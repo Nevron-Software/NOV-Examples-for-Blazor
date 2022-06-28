@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nevron.Nov.Examples.WebAssembly", "Nevron.Nov.Examples.WebAssembly.csproj", "{AFA5E643-5DB6-46AC-9731-C90AAFAFD056}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8BDD0309-7521-4D75-9814-07C2F7B4146F} = {8BDD0309-7521-4D75-9814-07C2F7B4146F}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nevron.Nov.Examples", "..\Core\Nevron.Nov.Examples.csproj", "{8BDD0309-7521-4D75-9814-07C2F7B4146F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AFA5E643-5DB6-46AC-9731-C90AAFAFD056}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFA5E643-5DB6-46AC-9731-C90AAFAFD056}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFA5E643-5DB6-46AC-9731-C90AAFAFD056}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFA5E643-5DB6-46AC-9731-C90AAFAFD056}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BDD0309-7521-4D75-9814-07C2F7B4146F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BDD0309-7521-4D75-9814-07C2F7B4146F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BDD0309-7521-4D75-9814-07C2F7B4146F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BDD0309-7521-4D75-9814-07C2F7B4146F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {483C8E88-C15B-4F85-9A92-702160DF72B9}
+	EndGlobalSection
+EndGlobal

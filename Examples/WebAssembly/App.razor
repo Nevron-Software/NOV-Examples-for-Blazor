@@ -1,0 +1,47 @@
+@inject IJSRuntime JSRuntime
+
+@using Nevron.Nov;
+@using Nevron.Nov.WebAssembly;
+@using Nevron.Nov.IO;
+
+<Router AppAssembly="@typeof(Program).Assembly">
+    <Found Context="routeData">
+        <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
+    </Found>
+    <NotFound>
+        <LayoutView Layout="@typeof(MainLayout)">
+            <p>Sorry, there's nothing at this address.</p>
+        </LayoutView>
+    </NotFound>
+</Router>
+
+@code {
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+
+        // apply license
+        NLicense license = new NLicense("26a6325289003c4ce93a0afcaf1146003463382c0931ff04");
+        NLicenseManager.Instance.SetLicense(license);
+
+        // Install NOV
+        NNovApplicationInstaller.Install(
+            JSRuntime,
+            Nevron.Nov.Barcode.NBarcodeModule.Instance,
+            Nevron.Nov.Text.NTextModule.Instance,
+            Nevron.Nov.Diagram.NDiagramModule.Instance,
+            Nevron.Nov.Chart.NChartModule.Instance,
+            Nevron.Nov.Schedule.NScheduleModule.Instance,
+            Nevron.Nov.Grid.NGridModule.Instance
+        );
+
+        // load resourse from embedded resource
+        string resourceName = this.GetType().Assembly.GetName().Name + ".Resources.Resources.zip";
+        System.IO.Stream stream = GetType().Assembly.GetManifestResourceStream(resourceName);
+
+        // install a resource folder with in-memory resources
+        NFileSystem memoryFSS = NFileSystem.CreateMemoryFileSystem();
+        memoryFSS.DecompressZip(stream, "\\Resources\\");
+        NApplication.ResourcesFolder = new NFolder(memoryFSS, "\\Resources\\");
+    }
+}

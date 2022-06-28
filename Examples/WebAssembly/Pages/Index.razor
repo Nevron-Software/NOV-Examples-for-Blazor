@@ -1,0 +1,17 @@
+﻿@page "/"
+@inject IJSRuntime JSRuntime
+
+@using Nevron.Nov;
+@using Nevron.Nov.WebAssembly;
+
+<NNovWidgetHost @ref="m_Examples" TWidget="NExamplesContent" Style="width:100vw; height:100vh;"/>
+
+@code
+{
+    NNovWidgetHost<NExamplesContent> m_Examples;
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        base.OnAfterRender(firstRender);
+    }
+}
