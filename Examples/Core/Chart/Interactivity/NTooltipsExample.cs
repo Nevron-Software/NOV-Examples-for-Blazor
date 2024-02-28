@@ -1,5 +1,7 @@
 ﻿using Nevron.Nov.Chart;
+using Nevron.Nov.Chart.Tools;
 using Nevron.Nov.Dom;
+using Nevron.Nov.Graphics;
 using Nevron.Nov.UI;
 
 namespace Nevron.Nov.Examples.Chart
@@ -16,7 +18,6 @@ namespace Nevron.Nov.Examples.Chart
 		/// </summary>
 		public NTooltipsExample()
 		{
-			
 		}
 		/// <summary>
 		/// Static constructor
@@ -39,8 +40,13 @@ namespace Nevron.Nov.Examples.Chart
 
 			// configure chart
 			m_PieChart = (NPieChart)chartView.Surface.Charts[0];
+			m_PieChart.Enable3D = true;
+			m_PieChart.EnableInteractivity = true;
+            m_PieChart.Projection.SetPredefinedProjection(ENPredefinedProjection.PerspectiveElevated);
+			m_PieChart.LightModel.SetPredefinedLightModel(ENPredefinedLightModel.Arena);
+            m_PieChart.Interactor = new NInteractor(new NTrackballTool());
 
-			m_PieSeries = new NPieSeries();
+            m_PieSeries = new NPieSeries();
 			m_PieChart.Series.Add(m_PieSeries);
 			m_PieChart.DockSpiderLabelsToSides = true;
 
@@ -72,8 +78,13 @@ namespace Nevron.Nov.Examples.Chart
 		{
 			NStackPanel stack = new NStackPanel();
 			NUniSizeBoxGroup group = new NUniSizeBoxGroup(stack);
-			
-			NNumericUpDown beginAngleUpDown = new NNumericUpDown();
+
+			NCheckBox enable3DCheckBox = new NCheckBox("Enable 3D");
+			enable3DCheckBox.Checked = true;
+            enable3DCheckBox.CheckedChanged += OnEnable3DCheckBoxCheckedChanged;
+            stack.Add(enable3DCheckBox);
+
+            NNumericUpDown beginAngleUpDown = new NNumericUpDown();
 			beginAngleUpDown.Value = m_PieChart.BeginAngle;
 			beginAngleUpDown.ValueChanged += OnBeginAngleUpDownValueChanged;
 			stack.Add(NPairBox.Create("Begin Angle:", beginAngleUpDown));
@@ -87,7 +98,8 @@ namespace Nevron.Nov.Examples.Chart
 
 			return group;
 		}
-		protected override string GetExampleDescription()
+
+        protected override string GetExampleDescription()
 		{
 			return @"<p>This example demonstrates how to create tooltips attached to chart objects.</p>";
 		}
@@ -124,11 +136,16 @@ namespace Nevron.Nov.Examples.Chart
 			m_PieSeries.LabelMode = (ENPieLabelMode)(((NComboBox)arg.TargetNode).SelectedIndex);
 		}
 
-		#endregion
+        private void OnEnable3DCheckBoxCheckedChanged(NValueChangeEventArgs arg)
+        {
+			m_PieChart.Enable3D = (bool)arg.NewValue;
+        }
 
-		#region Fields
+        #endregion
 
-		NPieSeries m_PieSeries;
+        #region Fields
+
+        NPieSeries m_PieSeries;
 		NPieChart m_PieChart;
 
 		#endregion

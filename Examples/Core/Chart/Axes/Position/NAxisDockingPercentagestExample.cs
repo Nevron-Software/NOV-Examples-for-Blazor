@@ -43,7 +43,10 @@ namespace Nevron.Nov.Examples.Chart
 
 			NCartesianChart chart = (NCartesianChart)chartView.Surface.Charts[0];
 
-			m_RedAxis = CreateLinearAxis(ENCartesianAxisDockZone.Left, NColor.Red);
+            // clear the default chart axes
+            chart.Axes.Clear();
+
+            m_RedAxis = CreateLinearAxis(ENCartesianAxisDockZone.Left, NColor.Red);
 			chart.Axes.Add(m_RedAxis);
 
 			m_GreenAxis = CreateLinearAxis(ENCartesianAxisDockZone.Right, NColor.Green);
@@ -53,7 +56,7 @@ namespace Nevron.Nov.Examples.Chart
 			m_BlueAxis = CreateLinearAxis(ENCartesianAxisDockZone.Left, NColor.Blue);
 			chart.Axes.Add(m_BlueAxis);
 
-			chart.Axes.Add(NCartesianChart.CreateDockedAxis(ENCartesianAxisDockZone.Bottom, ENScaleType.Orindal));
+			chart.Axes.Add(NCartesianChart.CreateDockedAxis(ENCartesianAxisDockZone.Bottom, ENScaleType.Ordinal));
 
 			// create three line series and dispay them on three vertical axes (red, green and blue axis)
 			NLineSeries line1 = CreateLineSeries(NColor.Red, NColor.DarkRed, 10, 20);
@@ -163,7 +166,7 @@ namespace Nevron.Nov.Examples.Chart
 			markerStyle.Visible = true;
 			markerStyle.Border = new NStroke(color);
 			markerStyle.Fill = new NColorFill(lightColor);
-			markerStyle.Shape = ENPointShape.Ellipse;
+			markerStyle.Shape = ENPointShape3D.Ellipse;
 			markerStyle.Size = new NSize(5, 5);
 
 			line.MarkerStyle = markerStyle;

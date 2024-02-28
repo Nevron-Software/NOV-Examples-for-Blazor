@@ -146,26 +146,13 @@ namespace Nevron.Nov.Examples.Diagram
 				CustomOpenCommandActionSchema = NSchema.Create(typeof(CustomOpenCommandAction), NOpenCommandActionSchema);
 			}
 
-			/// <summary>
-			/// Executes the command action.
-			/// </summary>
-			/// <param name="target"></param>
-			/// <param name="parameter"></param>
-			public override void Execute(NNode target, object parameter)
+			protected override NDrawingFormat[] GetFormats()
 			{
-				if (IsEnabled(target) == false)
-					return;
-
-				// Get the drawing view
-				NDrawingView drawingView = GetDrawingView(target);
-
-				NDrawingFormatRegistry registry = new NDrawingFormatRegistry ();
-				registry.DocumentFormats = new NDrawingFormat[] {
+				return new NDrawingFormat[]
+				{
 					NDrawingFormat.Visio,
 					NDrawingFormat.VectorAutoCadDxf
 				};
-
-				drawingView.OpenFile(NDrawingFormat.NevronBinary, registry, true, true);
 			}
 
 			public static readonly NSchema CustomOpenCommandActionSchema;
@@ -181,26 +168,13 @@ namespace Nevron.Nov.Examples.Diagram
 				CustomSaveAsCommandActionSchema = NSchema.Create(typeof(CustomSaveAsCommandAction), NSaveAsCommandActionSchema);
 			}
 
-			// <summary>
-			/// Executes the command action.
-			/// </summary>
-			/// <param name="target"></param>
-			/// <param name="parameter"></param>
-			public override void Execute(NNode target, object parameter)
+			protected override NDrawingFormat[] GetFormats()
 			{
-				if (IsEnabled(target) == false)
-					return;
-
-				// Get the drawing view
-				NDrawingView drawingView = (NDrawingView)GetDrawingView(target);
-
-				NDrawingFormatRegistry registry = new NDrawingFormatRegistry();
-				registry.DocumentFormats = new NDrawingFormat[] {
+				return new NDrawingFormat[]
+				{
 					NDrawingFormat.Visio,
 					NDrawingFormat.VectorAutoCadDxf
 				};
-
-				drawingView.SaveAs(NDrawingFormat.NevronBinary, registry, true);
 			}
 
 			public static readonly NSchema CustomSaveAsCommandActionSchema;

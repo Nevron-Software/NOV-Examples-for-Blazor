@@ -151,15 +151,15 @@ namespace Nevron.Nov.Examples.Diagram
 
 		private void OnSaveAsButtonClick(NEventArgs arg)
 		{
-			string fileName = m_DrawingView.Drawing.Information.FileName;
+			string fileName = m_DrawingView.Content.Information.FileName;
 			if (String.IsNullOrEmpty(fileName) || !fileName.EndsWith("vsdx", StringComparison.OrdinalIgnoreCase))
 			{
 				// The document has not been saved, yet, so set a file name with HTML extension
 				// to make the default Save As dialog show Web Page as file save as type
-				m_DrawingView.Drawing.Information.FileName = "Document1.html";
+				m_DrawingView.Content.Information.FileName = "Document1.html";
 			}
 
-            m_DrawingView.SaveAs();
+            m_DrawingView.SaveAsAsync();
 		}
 
 		#endregion

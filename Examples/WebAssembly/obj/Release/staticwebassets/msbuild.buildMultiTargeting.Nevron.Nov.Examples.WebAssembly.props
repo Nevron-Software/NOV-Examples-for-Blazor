@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Nevron.Nov.Examples.WebAssembly.props" />
+</Project>

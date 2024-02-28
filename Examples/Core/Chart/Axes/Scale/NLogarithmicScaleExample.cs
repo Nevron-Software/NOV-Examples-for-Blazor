@@ -70,7 +70,7 @@ namespace Nevron.Nov.Examples.Chart
 			NMarkerStyle markerStyle = new NMarkerStyle();
 			line.MarkerStyle = markerStyle;
 
-			markerStyle.Shape = ENPointShape.Ellipse;
+			markerStyle.Shape = ENPointShape3D.Ellipse;
 			markerStyle.Size = new NSize(15, 15);
 
 			NDataLabelStyle dataLabelStyle = new NDataLabelStyle();

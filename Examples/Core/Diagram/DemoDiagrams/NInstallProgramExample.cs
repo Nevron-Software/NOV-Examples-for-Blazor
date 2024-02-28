@@ -64,11 +64,10 @@ namespace Nevron.Nov.Examples.Diagram
             drawingDocument.StyleSheets.Add(sheet);
 
             // create a rule that applies to the geometries of all shapes with user class Connectors
-            const string connectorsClass = "Connector";
             {
                 NRule rule = sheet.CreateRule(delegate(NSelectorBuilder sb)
                 {
-                    sb.Type(NGeometry.NGeometrySchema); sb.ChildOf(); sb.UserClass(connectorsClass);
+                    sb.Type(NGeometry.NGeometrySchema); sb.ChildOf(); sb.UserClass(NDR.StyleSheetNameConnectors);
                 });
                 rule.AddValueDeclaration<NArrowhead>(NGeometry.EndArrowheadProperty, new NArrowhead(ENArrowheadShape.TriangleNoFill), true);
             }
@@ -77,7 +76,7 @@ namespace Nevron.Nov.Examples.Diagram
             {
                 NRule rule = sheet.CreateRule(delegate(NSelectorBuilder sb)
                 {
-                    sb.Type(NTextBlock.NTextBlockSchema); sb.ChildOf(); sb.UserClass(connectorsClass);
+                    sb.Type(NTextBlock.NTextBlockSchema); sb.ChildOf(); sb.UserClass(NDR.StyleSheetNameConnectors);
                 });
                 rule.AddValueDeclaration<NFill>(NTextBlock.BackgroundFillProperty, new NColorFill(NColor.White));
             }

@@ -65,7 +65,7 @@ namespace Nevron.Nov.Examples.Chart
 			m_Point.DataLabelStyle = new NDataLabelStyle(false);
 			m_Point.Fill = new NColorFill(new NColor(NColor.DarkOrange, 160));
 			m_Point.Size = 5;
-			m_Point.Shape = ENPointShape.Rectangle;
+			m_Point.Shape = ENPointShape3D.Bar;
 			m_Point.UseXValues = true;
 			m_Chart.Series.Add(m_Point);
 
@@ -95,13 +95,11 @@ namespace Nevron.Nov.Examples.Chart
 			NInteractor interactor = new NInteractor();
 
 			m_RectangleZoomTool = new NRectangleZoomTool();
-			m_RectangleZoomTool.Enabled = true;
 			interactor.Add(m_RectangleZoomTool);
 
 			NDataPanTool dataPanTool = new NDataPanTool();
 			dataPanTool.StartMouseButtonEvent = ENMouseButtonEvent.RightButtonDown;
 			dataPanTool.EndMouseButtonEvent = ENMouseButtonEvent.RightButtonUp;
-			dataPanTool.Enabled = true;
 			interactor.Add(dataPanTool);
 
 			m_Chart.Interactor = interactor;

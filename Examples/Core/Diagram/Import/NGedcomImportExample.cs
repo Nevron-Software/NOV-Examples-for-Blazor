@@ -1,5 +1,7 @@
 ﻿using Nevron.Nov.Diagram;
+using Nevron.Nov.Diagram.Formats;
 using Nevron.Nov.Dom;
+using Nevron.Nov.IO;
 using Nevron.Nov.UI;
 
 namespace Nevron.Nov.Examples.Diagram
@@ -52,17 +54,35 @@ namespace Nevron.Nov.Examples.Diagram
         protected override string GetExampleDescription()
         {
             return @"
-<p>Demonstrates how to import a family tree in GEDCOM format (""*.ged"") to Nevron Diagram.
-This example imports the family tree of the US president Abraham Lincoln.</p>";
+<p>
+	Demonstrates how to import a family tree in GEDCOM format (""*.ged"") in Nevron Diagram.
+	Before importing any GEDCOM files, you should set the <b>FamilyTreeLibrary</b> property of
+	<b>NDrawingFormat.Gedcom</b> or use its <b>LoadFamilyTreeLibraryFromFile</b> or
+	<b>LoadFamilyTreeLibraryFromStream</b> properties. This will also enable the ribbon's
+	<b>File -> Import -> GEDCOM</b> menu item and add the GEDCOM drawing format to the
+	Open file dialog of the drawing view.
+</p>
+<p>
+	This example imports the family tree of the US president Abraham Lincoln.
+</p>";
         }
 
         private void InitDiagram(NDrawingDocument drawingDocument)
         {
-            // Import a Visio diagram
-            m_DrawingView.LoadFromResource(NResources.RSTR_LincolnFamily_ged);
+			// Load the GEDCOM file format's family tree library (this needs to be done only once)
+			NFile libraryFile = NApplication.ResourcesFolder.GetFile(NPath.Current.Combine(
+					"ShapeLibraries", "Family Tree", "Family Tree Shapes.nlb"));
+			NDrawingFormat.Gedcom.LoadFamilyTreeLibraryFromFileAsync(libraryFile).Then(
+				delegate (NUndefined ud)
+				{
+					// The family tree library loaded successfully
+					// Import a GEDCOM file
+					m_DrawingView.LoadFromResourceAsync(NResources.RSTR_LincolnFamily_ged, NDrawingFormat.Gedcom);
 
-            // Hide ports
-            drawingDocument.Content.ScreenVisibility.ShowPorts = false;
+					// Hide the ports
+					drawingDocument.Content.ScreenVisibility.ShowPorts = false;
+				}
+			);
         }
 
         #endregion

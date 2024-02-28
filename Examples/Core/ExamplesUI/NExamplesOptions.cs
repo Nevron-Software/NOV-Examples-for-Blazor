@@ -121,7 +121,7 @@ namespace Nevron.Nov.Examples
 		public void Save()
 		{
 			byte[] settingsBytes = SaveToBytes();
-			NApplication.SetSetting(SettingsName, settingsBytes);
+			NApplication.SetSettingAsync(SettingsName, settingsBytes);
 		}
 		/// <summary>
 		/// Loads the NOV Examples options.
@@ -129,7 +129,7 @@ namespace Nevron.Nov.Examples
 		/// <returns></returns>
 		public NPromise<NUndefined> Load()
 		{
-			return NApplication.GetSetting(SettingsName).ThenPromise(
+			return NApplication.GetSettingAsync(SettingsName).ThenPromise(
 				delegate (byte[] settingsBytes)
 				{
 					LoadFromBytes(settingsBytes);
@@ -209,6 +209,10 @@ namespace Nevron.Nov.Examples
 
 		#region Implementation - Serialization
 
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <returns></returns>
 		private byte[] SaveToBytes()
 		{
 			using (MemoryStream memoryStream = new MemoryStream())
@@ -217,12 +221,19 @@ namespace Nevron.Nov.Examples
 				return memoryStream.ToArray();
 			}
 		}
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="stream"></param>
 		private void SaveToStream(Stream stream)
 		{
 			NDomNodeSerializer serializer = new NDomNodeSerializer();
 			serializer.SaveToStream(new NNode[] { this }, stream, PersistencyFormat);
 		}
-
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="bytes"></param>
 		private void LoadFromBytes(byte[] bytes)
 		{
 			using (MemoryStream memoryStream = new MemoryStream(bytes))
@@ -230,6 +241,10 @@ namespace Nevron.Nov.Examples
 				LoadFromStream(memoryStream);
 			}
 		}
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="stream"></param>
 		private void LoadFromStream(Stream stream)
 		{
 			m_bLoading = true;

@@ -57,7 +57,7 @@ namespace Nevron.Nov.Examples.Chart
             linearScale.Strips.Add(strip);
 
             m_BoxAndWhiskerSeries = new NBoxAndWhiskerSeries();
-            m_BoxAndWhiskerSeries.WidthMode = ENBarWidthMode.FixedWidth;
+            m_BoxAndWhiskerSeries.WidthSizeMode = ENBarSizeMode.Fixed;
             m_Chart.Series.Add(m_BoxAndWhiskerSeries);
 
             m_BoxAndWhiskerSeries.Fill = new NStockGradientFill(ENGradientStyle.Vertical, ENGradientVariant.Variant4, NColor.LightYellow, NColor.DarkOrange);

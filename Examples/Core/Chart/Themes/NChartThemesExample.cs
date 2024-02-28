@@ -7,10 +7,10 @@ using Nevron.Nov.UI;
 
 namespace Nevron.Nov.Examples.Chart
 {
-	/// <summary>
-	/// Chart Themes Example
-	/// </summary>
-	public class NChartThemesExample : NExampleBase
+    /// <summary>
+    /// Chart Themes Example
+    /// </summary>
+    public class NChartThemesExample : NExampleBase
 	{
 		#region Constructors
 

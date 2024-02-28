@@ -71,7 +71,7 @@ namespace Nevron.Nov.Examples.Chart
 				bar.DataPoints.Add(new NBarDataPoint(random.Next(100)));
 			}
 
-			m_Chart.Series.Add(bar);
+            m_Chart.Series.Add(bar);
 
 			chartView.Document.StyleSheets.ApplyTheme(new NChartTheme(ENChartPalette.Bright, false));
 

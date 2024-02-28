@@ -56,8 +56,9 @@ namespace Nevron.Nov.Examples.Chart
 			m_Line.InflateMargins = true;
 			m_Line.DataLabelStyle = new NDataLabelStyle("<value>");
 			m_Line.MarkerStyle = new NMarkerStyle(new NSize(4, 4));
+			m_Line.Stroke = new NStroke(2, NColor.Green);
 
-			Random random = new Random();
+            Random random = new Random();
 
 			for (int i = 0; i < 8; i++)
 			{

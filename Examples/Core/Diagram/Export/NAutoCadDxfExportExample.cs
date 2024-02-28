@@ -133,13 +133,13 @@ namespace Nevron.Nov.Examples.Diagram
 
 		private void OnShowDialogButtonClick(NEventArgs arg)
 		{
-			NDrawingVectorImageExporter imageExporter = new NDrawingVectorImageExporter(m_DrawingView.Drawing);
+			NDrawingVectorImageExporter imageExporter = new NDrawingVectorImageExporter(m_DrawingView.Content);
 			imageExporter.ShowDialog(DisplayWindow, true);
 		}
 		private void OnSaveAsButtonClick(NEventArgs arg)
 		{
-			NDrawingVectorImageExporter imageExporter = new NDrawingVectorImageExporter(m_DrawingView.Drawing);
-			imageExporter.SaveAsImage("dxf");
+			NDrawingVectorImageExporter imageExporter = new NDrawingVectorImageExporter(m_DrawingView.Content);
+			imageExporter.SaveAsImage(ENVectorImageFormat.Dxf);
 		}
 
 		#endregion

@@ -61,6 +61,8 @@ namespace Nevron.Nov.Examples.Chart
 				"Missoula County", 95802, 41319, 20.37, 2597.97, 36.9, 15.9,
 				"Powell County", 7180, 2930, 6.74, 2325.94, 3.1, 1.3 };
 
+			NColor[] palette = NChartPalette.BrightPalette;
+
 			for (int i = 0; i < 6; i++)
 			{
 				NRadarLineSeries radarLine = new NRadarLineSeries();
@@ -81,10 +83,10 @@ namespace Nevron.Nov.Examples.Chart
 				NMarkerStyle markerStyle = new NMarkerStyle();
 				markerStyle.Size = new NSize(4, 4);
 				markerStyle.Visible = true;
-				markerStyle.Fill = new NColorFill(NChartTheme.BrightPalette[i]);
+				markerStyle.Fill = new NColorFill(palette[i]);
 				radarLine.MarkerStyle = markerStyle;
 
-				radarLine.Stroke = new NStroke(2, NChartTheme.BrightPalette[i]);
+				radarLine.Stroke = new NStroke(2, palette[i]);
 			}
 			
 			chartView.Document.StyleSheets.ApplyTheme(new NChartTheme(ENChartPalette.Bright, false));

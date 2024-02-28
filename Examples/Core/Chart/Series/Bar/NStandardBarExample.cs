@@ -48,7 +48,7 @@ namespace Nevron.Nov.Examples.Chart
 			NLinearScale linearScale = chart.Axes[ENCartesianAxis.PrimaryY].Scale as NLinearScale;
 			NScaleStrip strip = new NScaleStrip(new NColorFill(ENNamedColor.Beige), null, true, 0, 0, 1, 1);
             strip.Interlaced = true;
-            //linearScale.Strips.Add(strip);
+            linearScale.Strips.Add(strip);
 
 			// setup a bar series
 			m_Bar = new NBarSeries();

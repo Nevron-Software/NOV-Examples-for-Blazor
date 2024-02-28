@@ -49,8 +49,11 @@ namespace Nevron.Nov.Examples.Chart
 			m_FunnelSeries.DataPoints.Add(new NFunnelDataPoint(15.0, "Further Learn"));
 			m_FunnelSeries.DataPoints.Add(new NFunnelDataPoint(7.0, "Liking"));
 			m_FunnelSeries.DataPoints.Add(new NFunnelDataPoint(28.0, "Decision"));
+			m_FunnelSeries.DataLabelStyle = new NDataLabelStyle(true);
+			m_FunnelSeries.DataLabelStyle.VertAlign = ENVerticalAlignment.Center;
 
-			chartView.Document.StyleSheets.ApplyTheme(new NChartTheme(ENChartPalette.Bright, true));
+
+            chartView.Document.StyleSheets.ApplyTheme(new NChartTheme(ENChartPalette.Bright, true));
 
 			return chartView;
 		}
@@ -81,7 +84,17 @@ namespace Nevron.Nov.Examples.Chart
 			pointGapUpDown.ValueChanged += OnPointGapUpDownValueChanged;
 			stack.Add(NPairBox.Create("Point Gap Percent:", pointGapUpDown));
 
-			return group;
+            NNumericUpDown neckHeightPercentUpDown = new NNumericUpDown();
+            neckHeightPercentUpDown.Value = m_FunnelSeries.NeckHeightPercent;
+            neckHeightPercentUpDown.ValueChanged += OnNeckHeightPercentUpDownValueChanged;
+            stack.Add(NPairBox.Create("Neck Height Percent:", neckHeightPercentUpDown));
+
+            NNumericUpDown neckWidthPercentUpDown = new NNumericUpDown();
+            neckWidthPercentUpDown.Value = m_FunnelSeries.NeckWidthPercent;
+            neckWidthPercentUpDown.ValueChanged += OnNeckWidthPercentUpDownValueChanged;
+            stack.Add(NPairBox.Create("Neck Width Percent:", neckWidthPercentUpDown));
+
+            return group;
 		}
 		protected override string GetExampleDescription()
 		{
@@ -112,11 +125,21 @@ namespace Nevron.Nov.Examples.Chart
 			m_FunnelSeries.Shape = (ENFunnelShape)((NComboBox)arg.TargetNode).SelectedIndex;
 		}
 
-		#endregion
+        private void OnNeckHeightPercentUpDownValueChanged(NValueChangeEventArgs arg)
+        {
+            m_FunnelSeries.NeckHeightPercent = ((NNumericUpDown)arg.TargetNode).Value;
+        }
 
-		#region Fields
+        private void OnNeckWidthPercentUpDownValueChanged(NValueChangeEventArgs arg)
+        {
+            m_FunnelSeries.NeckWidthPercent = ((NNumericUpDown)arg.TargetNode).Value;
+        }
 
-		NFunnelSeries m_FunnelSeries;
+        #endregion
+
+        #region Fields
+
+        NFunnelSeries m_FunnelSeries;
 
 		#endregion
 

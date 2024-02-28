@@ -7,10 +7,10 @@ using Nevron.Nov.UI;
 
 namespace Nevron.Nov.Examples.Chart
 {
-	/// <summary>
-	/// Automatic Scale Breaks Example
-	/// </summary>
-	public class NAutomaticScaleBreaksExample : NExampleBase
+    /// <summary>
+    /// Automatic Scale Breaks Example
+    /// </summary>
+    public class NAutomaticScaleBreaksExample : NExampleBase
 	{
 		#region Constructors
 

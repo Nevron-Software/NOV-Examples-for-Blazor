@@ -135,12 +135,12 @@ namespace Nevron.Nov.Examples.Diagram
 
         private void OnShowPdfDialogButtonClick(NEventArgs arg)
         {
-            NDrawingPdfExporter imageExporter = new NDrawingPdfExporter(m_DrawingView.Drawing);
+            NDrawingPdfExporter imageExporter = new NDrawingPdfExporter(m_DrawingView.Content);
             imageExporter.ShowDialog(DisplayWindow, true);
         }
         private void OnSaveAsPdfButtonClick(NEventArgs arg)
         {
-            NDrawingPdfExporter imageExporter = new NDrawingPdfExporter(m_DrawingView.Drawing);
+            NDrawingPdfExporter imageExporter = new NDrawingPdfExporter(m_DrawingView.Content);
             imageExporter.SaveAsPdf();
         }
 

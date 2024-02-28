@@ -68,8 +68,9 @@ namespace Nevron.Nov.Examples.Chart
 			m_Bubble.LegendView.Mode = ENSeriesLegendMode.DataPoints;
 			m_Bubble.MinSize = 20;
 			m_Bubble.MaxSize = 100;
+			m_Bubble.Shape = ENPointShape3D.Sphere;
 
-			m_Bubble.DataPoints.Add(new NBubbleDataPoint(10, 10, "Company 1"));
+            m_Bubble.DataPoints.Add(new NBubbleDataPoint(10, 10, "Company 1"));
 			m_Bubble.DataPoints.Add(new NBubbleDataPoint(15, 20, "Company 2"));
 			m_Bubble.DataPoints.Add(new NBubbleDataPoint(12, 25, "Company 3"));
 			m_Bubble.DataPoints.Add(new NBubbleDataPoint(8, 15, "Company 4"));
@@ -88,10 +89,10 @@ namespace Nevron.Nov.Examples.Chart
 			NUniSizeBoxGroup group = new NUniSizeBoxGroup(stack);
 			
 			NComboBox bubbleShapeComboBox = new NComboBox();
-			bubbleShapeComboBox.FillFromEnum<ENPointShape>();
+			bubbleShapeComboBox.FillFromEnum<ENPointShape3D>();
 			bubbleShapeComboBox.SelectedIndexChanged += new Function<NValueChangeEventArgs>(OnBubbleShapeComboBoxSelectedIndexChanged);
 			stack.Add(NPairBox.Create("Bubble Shape: ", bubbleShapeComboBox));
-			bubbleShapeComboBox.SelectedIndex = (int)ENPointShape.Ellipse;
+			bubbleShapeComboBox.SelectedIndex = (int)ENPointShape3D.Ellipse;
 
 			NNumericUpDown minBubbleSizeUpDown = new NNumericUpDown();
 			minBubbleSizeUpDown.ValueChanged += new Function<NValueChangeEventArgs>(OnMinBubbleSizeUpDownValueChanged);
@@ -130,7 +131,7 @@ namespace Nevron.Nov.Examples.Chart
 
 		void OnBubbleShapeComboBoxSelectedIndexChanged(NValueChangeEventArgs arg)
 		{
-			m_Bubble.Shape = (ENPointShape)((NComboBox)arg.TargetNode).SelectedIndex;
+			m_Bubble.Shape = (ENPointShape3D)((NComboBox)arg.TargetNode).SelectedIndex;
 		}
 
 		void OnInflateMarginsCheckBoxCheckedChanged(NValueChangeEventArgs arg)

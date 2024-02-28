@@ -88,7 +88,7 @@ namespace Nevron.Nov.Examples.Chart
 		}
 		protected override string GetExampleDescription()
 		{
-			return @"<p>This example demonstrates how to create a standard high low series.</p>";
+			return @"<p>This example demonstrates how to create a standard high low chart.</p>";
 		}
 
 		#endregion

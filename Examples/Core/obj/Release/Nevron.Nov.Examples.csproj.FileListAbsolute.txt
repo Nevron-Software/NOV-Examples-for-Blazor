@@ -1,0 +1,12 @@
+C:\Program Files (x86)\Nevron Software\Nevron Open Vision 2023.1\Bin\Net70\Nevron.Nov.Examples.deps.json
+C:\Program Files (x86)\Nevron Software\Nevron Open Vision 2023.1\Bin\Net70\Nevron.Nov.Examples.dll
+C:\Program Files (x86)\Nevron Software\Nevron Open Vision 2023.1\Bin\Net70\Nevron.Nov.Examples.pdb
+C:\Program Files (x86)\Nevron Software\Nevron Open Vision 2023.1\Bin\Net70\Nevron.Nov.Examples.xml
+C:\Program Files (x86)\Nevron Software\Nevron Open Vision 2023.1\Examples\Core\obj\Release\Nevron.Nov.Examples.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Nevron Software\Nevron Open Vision 2023.1\Examples\Core\obj\Release\Nevron.Nov.Examples.GeneratedMSBuildEditorConfig.editorconfig
+C:\Program Files (x86)\Nevron Software\Nevron Open Vision 2023.1\Examples\Core\obj\Release\Nevron.Nov.Examples.AssemblyInfoInputs.cache
+C:\Program Files (x86)\Nevron Software\Nevron Open Vision 2023.1\Examples\Core\obj\Release\Nevron.Nov.Examples.AssemblyInfo.cs
+C:\Program Files (x86)\Nevron Software\Nevron Open Vision 2023.1\Examples\Core\obj\Release\Nevron.Nov.Examples.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Nevron Software\Nevron Open Vision 2023.1\Examples\Core\obj\Release\Nevron.Nov.Examples.csproj.CopyComplete
+C:\Program Files (x86)\Nevron Software\Nevron Open Vision 2023.1\Examples\Core\obj\Release\Nevron.Nov.Examples.dll
+C:\Program Files (x86)\Nevron Software\Nevron Open Vision 2023.1\Examples\Core\obj\Release\Nevron.Nov.Examples.pdb

@@ -241,14 +241,14 @@ namespace Nevron.Nov.Examples.Diagram
 		{
 			// Create a random tree
 			NGenericTreeTemplate tree = new NGenericTreeTemplate();
-			tree.EdgesUserClass = "Connector";
+			tree.EdgeUserClass = NDR.StyleSheetNameConnectors;
 			tree.Balanced = false;
 			tree.Levels = levels;
 			tree.BranchNodes = branchNodes;
 			tree.HorizontalSpacing = 10;
 			tree.VerticalSpacing = 10;
-            tree.VerticesShape = VertexShape;
-            tree.VerticesSize = VertexSize;
+            tree.VertexShape = VertexShape;
+            tree.VertexSize = VertexSize;
 			tree.VertexSizeDeviation = 1;
 			tree.Create(drawingDocument);
 

@@ -56,7 +56,8 @@ namespace Nevron.Nov.Examples.Chart
 
 			m_ScaleBreak = new NAutoScaleBreak(0.4f);
 			m_ScaleBreak.PositionMode = ENScaleBreakPositionMode.Percent;
-			yScale.ScaleBreaks.Add(m_ScaleBreak);
+
+            yScale.ScaleBreaks.Add(m_ScaleBreak);
 
 			// add an interlaced strip to the Y axis
 			NScaleStrip interlacedStrip = new NScaleStrip();

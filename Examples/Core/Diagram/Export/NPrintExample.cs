@@ -135,12 +135,12 @@ namespace Nevron.Nov.Examples.Diagram
 
         void OnShowPrintDialogButtonClick(NEventArgs arg)
         {
-            NDrawingPrintExporter imageExporter = new NDrawingPrintExporter(m_DrawingView.Drawing);
+            NDrawingPrintExporter imageExporter = new NDrawingPrintExporter(m_DrawingView.Content);
             imageExporter.ShowDialog(DisplayWindow, true);
         }
         void OnPrintButtonClick(NEventArgs arg)
         {
-            NDrawingPrintExporter imageExporter = new NDrawingPrintExporter(m_DrawingView.Drawing);
+            NDrawingPrintExporter imageExporter = new NDrawingPrintExporter(m_DrawingView.Content);
             imageExporter.Print();
         }
 

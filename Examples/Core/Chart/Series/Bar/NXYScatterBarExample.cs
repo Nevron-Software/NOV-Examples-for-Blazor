@@ -4,6 +4,7 @@ using Nevron.Nov.Chart;
 using Nevron.Nov.Dom;
 using Nevron.Nov.Graphics;
 using Nevron.Nov.UI;
+using static Nevron.Nov.UI.NCommandBarLane;
 
 namespace Nevron.Nov.Examples.Chart
 {
@@ -60,7 +61,7 @@ namespace Nevron.Nov.Examples.Chart
 
 			m_Bar.DataLabelStyle = new NDataLabelStyle(false);
 			m_Bar.InflateMargins = true;
-			m_Bar.WidthMode = ENBarWidthMode.FixedWidth;
+			m_Bar.WidthSizeMode = ENBarSizeMode.Fixed;
 			m_Bar.Width = 20;
 
 			m_Bar.Name = "Bar Series";
@@ -75,7 +76,7 @@ namespace Nevron.Nov.Examples.Chart
 			m_Bar.DataPoints.Add(new NBarDataPoint(67, 19));
 			m_Bar.DataPoints.Add(new NBarDataPoint(72, 11));
 
-			return chartView;
+            return chartView;
 		}
 		/// <summary>
 		/// 

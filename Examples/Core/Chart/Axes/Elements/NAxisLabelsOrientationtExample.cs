@@ -48,8 +48,11 @@ namespace Nevron.Nov.Examples.Chart
 				// configure the axes
 				NCartesianAxis axis = m_Chart.Axes[i];
 
-				// set the range to [0, 100]
-				axis.ViewRangeMode = ENAxisViewRangeMode.FixedRange;
+				// set the visibility mode to always visible
+                axis.VisibilityMode = ENAxisVisibilityMode.Visible;
+
+                // set the range to [0, 100]
+                axis.ViewRangeMode = ENAxisViewRangeMode.FixedRange;
 				axis.MinViewRangeValue = 0;
 				axis.MaxViewRangeValue = 100;
 

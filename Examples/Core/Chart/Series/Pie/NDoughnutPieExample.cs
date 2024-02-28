@@ -57,9 +57,10 @@ namespace Nevron.Nov.Examples.Chart
 				pieSeries.BeginRadiusPercent = 10;
 
 				m_PieChart.Series.Add(pieSeries);
+
 				m_PieChart.DockSpiderLabelsToSides = true;
 
-				NDataLabelStyle dataLabelStyle = new NDataLabelStyle(false);
+                NDataLabelStyle dataLabelStyle = new NDataLabelStyle(true);
 				dataLabelStyle.ArrowLength = 0;
 				dataLabelStyle.ArrowPointerLength = 0;
 				dataLabelStyle.Format = "<percent>";

@@ -44,6 +44,9 @@ namespace Nevron.Nov.Examples.Chart
 			m_FunnelSeries = new NFunnelSeries();
 			m_FunnelSeries.UseXValues = true;
 			m_FunnelSeries.Shape = ENFunnelShape.Rectangle;
+            m_FunnelSeries.DataLabelStyle = new NDataLabelStyle(true);
+			m_FunnelSeries.DataLabelStyle.VertAlign = ENVerticalAlignment.Center;
+
 			funnelChart.Series.Add(m_FunnelSeries);
 
 			GenerateData();

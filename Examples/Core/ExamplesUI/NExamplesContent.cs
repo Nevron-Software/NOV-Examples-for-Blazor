@@ -75,11 +75,10 @@ namespace Nevron.Nov.Examples
 		public void NavigateToHomePageWelcomeScreen()
 		{
 			// Show the home page
-			m_HomePage.NavigateToWelcomeScreen();
 			Content = m_HomePage;
 
 			// Clear the text of the search box
-			m_HomePage.m_SearchBox.Text = null;
+			m_HomePage.Header.m_SearchBox.Text = null;
 		}
 		/// <summary>
 		/// Navigates to the given category of the examples home page.
@@ -88,11 +87,11 @@ namespace Nevron.Nov.Examples
 		public void NavigateToHomePageCategory(string categoryName)
 		{
 			// Show the home page
-			m_HomePage.NavigateToCategory(categoryName);
+			m_HomePage.Content.NavigateToCategory(categoryName);
 			Content = m_HomePage;
 
 			// Clear the text of the search box
-			m_HomePage.m_SearchBox.Text = null;
+			m_HomePage.Header.m_SearchBox.Text = null;
 		}
 
 		/// <summary>
@@ -123,9 +122,9 @@ namespace Nevron.Nov.Examples
 		/// <param name="xmlElement"></param>
 		public void NavigateToExample(NXmlElement xmlElement)
 		{
-			if (this.Content != m_ExamplePage)
+			if (Content != m_ExamplePage)
 			{
-				this.Content = m_ExamplePage;
+				Content = m_ExamplePage;
 				m_ExamplePage.NavigateToExample(xmlElement);
 			}
 		}
@@ -165,6 +164,7 @@ namespace Nevron.Nov.Examples
 		#region Fields
 
 		internal NHomePage m_HomePage;
+		internal NHomePage m_HomePageNew;
 		private NExamplePage m_ExamplePage;
 
 		#endregion

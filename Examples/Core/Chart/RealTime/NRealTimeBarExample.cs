@@ -65,7 +65,7 @@ namespace Nevron.Nov.Examples.Chart
 			m_Bar.InflateMargins = true;
 			m_Bar.DataLabelStyle = new NDataLabelStyle(false);
 			m_Bar.UseXValues = true;
-			m_Bar.WidthMode = ENBarWidthMode.ScaleWidth;
+			m_Bar.WidthSizeMode = ENBarSizeMode.Scale;
 			m_Bar.Width = 0.5;
 			m_CurXValue = 0;
 

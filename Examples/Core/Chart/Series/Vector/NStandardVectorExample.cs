@@ -87,8 +87,7 @@ namespace Nevron.Nov.Examples.Chart
 
 		private void FillData(NVectorSeries vectorSeries)
 		{
-			double x = 0, y = 0;
-			int k = 0;
+			double x, y = 0;
 
 			for (int i = 0; i < 10; i++)
 			{
@@ -97,14 +96,13 @@ namespace Nevron.Nov.Examples.Chart
 
 				for (int j = 0; j < 10; j++)
 				{
-					x += 1;
-
 					double dx = Math.Sin(x / 3.0) * Math.Cos((x - y) / 4.0);
 					double dy = Math.Cos(y / 8.0) * Math.Cos(y / 4.0);
 
 					NColor color = ColorFromVector(dx, dy);
 					vectorSeries.DataPoints.Add(new NVectorDataPoint(x, y, x + dx, y + dy, new NColorFill(color), new NStroke(1, color)));
-					k++;
+
+					x++;
 				}
 			}		
 		}

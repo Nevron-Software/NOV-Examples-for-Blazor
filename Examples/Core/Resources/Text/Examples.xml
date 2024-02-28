@@ -9,12 +9,12 @@
   </statusColors>
   <categories>
     <!--Chart-->
-    <category name="Chart" namespace="Chart" license="Commercial" color="68348C">
+    <category name="Chart" namespace="Chart" color="68348C" link="https://www.nevron.com/products-open-vision-nov-chart-control-overview">
       <row>
-        <label>
-					NOV Chart allows for the visualization of business, scientific, financial and presentation charts.<br />
+        <description>
+					NOV Chart allows for the visualization of business, scientific, financial and presentation charts.<br /><br />
 					The control features numerous charting types, advanced axes, support for zooming and scrolling, serialization, image export and others.
-				</label>
+				</description>
       </row>
       <row>
         <group name="Axes">
@@ -58,23 +58,33 @@
             <example name="Custom Scale Breaks" type="NCustomScaleBreaksExample" />
             <example name="Scale Break Appearance" type="NScaleBreakAppearanceExample" />
           </tile>
+          <tile name="View Range" icon="ScaleBreaks.png">
+            <example name="View Range" type="NAxisViewRangeExample" />
+            <example name="Synchronized Axes" type="NSynchronizedAxesExample" />
+          </tile>
         </group>
         <group name="Series" maxRows="8">
           <tile name="Area" icon="AreaSeries.png">
             <example name="Standard Area" type="NStandardAreaExample" />
-            <example name="Area Labels" type="NAreaLabelsExample" />
+            <example name="Standard Area 3D " type="NStandard3DAreaExample" platforms="WinForms, WPF" />
             <example name="Stacked Area" type="NStackedAreaExample" />
+            <example name="Stacked Area 3D" type="NStackedArea3DExample" platforms="WinForms, WPF" />
             <example name="XY Scatter Area" type="NXYScatterAreaExample" />
+            <example name="Area Labels" type="NAreaLabelsExample" />
             <example name="Area Palette" type="NAreaPaletteExample" />
           </tile>
           <tile name="Bar" icon="BarSeries.png">
             <example name="Standard Bar" type="NStandardBarExample" />
+            <example name="Standard Bar 3D" type="NStandard3DBarExample" platforms="WinForms, WPF" />
             <example name="XY Scatter Bar" type="NXYScatterBarExample" />
-            <example name="Bar Labels" type="NBarLabelsExample" />
+            <example name="Manhattan Bar" type="NManhattanBarExample" />
             <example name="Cluster Bar" type="NClusterBarExample" />
             <example name="Stacked Bar" type="NStackedBarExample" />
             <example name="Stacked Percent Bar" type="NStackedPercentBarExample" />
             <example name="Cluster Stack Bar Labels" type="NClusterStackBarLabelsExample" />
+            <example name="XYZ Scatter Stack Bar" type="NXYZScatterStackBarExample" platforms="WinForms, WPF" />
+            <example name="XYZ Scatter Cluster Stack Bar" type="NXYZScatterClusterStackBarExample" platforms="WinForms, WPF" />
+            <example name="Bar Labels" type="NBarLabelsExample" />
             <example name="Bar Palette" type="NBarPaletteExample" />
           </tile>
           <tile name="Box And Whiskers" icon="BoxAndWhiskersSeries.png">
@@ -83,36 +93,47 @@
           <tile name="Bubble" icon="BubbleSeries.png">
             <example name="Standard Bubble" type="NStandardBubbleExample" />
             <example name="XY Scatter Bubble" type="NXYScatterBubbleExample" />
+            <example name="XYZ Scatter Bubble" type="NXYZScatterBubbleExample" platforms="WinForms, WPF" />
           </tile>
           <tile name="Combo" icon="ComboSeries.png">
             <example name="Combo Chart" type="NComboChartExample" />
           </tile>
           <tile name="Error Bar" icon="ErrorBarSeries.png">
             <example name="Standard Error Bar" type="NStandardErrorBarExample" />
+            <example name="XYZ Scatter Error Bar" type="NXYZErrorBarExample" platforms="WinForms, WPF" />
           </tile>
           <tile name="Heat Map" icon="HeatMapSeries.png">
             <example name="Standard Heat Map" type="NStandardHeatMapExample" />
             <example name="Wafer Chart" type="NWaferChartExample" />
             <example name="Contour Chart" type="NContourChartExample" />
+            <example name="Contour Chart Labels" type="NContourLabelsExample" />
           </tile>
           <tile name="High Low" icon="HighLowSeries.png">
             <example name="Standard High Low" type="NStandardHighLowExample" />
+            <example name="Standard High Low 3D" type="NHighLow3DExample" platforms="WinForms, WPF" />
           </tile>
           <tile name="Kagi" icon="KagiSeries.png">
             <example name="Kagi" type="NKagiExample" />
           </tile>
           <tile name="Line" icon="LineSeries.png">
             <example name="Standard Line" type="NStandardLineExample" />
+            <example name="Standard Line 3D" type="NStandardLine3DExample" platforms="WinForms, WPF" />
             <example name="XY Scatter Line" type="NXYScatterLineExample" />
-            <example name="Stacked Line" type="NStackedLineExample" />
+            <example name="XYZ Scatter line" type="NXYZScatterLineExample" platforms="WinForms, WPF" />
+            <example name="Stacked Line" type="NStackedLine2DExample" />
+            <example name="Stacked Line 3D" type="NStackedLine3DExample" platforms="WinForms, WPF" />
             <example name="Step Line" type="NStepLineExample" />
+            <example name="Step Line 3D" type="NStepLine3DExample" platforms="WinForms, WPF" />
             <example name="Smooth Line" type="NSmoothLineExample" />
             <example name="Line Labels" type="NLineLabelsExample" />
+            <example name="Multi Series line" type="NMultiSeriesLineExample" />
           </tile>
           <tile name="Point" icon="PointSeries.png">
             <example name="Standard Point" type="NStandardPointExample" />
             <example name="XY Scatter Point" type="NXYScatterPointExample" />
-            <example name="Point Droplines" type="NPointDropLinesExample" />
+            <example name="XYZ Scatter Point" type="NXYZScatterPointExample" platforms="WinForms, WPF" />
+            <example name="Point Droplines 2D" type="NPointDropLinesExample" />
+            <example name="Point Droplines 3D" type="N3DPointDropLinesExample" platforms="WinForms, WPF" />
           </tile>
           <tile name="Point And Figure" icon="PointAndFigureSeries.png">
             <example name="Point And Figure" type="NPointAndFigureExample" />
@@ -120,6 +141,7 @@
           <tile name="Range" icon="RangeSeries.png">
             <example name="Standard Range" type="NStandardRangeExample" />
             <example name="Range Fill Styles" type="NRangeFillStylesExample" />
+            <example name="XYZ Range" type="NXYZRangeExample" platforms="WinForms, WPF" />
           </tile>
           <tile name="Renko" icon="RenkoSeries.png">
             <example name="Renko" type="NRenkoExample" />
@@ -133,33 +155,16 @@
           </tile>
           <tile name="Vector" icon="VectorSeries.png">
             <example name="Standard Vector" type="NStandardVectorExample" />
+            <example name="XYZ Vector" type="NXYZVectorExample" platforms="WinForms, WPF" />
           </tile>
           <tile name="Funnel" icon="FunnelSeries.png">
             <example name="Standard Funnel" type="NStandardFunnelExample" />
+            <example name="Standard Funnel 3D" type="NStandardFunnel3DExample" platforms="WinForms, WPF" />
             <example name="Scatter Funnel" type="NScatterFunnelExample" />
+            <example name="Scatter Funnel 3D" type="NScatterFunnel3DExample" platforms="WinForms, WPF" />
           </tile>
-          <tile name="Pie" icon="PieSeries.png">
-            <example name="Standard Pie" type="NStandardPieExample" />
-            <example name="Doughnut Pie" type="NDoughnutPieExample" />
-          </tile>
-          <tile name="Polar" icon="PolarSeries.png">
-            <example name="Polar Line" type="NPolarLineExample" />
-            <example name="Polar Point" type="NPolarPointExample" />
-            <example name="Polar Area" type="NPolarAreaExample" />
-            <example name="Polar Range" type="NPolarRangeExample" />
-            <example name="Polar Vector" type="NPolarVectorExample" />
-          </tile>
-          <tile name="Radar" icon="RadarSeries.png">
-            <example name="Radar Line" type="NRadarLineExample" />
-            <example name="Radar Area" type="NRadarAreaExample" />
-            <example name="Multi Measure Radar" type="NMultiMeasureRadarExample" />
-            <example name="Radar Axis Titles" type="NRadarAxisTitlesExample" />
-          </tile>
-          <tile name="TreeMap" icon="TreeMap.png">
-            <example name="Standard TreeMap" type="NStandardTreeMapExample" />
-            <example name="TreeMap Legend" type="NTreeMapLegendExample" />
-          </tile>
-        </group>
+					|
+					<tile name="Pie" icon="PieSeries.png"><example name="Standard Pie" type="NStandardPieExample" /><example name="Standard Pie 3D" type="NStandardPie3DExample" platforms="WinForms, WPF" /><example name="Doughnut Pie" type="NDoughnutPieExample" /><example name="Doughnut Pie 3D" type="NDoughnutPie3DExample" platforms="WinForms, WPF" /></tile><tile name="Polar" icon="PolarSeries.png"><example name="Polar Line" type="NPolarLineExample" /><example name="Polar Point" type="NPolarPointExample" /><example name="Polar Area" type="NPolarAreaExample" /><example name="Polar Range" type="NPolarRangeExample" /><example name="Polar Vector" type="NPolarVectorExample" /></tile><tile name="Radar" icon="RadarSeries.png"><example name="Radar Line" type="NRadarLineExample" /><example name="Radar Area" type="NRadarAreaExample" /><example name="Multi Measure Radar" type="NMultiMeasureRadarExample" /><example name="Radar Axis Titles" type="NRadarAxisTitlesExample" /></tile><tile name="TreeMap" icon="TreeMap.png"><example name="Standard TreeMap" type="NStandardTreeMapExample" /><example name="TreeMap Legend" type="NTreeMapLegendExample" /></tile></group>
       </row>
       <row>
         <group name="Interactivity">
@@ -175,8 +180,11 @@
           </tile>
         </group>
         <group name="Export">
-          <tile name="Image Export" icon="Export.png">
-            <example name="Image Export" type="NImageExportExample" />
+          <tile name="Raster Image Export" icon="Export.png">
+            <example name="Raster Image Export" type="NRasterImageExportExample" />
+          </tile>
+          <tile name="SVG Export" icon="..\Diagram\SVG.png">
+            <example name="SVG Export" type="NSvgExportExample" />
           </tile>
           <tile name="Pdf Export" icon="PdfExport.png">
             <example name="Pdf Export" type="NPdfExportExample" />
@@ -196,6 +204,7 @@
             <example name="Series Legend View" type="NSeriesLegendViewExample" />
             <example name="Interactive Legend" type="NInteractiveLegendExample" />
             <example name="Multiple Legends" type="NMultipleLegendsExample" />
+            <example name="Custom Legend Items" type="NCustomLegendItemsExample" />
           </tile>
           <tile name="Layout" icon="Layout.png">
             <example name="Aligning Chart Areas" type="NAligningChartAreasExample" />
@@ -209,16 +218,19 @@
           <tile name="Themes" icon="Themes.png">
             <example name="Chart Themes" type="NChartThemesExample" />
           </tile>
+          <tile name="Effects" icon="Effects.png">
+            <example name="Light Model" type="NLightModelExample" />
+          </tile>
         </group>
       </row>
     </category>
     <!--Diagram-->
-    <category name="Diagram" namespace="Diagram" license="Commercial" color="68348C">
+    <category name="Diagram" namespace="Diagram" color="68348C" link="https://www.nevron.com/products-open-vision-nov-diagram-control-overview">
       <row>
-        <label>
+        <description>
 					NOV Diagram for .NET is a fully managed, extensible and powerful diagramming framework, which can help you
 					create feature rich diagramming solutions.
-				</label>
+				</description>
       </row>
       <row>
         <group name="Demo Apps and Diagrams">
@@ -265,7 +277,7 @@
             <example name="End Points Glue" type="NEndPointsGlueExample" />
             <example name="Connector with Multiple Labels" type="NConnectorWithMultipleLabelsExample" />
           </tile>
-          <tile name="Texts" icon="Texts.png">
+          <tile name="Rich Texts" icon="Texts.png">
             <example name="Rich Text Formatting" type="NRichTextFormattingExample" />
             <example name="Paragraphs" type="NParagraphsExample" />
             <example name="Bullet lists" type="NBulletListsExample" />
@@ -279,6 +291,9 @@
           </tile>
           <tile name="Barcodes" icon="..\Barcode\Barcode1D.png">
             <example name="Barcodes" type="NBarcodesInDiagramExample" />
+          </tile>
+          <tile name="Charts" icon="..\Chart\BarSeries.png">
+            <example name="Charts" type="NChartsInDiagramExample" />
           </tile>
         </group>
         <group name="Predefined Shapes" maxRows="7">
@@ -299,6 +314,9 @@
           </tile>
           <tile name="Callout Shapes" icon="ShapesCallout.png">
             <example name="Callout Shapes" type="NCalloutShapesExample" />
+          </tile>
+          <tile name="Cause and Effect Shapes" icon="CauseAndEffect.png">
+            <example name="Cause and Effect Shapes" type="NCauseAndEffectShapesExample" />
           </tile>
           <tile name="Connector Shapes" icon="ShapesConnector.png">
             <example name="Connector Shapes" type="NConnectorShapesExample" />
@@ -326,9 +344,6 @@
           </tile>
           <tile name="EPC Shapes" icon="FlowchartingEPC.png">
             <example name="EPC Shapes" type="NEPCShapesExample" />
-          </tile>
-          <tile name="Fishbone Shapes" icon="Fishbone.png">
-            <example name="Fishbone Shapes" type="NFishboneShapesExample" />
           </tile>
           <tile name="Floor Plan Shapes" icon="ShapesFloorPlan.png">
             <example name="Floor Plan Shapes" type="NFloorPlanShapesExample" />
@@ -442,11 +457,11 @@
       </row>
     </category>
     <!--Grid-->
-    <category name="Grid" namespace="Grid" license="Commercial" color="68348C">
+    <category name="Grid" namespace="Grid" color="68348C" link="https://www.nevron.com/products-open-vision-nov-grid-control-overview">
       <row>
-        <label>
+        <description>
 					NOV Grid for .NET represents a powerful framework for displaying and editing tabular data in versatile ways.
-				</label>
+				</description>
       </row>
       <row>
         <group name="Data Processing">
@@ -530,11 +545,11 @@
       </row>
     </category>
     <!--Rich Text Editor-->
-    <category name="Rich Text Editor" namespace="Text" license="Commercial" color="68348C">
+    <category name="Rich Text Editor" namespace="Text" color="68348C" link="https://www.nevron.com/products-open-vision-nov-rich-text-editor-control-overview">
       <row>
-        <label>
+        <description>
 					NOV Text Editor for .NET helps you embed state-of-art, Microsoft Word-like abilities in your .NET applications.
-				</label>
+				</description>
       </row>
       <row>
         <group name="Model">
@@ -594,6 +609,7 @@
           <tile name="Sample Reports" icon="Report.png">
             <example name="Sample Report 1" type="NSampleReport1Example" />
             <example name="Sample Report 2" type="NSampleReport2Example" />
+            <example name="Sample Report 3" type="NSampleReport3Example" />
           </tile>
           <tile name="Mail Merge" icon="MailMerge.png">
             <example name="Mail Merge" type="NMailMergeExample" />
@@ -641,12 +657,12 @@
       </row>
     </category>
     <!--Schedule-->
-    <category name="Schedule" namespace="Schedule" license="Commercial" color="68348C">
+    <category name="Schedule" namespace="Schedule" color="68348C" link="https://www.nevron.com/products-open-vision-nov-schedule-control-overview">
       <row>
-        <label>
+        <description>
 					NOV Schedule is a widget for showing and organizing appointments and recurring events.<br />
 					It provides all the features of Microsoft Outlook Calendar and Google Calendar plus many more.
-				</label>
+				</description>
       </row>
       <row>
         <group name="Model">
@@ -718,17 +734,18 @@
       </row>
     </category>
     <!--Gauge-->
-    <category name="Gauge" namespace="Gauge" license="Commercial" color="68348C">
+    <category name="Gauge" namespace="Gauge" color="68348C" link="https://www.nevron.com/products-open-vision-nov-gauge-control-overview">
       <row>
-        <label>
+        <description>
 					NOV Gauge for .NET has extensive support for instrumentation widgets such as radial (circular)<br />
 					and linear gauges, knobs, indicators and numeric displays.
-				</label>
+				</description>
       </row>
       <row>
         <group>
-          <tile name="Numeric Led Display" icon="NumericLedDisplay.png">
+          <tile name="Led Display" icon="NumericLedDisplay.png">
             <example name="Numeric Led Display" type="NNumericLedDisplayExample" />
+            <example name="Text Led Display" type="NTextLedDisplayExample" />
           </tile>
           <tile name="Axes" icon="Axes.png">
             <example name="Axis Size" type="NAxisSizeExample" />
@@ -736,6 +753,17 @@
             <example name="Custom Range Labels" type="NGaugeCustomRangeLabelsExample" />
             <example name="Labels Orientation" type="NGaugeScaleLabelsOrientationExample" />
             <example name="Gauge Axis Docking" type="NAxisDockingExample" />
+            <example name="Value Indicators Type And Style" type="NValueIndicatorsStyleExample" />
+            <example name="Associating With A Scale" type="NPointerScaleAssociationExample" />
+            <example name="Dampening the Pointer" type="NPointerDampeningExample" />
+            <example name="Scales Appearance" type="NScalesAppearanceExample" />
+            <example name="Auto Adjusting Scale" type="NAutoAdjustScaleExample" />
+            <example name="Logarithmic and Reversed Scales" type="NScalesLogarithmicExample" />
+            <example name="Minimum, Maximum and Interval" type="NScalesMinMaxExample" />
+            <example name="Scale Tick Marks" type="NScaleTickMarksExample" />
+            <example name="Off Position using a Pin" type="NScalesOffPositionExample" />
+            <example name="Scale Multiplier" type="NScaleMultiplierExample" />
+            <example name="Custom Labels and TickMarks" type="NScalesCustomLabelsExample" />
           </tile>
           <tile name="Indicators" icon="Indicators.png">
             <example name="Linear Gauge Indicators" type="NLinearGaugeIndicatorsExample" />
@@ -743,6 +771,10 @@
             <example name="Knob Indicator" type="NKnobIndicatorExample" />
             <example name="Paint Order" type="NIndicatorPaintOrderExample" />
             <example name="Palette" type="NIndicatorPaletteExample" />
+          </tile>
+          <tile name="StateIndicator" icon="StateIndicators.png">
+            <example name="Car Dashboard" type="NCarDashboardExample" />
+            <example name="Style Appearance" type="NStateIndicatorStyleAppearanceExample" />
           </tile>
           <tile name="Interactivity" icon="Interactivity.png">
             <example name="Tooltips" type="NGaugeTooltipsExample" />
@@ -752,12 +784,12 @@
       </row>
     </category>
     <!--Barcode-->
-    <category name="Barcode" namespace="Barcode" license="Commercial" color="68348C">
+    <category name="Barcode" namespace="Barcode" color="68348C" link="https://www.nevron.com/products-open-vision-nov-barcode-control-overview">
       <row>
-        <label>
+        <description>
 					NOV Barcode for .NET helps you embed barcodes in your .NET applications quickly and easily.<br />
 					The solution is fully customizable and provides support for all industry standard barcode formats.
-				</label>
+				</description>
       </row>
       <row>
         <group name="1D Barcodes" maxRows="10">
@@ -844,12 +876,12 @@
       </row>
     </category>
     <!--User Interface-->
-    <category name="User Interface" namespace="UI" license="Free!" color="53A4DA">
+    <category name="User Interface" namespace="UI" color="53A4DA" link="https://www.nevron.com/products-open-vision-nov-ui-widgets-overview">
       <row>
-        <label>
-					NOV UI for .NET contains a complete and feature-rich set of cross-platform User Interface elements (widgets),<br />
-					which completely eliminates the need to use any platform specific controls.
-				</label>
+        <description>
+					NOV UI for .NET contains a complete and feature-rich set of cross-platform User Interface elements (widgets),
+          which completely eliminates the need to use any platform-specific controls.
+				</description>
       </row>
       <row>
         <group name="Appearance">
@@ -950,8 +982,8 @@
             <example name="Drop Down Button" type="NDropDownButtonExample" />
           </tile>
           <tile name="Image Box" icon="ImageBox.png">
-            <example name="Image Box" type="NImageBoxFirstLookExample" />
-            <example name="Meta Image Box" type="NMetaImageBoxExample" />
+            <example name="First Look" type="NImageBoxFirstLookExample" />
+            <!--<example name="DPI Scaling" type="NImageBoxDpiScalingExample"/>-->
           </tile>
           <tile name="Label" icon="Label.png">
             <example name="Label" type="NLabelExample" />
@@ -1114,7 +1146,12 @@
       </row>
     </category>
     <!--Framework-->
-    <category name="Framework" namespace="Framework" license="Free!" color="53A4DA">
+    <category name="Framework" namespace="Framework" color="53A4DA" link="https://www.nevron.com/products-open-vision">
+      <row>
+        <description>
+          NOV Framework provides the foundation on which all NOV components are built.
+        </description>
+      </row>
       <row>
         <group name="Editors">
           <tile name="Category Editors" icon="CategoryEdit.png">
@@ -1145,14 +1182,6 @@
             <example name="Image Fill" type="NImageFillExample" />
             <example name="Custom Texture Mapping" type="NCustomTextureMappingExample" />
           </tile>
-          <tile name="Imaging" icon="Images.png">
-            <example name="Painting Images" type="NPaintingImagesExample" />
-            <example name="BMP Decoder" type="NBmpDecoderExample" />
-            <example name="JPEG Decoder" type="NJpegDecoderExample" />
-            <example name="PNG Decoder" type="NPngDecoderExample" />
-            <example name="Animated PNG Decoder" type="NApngDecoderExample" />
-            <example name="GIF Decoder" type="NGifDecoderExample" />
-          </tile>
           <tile name="Paths &amp; Primitives" icon="Paths.png">
             <example name="Painting Primitives" type="NPaintingPrimitivesExample" />
             <example name="Painting Graphics Paths" type="NPaintingGraphicsPathsExample" />
@@ -1172,9 +1201,30 @@
             <example name="Installing Fonts" type="NInstallingFontsExample" />
           </tile>
         </group>
+        <group name="Imaging">
+          <tile name="Painting Images" icon="Images.png">
+            <example name="Painting Images" type="NPaintingImagesExample" />
+          </tile>
+          <tile name="Raster Images" icon="RasterImages.png">
+            <example name="Bitmap (BMP)" type="NBmpDecoderExample" />
+            <example name="Joint Photographic Experts Group (JPEG)" type="NJpegDecoderExample" />
+            <example name="Portable Network Graphics (PNG)" type="NPngDecoderExample" />
+            <example name="Icon (ICO)" type="NIcoDecoderExample" />
+            <example name="Animated GIF" type="NGifDecoderExample" />
+            <example name="Animated PNG" type="NApngDecoderExample" />
+          </tile>
+          <tile name="Vector Images" icon="VectorImages.png">
+            <example name="Scalable Vector Graphics (SVG)" type="NSvgDecoderExample" />
+            <example name="Windows Metafiles (EMF, WMF)" type="NMetafileDecoderExample" />
+            <example name="AutoCAD Drawing Interchange (DXF)" type="NDxfDecoderExample" />
+          </tile>
+        </group>
         <group name="IO &amp; Misc">
           <tile name="Embedded Resources" icon="Images.png">
             <example name="Embedded Resources" type="NEmbeddedResourcesExample" />
+          </tile>
+          <tile name="Application Settings" icon="NodeDesigner.png">
+            <example name="Application Settings" type="NApplicationSettingsExample" />
           </tile>
           <tile name="CLR Serialization" icon="ClrSerialization.png">
             <example name="CLR Serialization" type="NCLRSerializationExample" />

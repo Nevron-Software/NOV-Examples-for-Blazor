@@ -64,18 +64,15 @@ namespace Nevron.Nov.Examples.Diagram
             saveAsRasterImageFileButton.Click += OnSaveAsRasterImageFileButtonClick;
             stackPanel.Add(saveAsRasterImageFileButton);
 
-			NButton saveAsVectorImageFileButton = new NButton("Save as Vector Image File...");
-			saveAsVectorImageFileButton.Click += OnSaveAsVectorImageFileButtonClick;
-			stackPanel.Add(saveAsVectorImageFileButton);
-
             return stackPanel;
         }
+
         protected override string GetExampleDescription()
         {
             return @"
 <p>
-    Demonstrates the image exporters, with the help of which you can export the active page or any portion of it
-	to a raster (PNG, JPG, BMP, GIF) or a vector (SVG) image.
+    Demonstrates the raster image exporter, with the help of which you can export the active page or any portion of it
+	to a raster image (PNG, JPEG, BMP).
 </p>
             ";
         }
@@ -141,24 +138,19 @@ namespace Nevron.Nov.Examples.Diagram
 
         private void OnShowImageExportButtonClick(NEventArgs arg)
         {
-			NDrawingRasterImageExporter imageExporter = new NDrawingRasterImageExporter(m_DrawingView.Drawing);
+			NDrawingRasterImageExporter imageExporter = new NDrawingRasterImageExporter(m_DrawingView.Content);
             imageExporter.ShowDialog(DisplayWindow, true);
         }
         private void OnCopyImageToClipboardButtonClick(NEventArgs arg)
         {
-			NDrawingRasterImageExporter imageExporter = new NDrawingRasterImageExporter(m_DrawingView.Drawing);
+			NDrawingRasterImageExporter imageExporter = new NDrawingRasterImageExporter(m_DrawingView.Content);
             imageExporter.CopyToClipboard();
         }
         private void OnSaveAsRasterImageFileButtonClick(NEventArgs arg)
         {
-			NDrawingRasterImageExporter imageExporter = new NDrawingRasterImageExporter(m_DrawingView.Drawing);
+			NDrawingRasterImageExporter imageExporter = new NDrawingRasterImageExporter(m_DrawingView.Content);
             imageExporter.SaveAsImage();
         }
-		private void OnSaveAsVectorImageFileButtonClick(NEventArgs arg)
-		{
-			NDrawingVectorImageExporter imageExporter = new NDrawingVectorImageExporter(m_DrawingView.Drawing);
-			imageExporter.SaveAsImage();
-		}
 
         #endregion
 

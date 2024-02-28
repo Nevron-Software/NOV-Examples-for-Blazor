@@ -52,11 +52,11 @@ namespace Nevron.Nov.Examples.Diagram
         {
             NStackPanel stackPanel = new NStackPanel();
 
-            NButton showDialogButton = new NButton("Show Export to Vector Image Dialog...");
+			NButton showDialogButton = new NButton("Show Export to Vector Image Dialog...");
             showDialogButton.Click += OnShowDialogButtonClick;
             stackPanel.Add(showDialogButton);
 
-            NButton saveAsButton = new NButton("Save as Vector Image...");
+            NButton saveAsButton = new NButton("Save as SVG...");
             saveAsButton.Click += OnSaveAsButtonClick;
             stackPanel.Add(saveAsButton);
 
@@ -133,13 +133,13 @@ namespace Nevron.Nov.Examples.Diagram
 
         private void OnShowDialogButtonClick(NEventArgs arg)
         {
-			NDrawingVectorImageExporter imageExporter = new NDrawingVectorImageExporter(m_DrawingView.Drawing);
+			NDrawingVectorImageExporter imageExporter = new NDrawingVectorImageExporter(m_DrawingView.Content);
             imageExporter.ShowDialog(DisplayWindow, true);
         }
         private void OnSaveAsButtonClick(NEventArgs arg)
         {
-			NDrawingVectorImageExporter imageExporter = new NDrawingVectorImageExporter(m_DrawingView.Drawing);
-			imageExporter.SaveAsImage("svg");
+			NDrawingVectorImageExporter imageExporter = new NDrawingVectorImageExporter(m_DrawingView.Content);
+			imageExporter.SaveAsImage(ENVectorImageFormat.Svg);
         }
 
         #endregion

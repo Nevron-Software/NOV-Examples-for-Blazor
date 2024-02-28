@@ -74,7 +74,7 @@ namespace Nevron.Nov.Examples.Chart
 			chartView.Document.StyleSheets.ApplyTheme(new NChartTheme(ENChartPalette.Bright, true));
 
 			return chartView;
-		}
+        }
 		protected override NWidget CreateExampleControls()
 		{
 			NStackPanel stack = new NStackPanel();
@@ -93,7 +93,7 @@ namespace Nevron.Nov.Examples.Chart
 			stack.Add(NPairBox.Create("Point Size: ", pointSizeNumericUpDown));
 
 			NComboBox pointShapeComboBox = new NComboBox();
-			pointShapeComboBox.FillFromEnum<ENPointShape>();
+			pointShapeComboBox.FillFromEnum<ENPointShape3D>();
 			pointShapeComboBox.SelectedIndexChanged += new Function<NValueChangeEventArgs>(OnPointShapeComboBoxSelectedIndexChanged);
 			stack.Add(NPairBox.Create("Point Shape: ", pointShapeComboBox));
 
@@ -110,7 +110,7 @@ namespace Nevron.Nov.Examples.Chart
 
 		void OnPointShapeComboBoxSelectedIndexChanged(NValueChangeEventArgs arg)
 		{
-			m_Point.Shape = (ENPointShape)(arg.TargetNode as NComboBox).SelectedIndex;
+			m_Point.Shape = (ENPointShape3D)(arg.TargetNode as NComboBox).SelectedIndex;
 		}
 
 		void OnPointSizeNumericUpDownValueChanged(NValueChangeEventArgs arg)

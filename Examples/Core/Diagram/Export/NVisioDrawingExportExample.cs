@@ -1,5 +1,6 @@
 ﻿using System;
 using Nevron.Nov.Diagram;
+using Nevron.Nov.Diagram.Formats;
 using Nevron.Nov.Diagram.Shapes;
 using Nevron.Nov.Dom;
 using Nevron.Nov.Graphics;
@@ -128,15 +129,15 @@ namespace Nevron.Nov.Examples.Diagram
 
 		private void OnSaveAsButtonClick(NEventArgs arg)
 		{
-			string fileName = m_DrawingView.Drawing.Information.FileName;
+			string fileName = m_DrawingView.Content.Information.FileName;
 			if (String.IsNullOrEmpty(fileName) || !fileName.EndsWith("vsdx", StringComparison.OrdinalIgnoreCase))
 			{
 				// The document has not been saved, yet, so set a file name with VSDX extension
 				// to make the default Save As dialog show Visio Drawing as file save as type
-				m_DrawingView.Drawing.Information.FileName = "Document1.vsdx";
+				m_DrawingView.Content.Information.FileName = "Document1.vsdx";
 			}
 
-            m_DrawingView.SaveAs();
+            m_DrawingView.SaveAsAsync();
 		}
 
 		#endregion

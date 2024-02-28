@@ -1,4 +1,5 @@
 @inject IJSRuntime JSRuntime
+@inject NavigationManager NavigationManager
 
 @using Nevron.Nov;
 @using Nevron.Nov.WebAssembly;
@@ -21,12 +22,14 @@
         base.OnInitialized();
 
         // apply license
-        NLicense license = new NLicense("26a6325289003c4ce93a0afcaf1146003463382c0931ff04");
+        NLicense license = new NLicense("d6003c7a1c75e53c0cc26730b836de38001cd4a9950c0db8");
         NLicenseManager.Instance.SetLicense(license);
 
         // Install NOV
         NNovApplicationInstaller.Install(
             JSRuntime,
+            NavigationManager.BaseUri,
+
             Nevron.Nov.Barcode.NBarcodeModule.Instance,
             Nevron.Nov.Text.NTextModule.Instance,
             Nevron.Nov.Diagram.NDiagramModule.Instance,

@@ -41,8 +41,9 @@ namespace Nevron.Nov.Examples
 		/// <returns></returns>
 		public static bool IsSingleExampleTile(NXmlElement element)
 		{
-			return element.Name == "tile" && element.ChildrenCount == 1 &&
-				element.GetChildAt(0).Name == "example";
+			return element.Name == NExamplesXml.Element.Tile &&
+                element.ChildrenCount == 1 &&
+				element.GetChildAt(0).Name == NExamplesXml.Element.Example;
 		}
 		/// <summary>
 		/// Escapes the invalid URL characters from the given path.
@@ -58,23 +59,48 @@ namespace Nevron.Nov.Examples
 				.Replace("&", "&amp;")
 				.Replace(">", "&gt;")
 				.Replace("<", "&lt;");
-
 		}
 
 		/// <summary>
-		/// Builds example path for the given XML element using the specified path builder.
+		/// Copies a link to the given example to the clipboard.
 		/// </summary>
-		/// <param name="xmlElement"></param>
-		/// <param name="pathBuilder"></param>
-		/// <returns></returns>
-		private static void BuildExamplePath(NXmlElement xmlElement, NExamplesPathBuilder pathBuilder)
+		/// <param name="xmlElement">The example's XML element.</param>
+		/// <param name="examplesUrl">Optional URL to the examples. Used only by Blazor WebAssembly examples.</param>
+		/// <returns>The link to the given example that was copied to the clipboard.</returns>
+		public static string CopyExampleLinkToClipboard(NXmlElement xmlElement, string examplesUrl = null)
+		{
+            string exampleLink;
+            if (NApplication.IntegrationPlatform == ENIntegrationPlatform.WebAssembly)
+            {
+                exampleLink = examplesUrl + "?example=" + xmlElement.GetAttributeValue("type");
+            }
+            else
+            {
+                exampleLink = NExamplesUiHelpers.GetExamplePath(xmlElement);
+            }
+
+            // Copy the example link to clipboard
+            NDataObject dataObject = new NDataObject();
+            dataObject.SetData(NDataFormat.TextFormatString, exampleLink);
+            NClipboard.SetDataObject(dataObject);
+
+			return exampleLink;
+        }
+
+        /// <summary>
+        /// Builds example path for the given XML element using the specified path builder.
+        /// </summary>
+        /// <param name="xmlElement"></param>
+        /// <param name="pathBuilder"></param>
+        /// <returns></returns>
+        private static void BuildExamplePath(NXmlElement xmlElement, NExamplesPathBuilder pathBuilder)
 		{
 			while (xmlElement.Name != "document")
 			{
 				if (IsSingleExampleTile(xmlElement) == false)
 				{
 					// The current XML element is not a tile with a single example
-					string name = xmlElement.GetAttributeValue("name");
+					string name = xmlElement.GetAttributeValue(NExamplesXml.Attribute.Name);
 					if (!String.IsNullOrEmpty(name))
 					{
 						// The current XML element has a "name" attribute value, so process the element
@@ -153,11 +179,11 @@ namespace Nevron.Nov.Examples
 			return text.ToUpper();*/
 		}
 
-		#endregion
+        #endregion
 
-		#region Nested Types - Example Path
+        #region Nested Types - Example Path
 
-		private abstract class NExamplesPathBuilder
+        private abstract class NExamplesPathBuilder
 		{
 			public abstract void ProcessElement(NXmlElement element);
 		}

@@ -81,7 +81,7 @@ namespace Nevron.Nov.Examples.Diagram
 
 		private void OnOpenLibraryButtonClick(NEventArgs arg)
 		{
-			m_LibraryView.OpenFile();
+			m_LibraryView.OpenFileAsync();
 		}
 
 		#endregion
@@ -117,6 +117,9 @@ namespace Nevron.Nov.Examples.Diagram
 			NShape themeShape = new NShape();
 			themeShape.SetBounds(shapeBounds);
 			themeShape.Geometry.AddRelative(new NDrawRectangle(0, 0, 1, 1));
+
+			// FIX: Remove this line when serialization is fixed
+			themeShape.Tag = new NLineSegment(0, 0, 100, 100);
 
 			// Make color1 a theme variant color
 			NDrawingTheme theme = NDrawingTheme.MyDrawNature;

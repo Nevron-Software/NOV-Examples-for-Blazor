@@ -118,8 +118,8 @@ namespace Nevron.Nov.Examples.Chart
 
 		private void OnPrintButtonClick(NEventArgs arg)
 		{
-			NChartPrintExporter printExporter = new NChartPrintExporter(m_ChartView.Document);
-			printExporter.Print(new NRectangle(0, 0, m_ChartView.Size.Width, m_ChartView.Size.Height));
+			NChartPrintExporter printExporter = new NChartPrintExporter(m_ChartView.Content);
+			printExporter.ShowDialog(m_ChartView.DisplayWindow, true);
 		}
 
 		#endregion

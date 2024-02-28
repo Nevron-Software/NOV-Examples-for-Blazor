@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Program Files (x86)\Nevron Software\Nevron Open Vision 2023.1\Examples\WebAssembly\..\..\..\Bin\Net70\browser-wasm\publish\</_PublishTargetUrl>
+    <History>True|2024-02-27T13:44:47.9009056Z;True|2023-12-19T17:27:08.2355528+02:00;True|2023-12-19T17:02:47.1073927+02:00;True|2023-10-26T13:59:49.8611491+03:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>

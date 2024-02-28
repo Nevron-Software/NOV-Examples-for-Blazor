@@ -189,7 +189,7 @@ namespace Nevron.Nov.Examples.Chart
 			scale.Ruler.EndCap = new NRulerCapStyle((ENCapShape)m_EndCapShapeComboBox.SelectedIndex, capSize, 3, new NColorFill(NColor.Black), new NStroke(NColor.Black));
 			scale.Ruler.ScaleBreakCap = new NRulerCapStyle((ENCapShape)m_ScaleBreakCapShapeComboBox.SelectedIndex, capSize, 0, new NColorFill(NColor.Black), new NStroke(NColor.Black));
 			scale.Ruler.PaintOnScaleBreaks = m_PaintOnScaleBreaksCheckBox.Checked;
-		}
+        }
 
 		private NScaleGridLines CreateScaleGrid()
 		{

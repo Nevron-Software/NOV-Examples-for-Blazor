@@ -55,7 +55,7 @@ namespace Nevron.Nov.Examples.UI
 			ribbon.Tab.TabPageGroups.Add(CreateImageTabPageGroup());
 
 			// The help button
-			ribbon.Tab.AdditionalContent = new NRibbonHelpButton();
+			ribbon.Tab.AdditionalHeaderContent = new NRibbonHelpButton();
 
 			// The ribbon search box
 			ribbon.Tab.SearchBox = new NRibbonSearchBox();
@@ -365,8 +365,8 @@ namespace Nevron.Nov.Examples.UI
 
 			NTableStylePicker stylePicker = new NTableStylePicker();
 			NRibbonGallery gallery = new NRibbonGallery("Table Style", NResources.Image_Ribbon_32x32_table_design_png, stylePicker);
-			gallery.ColumnCountStep = stylePicker.MaxNumberOfColumns;
-			gallery.MinimumPopupColumnCount = stylePicker.MaxNumberOfColumns;
+			gallery.ColumnCountStep = stylePicker.MaxColumnCount;
+			gallery.MinimumPopupColumnCount = stylePicker.MaxColumnCount;
 
 			gallery.PopupMenu = new NMenu();
 			gallery.PopupMenu.Items.Add(new NMenuSeparator());

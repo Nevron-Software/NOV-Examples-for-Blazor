@@ -81,8 +81,17 @@ namespace Nevron.Nov.Examples.Chart
 			chart.Axes.Add(secondaryYAxis);
 
 			// cross them
-			secondaryXAxis.Anchor = new NValueCrossCartesianAxisAnchor(0, secondaryYAxis, ENCartesianAxisOrientation.Horizontal, ENScaleOrientation.Right, 0, 100);
-			secondaryYAxis.Anchor = new NValueCrossCartesianAxisAnchor(0, secondaryXAxis, ENCartesianAxisOrientation.Vertical, ENScaleOrientation.Right, 0, 100);
+			NAxisCrossing secondaryXAxisCrossing = new NValueAxisCrossing(secondaryYAxis, 0);
+			NCrossCartesianAxisAnchor secondaryXAxisAnchor = new NCrossCartesianAxisAnchor(ENCartesianAxisOrientation.Horizontal, ENScaleOrientation.Right, 0, 100);
+			secondaryXAxisAnchor.YAxisCrossing = secondaryXAxisCrossing;
+
+            secondaryXAxis.Anchor = secondaryXAxisAnchor;
+
+            NAxisCrossing secondaryYAxisCrossing = new NValueAxisCrossing(secondaryXAxis, 0);
+            NCrossCartesianAxisAnchor secondaryYAxisAnchor = new NCrossCartesianAxisAnchor(ENCartesianAxisOrientation.Vertical, ENScaleOrientation.Right, 0, 100);
+			secondaryYAxisAnchor.XAxisCrossing = secondaryYAxisCrossing;
+
+            secondaryYAxis.Anchor = secondaryYAxisAnchor;
 
 			// add some dummy data
 			NPointSeries point = new NPointSeries();

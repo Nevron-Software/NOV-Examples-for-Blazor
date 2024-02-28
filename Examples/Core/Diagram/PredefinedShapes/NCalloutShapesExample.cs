@@ -1,6 +1,9 @@
-﻿using Nevron.Nov.Diagram;
+﻿using System;
+
+using Nevron.Nov.Diagram;
 using Nevron.Nov.Diagram.Shapes;
 using Nevron.Nov.Dom;
+using Nevron.Nov.Globalization;
 using Nevron.Nov.Graphics;
 using Nevron.Nov.Layout;
 using Nevron.Nov.UI;
@@ -53,10 +56,6 @@ namespace Nevron.Nov.Examples.Diagram
 		{
 			return null;
 		}
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <returns></returns>
 		protected override string GetExampleDescription()
 		{
 			return @"
@@ -77,6 +76,9 @@ namespace Nevron.Nov.Examples.Diagram
 			// Hide grid and ports
 			drawing.ScreenVisibility.ShowGrid = false;
 			drawing.ScreenVisibility.ShowPorts = false;
+
+			// Hide disabled handles to hide the center point of polygon and circular callouts
+			m_DrawingView.Settings.HideDisabledHandles = true;
 
 			// Create all shapes
 			NCalloutShapeFactory factory = new NCalloutShapeFactory();

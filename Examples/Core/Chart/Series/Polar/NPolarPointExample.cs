@@ -70,9 +70,9 @@ namespace Nevron.Nov.Examples.Chart
 
 			// create three polar point series
             Random random = new Random();
-            NSeries s1 = CreatePolarPointSeries("Sample 1", ENPointShape.Ellipse, random);
-			NSeries s2 = CreatePolarPointSeries("Sample 2", ENPointShape.Rectangle, random);
-            NSeries s3 = CreatePolarPointSeries("Sample 3", ENPointShape.Triangle, random);
+            NPolarSeries s1 = CreatePolarPointSeries("Sample 1", ENPointShape2D.Ellipse, random);
+            NPolarSeries s2 = CreatePolarPointSeries("Sample 2", ENPointShape2D.Rectangle, random);
+            NPolarSeries s3 = CreatePolarPointSeries("Sample 3", ENPointShape2D.Triangle, random);
 
 			// add the series to the chart
 			m_Chart.Series.Add(s1);
@@ -107,7 +107,7 @@ namespace Nevron.Nov.Examples.Chart
 
 		#region Implementation
 
-        private NSeries CreatePolarPointSeries(string name, ENPointShape shape, Random random)
+        private NPolarSeries CreatePolarPointSeries(string name, ENPointShape2D shape, Random random)
 		{
 			NPolarPointSeries series = new NPolarPointSeries();
 			series.Name = name;

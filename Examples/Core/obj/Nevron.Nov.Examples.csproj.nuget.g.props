@@ -5,17 +5,17 @@
     <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
     <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">$(MSBuildThisFileDirectory)project.assets.json</ProjectAssetsFile>
     <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">$(UserProfile)\.nuget\packages\</NuGetPackageRoot>
-    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\Angel.LN\.nuget\packages\;C:\Program Files (x86)\Nevron Software\Nevron Open Vision 2022.1\NugetPackage;C:\Program Files (x86)\Nevron Software\Nevron Open Vision 2022.2\NugetPackage;C:\Program Files\dotnet\sdk\NuGetFallbackFolder</NuGetPackageFolders>
+    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\Angel.LN\.nuget\packages\;C:\Program Files (x86)\Nevron Software\Nevron .NET Vision 2022.2\NugetPackage\nevrondotnetvision;C:\Program Files (x86)\Nevron Software\Nevron .NET Vision 2023.1\NugetPackage\nevrondotnetvision;C:\Program Files (x86)\Nevron Software\Nevron Open Vision 2022.1\NugetPackage;C:\Program Files (x86)\Nevron Software\Nevron Open Vision 2022.1\NugetPackage;C:\Program Files (x86)\Nevron Software\Nevron Open Vision 2023.1\NugetPackage;C:\Program Files\dotnet\sdk\NuGetFallbackFolder</NuGetPackageFolders>
     <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
-    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">5.11.1</NuGetToolVersion>
+    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">6.8.1</NuGetToolVersion>
   </PropertyGroup>
   <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <SourceRoot Include="C:\Users\Angel.LN\.nuget\packages\" />
+    <SourceRoot Include="C:\Program Files (x86)\Nevron Software\Nevron .NET Vision 2022.2\NugetPackage\nevrondotnetvision\" />
+    <SourceRoot Include="C:\Program Files (x86)\Nevron Software\Nevron .NET Vision 2023.1\NugetPackage\nevrondotnetvision\" />
     <SourceRoot Include="C:\Program Files (x86)\Nevron Software\Nevron Open Vision 2022.1\NugetPackage\" />
-    <SourceRoot Include="C:\Program Files (x86)\Nevron Software\Nevron Open Vision 2022.2\NugetPackage\" />
+    <SourceRoot Include="C:\Program Files (x86)\Nevron Software\Nevron Open Vision 2022.1\NugetPackage\" />
+    <SourceRoot Include="C:\Program Files (x86)\Nevron Software\Nevron Open Vision 2023.1\NugetPackage\" />
     <SourceRoot Include="C:\Program Files\dotnet\sdk\NuGetFallbackFolder\" />
   </ItemGroup>
-  <PropertyGroup>
-    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
-  </PropertyGroup>
 </Project>

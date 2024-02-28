@@ -60,7 +60,9 @@ namespace Nevron.Nov.Examples.Chart
 			dockPanel.AddChild(stackPanel);
 
 			NCartesianChart stockPriceChart = new NCartesianChart();
-			stockPriceChart.SetPredefinedCartesianAxes(ENPredefinedCartesianAxis.XValueTimelineYLinear);
+			stockPriceChart.Tag = "Chart 1";
+
+            stockPriceChart.SetPredefinedCartesianAxes(ENPredefinedCartesianAxis.XValueTimelineYLinear);
 			stockPriceChart.FitMode = ENCartesianChartFitMode.Stretch;
 			stockPriceChart.Margins = new NMargins(10, 0, 10, 10);
 			ConfigureInteractivity(stockPriceChart);
@@ -81,7 +83,10 @@ namespace Nevron.Nov.Examples.Chart
 
 			// setup the volume chart
 			NCartesianChart stockVolumeChart = new NCartesianChart();
-			stockVolumeChart.SetPredefinedCartesianAxes(ENPredefinedCartesianAxis.XValueTimelineYLinear);
+            stockVolumeChart.Tag = "Chart 2";
+
+
+            stockVolumeChart.SetPredefinedCartesianAxes(ENPredefinedCartesianAxis.XValueTimelineYLinear);
 			stockVolumeChart.FitMode = ENCartesianChartFitMode.Stretch;
 			stockVolumeChart.Margins = new NMargins(10, 0, 10, 10);
 			ConfigureInteractivity(stockVolumeChart);
@@ -139,14 +144,12 @@ namespace Nevron.Nov.Examples.Chart
 			NInteractor interactor = new NInteractor();
 
 			NRectangleZoomTool rectangleZoomTool = new NRectangleZoomTool();
-			rectangleZoomTool.Enabled = true;
 			rectangleZoomTool.VerticalValueSnapper = new NAxisRulerMinMaxSnapper();
 			interactor.Add(rectangleZoomTool);
 
 			NDataPanTool dataPanTool = new NDataPanTool();
 			dataPanTool.StartMouseButtonEvent = ENMouseButtonEvent.RightButtonDown;
 			dataPanTool.EndMouseButtonEvent = ENMouseButtonEvent.RightButtonUp;
-			dataPanTool.Enabled = true;
 			interactor.Add(dataPanTool);
 
 			chart.Interactor = interactor;

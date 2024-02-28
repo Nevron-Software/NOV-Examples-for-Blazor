@@ -1,44 +1,49 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Program Files (x86)\\Nevron Software\\Nevron Open Vision 2022.2\\Examples\\WebAssembly\\Nevron.Nov.Examples.WebAssembly.csproj": {}
+    "C:\\Program Files (x86)\\Nevron Software\\Nevron Open Vision 2023.1\\Examples\\WebAssembly\\Nevron.Nov.Examples.WebAssembly.csproj": {}
   },
   "projects": {
-    "C:\\Program Files (x86)\\Nevron Software\\Nevron Open Vision 2022.2\\Examples\\WebAssembly\\Nevron.Nov.Examples.WebAssembly.csproj": {
+    "C:\\Program Files (x86)\\Nevron Software\\Nevron Open Vision 2023.1\\Examples\\WebAssembly\\Nevron.Nov.Examples.WebAssembly.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Program Files (x86)\\Nevron Software\\Nevron Open Vision 2022.2\\Examples\\WebAssembly\\Nevron.Nov.Examples.WebAssembly.csproj",
+        "projectUniqueName": "C:\\Program Files (x86)\\Nevron Software\\Nevron Open Vision 2023.1\\Examples\\WebAssembly\\Nevron.Nov.Examples.WebAssembly.csproj",
         "projectName": "Nevron.Nov.Examples.WebAssembly",
-        "projectPath": "C:\\Program Files (x86)\\Nevron Software\\Nevron Open Vision 2022.2\\Examples\\WebAssembly\\Nevron.Nov.Examples.WebAssembly.csproj",
+        "projectPath": "C:\\Program Files (x86)\\Nevron Software\\Nevron Open Vision 2023.1\\Examples\\WebAssembly\\Nevron.Nov.Examples.WebAssembly.csproj",
         "packagesPath": "C:\\Users\\Angel.LN\\.nuget\\packages\\",
-        "outputPath": "C:\\Program Files (x86)\\Nevron Software\\Nevron Open Vision 2022.2\\Examples\\WebAssembly\\obj\\",
+        "outputPath": "C:\\Program Files (x86)\\Nevron Software\\Nevron Open Vision 2023.1\\Examples\\WebAssembly\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Nevron Software\\Nevron .NET Vision 2022.1\\NugetPackage\\nevrondotnetvision",
+          "C:\\Program Files (x86)\\Nevron Software\\Nevron .NET Vision 2022.2\\NugetPackage\\nevrondotnetvision",
+          "C:\\Program Files (x86)\\Nevron Software\\Nevron .NET Vision 2023.1\\NugetPackage\\nevrondotnetvision",
           "C:\\Program Files (x86)\\Nevron Software\\Nevron Open Vision 2022.1\\NugetPackage",
-          "C:\\Program Files (x86)\\Nevron Software\\Nevron Open Vision 2022.2\\NugetPackage",
+          "C:\\Program Files (x86)\\Nevron Software\\Nevron Open Vision 2022.1\\NugetPackage",
+          "C:\\Program Files (x86)\\Nevron Software\\Nevron Open Vision 2023.1\\NugetPackage",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
           "C:\\Users\\Angel.LN\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\NevronDotNetVision.22.4.12.12.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\NevronDotNetVision.23.3.9.12.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\NevronDotNetVision.23.9.11.12.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\NevronOpenVision.22.2.11.12.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\NevronOpenVision.22.2.15.12.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\NevronOpenVision.22.6.6.12.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\NevronOpenVision.22.6.9.12.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\NevronOpenVision.23.12.19.12.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\NevronOpenVision.23.5.29.12.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files (x86)\\Nevron Software\\Nevron .NET Vision 2022.1\\NugetPackage\\nevrondotnetvision": {},
-          "C:\\Program Files (x86)\\Nevron Software\\Nevron Open Vision 2022.2\\NugetPackage\\nevronopenvision": {},
+          "C:\\Program Files (x86)\\Nevron Software\\Nevron Open Vision 2022.1\\NugetPackage\\nevronopenvision": {},
+          "C:\\Program Files (x86)\\Nevron Software\\Nevron Open Vision 2023.1\\NugetPackage\\nevronopenvision": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {}
           }
         },
@@ -49,21 +54,39 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "dependencies": {
             "Microsoft.AspNetCore.Components.WebAssembly": {
               "target": "Package",
-              "version": "[5.0.8, )"
+              "version": "[7.0.12, )"
             },
             "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.8, )"
+              "version": "[7.0.12, )"
+            },
+            "Microsoft.NET.ILLink.Analyzers": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.100-1.23211.1, )",
+              "autoReferenced": true
+            },
+            "Microsoft.NET.ILLink.Tasks": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.100-1.23211.1, )",
+              "autoReferenced": true
+            },
+            "Microsoft.NET.Sdk.WebAssembly.Pack": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.2, )",
+              "autoReferenced": true
             },
             "System.Net.Http.Json": {
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[7.0.1, )"
             }
           },
           "imports": [
@@ -72,22 +95,17 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Runtime.browser-wasm",
-              "version": "[5.0.17, 5.0.17]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.102\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {

@@ -84,7 +84,7 @@ namespace Nevron.Nov.Examples.Chart
 
 			NMarkerStyle markerStyle = new NMarkerStyle();
 			markerStyle.Visible = true;
-			markerStyle.Shape = ENPointShape.Ellipse;
+			markerStyle.Shape = ENPointShape3D.Ellipse;
 			markerStyle.Size = new NSize(10, 10);
 			markerStyle.Fill = new NColorFill(NColor.Orange);
 

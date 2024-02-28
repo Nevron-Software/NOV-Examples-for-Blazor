@@ -8,10 +8,10 @@ using Nevron.Nov.UI;
 
 namespace Nevron.Nov.Examples.Diagram
 {
-	/// <summary>
-	/// 
-	/// </summary>
-	public class NFindAndReplaceExample : NExampleBase
+    /// <summary>
+    /// 
+    /// </summary>
+    public class NFindAndReplaceExample : NExampleBase
     {
         #region Constructors
 
@@ -177,7 +177,7 @@ namespace Nevron.Nov.Examples.Diagram
 		/// <param name="arg"></param>
 		void OnClearHighlightButtonClick(NEventArgs arg)
 		{
-			NList<NNode> shapes = m_DrawingView.Drawing.GetDescendants(NShape.NShapeSchema);
+			NList<NNode> shapes = m_DrawingView.Content.GetDescendants(NShape.NShapeSchema);
 
 			for (int i = 0; i < shapes.Count; i++)
 			{

@@ -79,7 +79,7 @@ namespace Nevron.Nov.Examples.Chart
 
 			NLegend legend = (NLegend)chartView.Surface.Legends[0];
 			legend.Mode = ENLegendMode.Custom;
-			legend.Header = new NLabel("Some header");
+			legend.Header = new NLabel("Some of World's Tallest Buildings");
 			double xOffset = 0;
 
 			for (int i = 0; i < buildingNames.Length; i++)

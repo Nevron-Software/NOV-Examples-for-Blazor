@@ -64,6 +64,8 @@ namespace Nevron.Nov.Examples
 		/// </summary>
 		public void Initialize()
 		{
+			NLicenseManager.Instance.ResetEvaluationState();
+
 			NWidget content = CreateExampleContent();
 			NWidget controls = CreateExampleControls();
 
@@ -93,7 +95,11 @@ namespace Nevron.Nov.Examples
 			vbTab.Tag = ENProgrammingLanguage.VisualBasic;
 			exampleTab.TabPages.Add(vbTab);
 
-			exampleTab.TabPages.Add(CreateExportSolutionTabPage());
+			if (PlatformSupportsExportSolution)
+			{
+				exampleTab.TabPages.Add(CreateExportSolutionTabPage());
+			}
+
 			exampleHolder = exampleTab;
 
 			if (controls != null)
@@ -162,7 +168,7 @@ namespace Nevron.Nov.Examples
 					richText.Content.Layout = ENTextLayout.Web;
 
 					// Load the colorized source code in the source code rich text view
-					richText.LoadFromStream(htmlStream, NTextFormat.Html);
+					richText.LoadFromStreamAsync(htmlStream, NTextFormat.Html);
 				}
 			}
 			catch (Exception ex)
@@ -184,13 +190,15 @@ namespace Nevron.Nov.Examples
 			richTextView.HRuler.Visibility = ENVisibility.Collapsed;
 			richTextView.VRuler.Visibility = ENVisibility.Collapsed;
 			richTextView.ReadOnly = true;
+			richTextView.TryEnterExampleDescriptionMode();
 
-			byte[] descriptionData = NEncoding.UTF8.GetBytes(GetExampleDescription());
+
+            byte[] descriptionData = NEncoding.UTF8.GetBytes(GetExampleDescription());
 			MemoryStream stream = new MemoryStream(descriptionData);
 
 			richTextView.Content.Layout = ENTextLayout.Normal;
 			
-			richTextView.LoadFromStream(stream, NTextFormat.Html).Finally(delegate () 
+			richTextView.LoadFromStreamAsync(stream, NTextFormat.Html).Finally(delegate () 
 			{
 				richTextView.Content.Padding = new NMargins(NDesign.HorizontalSpacing * 2, NDesign.VerticalSpacing);
 				stream.Dispose(); 
@@ -226,7 +234,7 @@ namespace Nevron.Nov.Examples
 			NStylePropertyEx.SetExtendedLook(stack, ENExtendedLook.Flat);
 
 			// Add an info label to the root stack
-			stack.Add(new NLabel("Click the buttons below to export a Visual Studio 2019 solution for this example."));
+			stack.Add(new NLabel("Click the buttons below to export a Visual Studio solution for this example."));
 
 			// Create the Export Solution buttons
 			NStackPanel buttonsStack = new NStackPanel();
@@ -357,6 +365,7 @@ namespace Nevron.Nov.Examples
 
 		private static readonly Stream CSharpSourceCodeArchiveStream;
 		private static readonly Stream VbSourceCodeArchiveStream;
+		private static bool PlatformSupportsExportSolution = NApplication.IntegrationPlatform != ENIntegrationPlatform.WebAssembly;
 
 		#endregion
 
@@ -389,7 +398,7 @@ namespace Nevron.Nov.Examples
 					return;
 				}
 
-				m_File.WriteAllBytes(zipData).Then(
+				m_File.WriteAllBytesAsync(zipData).Then(
 					delegate (NUndefined ud)
 					{
 						NApplication.BeginInvoke(

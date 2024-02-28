@@ -1,0 +1,73 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Program Files (x86)\\Nevron Software\\Nevron Open Vision 2023.1\\Examples\\WebAssembly\\bin\\wwwroot\\_framework\\blazor.webassembly.js",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
+    },
+    {
+      "Id": "C:\\Program Files (x86)\\Nevron Software\\Nevron Open Vision 2023.1\\Examples\\WebAssembly\\obj\\Release\\compressed\\7dczkmgc3c.gz",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
+    },
+    {
+      "Id": "C:\\Program Files (x86)\\Nevron Software\\Nevron Open Vision 2023.1\\Examples\\WebAssembly\\obj\\Release\\scopedcss\\bundle\\Nevron.Nov.Examples.WebAssembly.styles.css",
+      "PackagePath": "staticwebassets\\Nevron.Nov.Examples.WebAssembly.styles.css"
+    },
+    {
+      "Id": "C:\\Program Files (x86)\\Nevron Software\\Nevron Open Vision 2023.1\\Examples\\WebAssembly\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\Program Files (x86)\\Nevron Software\\Nevron Open Vision 2023.1\\Examples\\WebAssembly\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Program Files (x86)\\Nevron Software\\Nevron Open Vision 2023.1\\Examples\\WebAssembly\\wwwroot\\css\\loader.css",
+      "PackagePath": "staticwebassets\\css\\loader.css"
+    },
+    {
+      "Id": "C:\\Program Files (x86)\\Nevron Software\\Nevron Open Vision 2023.1\\Examples\\WebAssembly\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Program Files (x86)\\Nevron Software\\Nevron Open Vision 2023.1\\Examples\\WebAssembly\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
+    },
+    {
+      "Id": "C:\\Program Files (x86)\\Nevron Software\\Nevron Open Vision 2023.1\\Examples\\WebAssembly\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
+    },
+    {
+      "Id": "C:\\Program Files (x86)\\Nevron Software\\Nevron Open Vision 2023.1\\Examples\\WebAssembly\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Program Files (x86)\\Nevron Software\\Nevron Open Vision 2023.1\\Examples\\WebAssembly\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Program Files (x86)\\Nevron Software\\Nevron Open Vision 2023.1\\Examples\\WebAssembly\\wwwroot\\indexArtTest.html",
+      "PackagePath": "staticwebassets\\indexArtTest.html"
+    },
+    {
+      "Id": "C:\\Program Files (x86)\\Nevron Software\\Nevron Open Vision 2023.1\\Examples\\WebAssembly\\wwwroot\\sample-data\\weather.json",
+      "PackagePath": "staticwebassets\\sample-data\\weather.json"
+    },
+    {
+      "Id": "obj\\Release\\staticwebassets\\msbuild.Nevron.Nov.Examples.WebAssembly.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\staticwebassets\\msbuild.build.Nevron.Nov.Examples.WebAssembly.props",
+      "PackagePath": "build\\Nevron.Nov.Examples.WebAssembly.props"
+    },
+    {
+      "Id": "obj\\Release\\staticwebassets\\msbuild.buildMultiTargeting.Nevron.Nov.Examples.WebAssembly.props",
+      "PackagePath": "buildMultiTargeting\\Nevron.Nov.Examples.WebAssembly.props"
+    },
+    {
+      "Id": "obj\\Release\\staticwebassets\\msbuild.buildTransitive.Nevron.Nov.Examples.WebAssembly.props",
+      "PackagePath": "buildTransitive\\Nevron.Nov.Examples.WebAssembly.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

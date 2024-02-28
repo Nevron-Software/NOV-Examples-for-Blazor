@@ -82,7 +82,7 @@ namespace Nevron.Nov.Examples.Chart
 			NNumericUpDown gapPercentNumericUpDown = new NNumericUpDown();
 			propertyStack.Add(NPairBox.Create("Gap Percent: ", gapPercentNumericUpDown));
 
-			gapPercentNumericUpDown.Value = m_Bar1.GapFactor * 100.0;
+			gapPercentNumericUpDown.Value = m_Bar1.WidthGapFactor * 100.0;
 			gapPercentNumericUpDown.ValueChanged += new Function<NValueChangeEventArgs>(gapPercentNumericUpDown_ValueChanged);
 
 			return boxGroup;
@@ -124,7 +124,7 @@ namespace Nevron.Nov.Examples.Chart
 
 		void gapPercentNumericUpDown_ValueChanged(NValueChangeEventArgs arg)
 		{
-			m_Bar1.GapFactor = ((NNumericUpDown)arg.TargetNode).Value / 100.0;
+			m_Bar1.WidthGapFactor = ((NNumericUpDown)arg.TargetNode).Value / 100.0;
 		}
 
 		#endregion

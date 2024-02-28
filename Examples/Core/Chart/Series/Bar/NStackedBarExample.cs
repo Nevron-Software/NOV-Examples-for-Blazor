@@ -189,31 +189,6 @@ namespace Nevron.Nov.Examples.Chart
 			return dataLabelStyle;
 		}
 		/// <summary>
-		/// Gets a format string from the specified index
-		/// </summary>
-		/// <param name="index"></param>
-		/// <returns></returns>
-		private string GetFormatStringFromIndex(int index)
-		{
-			switch (index)
-			{
-				case 0:
-					return "<value>";
-
-				case 1:
-					return "<total>";
-
-				case 2:
-					return "<cumulative>";
-
-				case 3:
-					return "<percent>";
-
-				default:
-					return "";
-			}
-		}
-		/// <summary>
 		/// Creates a label format combo box
 		/// </summary>
 		/// <returns></returns>

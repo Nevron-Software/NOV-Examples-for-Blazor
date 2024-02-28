@@ -147,14 +147,12 @@ namespace Nevron.Nov.Examples.Chart
 			NInteractor interactor = new NInteractor();
 
 			NRectangleZoomTool rectangleZoomTool = new NRectangleZoomTool();
-			rectangleZoomTool.Enabled = true;
 			rectangleZoomTool.VerticalValueSnapper = new NAxisRulerMinMaxSnapper();
 			interactor.Add(rectangleZoomTool);
 
 			NDataPanTool dataPanTool = new NDataPanTool();
 			dataPanTool.StartMouseButtonEvent = ENMouseButtonEvent.RightButtonDown;
 			dataPanTool.EndMouseButtonEvent = ENMouseButtonEvent.RightButtonUp;
-			dataPanTool.Enabled = true;
 			interactor.Add(dataPanTool);
 
 			chart.Interactor = interactor;

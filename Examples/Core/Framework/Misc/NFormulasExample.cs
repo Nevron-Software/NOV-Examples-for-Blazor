@@ -283,6 +283,7 @@ Demonstrates the strong support for Formulas. Formula expressions can be assigne
                "ISBOOL(\"true\")",
                "ISDATETIME(10)",
                "ISDATETIME(DATETIME(2008,9,15))",
+               "ISDEFAULT(TODATETIME(\"1-1-0001 0:0:0\"))",
                "ISEMPTY(EMPTY())",
                "ISEMPTY(true)",
                "ISMEASURE(10[mm])",

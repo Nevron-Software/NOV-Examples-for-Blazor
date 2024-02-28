@@ -64,7 +64,7 @@ namespace Nevron.Nov.Examples.Chart
 			m_Point.DataLabelStyle = new NDataLabelStyle(false);
 			m_Point.Fill = new NColorFill(new NColor(NColor.DarkOrange, 160));
 			m_Point.Size = 5;
-			m_Point.Shape = ENPointShape.Ellipse;
+			m_Point.Shape = ENPointShape3D.Ellipse;
 			m_Point.UseXValues = true;
 			m_Chart.Series.Add(m_Point);
 

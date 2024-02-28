@@ -112,7 +112,7 @@ at the end of the context menu.</p>
 			/// </summary>
 			static CustomContextMenu()
 			{
-				CustomContextMenuSchema = NSchema.Create(typeof(CustomContextMenu), NDrawingContextMenu.NDrawingContextMenuSchema);
+				CustomContextMenuSchema = NSchema.Create(typeof(CustomContextMenu), NDrawingContextMenuSchema);
 			}
 
 			protected override void CreateCustomCommands(NMenu menu, NContextMenuBuilder builder)
@@ -145,7 +145,7 @@ at the end of the context menu.</p>
 			/// </summary>
 			static CustomCommandAction()
 			{
-				CustomCommandActionSchema = NSchema.Create(typeof(CustomCommandAction), NDrawingCommandAction.NDrawingCommandActionSchema);
+				CustomCommandActionSchema = NSchema.Create(typeof(CustomCommandAction), NDrawingCommandActionSchema);
 			}
 
 			#endregion

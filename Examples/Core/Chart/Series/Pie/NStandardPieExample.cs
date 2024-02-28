@@ -53,7 +53,8 @@ namespace Nevron.Nov.Examples.Chart
 			m_PieSeries.LegendView.Mode = ENSeriesLegendMode.DataPoints;
 			m_PieSeries.LegendView.Format = "<label> <percent>";
 
-			m_PieSeries.DataPoints.Add(new NPieDataPoint(24, "Cars"));
+
+            m_PieSeries.DataPoints.Add(new NPieDataPoint(24, "Cars"));
 			m_PieSeries.DataPoints.Add(new NPieDataPoint(18, "Airplanes"));
 			m_PieSeries.DataPoints.Add(new NPieDataPoint(32, "Trains"));
 			m_PieSeries.DataPoints.Add(new NPieDataPoint(23, "Ships"));

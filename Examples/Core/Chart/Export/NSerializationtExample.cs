@@ -160,27 +160,27 @@ namespace Nevron.Nov.Examples.Chart
 
 		void OnLoadStateFromFileButtonClick(NEventArgs arg)
 		{
-			m_ChartView.OpenFile();
+			m_ChartView.OpenFileAsync();
 		}
 
 		void OnSaveStateToFileButtonClick(NEventArgs arg)
 		{
-            m_ChartView.SaveAs();
-		}
+            m_ChartView.SaveAsAsync();
+        }
 
 		void OnLoadStateFromStreamButtonClick(NEventArgs arg)
 		{
 			if (m_Stream != null)
 			{
 				m_Stream.Seek(0, SeekOrigin.Begin);
-				m_ChartView.LoadFromStream(m_Stream);
+				m_ChartView.LoadFromStreamAsync(m_Stream);
 			}
 		}
 
 		void OnSaveStateToStreamButtonClick(NEventArgs arg)
 		{
 			m_Stream = new MemoryStream();
-			m_ChartView.SaveToStream(m_Stream, NChartFormat.NevronXml);
+			m_ChartView.SaveToStreamAsync(m_Stream, NChartFormat.NevronXml);
 		}
 
 		void OnChangeDataButtonClick(NEventArgs arg)
