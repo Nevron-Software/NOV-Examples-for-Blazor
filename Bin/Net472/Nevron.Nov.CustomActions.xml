@@ -587,48 +587,48 @@
             Enumerates the log entry types
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Internal.pnii.Equals(System.Object)">
+        <member name="M:Nevron.Nov.Internal.dxUI.Equals(System.Object)">
             <summary>
             Returns true if the objects are equal
             </summary>
-            <param name="vnii"></param>
+            <param name="jxUI"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.coii.Execute(Nevron.Nov.CustomActions.NInstallationContext)">
+        <member name="M:Nevron.Nov.Internal.pxUI.Execute(Nevron.Nov.CustomActions.NInstallationContext)">
             <summary>
             
             </summary>
-            <param name="doii"></param>
+            <param name="QxUI"></param>
         </member>
-        <member name="M:Nevron.Nov.Internal.gpii.Execute(Nevron.Nov.CustomActions.NInstallationContext)">
+        <member name="M:Nevron.Nov.Internal.tYUI.Execute(Nevron.Nov.CustomActions.NInstallationContext)">
             <summary>
             
             </summary>
-            <param name="hpii"></param>
+            <param name="UYUI"></param>
         </member>
-        <member name="M:Nevron.Nov.Internal.ipii.Execute(Nevron.Nov.CustomActions.NInstallationContext)">
+        <member name="M:Nevron.Nov.Internal.vYUI.Execute(Nevron.Nov.CustomActions.NInstallationContext)">
             <summary>
             
             </summary>
-            <param name="jpii"></param>
+            <param name="WYUI"></param>
         </member>
-        <member name="M:Nevron.Nov.Internal.mpii.Execute(Nevron.Nov.CustomActions.NInstallationContext)">
+        <member name="M:Nevron.Nov.Internal.AAvI.Execute(Nevron.Nov.CustomActions.NInstallationContext)">
             <summary>
             
             </summary>
-            <param name="ppii"></param>
+            <param name="dAvI"></param>
         </member>
-        <member name="M:Nevron.Nov.Internal.vpii.Execute(Nevron.Nov.CustomActions.NInstallationContext)">
+        <member name="M:Nevron.Nov.Internal.jAvI.Execute(Nevron.Nov.CustomActions.NInstallationContext)">
             <summary>
             
             </summary>
-            <param name="xpii"></param>
+            <param name="lAvI"></param>
         </member>
-        <member name="M:Nevron.Nov.Internal.etii.Execute(Nevron.Nov.CustomActions.NInstallationContext)">
+        <member name="M:Nevron.Nov.Internal.rdvI.Execute(Nevron.Nov.CustomActions.NInstallationContext)">
             <summary>
             
             </summary>
-            <param name="jtii"></param>
+            <param name="WdvI"></param>
         </member>
     </members>
 </doc>

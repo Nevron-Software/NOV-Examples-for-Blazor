@@ -1,0 +1,821 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nevron.Nov.Host.WebAssembly</name>
+    </assembly>
+    <members>
+        <member name="T:Nevron.Nov.WebAssembly.NWaBlob">
+            <summary>
+            Represents a Binary Large Object (BLOB) that can be passed to JavaScript code and vice versa.
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.WebAssembly.NWaBlob.#ctor">
+            <summary>
+            Default constructor - needed for JSON deserialization.
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.WebAssembly.NWaBlob.#ctor(System.String,System.Byte[])">
+            <summary>
+            Initializing constructor.
+            </summary>
+            <param name="type"></param>
+            <param name="data"></param>
+        </member>
+        <member name="P:Nevron.Nov.WebAssembly.NWaBlob.Type">
+            <summary>
+            Gets/Sets the type of this BLOB.
+            </summary>
+        </member>
+        <member name="P:Nevron.Nov.WebAssembly.NWaBlob.Data">
+            <summary>
+            Gets/Sets the data of this BLOB.
+            </summary>
+        </member>
+        <member name="P:Nevron.Nov.WebAssembly.NWaBlob.SubType">
+            <summary>
+            Gets the sub-type of this BLOB - i.e. the value after the slash.
+            For example, if the BLOB type is "image/png", this property returns "png".
+            For file BLOBs like " file/readme.txt", this property returns the file name - "readme.txt".
+            </summary>
+        </member>
+        <member name="T:Nevron.Nov.WebAssembly.NWaBlobList">
+            <summary>
+            Represents a list of WebAssembly BLOBs.
+            </summary>
+        </member>
+        <member name="T:Nevron.Nov.WebAssembly.NWaDataObject">
+            <summary>
+            Represents a WebAssembly data object that can be transferred to and from JavaScript code.
+            It is typically used in clipboard and drag/drop operations.
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.WebAssembly.NWaDataObject.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="P:Nevron.Nov.WebAssembly.NWaDataObject.Text">
+            <summary>
+            Gets/Sets the text stored in this clipboard data object.
+            </summary>
+        </member>
+        <member name="P:Nevron.Nov.WebAssembly.NWaDataObject.EncodedImageBytes">
+            <summary>
+            Gets/Sets the encoded image bytes of the raster in this clipboard data object.
+            </summary>
+            <remarks>
+            The getter of this property returns 
+            </remarks>
+        </member>
+        <member name="P:Nevron.Nov.WebAssembly.NWaDataObject.Blobs">
+            <summary>
+            Gets/Sets the Binary Large Objects (BLOBs) stored in this clipboard data object.
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.WebAssembly.NWaDataObject.IsReadOnly">
+            <summary>
+            Gets whether this data object is readonly. Always returns true.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.WebAssembly.NWaDataObject.SetData(Nevron.Nov.UI.NDataFormat,System.Object)">
+            <summary>
+            Sets the data for the given format. Not supported by the this class.
+            </summary>
+            <param name="format"></param>
+            <param name="obj"></param>
+        </member>
+        <member name="M:Nevron.Nov.WebAssembly.NWaDataObject.ContainsData(Nevron.Nov.UI.NDataFormat)">
+            <summary>
+            Checks whether this data object contains data of the given format.
+            </summary>
+            <param name="format"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.WebAssembly.NWaDataObject.GetData(Nevron.Nov.UI.NDataFormat)">
+            <summary>
+            Gets the data of the given format stored in this data object.
+            </summary>
+            <param name="format"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.WebAssembly.NWaDataObject.GetFormats">
+            <summary>
+            Gets the formats stored in this data object.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Nevron.Nov.WebAssembly.NJsInterop">
+            <summary>
+            Represents the NOV JavaScript service that can be used to call JavaScript code from Blazor WebAssembly.
+            </summary>
+        </member>
+        <member name="P:Nevron.Nov.WebAssembly.NJsInterop.WaJSRuntime">
+            <summary>
+            JavaScript runtime that can be used for unmarshalled calls.
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.WebAssembly.NJsInterop.InvokeVoid(System.String,System.Object[])">
+            <summary>
+            Invokes the JavaScript function with the given name synchronously.
+            </summary>
+            <param name="jsFunctionName"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:Nevron.Nov.WebAssembly.NJsInterop.Invoke``1(System.String,System.Object[])">
+            <summary>
+            Invokes the JavaScript function with the given name and returns the result from it synchronously.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="jsFunctionName"></param>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.WebAssembly.NJsInterop.InvokeVoidAsync(System.String,System.Object[])">
+            <summary>
+            Invokes the JavaScript function with the given name asynchronously.
+            </summary>
+            <param name="jsFunctionName"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:Nevron.Nov.WebAssembly.NJsInterop.InvokeAsync``1(System.String,System.Object[])">
+            <summary>
+            Invokes the JavaScript function with the given name asynchronously and returns a value task
+            that contains the result when the JavaScript function finishes executing.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="jsFunctionName"></param>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Nevron.Nov.WebAssembly.NNovApplicationInstaller">
+            <summary>
+            NOV Application installer in the context of WebAssembly.
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.WebAssembly.NNovApplicationInstaller.Install(Microsoft.JSInterop.IJSRuntime,System.String,Nevron.Nov.NModule[])">
+            <summary>
+            Installs the services needed for WebAssemblt applications.
+            </summary>
+            <param name="jsRuntime"></param>
+            <param name="baseUri">The base uri of the application with a trailing slash, for example "https://localhost:44331/".</param>
+            <param name="modules"></param>
+        </member>
+        <member name="T:Nevron.Nov.WebAssembly.NNovChildWindowHost">
+            <summary>
+            Represents a component that contains a NOV widget of a certain type.
+            </summary>
+            <typeparam name="TWidget"></typeparam>
+        </member>
+        <member name="M:Nevron.Nov.WebAssembly.NNovChildWindowHost.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.WebAssembly.NNovChildWindowHost.Finalize">
+            <summary>
+            Finalizer
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.WebAssembly.NNovChildWindowHost.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Nevron.Nov.WebAssembly.NNovChildWindowHost.Element">
+            <summary>
+            Gets a reference to the root element rendered by the host.
+            </summary>
+        </member>
+        <member name="P:Nevron.Nov.WebAssembly.NNovChildWindowHost.Attributes">
+            <summary>
+            Gets or sets custom attributes that need to be rendered by the component
+            </summary>
+            <value>The attributes.</value>
+        </member>
+        <member name="P:Nevron.Nov.WebAssembly.NNovChildWindowHost.Style">
+            <summary>
+            Gets or sets the style of the root element rendered by the host.
+            </summary>
+        </member>
+        <member name="P:Nevron.Nov.WebAssembly.NNovChildWindowHost.Class">
+            <summary>
+            Gets or sets the class of the root element rendered by the host.
+            </summary>
+        </member>
+        <member name="P:Nevron.Nov.WebAssembly.NNovChildWindowHost.Id">
+            <summary>
+            Gets or sets the Id of the root element rendered by the host
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.WebAssembly.NNovChildWindowHost.Dispose(System.Boolean)">
+            <summary>
+            Called to release all unmanaged resource that this object has
+            </summary>
+            <param name="disposing">true to release managed resource too</param>
+        </member>
+        <member name="T:Nevron.Nov.WebAssembly.NNovWidgetHost`1">
+            <summary>
+            Represents a component that contains a NOV widget of a certain type.
+            </summary>
+            <typeparam name="TWidget"></typeparam>
+        </member>
+        <member name="M:Nevron.Nov.WebAssembly.NNovWidgetHost`1.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.WebAssembly.NNovWidgetHost`1.#ctor(`0)">
+            <summary>
+            Initializer constructor
+            </summary>
+            <param name="widget"></param>
+        </member>
+        <member name="P:Nevron.Nov.WebAssembly.NNovWidgetHost`1.Widget">
+            <summary>
+            Gets the NOV widget hosted by this host.
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.WebAssembly.NNovWidgetHost`1.Dispose(System.Boolean)">
+            <summary>
+            Called to release all unmanaged resource that this object has
+            </summary>
+            <param name="disposing">true to release managed resource too</param>
+        </member>
+        <member name="T:Nevron.Nov.WebAssembly.NResources">
+            <summary>
+            DO NOT MODIFY MANUALLY. Automatically generated by NResourceMaker.
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.WebAssembly.NResources.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="P:Nevron.Nov.WebAssembly.NResources.Image_Printing_PageOrientationLandscape_png">
+            <summary></summary>
+        </member>
+        <member name="P:Nevron.Nov.WebAssembly.NResources.Image_Printing_PageOrientationPortrait_png">
+            <summary></summary>
+        </member>
+        <member name="P:Nevron.Nov.WebAssembly.NResources.Cursor_DragDropCopy_cur">
+            <summary></summary>
+        </member>
+        <member name="P:Nevron.Nov.WebAssembly.NResources.Cursor_DragDropLink_cur">
+            <summary></summary>
+        </member>
+        <member name="P:Nevron.Nov.WebAssembly.NResources.Cursor_DragDropMove_cur">
+            <summary></summary>
+        </member>
+        <member name="P:Nevron.Nov.WebAssembly.NResources.String_CSSCompressed_css">
+            <summary></summary>
+        </member>
+        <member name="P:Nevron.Nov.WebAssembly.NResources.String_JSCompressed_js">
+            <summary></summary>
+        </member>
+        <member name="F:Nevron.Nov.WebAssembly.NResources.RBIN_documentation_zip">
+            <summary></summary>
+        </member>
+        <member name="F:Nevron.Nov.WebAssembly.NResources.RCUR_DragDropCopy_cur">
+            <summary></summary>
+        </member>
+        <member name="F:Nevron.Nov.WebAssembly.NResources.RCUR_DragDropLink_cur">
+            <summary></summary>
+        </member>
+        <member name="F:Nevron.Nov.WebAssembly.NResources.RCUR_DragDropMove_cur">
+            <summary></summary>
+        </member>
+        <member name="F:Nevron.Nov.WebAssembly.NResources.RIMG_Printing_PageOrientationLandscape_png">
+            <summary></summary>
+        </member>
+        <member name="F:Nevron.Nov.WebAssembly.NResources.RIMG_Printing_PageOrientationPortrait_png">
+            <summary></summary>
+        </member>
+        <member name="F:Nevron.Nov.WebAssembly.NResources.RSTR_CSSCompressed_css">
+            <summary></summary>
+        </member>
+        <member name="F:Nevron.Nov.WebAssembly.NResources.RSTR_JSCompressed_js">
+            <summary></summary>
+        </member>
+        <member name="F:Nevron.Nov.WebAssembly.NResources.Instance">
+            <summary>
+            Singleton instance.
+            </summary>
+        </member>
+        <member name="T:Nevron.Nov.WebAssembly.NWaEventArgs">
+            <summary>
+            Serves as base class for all events that originate from the browser.
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.WebAssembly.NWaEventArgs.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="P:Nevron.Nov.WebAssembly.NWaEventArgs.Cancel">
+            <summary>
+            Gets or sets whether the event default action should be canceled or not.
+            </summary>
+        </member>
+        <member name="T:Nevron.Nov.WebAssembly.NWaKeyEventHandler">
+            <summary>
+            Represents a delegate for events which receive a NWaKeyEventArgs argument.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="T:Nevron.Nov.WebAssembly.NWaKeyEventArgs">
+            <summary>
+            Represents a key event that originated in the browser. 
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.WebAssembly.NWaKeyEventArgs.#ctor(System.String,System.String,System.Int32)">
+            <summary>
+            Initializer constructor
+            </summary>
+            <param name="key"></param>
+            <param name="code"></param>
+            <param name="location"></param>
+        </member>
+        <member name="P:Nevron.Nov.WebAssembly.NWaKeyEventArgs.Key">
+            <summary>
+            Gets the key
+            </summary>
+        </member>
+        <member name="P:Nevron.Nov.WebAssembly.NWaKeyEventArgs.Code">
+            <summary>
+            Gets the key code
+            </summary>
+        </member>
+        <member name="P:Nevron.Nov.WebAssembly.NWaKeyEventArgs.Location">
+            <summary>
+            Gets the key location number
+            </summary>
+        </member>
+        <member name="T:Nevron.Nov.WebAssembly.NWaKeyPressEventHandler">
+            <summary>
+            Represents a delegate for events which receive a NWaKeyPressEventArgs argument.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="T:Nevron.Nov.WebAssembly.NWaKeyPressEventArgs">
+            <summary>
+            Represents a key event that originated in the browser. 
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.WebAssembly.NWaKeyPressEventArgs.#ctor(System.String)">
+            <summary>
+            Initializer constructor
+            </summary>
+            <param name="inputText"></param>
+        </member>
+        <member name="P:Nevron.Nov.WebAssembly.NWaKeyPressEventArgs.InputText">
+            <summary>
+            Gets the key code associted with the event.
+            </summary>
+        </member>
+        <member name="T:Nevron.Nov.WebAssembly.NWaMouseEventHandler">
+            <summary>
+            Represents a delegate for events which receive a NWaMouseEventArgs argument.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="T:Nevron.Nov.WebAssembly.NWaMouseEventArgs">
+            <summary>
+            Represents a mouse event that originated in the browser. 
+            </summary>
+        </member>
+        <member name="P:Nevron.Nov.WebAssembly.NWaMouseEventArgs.Button">
+            <summary>
+            Gets which mouse button was pressed.
+            </summary>
+        </member>
+        <member name="P:Nevron.Nov.WebAssembly.NWaMouseEventArgs.ButtonState">
+            <summary>
+            Gets the mouse button state.
+            </summary>
+        </member>
+        <member name="P:Nevron.Nov.WebAssembly.NWaMouseEventArgs.Clicks">
+            <summary>
+            Gets the number of times the mouse button was pressed and released.
+            </summary>
+        </member>
+        <member name="P:Nevron.Nov.WebAssembly.NWaMouseEventArgs.DeltaX">
+            <summary>
+            Gets the number of wheel delta X
+            </summary>
+        </member>
+        <member name="P:Nevron.Nov.WebAssembly.NWaMouseEventArgs.DeltaY">
+            <summary>
+            Gets the number of wheel delta Y
+            </summary>
+        </member>
+        <member name="P:Nevron.Nov.WebAssembly.NWaMouseEventArgs.DeltaZ">
+            <summary>
+            Gets the number of wheel delta Y
+            </summary>
+        </member>
+        <member name="P:Nevron.Nov.WebAssembly.NWaMouseEventArgs.ClientLocation">
+            <summary>
+            Gets the client location of the mouse during the generating mouse event.
+            </summary>
+        </member>
+        <member name="P:Nevron.Nov.WebAssembly.NWaMouseEventArgs.ScreenLocation">
+            <summary>
+            Gets the screen location of the mouse during the generating mouse event.
+            </summary>
+        </member>
+        <member name="T:Nevron.Nov.WebAssembly.NWaPointerEventArgs">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.WebAssembly.NWaPointerEventArgs.#ctor(System.String,System.Int32)">
+            <summary>
+            Initializer constructor
+            </summary>
+            <param name="pointerType"></param>
+            <param name="pointerId"></param>
+        </member>
+        <member name="P:Nevron.Nov.WebAssembly.NWaPointerEventArgs.PointerType">
+            <summary>
+            Gets the pointer type associated with this event.
+            </summary>
+        </member>
+        <member name="P:Nevron.Nov.WebAssembly.NWaPointerEventArgs.PointerId">
+            <summary>
+            Gets the pointer id.
+            </summary>
+        </member>
+        <member name="T:Nevron.Nov.WebAssembly.NWaUIEventArgs">
+            <summary>
+            Serves as base class for all UI events that originate from the browser.
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.WebAssembly.NWaUIEventArgs.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Internal.GOUI.IsReadOnly">
+            <summary>
+            Returns true
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Internal.GOUI.SetData(Nevron.Nov.UI.NDataFormat,System.Object)">
+            <summary>
+            Throws an invalid operation exception
+            </summary>
+            <param name="hOUI"></param>
+            <param name="IOUI"></param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.GOUI.ContainsData(Nevron.Nov.UI.NDataFormat)">
+            <summary>
+            Queries whether data can be obtained in the specified format.
+            </summary>
+            <param name="jOUI"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Internal.GOUI.GetFormats">
+            <summary>
+            Gets a list of the formats in which data can be obtained.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Internal.GOUI.GetData(Nevron.Nov.UI.NDataFormat)">
+            <summary>
+            Gets a data object in the specified format. 
+            Returns null, if data in the specified format does not exists or its retrieval failed.  
+            Returns a format specific object instance in case the data was successfully retrived.
+            </summary>
+            <param name="KOUI"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Internal.xQUI.Dispose">
+            <summary>
+            Disposes the internally created bitmap
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Internal.YUUI.GetFunctionIndex(System.String)">
+            <summary>
+            Calls the getFuncIndex client side function to obtain an index of the function with the specified name
+            </summary>
+            <param name="AvUI"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Internal.YUUI.Invoke``1(System.Boolean,Nevron.Nov.Interop.INInteropFunction,System.IO.MemoryStream)">
+            <summary>
+            Overriden to perform an unmarshalled call of the nevron.invoke JS function.
+            </summary>
+            <typeparam name="bvUI"></typeparam>
+            <param name="CvUI"></param>
+            <param name="dvUI"></param>
+            <param name="EvUI"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Internal.YUUI.InvokeBatch(System.IO.MemoryStream)">
+            <summary>
+            Overriden to perform an unmarshalled call of the nevron.invokeBatch JS function.
+            </summary>
+            <param name="fvUI"></param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.fEWI.CreateToArrayDelegateHelper``2(System.Reflection.MethodInfo)">
+            <summary>
+            Helpers method for generics 
+            </summary>
+            <typeparam name="TTarget"></typeparam>
+            <typeparam name="TReturn"></typeparam>
+            <param name="method"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Internal.rxUI.NativeEncodeBitmap(Nevron.Nov.Graphics.NRaster)">
+            <summary>
+            Overriden to return null - native bitmap encoding is not currently supported by the Web Assembly host.
+            </summary>
+            <param name="SxUI"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Internal.rxUI.NativeEncodeJpg(Nevron.Nov.Graphics.NRaster,Nevron.Nov.Graphics.NJpegEncoderSettings)">
+            <summary>
+            Overriden to return null - native JPEG encoding is not currently supported by the Web Assembly host.
+            </summary>
+            <param name="txUI"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Internal.rxUI.NativeEncodePng(Nevron.Nov.Graphics.NRaster,Nevron.Nov.Graphics.NPngEncoderSettings)">
+            <summary>
+            Overriden to return null - native PNG encoding is not currently supported by the Web Assembly host.
+            </summary>
+            <param name="vxUI"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Internal.rxUI.NativeEncodeTiff(Nevron.Nov.Graphics.NRaster)">
+            <summary>
+            Overriden to return null - native TIFF encoding is not currently supported by the Web Assembly host.
+            </summary>
+            <param name="xxUI"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Internal.rxUI.NativeDecodeImageData(System.Byte[],Nevron.Nov.Graphics.NImageFormat)">
+            <summary>
+            Overriden to return null - native image decoding is not currently supported by the Web Assmebly host.
+            </summary>
+            <param name="YxUI"></param>
+            <param name="AYUI"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Internal.ChWI.ToString">
+            <summary>
+            Overriden to provide a CSS representation of this object.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Internal.ChWI.Equals(System.Object)">
+            <summary>
+            Returns true if the objects are equal
+            </summary>
+            <param name="GhWI"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Internal.ChWI.GetHashCode">
+            <summary>
+            Returns the hash code of this object
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Internal.EIWI.Equals(System.Object)">
+            <summary>
+            Determintes whether this object is equal to the specified object
+            </summary>
+            <param name="IIWI"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Internal.EIWI.GetHashCode">
+            <summary>
+            Gets the hash code of the length
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Internal.EIWI.ToString">
+            <summary>
+            Gets a string representation of this length, that is HTML compatible.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Internal.QIWI.ToString">
+            <summary>
+            Overriden to provide a CSS representation of this object.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Internal.QIWI.Equals(System.Object)">
+            <summary>
+            Returns true if the objects are equal
+            </summary>
+            <param name="SIWI"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Internal.QIWI.GetHashCode">
+            <summary>
+            Returns the hash code of this object
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Internal.SMWI.OnClientSizeChanged(System.Double,System.Double)">
+            <summary>
+            Updates the size of this HTML element. Called from JS when the size of the client size HTML element associated with this host has changed.
+            </summary>
+            <param name="clientWidth"></param>
+            <param name="clientHeight"></param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.hSWI.DeactivateActiveWindow">
+            <summary>
+            Called from the client side, when an event was received by the HTML document that should deactivate the currently active window, if any.
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Internal.hSWI.UpdateDevicePixelRatio(System.Double)">
+            <summary>
+            Called from the client side, when the device pixel ratio has changed.
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Internal.hSWI.OnApplicationIdle">
+            <summary>
+            Callback called from the requestApplicationIdle JS function.
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Internal.hSWI.OnWindowUnload">
+            <summary>
+            Called from the client side, when the window.unload event is raised
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Internal.hSWI.OnWindowBeforeUnload">
+            <summary>
+            Called from the client side, when the window.beforeunload event is raised
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Internal.hSWI.OnWindowFocus">
+            <summary>
+            Called from the client side, when the window.focus event is raised
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Internal.hSWI.OnWindowBlur">
+            <summary>
+            Called from the client side, when the window.focus event is raised
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Internal.pvWI.OnPointerEnter(System.String,System.Int32,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Notifies the element that the mouse has entered its boundaries.
+            </summary>
+            <param name="clientX"></param>
+            <param name="clientY"></param>
+            <param name="screenX"></param>
+            <param name="screenY"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Internal.pvWI.OnPointerLeave(System.String,System.Int32,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Notifies the element that the mouse has entered its boundaries.
+            </summary>
+            <param name="clientX"></param>
+            <param name="clientY"></param>
+            <param name="screenX"></param>
+            <param name="screenY"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Internal.pvWI.OnPointerMove(System.String,System.Int32,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Notifies the element that the mouse is moved inside it.
+            </summary>
+            <param name="clientX"></param>
+            <param name="clientY"></param>
+            <param name="screenX"></param>
+            <param name="screenY"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Internal.pvWI.OnPointerDown(System.String,System.Int32,System.Double,System.Double,System.Double,System.Double,System.Int32)">
+            <summary>
+            Notifies the element that a mouse button is down inside it.
+            </summary>
+            <param name="clientX"></param>
+            <param name="clientY"></param>
+            <param name="screenX"></param>
+            <param name="screenY"></param>
+            <param name="button"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Internal.pvWI.OnPointerUp(System.String,System.Int32,System.Double,System.Double,System.Double,System.Double,System.Int32)">
+            <summary>
+            Notifies the element that a mouse button is up inside it.
+            </summary>
+            <param name="clientX"></param>
+            <param name="clientY"></param>
+            <param name="screenX"></param>
+            <param name="screenY"></param>
+            <param name="button"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Internal.pvWI.OnGotPointerCapture(System.String,System.Int32,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Notifies the element that it received capture of the specified pointer.
+            </summary>
+            <param name="pointerType"></param>
+            <param name="pointerId"></param>
+            <param name="clientX"></param>
+            <param name="clientY"></param>
+            <param name="screenX"></param>
+            <param name="screenY"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Internal.pvWI.OnLostPointerCapture(System.String,System.Int32,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Notifies the element that it lost capture of the specified pointer.
+            </summary>
+            <param name="pointerType"></param>
+            <param name="pointerId"></param>
+            <param name="clientX"></param>
+            <param name="clientY"></param>
+            <param name="screenX"></param>
+            <param name="screenY"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Internal.pvWI.OnWheel(System.Double,System.Double,System.Double,System.Double,System.Int32,System.Double,System.Double,System.Double)">
+            <summary>
+            Notifies the element that the wheel is rotated inside it.
+            </summary>
+            <param name="clientX"></param>
+            <param name="clientY"></param>
+            <param name="screenX"></param>
+            <param name="screenY"></param>
+            <param name="deltaMode"></param>
+            <param name="deltaX"></param>
+            <param name="deltaY"></param>
+            <param name="deltaZ"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Internal.pvWI.OnKeyDown(System.String,System.String,System.Int32)">
+            <summary>
+            Notifies the element that a key is down
+            </summary>
+            <param name="key"></param>
+            <param name="code"></param>
+            <param name="location"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Internal.pvWI.OnKeyUp(System.String,System.String,System.Int32)">
+            <summary>
+            Notifies the element that a key is up
+            </summary>
+            <param name="key"></param>
+            <param name="code"></param>
+            <param name="location"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Internal.pvWI.OnKeyPress(System.String)">
+            <summary>
+            Notifies the element that a key was pressed.
+            </summary>
+            <param name="keyChar"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Internal.pvWI.OnGotFocus">
+            <summary>
+            Notifies the element that it got focus
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Internal.pvWI.OnLostFocus">
+            <summary>
+            Notifies the element that it lost focus
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Internal.vbxI.OnBeforePrint">
+            <summary>
+            Called when the frame window is about to be printed.
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Internal.vbxI.OnAfterPrint">
+            <summary>
+            Called when the frame window has been printed.
+            </summary>
+        </member>
+        <member name="P:Nevron.Nov.Internal.jCxI.Item(System.Int32)">
+            <summary>
+            Gets the PrintIFrame layer at the specified index
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Nevron.Nov.Internal.xfxI.Item(System.Int32)">
+            <summary>
+            Gets the window layer at the specified index
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Internal.nGxI`1.OnPaintAnimationFrame">
+            <summary>
+            Called to paint an animation frame 
+            </summary>
+        </member>
+    </members>
+</doc>
