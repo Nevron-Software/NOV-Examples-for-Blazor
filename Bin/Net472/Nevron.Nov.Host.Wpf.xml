@@ -139,72 +139,72 @@
             </summary>
             <param name="modules"></param>
         </member>
-        <member name="M:Nevron.Nov.Internal.GStI.NativeDecodeImageData(System.Byte[],Nevron.Nov.Graphics.NImageFormat)">
+        <member name="M:Nevron.Nov.Internal.WjEK.NativeDecodeImageData(System.Byte[],Nevron.Nov.Graphics.NImageFormat)">
             <summary>
             Decodes the specified image data using WPF image decoders.
             </summary>
-            <param name="hStI">Encoded image data.</param>
-            <param name="IStI">The format of the data in the byte array. Cannot be null.</param>
+            <param name="xjEK">Encoded image data.</param>
+            <param name="YjEK">The format of the data in the byte array. Cannot be null.</param>
             <returns>Returns a raster that contains the decoded image data. Returns null if the decoding was not successful.</returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.GStI.NativeEncodeBitmap(Nevron.Nov.Graphics.NRaster)">
+        <member name="M:Nevron.Nov.Internal.WjEK.NativeEncodeBitmap(Nevron.Nov.Graphics.NRaster)">
             <summary>
             Encodes a raster into BMP image format, using the WPF image encoder.
             </summary>
-            <param name="jStI">The raster to be encoded.</param>
+            <param name="AKEK">The raster to be encoded.</param>
             <param name="settings">BMP encoder settings.</param>
             <returns>A byte array containing the encoded image data. Returns null if the encoding fails.</returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.GStI.NativeEncodePng(Nevron.Nov.Graphics.NRaster,Nevron.Nov.Graphics.NPngEncoderSettings)">
+        <member name="M:Nevron.Nov.Internal.WjEK.NativeEncodePng(Nevron.Nov.Graphics.NRaster,Nevron.Nov.Graphics.NPngEncoderSettings)">
             <summary>
             Encodes a raster into PNG image format, using the WPF image encoder.
             </summary>
-            <param name="KStI">The raster to be encoded.</param>
-            <param name="lStI">PNG encoder settings.</param>
+            <param name="bKEK">The raster to be encoded.</param>
+            <param name="CKEK">PNG encoder settings.</param>
             <returns>A byte array containing the encoded image data. Returns null if the encoding fails.</returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.GStI.NativeEncodeJpg(Nevron.Nov.Graphics.NRaster,Nevron.Nov.Graphics.NJpegEncoderSettings)">
+        <member name="M:Nevron.Nov.Internal.WjEK.NativeEncodeJpg(Nevron.Nov.Graphics.NRaster,Nevron.Nov.Graphics.NJpegEncoderSettings)">
             <summary>
             Encodes a raster into JPEG image format, using the WPF image encoder.
             </summary>
-            <param name="MStI">The raster to be encoded.</param>
-            <param name="nStI">JPEG encoder settings.</param>
+            <param name="dKEK">The raster to be encoded.</param>
+            <param name="EKEK">JPEG encoder settings.</param>
             <returns>A byte array containing the encoded image data. Returns null if the encoding fails.</returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.GStI.NativeEncodeTiff(Nevron.Nov.Graphics.NRaster)">
+        <member name="M:Nevron.Nov.Internal.WjEK.NativeEncodeTiff(Nevron.Nov.Graphics.NRaster)">
             <summary>
             Encodes a raster into TIFF image format, using the image encoding capabilities of the underlying platform.
             Must be implemented in the image service of a platform host.
             </summary>
-            <param name="OStI">The raster to be encoded.</param>
+            <param name="fKEK">The raster to be encoded.</param>
             <returns>A byte array containing the encoded image data. Returns null if the encoding fails.</returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.OttI.Nevron#Nov#Dom#INEventHandler#Invoke(Nevron.Nov.Dom.NEventArgs)">
+        <member name="M:Nevron.Nov.Internal.flEK.Nevron#Nov#Dom#INEventHandler#Invoke(Nevron.Nov.Dom.NEventArgs)">
             <summary>
             Called when the measure of the child window has changed.
             </summary>
-            <param name="UttI"></param>
+            <param name="llEK"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.UCUI`1.HitTestCore(System.Windows.Media.PointHitTestParameters)">
+        <member name="M:Nevron.Nov.Internal.ltEK`1.HitTestCore(System.Windows.Media.PointHitTestParameters)">
             <summary>
             Overriden to hit test the element, if the point is inside its bounds.
             </summary>
-            <param name="KdUI"></param>
+            <param name="bUEK"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.UCUI`1.OnRender(System.Windows.Media.DrawingContext)">
+        <member name="M:Nevron.Nov.Internal.ltEK`1.OnRender(System.Windows.Media.DrawingContext)">
             <summary>
             Overriden to render a writable bitmap
             </summary>
-            <param name="ldUI"></param>
+            <param name="CUEK"></param>
         </member>
-        <member name="M:Nevron.Nov.Internal.UCUI`1.OnDpiChanged(System.Windows.DpiScale,System.Windows.DpiScale)">
+        <member name="M:Nevron.Nov.Internal.ltEK`1.OnDpiChanged(System.Windows.DpiScale,System.Windows.DpiScale)">
             <summary>
             Called when the DPI at which this View is rendered changes.
             </summary>
-            <param name="MdUI"></param>
-            <param name="ndUI"></param>
+            <param name="dUEK"></param>
+            <param name="EUEK"></param>
         </member>
     </members>
 </doc>

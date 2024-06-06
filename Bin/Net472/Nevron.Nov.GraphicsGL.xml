@@ -71,13 +71,13 @@
             Environmental mapping used for special visual effects like reflection.
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Internal.fGCG.ToString">
+        <member name="M:Nevron.Nov.Internal.dbIh.ToString">
             <summary>
             Overriden to provide a string representation of the vector
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.fGCG.op_Addition(Nevron.Nov.Internal.fGCG,Nevron.Nov.Internal.fGCG)">
+        <member name="M:Nevron.Nov.Internal.dbIh.op_Addition(Nevron.Nov.Internal.dbIh,Nevron.Nov.Internal.dbIh)">
             <summary>
             Adds a and b
             </summary>
@@ -85,7 +85,7 @@
             <param name="b"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.fGCG.op_Subtraction(Nevron.Nov.Internal.fGCG,Nevron.Nov.Internal.fGCG)">
+        <member name="M:Nevron.Nov.Internal.dbIh.op_Subtraction(Nevron.Nov.Internal.dbIh,Nevron.Nov.Internal.dbIh)">
             <summary>
             Substracts a and b
             </summary>
@@ -93,7 +93,7 @@
             <param name="b"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.fGCG.op_Multiply(Nevron.Nov.Internal.fGCG,System.Double)">
+        <member name="M:Nevron.Nov.Internal.dbIh.op_Multiply(Nevron.Nov.Internal.dbIh,System.Double)">
             <summary>
             Multiplies vec by value
             </summary>
@@ -101,26 +101,26 @@
             <param name="fMul"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.fGCG.Equals(System.Object)">
+        <member name="M:Nevron.Nov.Internal.dbIh.Equals(System.Object)">
             <summary>
             Returns true if the objects are equal.
             </summary>
-            <param name="vhCG"></param>
+            <param name="tCIh"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.fGCG.GetHashCode">
+        <member name="M:Nevron.Nov.Internal.dbIh.GetHashCode">
             <summary>
             Returns the hash code of this instance.
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.CICG.ToString">
+        <member name="M:Nevron.Nov.Internal.AdIh.ToString">
             <summary>
             Overriden to provide a string representation of the vector
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.CICG.op_Addition(Nevron.Nov.Internal.CICG,Nevron.Nov.Internal.CICG)">
+        <member name="M:Nevron.Nov.Internal.AdIh.op_Addition(Nevron.Nov.Internal.AdIh,Nevron.Nov.Internal.AdIh)">
             <summary>
             Adds a and b
             </summary>
@@ -128,7 +128,7 @@
             <param name="b"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.CICG.op_Subtraction(Nevron.Nov.Internal.CICG,Nevron.Nov.Internal.CICG)">
+        <member name="M:Nevron.Nov.Internal.AdIh.op_Subtraction(Nevron.Nov.Internal.AdIh,Nevron.Nov.Internal.AdIh)">
             <summary>
             Substracts a and b
             </summary>
@@ -136,7 +136,7 @@
             <param name="b"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.CICG.op_Multiply(Nevron.Nov.Internal.CICG,System.Single)">
+        <member name="M:Nevron.Nov.Internal.AdIh.op_Multiply(Nevron.Nov.Internal.AdIh,System.Single)">
             <summary>
             Multiplies vec by value
             </summary>
@@ -144,26 +144,26 @@
             <param name="fMul"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.CICG.Equals(System.Object)">
+        <member name="M:Nevron.Nov.Internal.AdIh.Equals(System.Object)">
             <summary>
             Returns true if the objects are equal.
             </summary>
-            <param name="SjCG"></param>
+            <param name="QEIh"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.CICG.GetHashCode">
+        <member name="M:Nevron.Nov.Internal.AdIh.GetHashCode">
             <summary>
             Returns the hash code of this instance.
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.YjCG.ToString">
+        <member name="M:Nevron.Nov.Internal.WEIh.ToString">
             <summary>
             Overriden to provide a string representation of the vector
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.YjCG.op_Addition(Nevron.Nov.Internal.YjCG,Nevron.Nov.Internal.YjCG)">
+        <member name="M:Nevron.Nov.Internal.WEIh.op_Addition(Nevron.Nov.Internal.WEIh,Nevron.Nov.Internal.WEIh)">
             <summary>
             Adds a and b
             </summary>
@@ -171,7 +171,7 @@
             <param name="b"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.YjCG.op_Subtraction(Nevron.Nov.Internal.YjCG,Nevron.Nov.Internal.YjCG)">
+        <member name="M:Nevron.Nov.Internal.WEIh.op_Subtraction(Nevron.Nov.Internal.WEIh,Nevron.Nov.Internal.WEIh)">
             <summary>
             Substracts a and b
             </summary>
@@ -179,7 +179,7 @@
             <param name="b"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.YjCG.op_Multiply(Nevron.Nov.Internal.YjCG,System.Double)">
+        <member name="M:Nevron.Nov.Internal.WEIh.op_Multiply(Nevron.Nov.Internal.WEIh,System.Double)">
             <summary>
             Multiplies vec by value
             </summary>
@@ -187,49 +187,49 @@
             <param name="fMul"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.YjCG.Equals(System.Object)">
+        <member name="M:Nevron.Nov.Internal.WEIh.Equals(System.Object)">
             <summary>
             Returns true if the objects are equal.
             </summary>
-            <param name="WMCG"></param>
+            <param name="UhIh"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.YjCG.GetHashCode">
+        <member name="M:Nevron.Nov.Internal.WEIh.GetHashCode">
             <summary>
             Returns the hash code of this instance.
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.EnCG.Equals(System.Object)">
+        <member name="M:Nevron.Nov.Internal.CIIh.Equals(System.Object)">
             <summary>
             Returns true if the objects are equal.
             </summary>
-            <param name="jnCG"></param>
+            <param name="hIIh"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.EnCG.GetHashCode">
+        <member name="M:Nevron.Nov.Internal.CIIh.GetHashCode">
             <summary>
             Returns the hash code of this instance.
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.CAvE.Dispose">
+        <member name="M:Nevron.Nov.Internal.btbG.Dispose">
             <summary>
             Disposes the surface
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Internal.fUdG.CompareTo(Nevron.Nov.Internal.fUdG)">
+        <member name="M:Nevron.Nov.Internal.jljh.CompareTo(Nevron.Nov.Internal.jljh)">
             <summary>
             
             </summary>
-            <param name="jUdG"></param>
+            <param name="nljh"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.nUdG.CompareTo(Nevron.Nov.Internal.nUdG)">
+        <member name="M:Nevron.Nov.Internal.rljh.CompareTo(Nevron.Nov.Internal.rljh)">
             <summary>
             
             </summary>
-            <param name="QUdG"></param>
+            <param name="Uljh"></param>
             <returns></returns>
         </member>
         <member name="T:Nevron.NOpenGLRenderingTest.NResources">

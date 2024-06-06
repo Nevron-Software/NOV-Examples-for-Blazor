@@ -324,124 +324,193 @@
             <param name="productGroup"></param>
             <param name="modules"></param>
         </member>
-        <member name="M:Nevron.Nov.Internal.KvQb`1.OnLoad(System.EventArgs)">
+        <member name="P:Nevron.Nov.Internal.KQrb`1.Nevron#Nov#Office#INOfficeMainWindow#Title">
             <summary>
-            Called when the form is first loaded.
+            Gets/Sets the title of the form.
             </summary>
-            <param name="lvQb"></param>
         </member>
-        <member name="M:Nevron.Nov.Internal.KvQb`1.OnShown(System.EventArgs)">
+        <member name="M:Nevron.Nov.Internal.KQrb`1.Nevron#Nov#Office#INOfficeMainWindow#Close">
+            <summary>
+            Closes the main application window.
+            </summary>
+        </member>
+        <member name="P:Nevron.Nov.Internal.KQrb`1.Nevron#Nov#Office#INOfficeMainWindow#MainWidget">
+            <summary>
+            Gets the main widget of the application that is hosted in the main window.
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Internal.KQrb`1.OnShown(System.EventArgs)">
             <summary>
             Called after the form has been shown.
             </summary>
-            <param name="MvQb"></param>
+            <param name="lQrb"></param>
         </member>
-        <member name="M:Nevron.Nov.Internal.KvQb`1.OnClosing(System.ComponentModel.CancelEventArgs)">
+        <member name="M:Nevron.Nov.Internal.KQrb`1.OnClosing(System.ComponentModel.CancelEventArgs)">
             <summary>
             Called when the form is about to be closed.
             </summary>
-            <param name="nvQb"></param>
+            <param name="MQrb"></param>
         </member>
-        <member name="M:Nevron.Nov.Internal.KvQb`1.OnLocationChanged(System.EventArgs)">
+        <member name="M:Nevron.Nov.Internal.KQrb`1.OnLocationChanged(System.EventArgs)">
             <summary>
             Called when the location of the form has changed.
             </summary>
-            <param name="OvQb"></param>
+            <param name="nQrb"></param>
         </member>
-        <member name="M:Nevron.Nov.Internal.hUQb.Dispose(System.Boolean)">
+        <member name="P:Nevron.Nov.Internal.WQrb`2.IsAnotherInstanceRunning">
+            <summary>
+            Checks whether an instance of this application is already running.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Nevron.Nov.Internal.WQrb`2.IsSandboxed">
+            <summary>
+            Gets whether this is a sandboxed environment (e.g. Blazor).
+            </summary>
+        </member>
+        <member name="P:Nevron.Nov.Internal.WQrb`2.IsStoreApp">
+            <summary>
+            Gets whether the application is runnting in the store.
+            </summary>
+        </member>
+        <member name="P:Nevron.Nov.Internal.WQrb`2.CmdLineFileName">
+            <summary>
+            Gets the Command Line File name with which the application was started.
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Internal.WQrb`2.GetMainWindowAsync">
+            <summary>
+            Gets the main window of the application.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Internal.WQrb`2.CreateMainWindowStateWorkspaceItem">
+            <summary>
+            Creates the main window state workspace item.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Internal.WQrb`2.OnAfterInitUIAsync">
+            <summary>
+            Called after the main widget is initialized.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Internal.WQrb`2.ShowHelp">
+            <summary>
+            Shows the application help
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Internal.WQrb`2.OnStartedAsync">
+            <summary>
+            Called when the app is started
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Internal.WQrb`2.StartMessagePump">
+            <summary>
+            Ensures there is a message pump to do messages
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Internal.WQrb`2.ExitMessagePump">
+            <summary>
+            Exits the message pump of the application.
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Internal.hprb.Dispose(System.Boolean)">
             <summary>
             Clean up any resources being used.
             </summary>
-            <param name="bvQb">true if managed resources should be disposed; otherwise, false.</param>
+            <param name="bQrb">true if managed resources should be disposed; otherwise, false.</param>
         </member>
-        <member name="M:Nevron.Nov.Internal.UftI.NativeDecodeImageData(System.Byte[],Nevron.Nov.Graphics.NImageFormat)">
+        <member name="M:Nevron.Nov.Internal.dWdK.NativeDecodeImageData(System.Byte[],Nevron.Nov.Graphics.NImageFormat)">
             <summary>
             Decodes the specified image data, using GDI+ image decoders.
             </summary>
-            <param name="vftI">Encoded image data.</param>
-            <param name="WftI">The format of the data in the byte array - not used, because GDI+ performs its own format recognition.</param>
+            <param name="EWdK">Encoded image data.</param>
+            <param name="fWdK">The format of the data in the byte array - not used, because GDI+ performs its own format recognition.</param>
             <returns>Returns a raster that contains the decoded image data. Returns null if the decoding was not successful.</returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.UftI.NativeEncodeBitmap(Nevron.Nov.Graphics.NRaster)">
+        <member name="M:Nevron.Nov.Internal.dWdK.NativeEncodeBitmap(Nevron.Nov.Graphics.NRaster)">
             <summary>
             Encodes a raster into BMP image format, using the GDI+ image encoder.
             </summary>
-            <param name="xftI">The raster to be encoded.</param>
+            <param name="GWdK">The raster to be encoded.</param>
             <returns>A byte array containing the encoded image data. Returns null if the encoding fails.</returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.UftI.NativeEncodePng(Nevron.Nov.Graphics.NRaster,Nevron.Nov.Graphics.NPngEncoderSettings)">
+        <member name="M:Nevron.Nov.Internal.dWdK.NativeEncodePng(Nevron.Nov.Graphics.NRaster,Nevron.Nov.Graphics.NPngEncoderSettings)">
             <summary>
             Encodes a raster into PNG image format, using the GDI+ image encoder.
             </summary>
-            <param name="YftI">The raster to be encoded.</param>
-            <param name="AGtI">PNG encoder settings.</param>
+            <param name="hWdK">The raster to be encoded.</param>
+            <param name="IWdK">PNG encoder settings.</param>
             <returns>A byte array containing the encoded image data. Returns null if the encoding fails.</returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.UftI.NativeEncodeJpg(Nevron.Nov.Graphics.NRaster,Nevron.Nov.Graphics.NJpegEncoderSettings)">
+        <member name="M:Nevron.Nov.Internal.dWdK.NativeEncodeJpg(Nevron.Nov.Graphics.NRaster,Nevron.Nov.Graphics.NJpegEncoderSettings)">
             <summary>
             Encodes a raster into JPEG image format, using the GDI+ image encoder.
             </summary>
-            <param name="bGtI">The raster to be encoded.</param>
-            <param name="CGtI">JPEG encoder settings.</param>
+            <param name="jWdK">The raster to be encoded.</param>
+            <param name="KWdK">JPEG encoder settings.</param>
             <returns>A byte array containing the encoded image data. Returns null if the encoding fails.</returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.UftI.NativeEncodeTiff(Nevron.Nov.Graphics.NRaster)">
+        <member name="M:Nevron.Nov.Internal.dWdK.NativeEncodeTiff(Nevron.Nov.Graphics.NRaster)">
             <summary>
             Encodes a raster into TIFF image format, using the image encoding capabilities of the underlying platform.
             Must be implemented in the image service of a platform host.
             </summary>
-            <param name="dGtI">The raster to be encoded.</param>
+            <param name="lWdK">The raster to be encoded.</param>
             <returns>A byte array containing the encoded image data. Returns null if the encoding fails.</returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.bjtI`1.Dispose(System.Boolean)">
+        <member name="M:Nevron.Nov.Internal.jAEK`1.Dispose(System.Boolean)">
             <summary>
             Disposes this surface
             </summary>
-            <param name="ljtI"></param>
+            <param name="tAEK"></param>
         </member>
-        <member name="M:Nevron.Nov.Internal.bjtI`1.IsInputKey(System.Windows.Forms.Keys)">
+        <member name="M:Nevron.Nov.Internal.jAEK`1.IsInputKey(System.Windows.Forms.Keys)">
             <summary>
             Overriden to return true
             </summary>
-            <param name="MjtI"></param>
+            <param name="UAEK"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.bjtI`1.IsInputChar(System.Char)">
+        <member name="M:Nevron.Nov.Internal.jAEK`1.IsInputChar(System.Char)">
             <summary>
             Overriden to return true
             </summary>
-            <param name="njtI"></param>
+            <param name="vAEK"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.bjtI`1.OnHandleCreated(System.EventArgs)">
+        <member name="M:Nevron.Nov.Internal.jAEK`1.OnHandleCreated(System.EventArgs)">
             <summary>
             Called when the native window handle is created.
             </summary>
-            <param name="OjtI"></param>
+            <param name="WAEK"></param>
         </member>
-        <member name="M:Nevron.Nov.Internal.bjtI`1.OnHandleDestroyed(System.EventArgs)">
+        <member name="M:Nevron.Nov.Internal.jAEK`1.OnHandleDestroyed(System.EventArgs)">
             <summary>
             
             </summary>
-            <param name="pjtI"></param>
+            <param name="xAEK"></param>
         </member>
-        <member name="M:Nevron.Nov.Internal.bjtI`1.OnClientSizeChanged(System.EventArgs)">
+        <member name="M:Nevron.Nov.Internal.jAEK`1.OnClientSizeChanged(System.EventArgs)">
             <summary>
             Overriden to request a repaint of the surface
             </summary>
-            <param name="QjtI"></param>
+            <param name="YAEK"></param>
         </member>
-        <member name="M:Nevron.Nov.Internal.bjtI`1.OnDpiChangedBeforeParent(System.EventArgs)">
+        <member name="M:Nevron.Nov.Internal.jAEK`1.OnDpiChangedBeforeParent(System.EventArgs)">
             <summary>
             Called when the DPI has changed, and the parent was not yet notified about it
             </summary>
-            <param name="rjtI"></param>
+            <param name="AbEK"></param>
         </member>
-        <member name="M:Nevron.Nov.Internal.SltI.Nevron#Nov#Dom#INEventHandler#Invoke(Nevron.Nov.Dom.NEventArgs)">
+        <member name="M:Nevron.Nov.Internal.jdEK.Nevron#Nov#Dom#INEventHandler#Invoke(Nevron.Nov.Dom.NEventArgs)">
             <summary>
             Called when the measure of the child window has changed.
             </summary>
-            <param name="UltI"></param>
+            <param name="ldEK"></param>
             <returns></returns>
         </member>
         <member name="T:Nevron.Nov.Office.NSplashScreenForm">

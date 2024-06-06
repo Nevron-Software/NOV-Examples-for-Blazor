@@ -589,40 +589,6 @@
             Initializer constructor.
             </summary>
         </member>
-        <member name="T:Nevron.Nov.Text.Data.NMemoryMailMergeDataSource">
-            <summary>
-            Represents an in memory data table data source provider.
-            </summary>
-        </member>
-        <member name="M:Nevron.Nov.Text.Data.NMemoryMailMergeDataSource.#ctor">
-            <summary>
-            Default constructor.
-            </summary>
-        </member>
-        <member name="M:Nevron.Nov.Text.Data.NMemoryMailMergeDataSource.#ctor(Nevron.Nov.Data.NDataTable)">
-            <summary>
-            Initializing constructor.
-            </summary>
-            <param name="dataTable"></param>
-        </member>
-        <member name="M:Nevron.Nov.Text.Data.NMemoryMailMergeDataSource.LoadDataTable">
-            <summary>
-            Loads a data table from this source.
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:Nevron.Nov.Text.Data.NMemoryMailMergeDataSource.DeepCopyCore(Nevron.Nov.Dom.NNode,Nevron.Nov.Dom.NDomDeepCopyContext)">
-            <summary>
-            Called to perform the actual deep copying of the source node.
-            </summary>
-            <param name="source"></param>
-            <param name="context"></param>
-        </member>
-        <member name="F:Nevron.Nov.Text.Data.NMemoryMailMergeDataSource.NMemoryMailMergeDataSourceSchema">
-            <summary>
-            Schema associated with NMemoryMailMergeDataSource.
-            </summary>
-        </member>
         <member name="T:Nevron.Nov.Text.Data.NCsvDataSource">
             <summary>
             Data source format for text files that contain comma separated values.
@@ -633,16 +599,16 @@
             Default constructor.
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Text.Data.NCsvDataSource.#ctor(Nevron.Nov.NUri)">
+        <member name="M:Nevron.Nov.Text.Data.NCsvDataSource.#ctor(Nevron.Nov.IO.NFile)">
             <summary>
             Initializer constructor.
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Text.Data.NCsvDataSource.#ctor(Nevron.Nov.NUri,System.Boolean,System.String[])">
+        <member name="M:Nevron.Nov.Text.Data.NCsvDataSource.#ctor(Nevron.Nov.IO.NFile,System.Boolean,System.String[])">
             <summary>
             Initializer constructor.
             </summary>
-            <param name="fileUri"></param>
+            <param name="file"></param>
             <param name="headerRow"></param>
             <param name="columnNames"></param>
         </member>
@@ -682,11 +648,11 @@
             Deafault constructor
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Text.Data.NExcelDataSource.#ctor(Nevron.Nov.NUri,System.String,System.Boolean,System.String[])">
+        <member name="M:Nevron.Nov.Text.Data.NExcelDataSource.#ctor(Nevron.Nov.IO.NFile,System.String,System.Boolean,System.String[])">
             <summary>
             Initializing constructor.
             </summary>
-            <param name="fileUri"></param>
+            <param name="file"></param>
             <param name="sheetName"></param>
             <param name="headerRow"></param>
             <param name="columnNames"></param>
@@ -743,23 +709,23 @@
             Initializer constructor.
             </summary>
         </member>
-        <member name="T:Nevron.Nov.Text.Data.NUriDataSource">
+        <member name="T:Nevron.Nov.Text.Data.NFileDataSource">
             <summary>
             Base class for all URI based data sources.
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Text.Data.NUriDataSource.#ctor">
+        <member name="M:Nevron.Nov.Text.Data.NFileDataSource.#ctor">
             <summary>
             Default constructor.
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Text.Data.NUriDataSource.#ctor(Nevron.Nov.NUri)">
+        <member name="M:Nevron.Nov.Text.Data.NFileDataSource.#ctor(Nevron.Nov.IO.NFile)">
             <summary>
             Initializing constructor.
             </summary>
             <param name="fileUri"></param>
         </member>
-        <member name="M:Nevron.Nov.Text.Data.NUriDataSource.#ctor(Nevron.Nov.NUri,System.Boolean,System.String[])">
+        <member name="M:Nevron.Nov.Text.Data.NFileDataSource.#ctor(Nevron.Nov.IO.NFile,System.Boolean,System.String[])">
             <summary>
             Initializing constructor.
             </summary>
@@ -767,66 +733,94 @@
             <param name="firstRowHasColumnNames"></param>
             <param name="columnNames"></param>
         </member>
-        <member name="P:Nevron.Nov.Text.Data.NUriDataSource.FileUri">
+        <member name="P:Nevron.Nov.Text.Data.NFileDataSource.File">
             <summary>
-            Gets or sets the file URI associated with this data source.
+            Gets or sets the file associated with this data source.
             </summary>
         </member>
-        <member name="P:Nevron.Nov.Text.Data.NUriDataSource.ColumnNames">
+        <member name="P:Nevron.Nov.Text.Data.NFileDataSource.ColumnNames">
             <summary>
             Gets or sets the column names to import from the specified file.
             </summary>
         </member>
-        <member name="P:Nevron.Nov.Text.Data.NUriDataSource.FirstRowHasColumnNames">
+        <member name="P:Nevron.Nov.Text.Data.NFileDataSource.FirstRowHasColumnNames">
             <summary>
             Gets or sets whether the first row has column names.
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Text.Data.NUriDataSource.ProcessDataTable(Nevron.Nov.Data.NDataTable)">
+        <member name="M:Nevron.Nov.Text.Data.NFileDataSource.ProcessDataTable(Nevron.Nov.Data.NDataTable)">
             <summary>
             Processes the data table.
             </summary>
             <param name="dataTable"></param>
         </member>
-        <member name="M:Nevron.Nov.Text.Data.NUriDataSource.GetFile">
-            <summary>
-            Gets the file for the URI of this data source.
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="F:Nevron.Nov.Text.Data.NUriDataSource.m_FirstRowHasColumnNames">
+        <member name="F:Nevron.Nov.Text.Data.NFileDataSource.m_FirstRowHasColumnNames">
             <summary>
             Indicates whether the first row has column names.
             </summary>
         </member>
-        <member name="F:Nevron.Nov.Text.Data.NUriDataSource.m_ColumnNames">
+        <member name="F:Nevron.Nov.Text.Data.NFileDataSource.m_ColumnNames">
             <summary>
             The column names to import.
             </summary>
         </member>
-        <member name="F:Nevron.Nov.Text.Data.NUriDataSource.m_FileUri">
+        <member name="F:Nevron.Nov.Text.Data.NFileDataSource.m_File">
             <summary>
-            The file URI associated with this data source.
+            The file associated with this data source.
             </summary>
         </member>
-        <member name="F:Nevron.Nov.Text.Data.NUriDataSource.NUriDataSourceSchema">
+        <member name="F:Nevron.Nov.Text.Data.NFileDataSource.NUriDataSourceSchema">
             <summary>
             Schema associated with NUriDataSource
             </summary>
         </member>
-        <member name="F:Nevron.Nov.Text.Data.NUriDataSource.FileUriProperty">
+        <member name="F:Nevron.Nov.Text.Data.NFileDataSource.FileProperty">
             <summary>
-            Reference to the file Uri property
+            Reference to the File property.
             </summary>
         </member>
-        <member name="F:Nevron.Nov.Text.Data.NUriDataSource.ColumnNamesProperty">
+        <member name="F:Nevron.Nov.Text.Data.NFileDataSource.ColumnNamesProperty">
             <summary>
-            Reference to the column names property
+            Reference to the ColumnNames property
             </summary>
         </member>
-        <member name="F:Nevron.Nov.Text.Data.NUriDataSource.FirstRowHasColumnNamesProperty">
+        <member name="F:Nevron.Nov.Text.Data.NFileDataSource.FirstRowHasColumnNamesProperty">
             <summary>
             Reference to the FirstRowHasColumnNames property.
+            </summary>
+        </member>
+        <member name="T:Nevron.Nov.Text.Data.NMemoryMailMergeDataSource">
+            <summary>
+            Represents an in memory data table data source provider.
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Text.Data.NMemoryMailMergeDataSource.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Text.Data.NMemoryMailMergeDataSource.#ctor(Nevron.Nov.Data.NDataTable)">
+            <summary>
+            Initializing constructor.
+            </summary>
+            <param name="dataTable"></param>
+        </member>
+        <member name="M:Nevron.Nov.Text.Data.NMemoryMailMergeDataSource.LoadDataTable">
+            <summary>
+            Loads a data table from this source.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Text.Data.NMemoryMailMergeDataSource.DeepCopyCore(Nevron.Nov.Dom.NNode,Nevron.Nov.Dom.NDomDeepCopyContext)">
+            <summary>
+            Called to perform the actual deep copying of the source node.
+            </summary>
+            <param name="source"></param>
+            <param name="context"></param>
+        </member>
+        <member name="F:Nevron.Nov.Text.Data.NMemoryMailMergeDataSource.NMemoryMailMergeDataSourceSchema">
+            <summary>
+            Schema associated with NMemoryMailMergeDataSource.
             </summary>
         </member>
         <member name="T:Nevron.Nov.Text.NTextLoadAssemblyType">
@@ -2708,23 +2702,66 @@
             Schema associated with NChangeFillCommandAction 
             </summary>
         </member>
-        <member name="T:Nevron.Nov.Text.Commands.NDeleteCommandAction">
+        <member name="T:Nevron.Nov.Text.Commands.NDeleteNextGraphemeCommandAction">
             <summary>
             Deletes the selected text
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Text.Commands.NDeleteCommandAction.#ctor">
+        <member name="M:Nevron.Nov.Text.Commands.NDeleteNextGraphemeCommandAction.#ctor">
             <summary>
             Default constructor
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Text.Commands.NDeleteCommandAction.GetCommand">
+        <member name="M:Nevron.Nov.Text.Commands.NDeleteNextGraphemeCommandAction.GetCommand">
             <summary>
             Gets the command associated with this action
             </summary>
             <returns></returns>
         </member>
-        <member name="F:Nevron.Nov.Text.Commands.NDeleteCommandAction.NDeleteCommandActionSchema">
+        <member name="F:Nevron.Nov.Text.Commands.NDeleteNextGraphemeCommandAction.NDeleteNextGraphemeCommandActionSchema">
+            <summary>
+            Schema associated with NDeleteNextGraphemeCommandAction
+            </summary>
+        </member>
+        <member name="T:Nevron.Nov.Text.Commands.NDeletePrevCharCommandAction">
+            <summary>
+            Deletes the previuos character
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Text.Commands.NDeletePrevCharCommandAction.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Text.Commands.NDeletePrevCharCommandAction.GetCommand">
+            <summary>
+            Gets the command associated with this action
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Nevron.Nov.Text.Commands.NDeletePrevCharCommandAction.NDeletePrevCharCommandActionSchema">
+            <summary>
+            Schema associated with NChangeFillCommandAction 
+            </summary>
+        </member>
+        <member name="T:Nevron.Nov.Text.Commands.NDeletePrevNextWordCommandAction">
+            <summary>
+            Deletes the selected text
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Text.Commands.NDeletePrevNextWordCommandAction.#ctor(System.Boolean)">
+            <summary>
+            Initializer constructor
+            </summary>
+            <param name="prevWord"></param>
+        </member>
+        <member name="M:Nevron.Nov.Text.Commands.NDeletePrevNextWordCommandAction.GetCommand">
+            <summary>
+            Gets the command associated with this action
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Nevron.Nov.Text.Commands.NDeletePrevNextWordCommandAction.NDeletePrevNextWordCommandActionSchema">
             <summary>
             Schema associated with NChangeFillCommandAction 
             </summary>
@@ -6628,6 +6665,48 @@
             Schema associated with NToggleHRulerCommandAction
             </summary>
         </member>
+        <member name="T:Nevron.Nov.Text.Commands.NToggleStatusBarCommandAction">
+            <summary>
+            Toggles the status bar visibility.
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Text.Commands.NToggleStatusBarCommandAction.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Text.Commands.NToggleStatusBarCommandAction.GetCommand">
+            <summary>
+            Gets the command associated with this command action.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Text.Commands.NToggleStatusBarCommandAction.IsEnabled(Nevron.Nov.Dom.NNode)">
+            <summary>
+            Checks whether this action should be enabled for the given target.
+            </summary>
+            <param name="target"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Text.Commands.NToggleStatusBarCommandAction.IsChecked(Nevron.Nov.Dom.NNode)">
+            <summary>
+            Checks whether this command action is checked.
+            </summary>
+            <param name="target"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Text.Commands.NToggleStatusBarCommandAction.Execute(Nevron.Nov.Dom.NNode,System.Object)">
+            <summary>
+            Executes this command action.
+            </summary>
+            <param name="target"></param>
+            <param name="parameter"></param>
+        </member>
+        <member name="F:Nevron.Nov.Text.Commands.NToggleStatusBarCommandAction.NToggleStatusBarCommandActionSchema">
+            <summary>
+            Schema associated with NToggleStatusBarCommandAction.
+            </summary>
+        </member>
         <member name="T:Nevron.Nov.Text.Commands.NToggleVRulerCommandAction">
             <summary>
             Toggles the VRuler
@@ -6640,23 +6719,23 @@
         </member>
         <member name="M:Nevron.Nov.Text.Commands.NToggleVRulerCommandAction.GetCommand">
             <summary>
-            Gets the command associated with this action
+            Gets the command associated with this action.
             </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Text.Commands.NToggleVRulerCommandAction.IsChecked(Nevron.Nov.Dom.NNode)">
+            <summary>
+            Checks whether the action is checked.
+            </summary>
+            <param name="target"></param>
             <returns></returns>
         </member>
         <member name="M:Nevron.Nov.Text.Commands.NToggleVRulerCommandAction.Execute(Nevron.Nov.Dom.NNode,System.Object)">
             <summary>
-            Executes the action
+            Executes the action.
             </summary>
             <param name="target"></param>
             <param name="parameter"></param>
-        </member>
-        <member name="M:Nevron.Nov.Text.Commands.NToggleVRulerCommandAction.IsChecked(Nevron.Nov.Dom.NNode)">
-            <summary>
-            
-            </summary>
-            <param name="target"></param>
-            <returns></returns>
         </member>
         <member name="F:Nevron.Nov.Text.Commands.NToggleVRulerCommandAction.NToggleVRulerCommandActionSchema">
             <summary>
@@ -7301,6 +7380,16 @@
             Initializer constructor
             </summary>
         </member>
+        <member name="T:Nevron.Nov.Text.NDeleteNextWordBatch">
+            <summary>
+            Deletes the next word.
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Text.NDeleteNextWordBatch.#ctor">
+            <summary>
+            Initializer constructor
+            </summary>
+        </member>
         <member name="T:Nevron.Nov.Text.NDeletePrevCharBatch">
             <summary>
             Deletes the previous char in case the selection does not contain a range.
@@ -7310,6 +7399,26 @@
         <member name="M:Nevron.Nov.Text.NDeletePrevCharBatch.#ctor">
             <summary>
             Initializing constructor.
+            </summary>
+        </member>
+        <member name="T:Nevron.Nov.Text.NDeletePrevChartBatch">
+            <summary>
+            Deletes the previuos chart
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Text.NDeletePrevChartBatch.#ctor">
+            <summary>
+            Initializer constructor
+            </summary>
+        </member>
+        <member name="T:Nevron.Nov.Text.NDeletePrevWordBatch">
+            <summary>
+            Deletes the word preceding the current selection.
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Text.NDeletePrevWordBatch.#ctor">
+            <summary>
+            Initializer constructor
             </summary>
         </member>
         <member name="T:Nevron.Nov.Text.NDeleteRangeBatch">
@@ -8815,7 +8924,7 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Text.NBulletList.KlpC.CreateControl">
+        <member name="M:Nevron.Nov.Text.NBulletList.vGQC.CreateControl">
             <summary>
             Overriden to create the hierarchy editor content.
             </summary>
@@ -9338,9 +9447,16 @@
             </summary>
             <returns>The new row index</returns>
         </member>
+        <member name="M:Nevron.Nov.Text.NMailMerge.DeepCopyCore(Nevron.Nov.Dom.NNode,Nevron.Nov.Dom.NDomDeepCopyContext)">
+            <summary>
+            Called to perform the actual deep copying of the source node.
+            </summary>
+            <param name="source"></param>
+            <param name="context"></param>
+        </member>
         <member name="M:Nevron.Nov.Text.NMailMerge.OnAttributeChanged(Nevron.Nov.Dom.NAttribute)">
             <summary>
-            
+            Overriden to detect when the data source property has changed.
             </summary>
             <param name="attribute"></param>
         </member>
@@ -9534,26 +9650,26 @@
             <summary>
             Determines whether the specified printRangeMode option is supported by the element.
             </summary>
-            <param name="MQpC"></param>
+            <param name="xlQC"></param>
             <returns></returns>
         </member>
         <member name="M:Nevron.Nov.Text.NDocumentBlock.Nevron#Nov#UI#INPagedElement#BeginPrinting(Nevron.Nov.UI.NPagedContext)">
             <summary>
             Starts the printing.
             </summary>
-            <param name="nQpC"></param>
+            <param name="YlQC"></param>
         </member>
         <member name="M:Nevron.Nov.Text.NDocumentBlock.Nevron#Nov#UI#INPagedElement#QueryPageSettings(Nevron.Nov.UI.NPagedContext)">
             <summary>
             Called before printing a page.
             </summary>
-            <param name="OQpC"></param>
+            <param name="AMQC"></param>
         </member>
         <member name="M:Nevron.Nov.Text.NDocumentBlock.Nevron#Nov#UI#INPagedElement#PrintPage(Nevron.Nov.UI.NPagedContext)">
             <summary>
             
             </summary>
-            <param name="pQpC"></param>
+            <param name="bMQC"></param>
         </member>
         <member name="M:Nevron.Nov.Text.NDocumentBlock.Nevron#Nov#UI#INPagedElement#EndPrinting">
             <summary>
@@ -10345,17 +10461,17 @@
         </member>
         <member name="P:Nevron.Nov.Text.NBlock.AllowSpacingBetweenCells">
             <summary>
-            Gets / sets whether to allow spacing between cells
+            Gets / sets whether to allow spacing between cells. By default set to true.
             </summary>
         </member>
         <member name="P:Nevron.Nov.Text.NBlock.TableCellHorizontalSpacing">
             <summary>
-            Gets / sets the horizontal border spacing for table cells
+            Gets / sets the horizontal border spacing for table cells. By default set to 0.
             </summary>
         </member>
         <member name="P:Nevron.Nov.Text.NBlock.TableCellVerticalSpacing">
             <summary>
-            Gets / sets the vertical border spacing for table cells
+            Gets / sets the vertical border spacing for table cells. By default set to 0.
             </summary>
         </member>
         <member name="P:Nevron.Nov.Text.NBlock.IntrinsicMinWidth">
@@ -14083,12 +14199,12 @@
             <param name="context"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Text.NMailMergeSourceFieldValue.bCvC.OnUpdateFromEditedNode">
+        <member name="M:Nevron.Nov.Text.NMailMergeSourceFieldValue.QWvC.OnUpdateFromEditedNode">
             <summary>
             Updates the editor from the edited node.
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Text.NMailMergeSourceFieldValue.bCvC.CreateValueControl">
+        <member name="M:Nevron.Nov.Text.NMailMergeSourceFieldValue.QWvC.CreateValueControl">
             <summary>
             
             </summary>
@@ -16268,6 +16384,48 @@
             Schema associated with NRichTextViewWithRibbon.
             </summary>
         </member>
+        <member name="T:Nevron.Nov.Text.NSimpleRichTextView">
+            <summary>
+            A simple rich text edit control that mimics the WordPad functionality.
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Text.NSimpleRichTextView.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="F:Nevron.Nov.Text.NSimpleRichTextView.NSimpleRichTextViewSchema">
+            <summary>
+            Schema associated with NSimpleRichTextView.
+            </summary>
+        </member>
+        <member name="T:Nevron.Nov.Text.NSimpleRichTextViewWithRibbon">
+            <summary>
+            A simple rich text view with ribbon (similar to WordPad).
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Text.NSimpleRichTextViewWithRibbon.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Text.NSimpleRichTextViewWithRibbon.CreateUIBuilder">
+            <summary>
+            Creates the rich text ribbon builder.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Text.NSimpleRichTextViewWithRibbon.CreateView">
+            <summary>
+            Creates the rich text view.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Nevron.Nov.Text.NSimpleRichTextViewWithRibbon.NSimpleRichTextViewWithRibbonSchema">
+            <summary>
+            Schema associated with NSimpleRichTextViewWithRibbon.
+            </summary>
+        </member>
         <member name="T:Nevron.Nov.Text.NTextElement">
             <summary>
             Base of all text elements
@@ -17386,6 +17544,16 @@
             Delete the previous char from the text
             </summary>
         </member>
+        <member name="M:Nevron.Nov.Text.NSelection.DeletePrevWord">
+            <summary>
+            Delete the previous word from the text
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Text.NSelection.DeleteNextWord">
+            <summary>
+            Delete the next word from the text
+            </summary>
+        </member>
         <member name="M:Nevron.Nov.Text.NSelection.CanInsertTable">
             <summary>
             Returns true if a table can be inserted at the current selection
@@ -18183,7 +18351,7 @@
         </member>
         <member name="T:Nevron.Nov.Text.NInsertDateSettings">
             <summary>
-            Represents settings for the insert date command action
+            Represents the settings for the insert date command action.
             </summary>
         </member>
         <member name="M:Nevron.Nov.Text.NInsertDateSettings.#ctor">
@@ -19783,32 +19951,32 @@
             <param name="node"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Text.NRichTextStyleCollection.pWnC.GetDesigner(Nevron.Nov.Dom.NNode)">
+        <member name="M:Nevron.Nov.Text.NRichTextStyleCollection.GSOC.GetDesigner(Nevron.Nov.Dom.NNode)">
             <summary>
             Gets the designer of the specified node.
             </summary>
-            <param name="QWnC"></param>
+            <param name="hSOC"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Text.NRichTextStyleCollection.pWnC.CreateHierarchyBrowser">
+        <member name="M:Nevron.Nov.Text.NRichTextStyleCollection.GSOC.CreateHierarchyBrowser">
             <summary>
             Creates the hierarchy browser.
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Text.NRichTextStyleCollection.rWnC.ShouldCreateItem(Nevron.Nov.Dom.NNode)">
+        <member name="M:Nevron.Nov.Text.NRichTextStyleCollection.ISOC.ShouldCreateItem(Nevron.Nov.Dom.NNode)">
             <summary>
             Determines whether an item should be created for the specified node.
             </summary>
-            <param name="tWnC"></param>
+            <param name="KSOC"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Text.NRichTextStyleCollection.rWnC.GetInsertionIndex(Nevron.Nov.Dom.NNode,Nevron.Nov.Dom.NNode)">
+        <member name="M:Nevron.Nov.Text.NRichTextStyleCollection.ISOC.GetInsertionIndex(Nevron.Nov.Dom.NNode,Nevron.Nov.Dom.NNode)">
             <summary>
             Gets the insertion index of the given node.
             </summary>
-            <param name="UWnC"></param>
-            <param name="vWnC"></param>
+            <param name="lSOC"></param>
+            <param name="MSOC"></param>
             <returns></returns>
         </member>
         <member name="T:Nevron.Nov.Text.NRichTextStylingElement">
@@ -25079,12 +25247,12 @@
         </member>
         <member name="P:Nevron.Nov.Text.UI.NRichTextContextMenuBuilder.ShowMiniToolbar">
             <summary>
-            Whether the context menu will also contain the mini toolbar
+            Specifies whether the context menu should show the mini toolbar.
             </summary>
         </member>
         <member name="P:Nevron.Nov.Text.UI.NRichTextContextMenuBuilder.Groups">
             <summary>
-            Gets the groups in this context menu builder
+            Gets/Sets the groups in this context menu builder.
             </summary>
         </member>
         <member name="M:Nevron.Nov.Text.UI.NRichTextContextMenuBuilder.ResetGroups">
@@ -25336,7 +25504,7 @@
             <summary>
             Creates a split button.
             </summary>
-            <typeparam name="jhOC"></typeparam>
+            <typeparam name="AdpC"></typeparam>
             <param name="image"></param>
             <param name="moreOptionsImage"></param>
             <param name="command"></param>
@@ -25599,6 +25767,36 @@
             The insert symbols group builder
             </summary>
         </member>
+        <member name="F:Nevron.Nov.Text.UI.NInsertTabPageBuilder.Pages">
+            <summary>
+            The "Pages" ribbon group name.
+            </summary>
+        </member>
+        <member name="F:Nevron.Nov.Text.UI.NInsertTabPageBuilder.Tables">
+            <summary>
+            The "Tables" ribbon group name.
+            </summary>
+        </member>
+        <member name="F:Nevron.Nov.Text.UI.NInsertTabPageBuilder.Illustrations">
+            <summary>
+            The "Illustrations" ribbon group name.
+            </summary>
+        </member>
+        <member name="F:Nevron.Nov.Text.UI.NInsertTabPageBuilder.Links">
+            <summary>
+            The "Links" ribbon group name.
+            </summary>
+        </member>
+        <member name="F:Nevron.Nov.Text.UI.NInsertTabPageBuilder.Text">
+            <summary>
+            The "Text" ribbon group name.
+            </summary>
+        </member>
+        <member name="F:Nevron.Nov.Text.UI.NInsertTabPageBuilder.Symbols">
+            <summary>
+            The "Symbols" ribbon group name.
+            </summary>
+        </member>
         <member name="T:Nevron.Nov.Text.UI.NInsertTextGroupBuilder">
             <summary>
             Creates the rich text "Text" ribbon group.
@@ -25761,7 +25959,7 @@
             <summary>
             Creates a split button.
             </summary>
-            <typeparam name="vhOC"></typeparam>
+            <typeparam name="hdpC"></typeparam>
             <param name="image"></param>
             <param name="moreOptionsImage"></param>
             <param name="command"></param>
@@ -26261,6 +26459,39 @@
             The name of the "Layout" tab page.
             </summary>
         </member>
+        <member name="T:Nevron.Nov.Text.UI.NInsertGroupBuilder">
+            <summary>
+            An "Insert" ribbon group builder that creates buttons for the most commonly inserted items.
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Text.UI.NInsertGroupBuilder.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Text.UI.NInsertGroupBuilder.AddRibbonGroupItems(Nevron.Nov.UI.NRibbonGroupItemCollection)">
+            <summary>
+            Adds the ribbon group builders.
+            </summary>
+            <param name="items"></param>
+        </member>
+        <member name="T:Nevron.Nov.Text.UI.NSimpleRichTextRibbonBuilder">
+            <summary>
+            A rich text ribbon builder, which creates a ribbon similar to that of WordPad.
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Text.UI.NSimpleRichTextRibbonBuilder.CreateRibbonTabContextCommandSource">
+            <summary>
+            Creates the ribbon tab context command source. Overriden to return null.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Text.UI.NSimpleRichTextRibbonBuilder.AddTabPageBuilders(Nevron.Nov.UI.NCommandBuilderCollection{Nevron.Nov.UI.NRibbonTabPageBuilder})">
+            <summary>
+            Adds the tab page builders.
+            </summary>
+            <param name="tabPageBuilders"></param>
+        </member>
         <member name="T:Nevron.Nov.Text.NSpellSuggestionMenuItem">
             <summary>
             A menu item that shows a spell check suggestion.
@@ -26721,8 +26952,8 @@
             <summary>
             Given a thumb position in thumb axis coordinates, determines the thumb value
             </summary>
-            <param name="rQSC"></param>
-            <param name="SQSC"></param>
+            <param name="dMtC"></param>
+            <param name="EMtC"></param>
             <returns></returns>
         </member>
         <member name="M:Nevron.Nov.Text.NHRuler.ArrangeContent(Nevron.Nov.Graphics.NRectangle)">
@@ -27222,8 +27453,8 @@
             <summary>
             Given a thumb position in thumb axis coordinates, determines the thumb value
             </summary>
-            <param name="hSSC"></param>
-            <param name="ISSC"></param>
+            <param name="SntC"></param>
+            <param name="tntC"></param>
             <returns></returns>
         </member>
         <member name="P:Nevron.Nov.Text.NVRuler.Lane">
@@ -28228,572 +28459,584 @@
             Matches a widget, direct child of a rich text cell alignment menu item.
             </summary>
         </member>
-        <member name="P:Nevron.Nov.Internal.plbC.Name">
+        <member name="P:Nevron.Nov.Internal.QGCC.Name">
             <summary>
             Gets the name of the format.
             </summary>
         </member>
-        <member name="P:Nevron.Nov.Internal.plbC.Extensions">
+        <member name="P:Nevron.Nov.Internal.QGCC.Extensions">
             <summary>
             Gets the possible file extnesions of the format.
             </summary>
         </member>
-        <member name="P:Nevron.Nov.Internal.plbC.FileSignature">
+        <member name="P:Nevron.Nov.Internal.QGCC.FileSignature">
             <summary>
             Gets the file signature of this document format.
             </summary>
         </member>
-        <member name="P:Nevron.Nov.Internal.plbC.Mime">
+        <member name="P:Nevron.Nov.Internal.QGCC.Mime">
             <summary>
             Gets the mime type.
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Internal.plbC.OnUse">
+        <member name="M:Nevron.Nov.Internal.QGCC.OnUse">
             <summary>
             Called when the format is used.
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Internal.plbC.LoadFromStreamCore(System.IO.Stream,Nevron.Nov.Text.Formats.NTextLoadSettings,Nevron.Nov.NProgress)">
+        <member name="M:Nevron.Nov.Internal.QGCC.LoadFromStreamCore(System.IO.Stream,Nevron.Nov.Text.Formats.NTextLoadSettings,Nevron.Nov.NProgress)">
             <summary>
             
             </summary>
-            <param name="QlbC"></param>
-            <param name="rlbC"></param>
-            <param name="SlbC"></param>
+            <param name="rGCC"></param>
+            <param name="SGCC"></param>
+            <param name="tGCC"></param>
             <returns></returns>
             <exception cref="T:System.NotImplementedException"></exception>
         </member>
-        <member name="M:Nevron.Nov.Internal.plbC.SaveToStreamCore(Nevron.Nov.Text.NRichTextDocument,System.IO.Stream,Nevron.Nov.Text.Formats.NTextSaveSettings,Nevron.Nov.NProgress)">
+        <member name="M:Nevron.Nov.Internal.QGCC.SaveToStreamCore(Nevron.Nov.Text.NRichTextDocument,System.IO.Stream,Nevron.Nov.Text.Formats.NTextSaveSettings,Nevron.Nov.NProgress)">
             <summary>
             
             </summary>
-            <param name="tlbC"></param>
-            <param name="UlbC"></param>
-            <param name="vlbC"></param>
-            <param name="WlbC"></param>
+            <param name="UGCC"></param>
+            <param name="vGCC"></param>
+            <param name="WGCC"></param>
+            <param name="xGCC"></param>
         </member>
-        <member name="P:Nevron.Nov.Internal.bMbC.Extensions">
+        <member name="P:Nevron.Nov.Internal.ChCC.Extensions">
             <summary>
             Gets the possible file extnesions of the format.
             </summary>
         </member>
-        <member name="P:Nevron.Nov.Internal.bMbC.Mime">
+        <member name="P:Nevron.Nov.Internal.ChCC.Mime">
             <summary>
             Gets the mime type.
             </summary>
         </member>
-        <member name="P:Nevron.Nov.Internal.bMbC.FileSignature">
+        <member name="P:Nevron.Nov.Internal.ChCC.FileSignature">
             <summary>
             Gets the file signature of this document format.
             </summary>
         </member>
-        <member name="P:Nevron.Nov.Internal.bMbC.Name">
+        <member name="P:Nevron.Nov.Internal.ChCC.Name">
             <summary>
             Gets the name of the format.
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Internal.bMbC.OnUse">
+        <member name="M:Nevron.Nov.Internal.ChCC.OnUse">
             <summary>
             Called when the format is used.
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Internal.bMbC.LoadFromStreamCore(System.IO.Stream,Nevron.Nov.Text.Formats.NTextLoadSettings,Nevron.Nov.NProgress)">
+        <member name="M:Nevron.Nov.Internal.ChCC.LoadFromStreamCore(System.IO.Stream,Nevron.Nov.Text.Formats.NTextLoadSettings,Nevron.Nov.NProgress)">
             <summary>
             
             </summary>
-            <param name="CMbC"></param>
-            <param name="dMbC"></param>
-            <param name="EMbC"></param>
+            <param name="dhCC"></param>
+            <param name="EhCC"></param>
+            <param name="fhCC"></param>
             <returns></returns>
             <exception cref="T:System.NotImplementedException"></exception>
         </member>
-        <member name="M:Nevron.Nov.Internal.bMbC.SaveToStreamCore(Nevron.Nov.Text.NRichTextDocument,System.IO.Stream,Nevron.Nov.Text.Formats.NTextSaveSettings,Nevron.Nov.NProgress)">
+        <member name="M:Nevron.Nov.Internal.ChCC.SaveToStreamCore(Nevron.Nov.Text.NRichTextDocument,System.IO.Stream,Nevron.Nov.Text.Formats.NTextSaveSettings,Nevron.Nov.NProgress)">
             <summary>
             
             </summary>
-            <param name="fMbC"></param>
-            <param name="GMbC"></param>
-            <param name="hMbC"></param>
-            <param name="IMbC"></param>
+            <param name="GhCC"></param>
+            <param name="hhCC"></param>
+            <param name="IhCC"></param>
+            <param name="jhCC"></param>
         </member>
-        <member name="P:Nevron.Nov.Internal.nMbC.Extensions">
+        <member name="P:Nevron.Nov.Internal.OhCC.Extensions">
             <summary>
             Gets the extension of the format.
             </summary>
         </member>
-        <member name="P:Nevron.Nov.Internal.nMbC.Mime">
+        <member name="P:Nevron.Nov.Internal.OhCC.Mime">
             <summary>
             Gets the mime type.
             </summary>
         </member>
-        <member name="P:Nevron.Nov.Internal.nMbC.Name">
+        <member name="P:Nevron.Nov.Internal.OhCC.Name">
             <summary>
             Gets the name of the format.
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Internal.nMbC.OnUse">
+        <member name="M:Nevron.Nov.Internal.OhCC.OnUse">
             <summary>
             Called when the format is used
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Internal.nMbC.LoadFromStreamCoreAsync(System.IO.Stream,Nevron.Nov.Text.Formats.NTextLoadSettings,Nevron.Nov.NProgress)">
+        <member name="M:Nevron.Nov.Internal.OhCC.LoadFromStreamCoreAsync(System.IO.Stream,Nevron.Nov.Text.Formats.NTextLoadSettings,Nevron.Nov.NProgress)">
             <summary>
             Loads a rich text document from the given HTML stream asynchronously.
             </summary>
-            <param name="pMbC"></param>
-            <param name="QMbC"></param>
-            <param name="rMbC"></param>
+            <param name="QhCC"></param>
+            <param name="rhCC"></param>
+            <param name="ShCC"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.nMbC.LoadFromStreamCore(System.IO.Stream,Nevron.Nov.Text.Formats.NTextLoadSettings,Nevron.Nov.NProgress)">
+        <member name="M:Nevron.Nov.Internal.OhCC.LoadFromStreamCore(System.IO.Stream,Nevron.Nov.Text.Formats.NTextLoadSettings,Nevron.Nov.NProgress)">
             <summary>
             Loads a rich text document from the given HTML stream. If the HTML contains links to external CSS files,
-            this method will throw an exception. Use the <see cref="M:Nevron.Nov.Internal.nMbC.LoadFromStreamCoreAsync(System.IO.Stream,Nevron.Nov.Text.Formats.NTextLoadSettings,Nevron.Nov.NProgress)"/>
+            this method will throw an exception. Use the <see cref="M:Nevron.Nov.Internal.OhCC.LoadFromStreamCoreAsync(System.IO.Stream,Nevron.Nov.Text.Formats.NTextLoadSettings,Nevron.Nov.NProgress)"/>
             to load HTML documents that contain links to external CSS files.
             </summary>
-            <param name="SMbC"></param>
-            <param name="tMbC"></param>
-            <param name="UMbC"></param>
+            <param name="thCC"></param>
+            <param name="UhCC"></param>
+            <param name="vhCC"></param>
             <returns></returns>
             <exception cref="T:System.NotImplementedException"></exception>
         </member>
-        <member name="M:Nevron.Nov.Internal.nMbC.SaveToStreamCore(Nevron.Nov.Text.NRichTextDocument,System.IO.Stream,Nevron.Nov.Text.Formats.NTextSaveSettings,Nevron.Nov.NProgress)">
+        <member name="M:Nevron.Nov.Internal.OhCC.SaveToStreamCore(Nevron.Nov.Text.NRichTextDocument,System.IO.Stream,Nevron.Nov.Text.Formats.NTextSaveSettings,Nevron.Nov.NProgress)">
             <summary>
             Saves the given rich text document to the specified stream as HTML.
             </summary>
-            <param name="vMbC"></param>
-            <param name="WMbC"></param>
-            <param name="xMbC"></param>
-            <param name="YMbC"></param>
+            <param name="WhCC"></param>
+            <param name="xhCC"></param>
+            <param name="YhCC"></param>
+            <param name="AICC"></param>
         </member>
-        <member name="P:Nevron.Nov.Internal.lnbC.Name">
+        <member name="P:Nevron.Nov.Internal.MICC.Name">
             <summary>
             Gets the name of the format
             </summary>
         </member>
-        <member name="P:Nevron.Nov.Internal.lnbC.Extensions">
+        <member name="P:Nevron.Nov.Internal.MICC.Extensions">
             <summary>
             Gets the extnesion of the format
             </summary>
         </member>
-        <member name="P:Nevron.Nov.Internal.lnbC.Mime">
+        <member name="P:Nevron.Nov.Internal.MICC.Mime">
             <summary>
             Gets the mime type 
             </summary>
         </member>
-        <member name="P:Nevron.Nov.Internal.lnbC.CanLoad">
+        <member name="P:Nevron.Nov.Internal.MICC.CanLoad">
             <summary>
             Returns true if the format can load a text document from stream
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Internal.lnbC.OnUse">
+        <member name="M:Nevron.Nov.Internal.MICC.OnUse">
             <summary>
             Called when the format is used.
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Internal.lnbC.LoadFromStreamCore(System.IO.Stream,Nevron.Nov.Text.Formats.NTextLoadSettings,Nevron.Nov.NProgress)">
+        <member name="M:Nevron.Nov.Internal.MICC.LoadFromStreamCore(System.IO.Stream,Nevron.Nov.Text.Formats.NTextLoadSettings,Nevron.Nov.NProgress)">
             <summary>
             
             </summary>
-            <param name="MnbC"></param>
-            <param name="nnbC"></param>
-            <param name="OnbC"></param>
+            <param name="nICC"></param>
+            <param name="OICC"></param>
+            <param name="pICC"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.lnbC.SaveToStreamCore(Nevron.Nov.Text.NRichTextDocument,System.IO.Stream,Nevron.Nov.Text.Formats.NTextSaveSettings,Nevron.Nov.NProgress)">
+        <member name="M:Nevron.Nov.Internal.MICC.SaveToStreamCore(Nevron.Nov.Text.NRichTextDocument,System.IO.Stream,Nevron.Nov.Text.Formats.NTextSaveSettings,Nevron.Nov.NProgress)">
             <summary>
             
             </summary>
-            <param name="pnbC"></param>
-            <param name="QnbC"></param>
-            <param name="rnbC"></param>
-            <param name="SnbC"></param>
+            <param name="QICC"></param>
+            <param name="rICC"></param>
+            <param name="SICC"></param>
+            <param name="tICC"></param>
         </member>
-        <member name="P:Nevron.Nov.Internal.vnbC.Name">
+        <member name="P:Nevron.Nov.Internal.WICC.Name">
             <summary>
             Gets the name of the format
             </summary>
         </member>
-        <member name="P:Nevron.Nov.Internal.vnbC.Extensions">
+        <member name="P:Nevron.Nov.Internal.WICC.Extensions">
             <summary>
             Gets the extnesion of the format
             </summary>
         </member>
-        <member name="P:Nevron.Nov.Internal.vnbC.FileSignature">
+        <member name="P:Nevron.Nov.Internal.WICC.FileSignature">
             <summary>
             Gets the file signature of this document format.
             </summary>
         </member>
-        <member name="P:Nevron.Nov.Internal.vnbC.Mime">
+        <member name="P:Nevron.Nov.Internal.WICC.Mime">
             <summary>
             Gets the mime type 
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Internal.vnbC.OnUse">
+        <member name="M:Nevron.Nov.Internal.WICC.OnUse">
             <summary>
             Called when the format is used.
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Internal.vnbC.LoadFromStreamCore(System.IO.Stream,Nevron.Nov.Text.Formats.NTextLoadSettings,Nevron.Nov.NProgress)">
+        <member name="M:Nevron.Nov.Internal.WICC.LoadFromStreamCore(System.IO.Stream,Nevron.Nov.Text.Formats.NTextLoadSettings,Nevron.Nov.NProgress)">
             <summary>
             
             </summary>
-            <param name="WnbC"></param>
-            <param name="xnbC"></param>
-            <param name="YnbC"></param>
+            <param name="xICC"></param>
+            <param name="YICC"></param>
+            <param name="AjCC"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.vnbC.SaveToStreamCore(Nevron.Nov.Text.NRichTextDocument,System.IO.Stream,Nevron.Nov.Text.Formats.NTextSaveSettings,Nevron.Nov.NProgress)">
+        <member name="M:Nevron.Nov.Internal.WICC.SaveToStreamCore(Nevron.Nov.Text.NRichTextDocument,System.IO.Stream,Nevron.Nov.Text.Formats.NTextSaveSettings,Nevron.Nov.NProgress)">
             <summary>
             
             </summary>
-            <param name="AObC"></param>
-            <param name="bObC"></param>
-            <param name="CObC"></param>
-            <param name="dObC"></param>
+            <param name="bjCC"></param>
+            <param name="CjCC"></param>
+            <param name="djCC"></param>
+            <param name="EjCC"></param>
         </member>
-        <member name="P:Nevron.Nov.Internal.hObC.Name">
+        <member name="P:Nevron.Nov.Internal.IjCC.Name">
             <summary>
             Gets the name of the format
             </summary>
         </member>
-        <member name="P:Nevron.Nov.Internal.hObC.Extensions">
+        <member name="P:Nevron.Nov.Internal.IjCC.Extensions">
             <summary>
             Gets the extnesion of the format
             </summary>
         </member>
-        <member name="P:Nevron.Nov.Internal.hObC.Mime">
+        <member name="P:Nevron.Nov.Internal.IjCC.Mime">
             <summary>
             Gets the mime type 
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Internal.hObC.LoadFromStreamCore(System.IO.Stream,Nevron.Nov.Text.Formats.NTextLoadSettings,Nevron.Nov.NProgress)">
+        <member name="M:Nevron.Nov.Internal.IjCC.LoadFromStreamCore(System.IO.Stream,Nevron.Nov.Text.Formats.NTextLoadSettings,Nevron.Nov.NProgress)">
             <summary>
             
             </summary>
-            <param name="nObC"></param>
-            <param name="OObC"></param>
-            <param name="pObC"></param>
+            <param name="OjCC"></param>
+            <param name="pjCC"></param>
+            <param name="QjCC"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.hObC.SaveToStreamCore(Nevron.Nov.Text.NRichTextDocument,System.IO.Stream,Nevron.Nov.Text.Formats.NTextSaveSettings,Nevron.Nov.NProgress)">
+        <member name="M:Nevron.Nov.Internal.IjCC.SaveToStreamCore(Nevron.Nov.Text.NRichTextDocument,System.IO.Stream,Nevron.Nov.Text.Formats.NTextSaveSettings,Nevron.Nov.NProgress)">
             <summary>
             
             </summary>
-            <param name="QObC"></param>
-            <param name="rObC"></param>
-            <param name="SObC"></param>
-            <param name="tObC"></param>
+            <param name="rjCC"></param>
+            <param name="SjCC"></param>
+            <param name="tjCC"></param>
+            <param name="UjCC"></param>
         </member>
-        <member name="M:Nevron.Nov.Internal.QOhC.Filter(Nevron.Nov.Compression.NZipItem)">
+        <member name="M:Nevron.Nov.Internal.rjIC.Filter(Nevron.Nov.Compression.NZipItem)">
             <summary>
             Determines whether the given item should be decompressed or not.
             Overriden to always return true.
             </summary>
-            <param name="SOhC"></param>
+            <param name="tjIC"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.QOhC.OnItemDecompressed(Nevron.Nov.Compression.NZipItem)">
+        <member name="M:Nevron.Nov.Internal.rjIC.OnItemDecompressed(Nevron.Nov.Compression.NZipItem)">
             <summary>
             Called when a zip item has been decompressed.
             </summary>
-            <param name="tOhC"></param>
+            <param name="UjIC"></param>
         </member>
-        <member name="M:Nevron.Nov.Internal.EnIC.Equals(System.Object)">
+        <member name="M:Nevron.Nov.Internal.fIjC.Equals(System.Object)">
             <summary>
             Checks whether this CSS class id list contains the same class ids
             the given one.
             </summary>
-            <param name="GnIC"></param>
+            <param name="hIjC"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.EnIC.GetHashCode">
+        <member name="M:Nevron.Nov.Internal.fIjC.GetHashCode">
             <summary>
             Serves as a hash function for a particular type.
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.fpIC.Equals(System.Object)">
+        <member name="M:Nevron.Nov.Internal.GKjC.Equals(System.Object)">
             <summary>
             Checks whether this HTML light element list contains the same
             HTML light elements as the given one.
             </summary>
-            <param name="IpIC"></param>
+            <param name="jKjC"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.fpIC.GetHashCode">
+        <member name="M:Nevron.Nov.Internal.GKjC.GetHashCode">
             <summary>
             Serves as a hash function for a particular type.
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.nhIC.OlIC.Compare(Nevron.Nov.Dom.NNode,Nevron.Nov.Dom.NNode)">
+        <member name="M:Nevron.Nov.Internal.OCjC.pGjC.Compare(Nevron.Nov.Dom.NNode,Nevron.Nov.Dom.NNode)">
             <summary>
             Compares the given HTML table children and returns -1 if the first one should be
             before the second one in this child array of the table and 1 in the opposite case.
             </summary>
-            <param name="plIC"></param>
-            <param name="QlIC"></param>
+            <param name="QGjC"></param>
+            <param name="rGjC"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.QWpb.Create">
+        <member name="M:Nevron.Nov.Internal.YArb.GetSmallLogoIcon">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Internal.YArb.GetAboutImage">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Internal.jbrb.Create">
             <summary>
             Creates Nevron Writer's "File" menu.
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.QWpb.AddItems(Nevron.Nov.UI.NMenuItemCollection)">
+        <member name="M:Nevron.Nov.Internal.jbrb.AddItems(Nevron.Nov.UI.NMenuItemCollection)">
             <summary>
             Adds the menu items.
             </summary>
-            <param name="rWpb"></param>
+            <param name="Kbrb"></param>
         </member>
-        <member name="M:Nevron.Nov.Internal.pxpb.AddItems(Nevron.Nov.UI.NMenuItemCollection)">
+        <member name="M:Nevron.Nov.Internal.ICrb.AddItems(Nevron.Nov.UI.NMenuItemCollection)">
             <summary>
             Add the items to the menu drop down.
             </summary>
-            <param name="Qxpb"></param>
+            <param name="jCrb"></param>
         </member>
-        <member name="P:Nevron.Nov.Internal.dxpb.HelpButtonCommand">
+        <member name="P:Nevron.Nov.Internal.vbrb.HelpButtonCommand">
             <summary>
             Gets the command that should be associated with the help button of the ribbon.
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Internal.OKlC.CanExecute(Nevron.Nov.Text.INRichTextView)">
+        <member name="M:Nevron.Nov.Internal.YfMC.CanExecute(Nevron.Nov.Text.INRichTextView)">
             <summary>
             Returns true if the batch can be executed.
             </summary>
-            <param name="pKlC"></param>
+            <param name="AGMC"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.CllC.GetBlockMargins(Nevron.Nov.Text.NBlock)">
+        <member name="M:Nevron.Nov.Internal.MGMC.GetBlockMargins(Nevron.Nov.Text.NBlock)">
             <summary>
             Gets the margins for the specified block
             </summary>
-            <param name="hllC"></param>
+            <param name="rGMC"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.CllC.SetBlockMargins(Nevron.Nov.Text.NBlock,Nevron.Nov.Graphics.NMargins)">
+        <member name="M:Nevron.Nov.Internal.MGMC.SetBlockMargins(Nevron.Nov.Text.NBlock,Nevron.Nov.Graphics.NMargins)">
             <summary>
             Sets the margins to the specified block
             </summary>
-            <param name="IllC"></param>
-            <param name="jllC"></param>
+            <param name="SGMC"></param>
+            <param name="tGMC"></param>
         </member>
-        <member name="M:Nevron.Nov.Internal.lllC.CanExecute(Nevron.Nov.Text.INRichTextView)">
+        <member name="M:Nevron.Nov.Internal.vGMC.CanExecute(Nevron.Nov.Text.INRichTextView)">
             <summary>
             Checks whether the batch can be executed.
             </summary>
-            <param name="MllC"></param>
+            <param name="WGMC"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.MMlC.CanExecute(Nevron.Nov.Text.INRichTextView)">
+        <member name="M:Nevron.Nov.Internal.WhMC.CanExecute(Nevron.Nov.Text.INRichTextView)">
             <summary>
             Returns true if the batch can be executed.
             </summary>
-            <param name="nMlC"></param>
+            <param name="xhMC"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.tMlC.CanExecute(Nevron.Nov.Text.INRichTextView)">
+        <member name="M:Nevron.Nov.Internal.hIMC.CanExecute(Nevron.Nov.Text.INRichTextView)">
             <summary>
             Returns true if the batch can be executed.
             </summary>
-            <param name="UMlC"></param>
+            <param name="IIMC"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.tMlC.OnDialogClosed(Nevron.Nov.Dom.NEventArgs)">
+        <member name="M:Nevron.Nov.Internal.hIMC.OnDialogClosed(Nevron.Nov.Dom.NEventArgs)">
             <summary>
             Called when the dialog has been closed.
             </summary>
-            <param name="vMlC"></param>
+            <param name="jIMC"></param>
         </member>
-        <member name="M:Nevron.Nov.Internal.SnlC.CanExecute(Nevron.Nov.Text.INRichTextView)">
+        <member name="M:Nevron.Nov.Internal.GjMC.CanExecute(Nevron.Nov.Text.INRichTextView)">
             <summary>
             Returns true if the batch can be executed.
             </summary>
-            <param name="tnlC"></param>
+            <param name="hjMC"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.vnlC.CanExecute(Nevron.Nov.Text.INRichTextView)">
+        <member name="M:Nevron.Nov.Internal.jjMC.CanExecute(Nevron.Nov.Text.INRichTextView)">
             <summary>
             Returns true if the batch can be executed.
             </summary>
-            <param name="WnlC"></param>
+            <param name="KjMC"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.COlC.CanExecute(Nevron.Nov.Text.INRichTextView)">
+        <member name="M:Nevron.Nov.Internal.pjMC.CanExecute(Nevron.Nov.Text.INRichTextView)">
             <summary>
             Returns true if the batch can be executed.
             </summary>
-            <param name="dOlC"></param>
+            <param name="QjMC"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.fOlC.CanExecute(Nevron.Nov.Text.INRichTextView)">
+        <member name="M:Nevron.Nov.Internal.SjMC.CanExecute(Nevron.Nov.Text.INRichTextView)">
             <summary>
             Returns true if the batch can be executed.
             </summary>
-            <param name="GOlC"></param>
+            <param name="tjMC"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.jOlC`1.CanExecute(Nevron.Nov.Text.INRichTextView)">
+        <member name="M:Nevron.Nov.Internal.WjMC`1.CanExecute(Nevron.Nov.Text.INRichTextView)">
             <summary>
             Returns true if the batch can be executed.
             </summary>
-            <param name="lOlC"></param>
+            <param name="YjMC"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.SOlC.CanExecute(Nevron.Nov.Text.INRichTextView)">
+        <member name="M:Nevron.Nov.Internal.GKMC.CanExecute(Nevron.Nov.Text.INRichTextView)">
             <summary>
             Returns true if the batch can be executed.
             </summary>
-            <param name="UOlC"></param>
+            <param name="IKMC"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.SOlC.InitializeDialog(Nevron.Nov.Editors.NEditorWindow)">
+        <member name="M:Nevron.Nov.Internal.GKMC.InitializeDialog(Nevron.Nov.Editors.NEditorWindow)">
             <summary>
             Initializes the given dialog.
             </summary>
-            <param name="vOlC"></param>
+            <param name="jKMC"></param>
         </member>
-        <member name="M:Nevron.Nov.Internal.SOlC.OnDialogClosed(Nevron.Nov.Dom.NEventArgs)">
+        <member name="M:Nevron.Nov.Internal.GKMC.OnDialogClosed(Nevron.Nov.Dom.NEventArgs)">
             <summary>
             Called when the dialog window has been closed.
             </summary>
-            <param name="WOlC"></param>
+            <param name="KKMC"></param>
         </member>
-        <member name="M:Nevron.Nov.Internal.OxOC.OnDialogClosed(Nevron.Nov.Dom.NEventArgs)">
+        <member name="M:Nevron.Nov.Internal.AtpC.OnDialogClosed(Nevron.Nov.Dom.NEventArgs)">
             <summary>
             Called when the dialog has been closed.
             </summary>
-            <param name="QxOC"></param>
+            <param name="CtpC"></param>
         </member>
-        <member name="M:Nevron.Nov.Internal.QQlC.CanExecute(Nevron.Nov.Text.INRichTextView)">
+        <member name="M:Nevron.Nov.Internal.EMMC.CanExecute(Nevron.Nov.Text.INRichTextView)">
             <summary>
             Returns true if the batch can be executed.
             </summary>
-            <param name="rQlC"></param>
+            <param name="fMMC"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.CSlC.CanExecute(Nevron.Nov.Text.INRichTextView)">
+        <member name="M:Nevron.Nov.Internal.pnMC.CanExecute(Nevron.Nov.Text.INRichTextView)">
             <summary>
             Returns true if the batch can be executed.
             </summary>
-            <param name="dSlC"></param>
+            <param name="QnMC"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.fSlC.CanExecute(Nevron.Nov.Text.INRichTextView)">
+        <member name="M:Nevron.Nov.Internal.SnMC.CanExecute(Nevron.Nov.Text.INRichTextView)">
             <summary>
             Returns true if the batch can be executed.
             </summary>
-            <param name="GSlC"></param>
+            <param name="tnMC"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.fSlC.OnDialogClosed(Nevron.Nov.Dom.NEventArgs)">
+        <member name="M:Nevron.Nov.Internal.SnMC.OnDialogClosed(Nevron.Nov.Dom.NEventArgs)">
             <summary>
             Called when the dialog has been closed.
             </summary>
-            <param name="hSlC"></param>
+            <param name="UnMC"></param>
         </member>
-        <member name="M:Nevron.Nov.Internal.jSlC.CanExecute(Nevron.Nov.Text.INRichTextView)">
+        <member name="M:Nevron.Nov.Internal.WnMC.CanExecute(Nevron.Nov.Text.INRichTextView)">
             <summary>
             Returns true if the batch can be executed.
             </summary>
-            <param name="KSlC"></param>
+            <param name="xnMC"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.GtlC.CanExecute(Nevron.Nov.Text.INRichTextView)">
+        <member name="M:Nevron.Nov.Internal.tOMC.CanExecute(Nevron.Nov.Text.INRichTextView)">
             <summary>
             Returns true if the batch can be executed.
             </summary>
-            <param name="ItlC"></param>
+            <param name="vOMC"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.ltlC.CanExecute(Nevron.Nov.Text.INRichTextView)">
+        <member name="M:Nevron.Nov.Internal.YOMC.CanExecute(Nevron.Nov.Text.INRichTextView)">
             <summary>
             Returns true if the batch can be executed.
             </summary>
-            <param name="ntlC"></param>
+            <param name="bpMC"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.OApC.CanExecute(Nevron.Nov.Text.INRichTextView)">
+        <member name="M:Nevron.Nov.Internal.AvpC.CanExecute(Nevron.Nov.Text.INRichTextView)">
             <summary>
             Returns true if the batch can be executed.
             </summary>
-            <param name="QApC"></param>
+            <param name="CvpC"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.WdpC.End">
+        <member name="M:Nevron.Nov.Internal.IYpC.End">
             <summary>
             Marks the end of a cloning session.
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Internal.AptC.Equals(System.Object)">
+        <member name="M:Nevron.Nov.Internal.lKUC.Equals(System.Object)">
             <summary>
             Returns true if the objects are equal
             </summary>
-            <param name="SptC"></param>
+            <param name="ElUC"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.AptC.GetHashCode">
+        <member name="M:Nevron.Nov.Internal.lKUC.GetHashCode">
             <summary>
             Returns the hash code of the current object.
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.AptC.DeepClone">
+        <member name="M:Nevron.Nov.Internal.lKUC.DeepClone">
             <summary>
             Creates an identical copy of this object.
             </summary>
             <returns>A copy of this instance.</returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.nQtC.Equals(System.Object)">
+        <member name="M:Nevron.Nov.Internal.YlUC.Equals(System.Object)">
             <summary>
             NInlineObstacleList
             </summary>
-            <param name="SStC"></param>
+            <param name="EOUC"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.nQtC.GetHashCode">
+        <member name="M:Nevron.Nov.Internal.YlUC.GetHashCode">
             <summary>
             Returns the hash code of the current object.
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.nQtC.DeepClone">
+        <member name="M:Nevron.Nov.Internal.YlUC.DeepClone">
             <summary>
             Creates an identical copy of this object.
             </summary>
             <returns>A copy of this instance.</returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.vhvC.CIvC.CreateInstanceEditor(Nevron.Nov.Dom.NNode,Nevron.Nov.Editors.NEditorContext)">
+        <member name="M:Nevron.Nov.Internal.ldWC.rdWC.CreateInstanceEditor(Nevron.Nov.Dom.NNode,Nevron.Nov.Editors.NEditorContext)">
             <summary>
             Creates the editor, which must edit the specified node.
             </summary>
-            <param name="dIvC">The node to edit, cannot be null.</param>
-            <param name="EIvC"></param>
+            <param name="SdWC">The node to edit, cannot be null.</param>
+            <param name="tdWC"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.vhvC.CIvC.CreateStateEditor(Nevron.Nov.Dom.NNode,Nevron.Nov.Editors.NEditorContext)">
+        <member name="M:Nevron.Nov.Internal.ldWC.rdWC.CreateStateEditor(Nevron.Nov.Dom.NNode,Nevron.Nov.Editors.NEditorContext)">
             <summary>
             Creates the editor, which must edit the state of the specified node.
             </summary>
-            <param name="fIvC">The node to edit, cannot be null.</param>
-            <param name="GIvC"></param>
+            <param name="UdWC">The node to edit, cannot be null.</param>
+            <param name="vdWC"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.OvtC.OnUnregistered">
+        <member name="M:Nevron.Nov.Internal.CrUC.OnUnregistered">
             <summary>
             Unregisters the page from the document.
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Internal.fAUC.AccumulateDisplayChildren(Nevron.Nov.Dom.NDisplayVisitor,Nevron.Nov.DataStructures.NList{Nevron.Nov.Dom.NVisual})">
+        <member name="M:Nevron.Nov.Internal.SUUC.AccumulateDisplayChildren(Nevron.Nov.Dom.NDisplayVisitor,Nevron.Nov.DataStructures.NList{Nevron.Nov.Dom.NVisual})">
             <summary>
             Appends the displayable children of the node to the provided list
             </summary>
-            <param name="KAUC"></param>
-            <param name="jAUC"></param>
+            <param name="xUUC"></param>
+            <param name="WUUC"></param>
         </member>
-        <member name="M:Nevron.Nov.Internal.KxpC.InvalidateParentMeasure(System.Object)">
+        <member name="M:Nevron.Nov.Internal.vSQC.InvalidateParentMeasure(System.Object)">
             <summary>
             Invalidates the measure of element measure parent(s).
             </summary>
@@ -28801,762 +29044,762 @@
             Pages don't invalidate thier parent
             </remarks>
         </member>
-        <member name="M:Nevron.Nov.Internal.KxpC.DoPrePaint(Nevron.Nov.Dom.NPaintVisitor)">
+        <member name="M:Nevron.Nov.Internal.vSQC.DoPrePaint(Nevron.Nov.Dom.NPaintVisitor)">
             <summary>
             Peforms the element pre children paint.
             </summary>
             <remarks>
             This implementation renders the element background and border background.
             </remarks>
-            <param name="rxpC"></param>
+            <param name="dtQC"></param>
         </member>
-        <member name="P:Nevron.Nov.Internal.UlvC.Item(System.Int32)">
+        <member name="P:Nevron.Nov.Internal.KhWC.Item(System.Int32)">
             <summary>
             Gets the page at the specified global page index
             </summary>
             <param name="pageIndex"></param>
             <returns></returns>
         </member>
-        <member name="P:Nevron.Nov.Internal.UnvC.Item(System.Int32)">
+        <member name="P:Nevron.Nov.Internal.KjWC.Item(System.Int32)">
             <summary>
             Gets the page at the specified global page index
             </summary>
             <param name="pageIndex"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.nAUC.DoPrePaint(Nevron.Nov.Dom.NPaintVisitor)">
+        <member name="M:Nevron.Nov.Internal.bvUC.DoPrePaint(Nevron.Nov.Dom.NPaintVisitor)">
             <summary>
             Peforms the element pre children paint.
             </summary>
             <remarks>
             This implementation renders the element background and border background.
             </remarks>
-            <param name="jCUC"></param>
+            <param name="WWUC"></param>
         </member>
-        <member name="M:Nevron.Nov.Internal.nAUC.CreateBorderWall(Nevron.Nov.Dom.NDisplayVisitor)">
+        <member name="M:Nevron.Nov.Internal.bvUC.CreateBorderWall(Nevron.Nov.Dom.NDisplayVisitor)">
             <summary>
             
             </summary>
-            <param name="KCUC"></param>
+            <param name="xWUC"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.nAUC.OnUnregistered">
+        <member name="M:Nevron.Nov.Internal.bvUC.OnUnregistered">
             <summary>
             
             </summary>
         </member>
-        <member name="P:Nevron.Nov.Internal.nAUC.IsPooledForMeasure">
+        <member name="P:Nevron.Nov.Internal.bvUC.IsPooledForMeasure">
             <summary>
             Gets whether the element is pooled for measure validation.
             </summary>
         </member>
-        <member name="P:Nevron.Nov.Internal.nAUC.IsMeasureValid">
+        <member name="P:Nevron.Nov.Internal.bvUC.IsMeasureValid">
             <summary>
             Gets whether the measure of the element is valid
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Internal.nAUC.InvalidateMeasure(System.Object)">
+        <member name="M:Nevron.Nov.Internal.bvUC.InvalidateMeasure(System.Object)">
             <summary>
             Invalidates the element measure and pools the element for measure validation.
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Internal.nAUC.ValidateMeasure">
+        <member name="M:Nevron.Nov.Internal.bvUC.ValidateMeasure">
             <summary>
             Called to validate the element measure
             </summary>
         </member>
-        <member name="P:Nevron.Nov.Internal.nAUC.IsPooledForArrange">
+        <member name="P:Nevron.Nov.Internal.bvUC.IsPooledForArrange">
             <summary>
             Gets whether the element is pooled for arrange validation.
             </summary>
         </member>
-        <member name="P:Nevron.Nov.Internal.nAUC.IsArrangeValid">
+        <member name="P:Nevron.Nov.Internal.bvUC.IsArrangeValid">
             <summary>
             Gets whether the arrange of the element is valid.
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.nAUC.InvalidateArrange(System.Object)">
+        <member name="M:Nevron.Nov.Internal.bvUC.InvalidateArrange(System.Object)">
             <summary>
             Invalidates the element arrange
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Internal.nAUC.ValidateArrange">
+        <member name="M:Nevron.Nov.Internal.bvUC.ValidateArrange">
             <summary>
             Called to arrange the element
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Internal.fGUC.AccumulateDisplayChildren(Nevron.Nov.Dom.NDisplayVisitor,Nevron.Nov.DataStructures.NList{Nevron.Nov.Dom.NVisual})">
+        <member name="M:Nevron.Nov.Internal.SbvC.AccumulateDisplayChildren(Nevron.Nov.Dom.NDisplayVisitor,Nevron.Nov.DataStructures.NList{Nevron.Nov.Dom.NVisual})">
             <summary>
             Appends the displayable children of the node to the provided list
             </summary>
-            <param name="UGUC"></param>
-            <param name="tGUC"></param>
+            <param name="ICvC"></param>
+            <param name="hCvC"></param>
         </member>
-        <member name="M:Nevron.Nov.Internal.rUQC.DeepClone">
+        <member name="M:Nevron.Nov.Internal.dQrC.DeepClone">
             <summary>
             Creates an identical copy of this object.
             </summary>
             <returns>A copy of this instance.</returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.OhrC.CreateControl">
+        <member name="M:Nevron.Nov.Internal.AdSC.CreateControl">
             <summary>
             Creates the control that should edit the bookmark collection.
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.OhrC.OnUpdateFromEditedNode">
+        <member name="M:Nevron.Nov.Internal.AdSC.OnUpdateFromEditedNode">
             <summary>
             Updates the editor from the edited node.
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Internal.pIrC.GetBrowsedNodeChildren">
+        <member name="M:Nevron.Nov.Internal.bESC.GetBrowsedNodeChildren">
             <summary>
             Gets the children of the browsed node.
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.KtMC.Filter(Nevron.Nov.Dom.NNode)">
+        <member name="M:Nevron.Nov.Internal.xOnC.Filter(Nevron.Nov.Dom.NNode)">
             <summary>
             Checks whether the given node is a non empty paragraph.
             </summary>
-            <param name="ltMC"></param>
+            <param name="YOnC"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.MdnC.GetTextPositionFromCoordinate(Nevron.Nov.Graphics.NPoint,Nevron.Nov.Text.NTextPosition@)">
+        <member name="M:Nevron.Nov.Internal.AYnC.GetTextPositionFromCoordinate(Nevron.Nov.Graphics.NPoint,Nevron.Nov.Text.NTextPosition@)">
             <summary>
             Gets the text position corresponding to the specified coordinate
             </summary>
-            <param name="ndnC"></param>
-            <param name="OdnC"></param>
+            <param name="bYnC"></param>
+            <param name="CYnC"></param>
             <returns></returns>
         </member>
-        <member name="P:Nevron.Nov.Internal.YdnC.TabStopInfo">
+        <member name="P:Nevron.Nov.Internal.MYnC.TabStopInfo">
             <summary>
             Gets / sets the tab stop info associated with this tab
             </summary>
         </member>
-        <member name="P:Nevron.Nov.Internal.YdnC.TabWidth">
+        <member name="P:Nevron.Nov.Internal.MYnC.TabWidth">
             <summary>
             Gets / sets the tab width
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Internal.YdnC.GetTabGlyphRun">
+        <member name="M:Nevron.Nov.Internal.MYnC.GetTabGlyphRun">
             <summary>
             Gets the tab run
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.CEnC.GetBlocksIntersectingYIterator(System.Double)">
+        <member name="M:Nevron.Nov.Internal.pYnC.GetBlocksIntersectingYIterator(System.Double)">
             <summary>
             Gets an iteratator that will output all blocks that intersect the specified coordinate
             </summary>
-            <param name="dEnC"></param>
+            <param name="QYnC"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.CEnC.GetBlocksIntersectingRangeIterator(System.Double,System.Double)">
+        <member name="M:Nevron.Nov.Internal.pYnC.GetBlocksIntersectingRangeIterator(System.Double,System.Double)">
             <summary>
             Gets an iteratator that will output all blocks that intersect the specified range
             </summary>
-            <param name="EEnC"></param>
-            <param name="fEnC"></param>
+            <param name="rYnC"></param>
+            <param name="SYnC"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.CEnC.InvalidateBlockYIndex(Nevron.Nov.Text.ENBlockYIndex)">
+        <member name="M:Nevron.Nov.Internal.pYnC.InvalidateBlockYIndex(Nevron.Nov.Text.ENBlockYIndex)">
             <summary>
             Invalidates the block y index
             </summary>
-            <param name="GEnC"></param>
+            <param name="tYnC"></param>
         </member>
-        <member name="M:Nevron.Nov.Internal.CEnC.GetContentYRange(Nevron.Nov.Graphics.NRange@)">
+        <member name="M:Nevron.Nov.Internal.pYnC.GetContentYRange(Nevron.Nov.Graphics.NRange@)">
             <summary>
             Gets the content y range
             </summary>
-            <param name="hEnC"></param>
+            <param name="UYnC"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.QMrC.UpdatePreview">
+        <member name="M:Nevron.Nov.Internal.CISC.UpdatePreview">
             <summary>
             Updates the preview based on the previewed value.
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Internal.xMrC.UpdatePreview">
+        <member name="M:Nevron.Nov.Internal.jISC.UpdatePreview">
             <summary>
             Updates the preview based on the previewed value.
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Internal.jEnC.PaintPreview(Nevron.Nov.Dom.NPaintVisitor,Nevron.Nov.Graphics.NRectangle,System.Boolean)">
+        <member name="M:Nevron.Nov.Internal.WYnC.PaintPreview(Nevron.Nov.Dom.NPaintVisitor,Nevron.Nov.Graphics.NRectangle,System.Boolean)">
             <summary>
             Overriden to paint a column page layout preview.
             </summary>
-            <param name="KEnC"></param>
-            <param name="lEnC"></param>
-            <param name="MEnC"></param>
+            <param name="xYnC"></param>
+            <param name="YYnC"></param>
+            <param name="AAOC"></param>
         </member>
-        <member name="M:Nevron.Nov.Internal.YEnC.UpdatePreview">
+        <member name="M:Nevron.Nov.Internal.MAOC.UpdatePreview">
             <summary>
             Updates the preview based on the previewed value.
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Internal.lnrC.UpdatePreview">
+        <member name="M:Nevron.Nov.Internal.WISC.UpdatePreview">
             <summary>
             Updates the preview based on the previewed value.
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Internal.QnrC.CreatePreview(Nevron.Nov.Graphics.NSize)">
+        <member name="M:Nevron.Nov.Internal.CjSC.CreatePreview(Nevron.Nov.Graphics.NSize)">
             <summary>
             Creates a table style preview with the given size.
             </summary>
-            <param name="rnrC"></param>
+            <param name="djSC"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.SnrC.PaintPreview(Nevron.Nov.Dom.NPaintVisitor,Nevron.Nov.Graphics.NRectangle,System.Boolean)">
+        <member name="M:Nevron.Nov.Internal.EjSC.PaintPreview(Nevron.Nov.Dom.NPaintVisitor,Nevron.Nov.Graphics.NRectangle,System.Boolean)">
             <summary>
             Paints the preview in the specified level of detail.
             </summary>
-            <param name="tnrC"></param>
-            <param name="UnrC"></param>
-            <param name="vnrC"></param>
+            <param name="fjSC"></param>
+            <param name="GjSC"></param>
+            <param name="hjSC"></param>
         </member>
-        <member name="P:Nevron.Nov.Internal.ICvC.TextFormat">
+        <member name="P:Nevron.Nov.Internal.xWvC.TextFormat">
             <summary>
             The underling text format
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Internal.vQrC.FromDataObject(System.Object)">
+        <member name="M:Nevron.Nov.Internal.hMSC.FromDataObject(System.Object)">
             <summary>
             Imports a document from a data object
             </summary>
-            <param name="WQrC"></param>
+            <param name="IMSC"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.vQrC.ToDataObject(Nevron.Nov.Text.NRichTextDocument,Nevron.Nov.UI.NDataObject)">
+        <member name="M:Nevron.Nov.Internal.hMSC.ToDataObject(Nevron.Nov.Text.NRichTextDocument,Nevron.Nov.UI.NDataObject)">
             <summary>
             Exports a document to a data object
             </summary>
-            <param name="xQrC"></param>
-            <param name="YQrC"></param>
+            <param name="jMSC"></param>
+            <param name="KMSC"></param>
             <returns></returns>
         </member>
-        <member name="P:Nevron.Nov.Internal.vQrC.TextFormat">
+        <member name="P:Nevron.Nov.Internal.hMSC.TextFormat">
             <summary>
             The underling text format
             </summary>
         </member>
-        <member name="P:Nevron.Nov.Internal.vQrC.DataFormat">
+        <member name="P:Nevron.Nov.Internal.hMSC.DataFormat">
             <summary>
             The underling text format
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Internal.vrnC.UndoAction">
+        <member name="M:Nevron.Nov.Internal.MnOC.UndoAction">
             <summary>
             Undoes the specific node action
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Internal.vrnC.RedoAction">
+        <member name="M:Nevron.Nov.Internal.MnOC.RedoAction">
             <summary>
             Redoes the specific node action
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Internal.fUrC.DeepClone">
+        <member name="M:Nevron.Nov.Internal.QpSC.DeepClone">
             <summary>
             Creates an exact replica of this object
             </summary>
             <returns></returns>
         </member>
-        <member name="P:Nevron.Nov.Internal.QCOC`1.HasCommon">
+        <member name="P:Nevron.Nov.Internal.hxOC`1.HasCommon">
             <summary>
             Gets whether there is a common value
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Internal.tCOC.GetSelectedSections">
+        <member name="M:Nevron.Nov.Internal.KxOC.GetSelectedSections">
             <summary>
             Gets the selected sections.
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.tCOC.GetSelectedBlocks">
+        <member name="M:Nevron.Nov.Internal.KxOC.GetSelectedBlocks">
             <summary>
             Gets the selected blocks.
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.tCOC.GetSelectedParagraphs">
+        <member name="M:Nevron.Nov.Internal.KxOC.GetSelectedParagraphs">
             <summary>
             Gets the currently selected paragraphs
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Internal.tCOC.GetSelectedInlines(System.Boolean)">
+        <member name="M:Nevron.Nov.Internal.KxOC.GetSelectedInlines(System.Boolean)">
             <summary>
             Gets the currently selected inline elements 
             </summary>
-            <param name="UCOC">whether to extend the selected range to include a paragraph end mark</param>
+            <param name="lxOC">whether to extend the selected range to include a paragraph end mark</param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.tCOC.GetSelectedTableRows">
+        <member name="M:Nevron.Nov.Internal.KxOC.GetSelectedTableRows">
             <summary>
             Gets the currently selected table rows iterator
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.tCOC.GetSelectedTableCells">
+        <member name="M:Nevron.Nov.Internal.KxOC.GetSelectedTableCells">
             <summary>
             Gets the selected table cells.
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.tCOC.GetDecreaseIndentTargetBlocks">
+        <member name="M:Nevron.Nov.Internal.KxOC.GetDecreaseIndentTargetBlocks">
             <summary>
             Gets the blocks currently target for a decrease indent operation
             </summary>
             <returns></returns>
         </member>
-        <member name="P:Nevron.Nov.Internal.pdKC`1.HasCommon">
+        <member name="P:Nevron.Nov.Internal.AYKC`1.HasCommon">
             <summary>
             Gets whether there is a common value
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Internal.tvvd.Equals(System.Object)">
+        <member name="M:Nevron.Nov.Internal.vjWd.Equals(System.Object)">
             <summary>
             
             </summary>
-            <param name="vvvd"></param>
+            <param name="xjWd"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.tvvd.GetHashCode">
-            <summary>
-            
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:Nevron.Nov.Internal.Yvvd.Equals(System.Object)">
-            <summary>
-            
-            </summary>
-            <param name="bWvd"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Nevron.Nov.Internal.Yvvd.GetHashCode">
+        <member name="M:Nevron.Nov.Internal.vjWd.GetHashCode">
             <summary>
             
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.QjKC.ToString">
+        <member name="M:Nevron.Nov.Internal.bKWd.Equals(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="dKWd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Internal.bKWd.GetHashCode">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Internal.bflC.ToString">
             <summary>
             Returns the string representation of this affix.
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.GKKC.ToString">
+        <member name="M:Nevron.Nov.Internal.QflC.ToString">
             <summary>
             Returns the string representation of this affix command.
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.QKKC.ToString">
+        <member name="M:Nevron.Nov.Internal.bGlC.ToString">
             <summary>
             Returns the string representation of this affix command condition.
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.vKKC.ToString">
+        <member name="M:Nevron.Nov.Internal.GGlC.ToString">
             <summary>
             Returns the string representation of this affixed word.
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.bOKC.ToString">
+        <member name="M:Nevron.Nov.Internal.ljlC.ToString">
             <summary>
             Returns the string representation of this dictionary item.
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.vIKC.DoThreadedTask">
+        <member name="M:Nevron.Nov.Internal.GElC.DoThreadedTask">
             <summary>
             
             </summary>
         </member>
-        <member name="P:Nevron.Nov.Internal.rvhC.Name">
+        <member name="P:Nevron.Nov.Internal.SQIC.Name">
             <summary>
             Gets the name of the format
             </summary>
         </member>
-        <member name="P:Nevron.Nov.Internal.rvhC.Extensions">
+        <member name="P:Nevron.Nov.Internal.SQIC.Extensions">
             <summary>
             Gets the extnesion of the format
             </summary>
         </member>
-        <member name="P:Nevron.Nov.Internal.rvhC.FileSignature">
+        <member name="P:Nevron.Nov.Internal.SQIC.FileSignature">
             <summary>
             Gets the file signature of this document format.
             </summary>
         </member>
-        <member name="P:Nevron.Nov.Internal.rvhC.Mime">
+        <member name="P:Nevron.Nov.Internal.SQIC.Mime">
             <summary>
             Gets the mime type 
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Internal.rvhC.OnUse">
+        <member name="M:Nevron.Nov.Internal.SQIC.OnUse">
             <summary>
             Called when the format is used
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Internal.rvhC.LoadFromStreamCore(System.IO.Stream,Nevron.Nov.Text.Formats.NTextLoadSettings,Nevron.Nov.NProgress)">
+        <member name="M:Nevron.Nov.Internal.SQIC.LoadFromStreamCore(System.IO.Stream,Nevron.Nov.Text.Formats.NTextLoadSettings,Nevron.Nov.NProgress)">
             <summary>
             
             </summary>
-            <param name="SvhC"></param>
-            <param name="tvhC"></param>
-            <param name="UvhC"></param>
+            <param name="tQIC"></param>
+            <param name="UQIC"></param>
+            <param name="vQIC"></param>
             <returns></returns>
             <exception cref="T:System.NotImplementedException"></exception>
         </member>
-        <member name="M:Nevron.Nov.Internal.rvhC.SaveToStreamCore(Nevron.Nov.Text.NRichTextDocument,System.IO.Stream,Nevron.Nov.Text.Formats.NTextSaveSettings,Nevron.Nov.NProgress)">
+        <member name="M:Nevron.Nov.Internal.SQIC.SaveToStreamCore(Nevron.Nov.Text.NRichTextDocument,System.IO.Stream,Nevron.Nov.Text.Formats.NTextSaveSettings,Nevron.Nov.NProgress)">
             <summary>
             
             </summary>
-            <param name="vvhC"></param>
-            <param name="WvhC"></param>
-            <param name="xvhC"></param>
-            <param name="YvhC"></param>
+            <param name="WQIC"></param>
+            <param name="xQIC"></param>
+            <param name="YQIC"></param>
+            <param name="ArIC"></param>
             <exception cref="T:System.NotImplementedException"></exception>
         </member>
-        <member name="P:Nevron.Nov.Internal.dWhC.Name">
+        <member name="P:Nevron.Nov.Internal.ErIC.Name">
             <summary>
             Gets the name of the format
             </summary>
         </member>
-        <member name="P:Nevron.Nov.Internal.dWhC.Extensions">
+        <member name="P:Nevron.Nov.Internal.ErIC.Extensions">
             <summary>
             Gets the extnesion of the format
             </summary>
         </member>
-        <member name="P:Nevron.Nov.Internal.dWhC.FileSignature">
+        <member name="P:Nevron.Nov.Internal.ErIC.FileSignature">
             <summary>
             Gets the file signature of this document format.
             </summary>
         </member>
-        <member name="P:Nevron.Nov.Internal.dWhC.Mime">
+        <member name="P:Nevron.Nov.Internal.ErIC.Mime">
             <summary>
             Gets the mime type 
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Internal.dWhC.OnUse">
+        <member name="M:Nevron.Nov.Internal.ErIC.OnUse">
             <summary>
             Called when the format is used
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Internal.dWhC.LoadFromStreamCore(System.IO.Stream,Nevron.Nov.Text.Formats.NTextLoadSettings,Nevron.Nov.NProgress)">
+        <member name="M:Nevron.Nov.Internal.ErIC.LoadFromStreamCore(System.IO.Stream,Nevron.Nov.Text.Formats.NTextLoadSettings,Nevron.Nov.NProgress)">
             <summary>
             
             </summary>
-            <param name="fWhC"></param>
-            <param name="GWhC"></param>
-            <param name="hWhC"></param>
+            <param name="GrIC"></param>
+            <param name="hrIC"></param>
+            <param name="IrIC"></param>
             <returns></returns>
             <exception cref="T:System.NotImplementedException"></exception>
         </member>
-        <member name="M:Nevron.Nov.Internal.dWhC.SaveToStreamCore(Nevron.Nov.Text.NRichTextDocument,System.IO.Stream,Nevron.Nov.Text.Formats.NTextSaveSettings,Nevron.Nov.NProgress)">
+        <member name="M:Nevron.Nov.Internal.ErIC.SaveToStreamCore(Nevron.Nov.Text.NRichTextDocument,System.IO.Stream,Nevron.Nov.Text.Formats.NTextSaveSettings,Nevron.Nov.NProgress)">
             <summary>
             
             </summary>
-            <param name="IWhC"></param>
-            <param name="jWhC"></param>
-            <param name="KWhC"></param>
-            <param name="lWhC"></param>
+            <param name="jrIC"></param>
+            <param name="KrIC"></param>
+            <param name="lrIC"></param>
+            <param name="MrIC"></param>
             <exception cref="T:System.NotImplementedException"></exception>
         </member>
-        <member name="M:Nevron.Nov.Internal.pQKC.ProvideRichTextView(Nevron.Nov.Graphics.NRectangle)">
+        <member name="M:Nevron.Nov.Internal.AMlC.ProvideRichTextView(Nevron.Nov.Graphics.NRectangle)">
             <summary>
             
             </summary>
-            <param name="QQKC"></param>
+            <param name="bMlC"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.pQKC.ProvideRichTextView(System.Boolean)">
+        <member name="M:Nevron.Nov.Internal.AMlC.ProvideRichTextView(System.Boolean)">
             <summary>
             
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.WpSC.NavigateToContent">
+        <member name="M:Nevron.Nov.Internal.IltC.NavigateToContent">
             <summary>
             Navigates to the first item of this item menu.
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.WpSC.CreatePopupWindow">
+        <member name="M:Nevron.Nov.Internal.IltC.CreatePopupWindow">
             <summary>
             Creates a popup window that hosts a table picker for selecting a table cell.
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.WpSC.IsPopupEmpty">
+        <member name="M:Nevron.Nov.Internal.IltC.IsPopupEmpty">
             <summary>
             Gets whether the menu contains at least one sub item.
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.WpSC.OnPopupOpened">
+        <member name="M:Nevron.Nov.Internal.IltC.OnPopupOpened">
             <summary>
             Called when the popup is opened.
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Internal.WpSC.OnPopupQueryStayOpen">
+        <member name="M:Nevron.Nov.Internal.IltC.OnPopupQueryStayOpen">
             <summary>
             Called when the popup queries whether to stay opened.
             This implementation returns true if the popup is active or has active descendant windows.
             </summary>
             <returns>true if the popup should stay opened.</returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.YtSC.PreVisit(Nevron.Nov.Dom.NVisual)">
+        <member name="M:Nevron.Nov.Internal.KptC.PreVisit(Nevron.Nov.Dom.NVisual)">
             <summary>
             Called before the visitor visits the node children
             </summary>
-            <param name="EUSC"></param>
+            <param name="pptC"></param>
         </member>
-        <member name="M:Nevron.Nov.Internal.YtSC.SkipBranchTraversal(Nevron.Nov.Dom.NVisual)">
+        <member name="M:Nevron.Nov.Internal.KptC.SkipBranchTraversal(Nevron.Nov.Dom.NVisual)">
             <summary>
             Determines whether the visitor needs to visit of the specified displayable branch.
             </summary>
-            <param name="fUSC"></param>
+            <param name="QptC"></param>
             <returns>true to skip branch traversal, otherwise false</returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.YQOC.OnUpdateFromEditedNode">
+        <member name="M:Nevron.Nov.Internal.KMpC.OnUpdateFromEditedNode">
             <summary>
             Updates the editor from the edited node.
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Internal.YQOC.CreateControl">
+        <member name="M:Nevron.Nov.Internal.KMpC.CreateControl">
             <summary>
             Creates the control that should edit the properties of the edited node.
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.YQOC.OnUpdatePreview">
+        <member name="M:Nevron.Nov.Internal.KMpC.OnUpdatePreview">
             <summary>
             Raises the UpdatePreview event.
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Internal.GYSC.OnUpdateFromEditedNode">
+        <member name="M:Nevron.Nov.Internal.rttC.OnUpdateFromEditedNode">
             <summary>
             Updates the editor from the edited node.
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Internal.OYSC.OnUpdateFromEditedNode">
+        <member name="M:Nevron.Nov.Internal.AUtC.OnUpdateFromEditedNode">
             <summary>
             Updates the editor from the edited node.
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Internal.OYSC.CreateControl">
+        <member name="M:Nevron.Nov.Internal.AUtC.CreateControl">
             <summary>
             Creates the control that should edit the properties of the edited node.
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.xAtC.OnPopupOpening">
+        <member name="M:Nevron.Nov.Internal.jvtC.OnPopupOpening">
             <summary>
             Called when the popup is about to be opened. Creates the popup content.
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.xAtC.OnPopupClosed">
+        <member name="M:Nevron.Nov.Internal.jvtC.OnPopupClosed">
             <summary>
             Called when the drop down has been closed.
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Internal.rbtC.AttachToSource(Nevron.Nov.Dom.NElement)">
+        <member name="M:Nevron.Nov.Internal.dWtC.AttachToSource(Nevron.Nov.Dom.NElement)">
             <summary>
             Attaches the command source to the specified element.
             </summary>
-            <param name="tbtC"></param>
+            <param name="fWtC"></param>
         </member>
-        <member name="M:Nevron.Nov.Internal.rbtC.DetachFromSource(Nevron.Nov.Dom.NElement)">
+        <member name="M:Nevron.Nov.Internal.dWtC.DetachFromSource(Nevron.Nov.Dom.NElement)">
             <summary>
             Detaches the command source from the specified element.
             </summary>
-            <param name="UbtC"></param>
+            <param name="GWtC"></param>
         </member>
-        <member name="M:Nevron.Nov.Internal.rbtC.GetUpdateMask(Nevron.Nov.UI.ENCommandSourceUpdateReason)">
+        <member name="M:Nevron.Nov.Internal.dWtC.GetUpdateMask(Nevron.Nov.UI.ENCommandSourceUpdateReason)">
             <summary>
             Gets the mask that defines the aspects of the owner element that need to be updated at update timer ticks and after command execution.
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.vEtC.CreateCommandSource(Nevron.Nov.UI.NCommand)">
+        <member name="M:Nevron.Nov.Internal.hAUC.CreateCommandSource(Nevron.Nov.UI.NCommand)">
             <summary>
             Creates a command source for this split button and associates it with the given command.
             </summary>
-            <param name="GftC"></param>
+            <param name="rAUC"></param>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.vEtC.CreateActionButton">
+        <member name="M:Nevron.Nov.Internal.hAUC.CreateActionButton">
             <summary>
             Overriden to perform the default initialization of the ActionButton content.
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Internal.vEtC.CreatePopupContent">
+        <member name="M:Nevron.Nov.Internal.hAUC.CreatePopupContent">
             <summary>
             Creates the popup content.
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.pftC.AttachToSource(Nevron.Nov.Dom.NElement)">
+        <member name="M:Nevron.Nov.Internal.bbUC.AttachToSource(Nevron.Nov.Dom.NElement)">
             <summary>
             Attaches the command source to the specified element
             </summary>
-            <param name="rftC"></param>
+            <param name="dbUC"></param>
         </member>
-        <member name="M:Nevron.Nov.Internal.pftC.DetachFromSource(Nevron.Nov.Dom.NElement)">
+        <member name="M:Nevron.Nov.Internal.bbUC.DetachFromSource(Nevron.Nov.Dom.NElement)">
             <summary>
             Detaches the command source to the specified element
             </summary>
-            <param name="SftC"></param>
+            <param name="EbUC"></param>
         </member>
-        <member name="M:Nevron.Nov.Internal.pftC.UpdateOwnerElementCore(Nevron.Nov.UI.NUpdateCommandSourceEventArgs)">
+        <member name="M:Nevron.Nov.Internal.bbUC.UpdateOwnerElementCore(Nevron.Nov.UI.NUpdateCommandSourceEventArgs)">
             <summary>
             Overriden to update the command source element field names.
             </summary>
-            <param name="tftC"></param>
+            <param name="fbUC"></param>
         </member>
-        <member name="M:Nevron.Nov.Internal.pftC.GetUpdateMask(Nevron.Nov.UI.ENCommandSourceUpdateReason)">
+        <member name="M:Nevron.Nov.Internal.bbUC.GetUpdateMask(Nevron.Nov.UI.ENCommandSourceUpdateReason)">
             <summary>
             Gets the mask that defines the aspects of the owner element that need to be updated at update timer ticks and after command execution.
             </summary>
             <returns></returns>
         </member>
-        <member name="P:Nevron.Nov.Internal.jhvC.EditorWindowTitle">
+        <member name="P:Nevron.Nov.Internal.YCWC.EditorWindowTitle">
             <summary>
             Gets the title of the editor window, which is shown for editing a style or creating a new one.
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Internal.lhvC.UpdateOwnerElementCore(Nevron.Nov.UI.NUpdateCommandSourceEventArgs)">
+        <member name="M:Nevron.Nov.Internal.bdWC.UpdateOwnerElementCore(Nevron.Nov.UI.NUpdateCommandSourceEventArgs)">
             <summary>
             Overriden to update the command source element selected style.
             </summary>
-            <param name="nhvC"></param>
+            <param name="ddWC"></param>
         </member>
-        <member name="P:Nevron.Nov.Internal.phvC.EditorWindowTitle">
+        <member name="P:Nevron.Nov.Internal.fdWC.EditorWindowTitle">
             <summary>
             Gets the title of the editor window, which is shown for editing a style or creating a new one.
             </summary>
         </member>
-        <member name="M:Nevron.Nov.Internal.IItC.UpdateOwnerElementCore(Nevron.Nov.UI.NUpdateCommandSourceEventArgs)">
+        <member name="M:Nevron.Nov.Internal.tdUC.UpdateOwnerElementCore(Nevron.Nov.UI.NUpdateCommandSourceEventArgs)">
             <summary>
             Overriden to update the command source element field names.
             </summary>
-            <param name="KItC"></param>
+            <param name="vdUC"></param>
         </member>
-        <member name="M:Nevron.Nov.Internal.IItC.GetUpdateMask(Nevron.Nov.UI.ENCommandSourceUpdateReason)">
+        <member name="M:Nevron.Nov.Internal.tdUC.GetUpdateMask(Nevron.Nov.UI.ENCommandSourceUpdateReason)">
             <summary>
             Gets the mask that defines the aspects of the owner element that need to be updated at update timer ticks and after command execution.
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.rItC.NavigateToCell(Nevron.Nov.UI.NTablePickerCell)">
+        <member name="M:Nevron.Nov.Internal.dEUC.NavigateToCell(Nevron.Nov.UI.NTablePickerCell)">
             <summary>
             Overriden to highlight all cells from the top left corner to the given cell.
             </summary>
-            <param name="vItC"></param>
+            <param name="hEUC"></param>
         </member>
-        <member name="M:Nevron.Nov.Internal.rItC.OnMouseMove(Nevron.Nov.UI.NMouseEventArgs)">
+        <member name="M:Nevron.Nov.Internal.dEUC.OnMouseMove(Nevron.Nov.UI.NMouseEventArgs)">
             <summary>
             Overriden to highlight cells when the mouse cursor is in the inter cell area.
             </summary>
-            <param name="WItC"></param>
+            <param name="IEUC"></param>
         </member>
-        <member name="M:Nevron.Nov.Internal.rItC.OnMouseOut(Nevron.Nov.UI.NMouseOverChangeEventArgs)">
+        <member name="M:Nevron.Nov.Internal.dEUC.OnMouseOut(Nevron.Nov.UI.NMouseOverChangeEventArgs)">
             <summary>
             Overriden to unhighlight all cells of this picker.
             </summary>
-            <param name="xItC"></param>
+            <param name="jEUC"></param>
         </member>
-        <member name="M:Nevron.Nov.Internal.rItC.OnMouseDown(Nevron.Nov.UI.NMouseButtonEventArgs)">
+        <member name="M:Nevron.Nov.Internal.dEUC.OnMouseDown(Nevron.Nov.UI.NMouseButtonEventArgs)">
             <summary>
             Overriden to selectd the nearest clicked cell when the mouse cursor is in the inter cell area.
             </summary>
-            <param name="YItC"></param>
+            <param name="KEUC"></param>
         </member>
-        <member name="M:Nevron.Nov.Internal.nAlC.DeepClone">
+        <member name="M:Nevron.Nov.Internal.xUlC.DeepClone">
             <summary>
             Must override to create a copy of the current object.
             </summary>
             <returns>A copy of this instance.</returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.hblC.DeepClone">
+        <member name="M:Nevron.Nov.Internal.rvlC.DeepClone">
             <summary>
             Creates an identical copy of this object.
             </summary>
             <returns>A copy of this instance.</returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.jflC.DeepClone">
+        <member name="M:Nevron.Nov.Internal.tAMC.DeepClone">
             <summary>
             Creates an identical copy of this object.
             </summary>
             <returns>A copy of this instance.</returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.CKtC.DeepClone">
+        <member name="M:Nevron.Nov.Internal.nfUC.DeepClone">
             <summary>
             Creates an identical copy of this object.
             </summary>
             <returns>A copy of this instance.</returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.fKtC.DeepClone">
+        <member name="M:Nevron.Nov.Internal.QfUC.DeepClone">
             <summary>
             Creates an identical copy of this object.
             </summary>
             <returns>A copy of this instance.</returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.lKtC.DeepClone">
+        <member name="M:Nevron.Nov.Internal.WfUC.DeepClone">
             <summary>
             Creates an identical copy of this object.
             </summary>
             <returns>A copy of this instance.</returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.OKtC.DeepClone">
+        <member name="M:Nevron.Nov.Internal.AGUC.DeepClone">
             <summary>
             Creates an identical copy of this object.
             </summary>
             <returns>A copy of this instance.</returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.IrOC.DeepClone">
+        <member name="M:Nevron.Nov.Internal.tMpC.DeepClone">
             <summary>
             Creates an identical copy of this object.
             </summary>
             <returns>A copy of this instance.</returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.nrOC.DeepClone">
+        <member name="M:Nevron.Nov.Internal.YMpC.DeepClone">
             <summary>
             Creates an identical copy of this object.
             </summary>
             <returns>A copy of this instance.</returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.UrOC.DeepClone">
+        <member name="M:Nevron.Nov.Internal.GnpC.DeepClone">
             <summary>
             Creates an identical copy of this object.
             </summary>
             <returns>A copy of this instance.</returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.nvOC.DeepClone">
+        <member name="M:Nevron.Nov.Internal.YQpC.DeepClone">
             <summary>
             Creates an identical copy of this object.
             </summary>
             <returns>A copy of this instance.</returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.EWOC.DeepClone">
+        <member name="M:Nevron.Nov.Internal.prpC.DeepClone">
             <summary>
             Creates an identical copy of this object.
             </summary>
             <returns>A copy of this instance.</returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.QWOC.DeepClone">
+        <member name="M:Nevron.Nov.Internal.CSpC.DeepClone">
             <summary>
             Creates an identical copy of this object.
             </summary>
             <returns>A copy of this instance.</returns>
         </member>
-        <member name="M:Nevron.Nov.Internal.WWOC.DeepClone">
+        <member name="M:Nevron.Nov.Internal.ISpC.DeepClone">
             <summary>
             Creates an identical copy of this object.
             </summary>
