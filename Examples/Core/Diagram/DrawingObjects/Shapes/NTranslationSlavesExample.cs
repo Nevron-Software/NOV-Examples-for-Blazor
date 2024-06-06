@@ -8,7 +8,7 @@ using Nevron.Nov.UI;
 
 namespace Nevron.Nov.Examples.Diagram
 {
-	public class NTranslationSlavesExample : NExampleBase
+    public class NTranslationSlavesExample : NExampleBase
     {
         #region Constructors
 
@@ -116,7 +116,7 @@ Note that the example will automatically highlight the move slaves of the curren
         /// Called when a diagram item has been selected.
         /// </summary>
         /// <param name="arg"></param>
-        void OnSelectionSelected(NSelectEventArgs<NDiagramItem> arg)
+        void OnSelectionSelected(NSelectEventArgs<NPageItem> arg)
         {
             NShape shape = arg.Item as NShape;
             if (shape == null)
@@ -135,7 +135,7 @@ Note that the example will automatically highlight the move slaves of the curren
         /// Called when a diagram item has been deselected.
         /// </summary>
         /// <param name="arg"></param>
-        void OnSelectionDeselected(NSelectEventArgs<NDiagramItem> arg)
+        void OnSelectionDeselected(NSelectEventArgs<NPageItem> arg)
         {
             NShape shape = arg.Item as NShape;
             if (shape == null)

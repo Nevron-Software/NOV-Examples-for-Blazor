@@ -1,11 +1,11 @@
-﻿using Nevron.Nov.Chart;
+﻿using System;
+
+using Nevron.Nov.Chart;
 using Nevron.Nov.Chart.Tools;
 using Nevron.Nov.Dom;
-using Nevron.Nov.Editors;
 using Nevron.Nov.Graphics;
 using Nevron.Nov.Layout;
 using Nevron.Nov.UI;
-using System;
 
 namespace Nevron.Nov.Examples.Chart
 {
@@ -37,7 +37,8 @@ namespace Nevron.Nov.Examples.Chart
 
 		protected override NWidget CreateExampleContent()
 		{
-			m_ChartView = new NChartView();
+			NChartViewWithCommandBars chartViewWithCommandBars = new NChartViewWithCommandBars();
+			m_ChartView = chartViewWithCommandBars.View;
 
 			NDockPanel dockPanel = new NDockPanel();
 			m_ChartView.Surface.Content = dockPanel;
@@ -85,7 +86,6 @@ namespace Nevron.Nov.Examples.Chart
 			NCartesianChart stockVolumeChart = new NCartesianChart();
             stockVolumeChart.Tag = "Chart 2";
 
-
             stockVolumeChart.SetPredefinedCartesianAxes(ENPredefinedCartesianAxis.XValueTimelineYLinear);
 			stockVolumeChart.FitMode = ENCartesianChartFitMode.Stretch;
 			stockVolumeChart.Margins = new NMargins(10, 0, 10, 10);
@@ -119,9 +119,9 @@ namespace Nevron.Nov.Examples.Chart
 
 			m_ChartView.Surface.AlignmentGuidelines = guideLines;
 
-			m_ChartView.Document.StyleSheets.ApplyTheme(new NChartTheme(ENChartPalette.Bright, false));
+			m_ChartView.Document.StyleSheets.ApplyTheme(new NChartTheme(ENChartPalette.Bright, ENChartPaletteTarget.Series));
 
-			return m_ChartView;
+			return chartViewWithCommandBars;
 		}
 		protected override NWidget CreateExampleControls()
 		{

@@ -1,9 +1,12 @@
 ﻿using System;
-using System.Text;
+using System.IO;
 
+using Nevron.Nov.DataStructures;
 using Nevron.Nov.Dom;
 using Nevron.Nov.Graphics;
 using Nevron.Nov.Layout;
+using Nevron.Nov.Text;
+using Nevron.Nov.Text.Formats;
 using Nevron.Nov.UI;
 using Nevron.Nov.Xml;
 
@@ -18,6 +21,7 @@ namespace Nevron.Nov.Examples
 		/// </summary>
 		public NHomePageContent()
 		{
+			m_RichTextViews = new NList<NRichTextView>();
 		}
 
 		/// <summary>
@@ -36,12 +40,13 @@ namespace Nevron.Nov.Examples
 		/// Adds a category to the tab of this widget.
 		/// </summary>
 		/// <param name="categoryElement"></param>
-		public void AddCategory(NXmlElement categoryElement)
+		/// <param name="examplesCount"></param>
+		public void AddCategory(NXmlElement categoryElement, int examplesCount)
 		{
-			bool selected = m_Tab.TabPages.Count == 0; // This first tab page should be selected
+			bool selected = m_Tab.TabPages.Count == 0; // The first tab page should be selected
 			NTabPage tabPage = new NTabPage(
 				CreateTabPageHeader(categoryElement, selected),
-				CreateTabPageContent(categoryElement)
+				CreateTabPageContent(categoryElement, examplesCount)
 			);
 			tabPage.Tag = categoryElement;
 
@@ -76,6 +81,37 @@ namespace Nevron.Nov.Examples
 
 		#endregion
 
+		#region Protected Overrides - Arrange
+
+		/// <summary>
+		/// Arranges the content. Overriden to set the "SmallSize" user class to the surface widget and the rich text view
+		/// when the height of the display window is less than a given treshold to make the home page design responsive.
+		/// </summary>
+		/// <param name="ca"></param>
+		protected override void ArrangeContent(NRectangle ca)
+		{
+			base.ArrangeContent(ca);
+
+			if (DisplayWindow != null && DisplayWindow.Height < SmallSizeHeight)
+			{
+				// Set the "SmallSize" to all rich text views
+				for (int i = 0; i < m_RichTextViews.Count; i++)
+				{
+					m_RichTextViews[i].Content.UserClass = SmallSizeClass;
+				}
+			}
+			else
+			{
+				// Clear the "SmallSize" user class of all rich text views
+				for (int i = 0; i < m_RichTextViews.Count; i++)
+				{
+					m_RichTextViews[i].Content.ClearLocalValue(UserClassProperty);
+				}
+			}
+		}
+
+		#endregion
+
 		#region Protected Overrides - UI
 
 		protected override NWidget CreateContent()
@@ -105,39 +141,42 @@ namespace Nevron.Nov.Examples
 		/// <returns></returns>
 		private NPairBox CreateTabPageHeader(NXmlElement categoryElement, bool selected)
 		{
-			// Get the category icon
-			NImage categoryIcon = GetCategoryIcon(categoryElement, selected);
+			// Get the product logo icon
+			NImage productLogoIcon = GetProductLogoIcon(categoryElement, selected);
+			NImageBox imageBox = new NImageBox(productLogoIcon);
+			imageBox.UserClass = ProductLogoImageBoxClass;
 
 			// Create the tab page header label
 			string categoryName = categoryElement.GetAttributeValue(NExamplesXml.Attribute.Name);
 			NLabel headerLabel = new NLabel(categoryName);
 
 			// Create a pair box with the icon and the label
-			return new NPairBox(categoryIcon, headerLabel, ENPairBoxRelation.Box1AboveBox2);
+			return new NPairBox(imageBox, headerLabel, ENPairBoxRelation.Box1AboveBox2);
 		}
         /// <summary>
         /// Creates the content of a tab page.
         /// </summary>
         /// <param name="categoryElement"></param>
+		/// <param name="examplesCount"></param>
         /// <returns></returns>
-        private NWidget CreateTabPageContent(NXmlElement categoryElement)
+        private NWidget CreateTabPageContent(NXmlElement categoryElement, int examplesCount)
 		{
 			NFlexBoxPanel infoFlexPanel = new NFlexBoxPanel();
 
 			// Get XML data
 			string categoryName = categoryElement.GetAttributeValue(NExamplesXml.Attribute.Name);
 			string categoryNamespace = categoryElement.GetAttributeValue(NExamplesXml.Attribute.Namespace);
-			NXmlNode descriptionElement = categoryElement.GetFirstDescendant(NExamplesXml.Element.Description);
+			NXmlElement descriptionElement = (NXmlElement)categoryElement.GetFirstDescendant(NExamplesXml.Element.Description);
 
 			// Create the header label
 			NLabel headerLabel = new NLabel($"NOV {categoryName} for .NET");
 			headerLabel.UserClass = HeaderLabelClass;
 			infoFlexPanel.Add(headerLabel);
 
-			// Create the description label
-			NLabel descriptionLabel = CreateDescriptionLabel(descriptionElement);
-			descriptionLabel.UserClass = DescriptionLabelClass;
-			infoFlexPanel.Add(descriptionLabel, 1, 1);
+			// Create the description rich text view
+			NRichTextView richTextView = CreateDescriptionRichTextView(descriptionElement);
+			infoFlexPanel.Add(richTextView, 1, 1);
+			m_RichTextViews.Add(richTextView);
 
 			// Create the buttons at the bottom
 			NTableFlowPanel buttonsTable = new NTableFlowPanel();
@@ -152,6 +191,7 @@ namespace Nevron.Nov.Examples
 
 			NButton examplesButton = new NButton("Examples");
 			examplesButton.UserId = ExamplesButtonId;
+			examplesButton.Tooltip = new NTooltip($"Show {examplesCount} {categoryName} examples");
 			examplesButton.Click += OnExamplesButtonClick;
 			buttonsTable.Add(examplesButton);
 
@@ -179,33 +219,29 @@ namespace Nevron.Nov.Examples
 			return mainFlexPanel;
 		}
 		/// <summary>
-		/// Creates the component description label.
+		/// Creates the component description rich text view.
 		/// </summary>
-		/// <param name="labelElement"></param>
+		/// <param name="descriptionElement"></param>
 		/// <returns></returns>
-		private NLabel CreateDescriptionLabel(NXmlNode labelElement)
+		private NRichTextView CreateDescriptionRichTextView(NXmlElement descriptionElement)
 		{
-			// Process the label element's children to determine its text
-			StringBuilder sb = new StringBuilder();
-			for (int i = 0, count = labelElement.ChildrenCount; i < count; i++)
+			NRichTextView richTextView = NExampleBase.CreateDescriptionRichTextView();
+			richTextView.UserClass = DescriptionLabelClass;
+
+			// Hide the context menu and the mini toolbar
+			richTextView.ContextMenuBuilder.ShowMiniToolbar = false;
+			richTextView.ContextMenuBuilder.ClearAllGroups();
+
+			// Load the description
+			using (MemoryStream memoryStream = new MemoryStream(NEncoding.UTF8.GetBytes(descriptionElement.InnerXml)))
 			{
-				NXmlNode child = labelElement.GetChildAt(i);
-				if (child.NodeType == ENXmlNodeType.Text)
-				{
-					sb.Append(((NXmlTextNode)child).Text);
-				}
-				else if (child.NodeType == ENXmlNodeType.Element && child.Name == "br")
-				{
-					sb.AppendLine();
-				}
+				// Load the stream in the rich text view as HTML
+				richTextView.LoadFromStream(memoryStream, NTextFormat.Html);
 			}
 
-			// Create a label
-			NLabel label = new NLabel(sb.ToString());
-			label.TextWrapMode = ENTextWrapMode.WordWrap;
-
-			return label;
+			return richTextView;
 		}
+
 		/// <summary>
 		/// Creates the platforms panel.
 		/// </summary>
@@ -216,12 +252,18 @@ namespace Nevron.Nov.Examples
 			table.HorizontalPlacement = ENHorizontalPlacement.Center;
 
 			//table.Add(new NLabel("Hello"));
-			table.Add(new NImageBox(NResources.Image_ExamplesUI_Logos_Platforms_Blazor_svg));
-			table.Add(new NImageBox(NResources.Image_ExamplesUI_Logos_Platforms_Wpf_svg));
-			table.Add(new NImageBox(NResources.Image_ExamplesUI_Logos_Platforms_WinForms_svg));
-			table.Add(new NImageBox(NResources.Image_ExamplesUI_Logos_Platforms_Xamarin_svg));
+			table.Add(CreatePlatformImageBox(NResources.Image_ExamplesUI_Logos_Platforms_Blazor_svg));
+			table.Add(CreatePlatformImageBox(NResources.Image_ExamplesUI_Logos_Platforms_Wpf_svg));
+			table.Add(CreatePlatformImageBox(NResources.Image_ExamplesUI_Logos_Platforms_WinForms_svg));
+			table.Add(CreatePlatformImageBox(NResources.Image_ExamplesUI_Logos_Platforms_Xamarin_svg));
 
 			return table;
+		}
+		private NImageBox CreatePlatformImageBox(NImage image)
+		{
+			NImageBox imageBox = new NImageBox(image);
+			imageBox.UserClass = PlatformImageBoxClass;
+			return imageBox;
 		}
 
 		#endregion
@@ -252,9 +294,9 @@ namespace Nevron.Nov.Examples
 		private void OnExamplesButtonClick(NEventArgs arg)
 		{
 			// Open the first example tile for the selected component
-			NXmlElement xmlElement = (NXmlElement)m_Tab.SelectedPage.Tag;
-			NXmlElement firstTile = (NXmlElement)xmlElement.GetFirstDescendant(NExamplesXml.Element.Tile);
-			GetFirstAncestor<NHomePage>().RaiseTileSelected(firstTile);
+			NXmlElement categoryElement = (NXmlElement)m_Tab.SelectedPage.Tag;
+			NXmlElement firstExample = (NXmlElement)categoryElement.GetFirstDescendant(NExamplesXml.Element.Example);
+			GetFirstAncestor<NHomePage>().RaiseItemSelected(firstExample);
 		}
 
 		#endregion
@@ -262,6 +304,7 @@ namespace Nevron.Nov.Examples
 		#region Fields
 
 		private NTab m_Tab;
+		private NList<NRichTextView> m_RichTextViews;
 
 		#endregion
 
@@ -280,9 +323,9 @@ namespace Nevron.Nov.Examples
 		{
 			NXmlElement categoryElement = (NXmlElement)tabPage.Tag;
 			NImageBox imageBox = tabPage.Header.GetFirstDescendant<NImageBox>();
-			imageBox.Image = GetCategoryIcon(categoryElement, selected);
+			imageBox.Image = GetProductLogoIcon(categoryElement, selected);
 		}
-		private static NImage GetCategoryIcon(NXmlElement categoryElement, bool selected)
+		private static NImage GetProductLogoIcon(NXmlElement categoryElement, bool selected)
 		{
 			string imageName = categoryElement.GetAttributeValue(NExamplesXml.Attribute.Namespace);
 			string selectedText = selected ? "Selected" : String.Empty;
@@ -295,7 +338,10 @@ namespace Nevron.Nov.Examples
 
 		private const string HeaderLabelClass = "HeaderLabel";
 		private const string DescriptionLabelClass = "DescriptionLabel";
+
+		private const string ProductLogoImageBoxClass = "ProductLogoImageBox";
 		private const string CollageImageBoxClass = "CollageImageBox";
+		private const string PlatformImageBoxClass = "PlatformImageBox";
 
 		private const string LearnMoreButtonId = "LearnMoreButton";
 		private const string ExamplesButtonId = "ExamplesButton";
@@ -312,6 +358,12 @@ namespace Nevron.Nov.Examples
 			{
 				// Update the text color
 				Colors.ControlText = TextColor;
+
+				InSmallSizeContext = CreateContext(sb =>
+				{
+					sb.DescendantOf();
+					sb.UserClass(SmallSizeClass);
+				});
 			}
 
 			static NHomePageLightTheme()
@@ -326,6 +378,8 @@ namespace Nevron.Nov.Examples
 			protected override void CreateDocumentBoxStyles()
 			{
 				base.CreateDocumentBoxStyles();
+
+				CreateRichTextStyles();
 
 				// Surface
 				NThemeRule rule = GetRule(NDocumentBoxSurface.NDocumentBoxSurfaceSchema);
@@ -401,16 +455,17 @@ namespace Nevron.Nov.Examples
 			{
 				base.CreateLabelStyles();
 
+				NThemingState headerLabelState = CreateUserClassState(HeaderLabelClass);
+
 				// Content header label
-				NThemeRule rule = GetRule(NLabel.NLabelSchema, CreateUserClassState(HeaderLabelClass));
+				NThemeRule rule = GetRule(NLabel.NLabelSchema, headerLabelState);
 				DefaultFont(rule, ENRelativeFontSize.XXXLarge, ENFontStyle.Bold);
 				Padding(rule, new NMargins(0, 0, 0, Spacing * 2));
 
-				// Content description label
-				rule = GetRule(NLabel.NLabelSchema, CreateUserClassState(DescriptionLabelClass));
-				DefaultFont(rule, ENRelativeFontSize.XXLarge);
-				TextFill(rule, GrayTextColor);
-				rule.Set(VerticalPlacementProperty, ENVerticalPlacement.Top);
+				// Content header label - in small size
+				rule = GetRule(NLabel.NLabelSchema, headerLabelState, InSmallSizeContext);
+				DefaultFont(rule, ENRelativeFontSize.XXLarge, ENFontStyle.Bold);
+				Padding(rule, new NMargins(0, 0, 0, Spacing));
 			}
 			protected override void CreateButtonStyles(NSchema buttonSchema)
 			{
@@ -434,15 +489,34 @@ namespace Nevron.Nov.Examples
 				base.CreateImageBoxStyles();
 
 				// Collage image box
-				NThemeRule rule = GetRule(NImageBox.NImageBoxSchema, CreateUserClassState(CollageImageBoxClass));
+				NThemingState collageImageBoxState = CreateUserClassState(CollageImageBoxClass);
+				NThemeRule rule = GetRule(NImageBox.NImageBoxSchema, collageImageBoxState);
 				Border(rule, NBorder.CreateFilledBorder(HighlightColor, 6, 9));
 				BorderThickness(rule, new NMargins(16));
 				Background(rule, new NRadialGradientFill(0.5d, 0.5d, new NColor(254, 254, 254), new NColor(227, 227, 227)));
+
+				// Collage image box - in small size
+				rule = GetRule(NImageBox.NImageBoxSchema, collageImageBoxState, InSmallSizeContext);
+				BorderThickness(rule, new NMargins(8));
+
+				// Product logo image box - in small size
+				rule = GetRule(NImageBox.NImageBoxSchema, CreateUserClassState(ProductLogoImageBoxClass), InSmallSizeContext);
+				PreferredSize(rule, 24, 24);
+
+				// Platform image box - in small size
+				rule = GetRule(NImageBox.NImageBoxSchema, CreateUserClassState(PlatformImageBoxClass), InSmallSizeContext);
+				PreferredHeight(rule, 24);
 			}
 
 			#endregion
 
-			#region Implementation - Button Styles
+			#region Implementation - Styles
+
+			private void CreateRichTextStyles()
+			{
+				NThemeRule rule = GetRule(NParagraph.NParagraphSchema, InSmallSizeContext);
+				rule.Set(NParagraph.FontSizeProperty, 10.0, true);
+			}
 
 			private NThemeRule StyleButton(string buttonId, NFill backgroundFill, NFill mouseOverFill)
 			{
@@ -463,8 +537,20 @@ namespace Nevron.Nov.Examples
 				NThemeRule buttonMouseOverRule = GetRule(NButton.NButtonSchema, state, IsMouseOverState);
 				Background(buttonMouseOverRule, mouseOverFill);
 
+				// Button - in small size
+				NThemeRule smallButtonRule = GetRule(NButton.NButtonSchema, state, InSmallSizeContext);
+				DefaultFont(smallButtonRule, ENRelativeFontSize.Large, ENFontStyle.Bold);
+				Padding(smallButtonRule, new NMargins(Spacing * 2, Spacing / 2));
+				ThinBorderThickness(smallButtonRule);
+
 				return buttonRule;
 			}
+
+			#endregion
+
+			#region Fields
+
+			private readonly NThemingContext InSmallSizeContext;
 
 			#endregion
 

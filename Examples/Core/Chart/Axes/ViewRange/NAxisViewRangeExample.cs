@@ -8,7 +8,7 @@ using Nevron.Nov.UI;
 namespace Nevron.Nov.Examples.Chart
 {
     /// <summary>
-    /// Axis View Range Example
+    /// Axis View Range example.
     /// </summary>
     public class NAxisViewRangeExample : NExampleBase
     {
@@ -35,8 +35,9 @@ namespace Nevron.Nov.Examples.Chart
 
         protected override NWidget CreateExampleContent()
         {
-            NChartView chartView = new NChartView();
-            chartView.Surface.CreatePredefinedChart(ENPredefinedChartType.Cartesian);
+			NChartViewWithCommandBars chartViewWithCommandBars = new NChartViewWithCommandBars();
+			NChartView chartView = chartViewWithCommandBars.View;
+			chartView.Surface.CreatePredefinedChart(ENPredefinedChartType.Cartesian);
 
             // configure title
             chartView.Surface.Titles[0].Text = "Axis View Range";
@@ -62,11 +63,10 @@ namespace Nevron.Nov.Examples.Chart
 
             OnChangeDataButtonClick(null);
 
-            chartView.Document.StyleSheets.ApplyTheme(new NChartTheme(ENChartPalette.Bright, false));
+            chartView.Document.StyleSheets.ApplyTheme(new NChartTheme(ENChartPalette.Bright, ENChartPaletteTarget.Series));
 
-            return chartView;
+            return chartViewWithCommandBars;
         }
-
         protected override NWidget CreateExampleControls()
         {
             NStackPanel stack = new NStackPanel();
@@ -94,6 +94,14 @@ namespace Nevron.Nov.Examples.Chart
 
             return boxGroup;
         }
+        protected override string GetExampleDescription()
+        {
+            return @"<p>This example demonstrates how to explicitly set the axis view range.</p>";
+        }
+
+        #endregion
+
+        #region Event Handlers
 
         private void OnViewRangeMinValueChanged(NValueChangeEventArgs arg)
         {
@@ -131,16 +139,7 @@ namespace Nevron.Nov.Examples.Chart
             }
         }
 
-        protected override string GetExampleDescription()
-        {
-            return @"<p>This example demonstrates how to explicitly set the axis view range.</p>";
-        }
-
-        #endregion
-
-        #region Event Handlers
-
-        void OnChangeDataButtonClick(NEventArgs arg)
+        private void OnChangeDataButtonClick(NEventArgs arg)
         {
             m_Chart.Series.Clear();
 
@@ -162,7 +161,6 @@ namespace Nevron.Nov.Examples.Chart
                 bar.DataPoints.Add(dataPoint);
             }
         }
-
 
         #endregion
 

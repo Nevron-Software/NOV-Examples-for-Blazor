@@ -124,9 +124,9 @@ namespace Nevron.Nov.Examples
 		public void Update(NXmlElement xmlElement)
 		{
             string name = xmlElement.GetAttributeValue("name");
-            string examplePath = NExamplesUiHelpers.GetExamplePath(xmlElement);
+            string examplePath = NExamplesUi.GetExamplePath(xmlElement);
 
-            Title = NExamplesUiHelpers.ProcessHeaderText(name);
+            Title = NExamplesUi.ProcessHeaderText(name);
             UpdateFavoriteButton(NExamplesOptions.Instance.FavoriteExamples.Contains(examplePath));
 
 			m_ExampleElement = xmlElement;
@@ -246,15 +246,8 @@ namespace Nevron.Nov.Examples
 		}
         private void OnCopyLinkButtonClick(NEventArgs arg)
         {
-            if (NApplication.IntegrationPlatform == ENIntegrationPlatform.WebAssembly)
-            {
-                NExamplePage exampleHost = GetFirstAncestor<NExamplePage>();
-                NExamplesUiHelpers.CopyExampleLinkToClipboard(m_ExampleElement, exampleHost.ExamplesPath);
-            }
-            else
-            {
-                NExamplesUiHelpers.CopyExampleLinkToClipboard(m_ExampleElement);
-            }
+            NExamplesContent examplesContent = GetFirstAncestor<NExamplesContent>();
+            NExamplesUi.CopyExampleLinkToClipboard(examplesContent.LinkProcessor, m_ExampleElement);
         }
 
         #endregion

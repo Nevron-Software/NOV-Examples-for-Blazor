@@ -4,6 +4,7 @@
 @using Nevron.Nov;
 @using Nevron.Nov.WebAssembly;
 @using Nevron.Nov.IO;
+@using Nevron.Nov.Compiler;
 
 <Router AppAssembly="@typeof(Program).Assembly">
     <Found Context="routeData">
@@ -22,7 +23,7 @@
         base.OnInitialized();
 
         // apply license
-        NLicense license = new NLicense("d6003c7a1c75e53c0cc26730b836de38001cd4a9950c0db8");
+        NLicense license = new NLicense("3606dd94269800c6b08ee2430d3c1b16b280006acecd0bfe");
         NLicenseManager.Instance.SetLicense(license);
 
         // Install NOV
@@ -38,13 +39,17 @@
             Nevron.Nov.Grid.NGridModule.Instance
         );
 
+        // Optional: If you intend to use NCodeAssembly (for example for Family Tree Shapes in in NOV Diagram for .NET),
+        // you need to specify the compiler service used to compile them.
+        NApplication.CompilerService = new NRoslynCompilerService();
+
         // load resourse from embedded resource
-        string resourceName = this.GetType().Assembly.GetName().Name + ".Resources.Resources.zip";
-        System.IO.Stream stream = GetType().Assembly.GetManifestResourceStream(resourceName);
+        string resourceName = GetType().Namespace + ".Resources.Resources.zip";
+        System.IO.Stream zipStream = GetType().Assembly.GetManifestResourceStream(resourceName);
 
         // install a resource folder with in-memory resources
         NFileSystem memoryFSS = NFileSystem.CreateMemoryFileSystem();
-        memoryFSS.DecompressZip(stream, "\\Resources\\");
-        NApplication.ResourcesFolder = new NFolder(memoryFSS, "\\Resources\\");
+        memoryFSS.DecompressZip(zipStream, "/Resources/");
+        NApplication.ResourcesFolder = new NFolder(memoryFSS, "/Resources/");
     }
 }

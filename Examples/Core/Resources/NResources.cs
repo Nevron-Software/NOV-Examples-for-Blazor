@@ -25,6 +25,7 @@ namespace Nevron.Nov.Examples
 
 			// Resource declarations
 			RegisterResource(RBIN_ComponentIcons_zip);
+			RegisterResource(RBIN_Countries_zip);
 			RegisterResource(RBIN_DOCX_CompatibilityTest_docx);
 			RegisterResource(RBIN_DOCX_ComplexDocument_docx);
 			RegisterResource(RBIN_DOCX_EventInvitation_docx);
@@ -41,9 +42,12 @@ namespace Nevron.Nov.Examples
 			RegisterResource(RBIN_ProjectTemplates_VB_Net70_Form1_vb);
 			RegisterResource(RBIN_ProjectTemplates_VB_Net70_NovWinFormsProject_zip);
 			RegisterResource(RBIN_ProjectTemplates_VB_Net70_NovWpfProject_zip);
+			RegisterResource(RBIN_SampleData_DataXYZ_bin);
+			RegisterResource(RBIN_SampleData_DataY_bin);
 			RegisterResource(RBIN_SourceCode_CSharp_zip);
 			RegisterResource(RBIN_SourceCode_VB_zip);
 			RegisterResource(RBIN_VSDX_CorporateDiagramShapes_vsdx);
+			RegisterResource(RBIN_XLSX_Organization_xlsx);
 			RegisterResource(RCUR_CustomCursor_cur);
 			RegisterResource(RFONT_LiberationMonoBold_ttf);
 			RegisterResource(RIMG_Add_png);
@@ -52,9 +56,9 @@ namespace Nevron.Nov.Examples
 			RegisterResource(RIMG_FishBowl_wmf);
 			RegisterResource(RIMG_Print_ico);
 			RegisterResource(RIMG_SampleImage_png);
-			RegisterResource(RIMG_Tiger_svg);
 			RegisterResource(RIMG_AnimatedPNGs_BouncingBeachBall_png);
 			RegisterResource(RIMG_AnimatedPNGs_Smiley_png);
+			RegisterResource(RIMG_Artistic_AirplaneSeats_png);
 			RegisterResource(RIMG_Artistic_FishBowl_jpg);
 			RegisterResource(RIMG_Artistic_Plane_png);
 			RegisterResource(RIMG_BmpSuite_g01bg_bmp);
@@ -100,263 +104,6 @@ namespace Nevron.Nov.Examples
 			RegisterResource(RIMG_Buildings_UAE_emf);
 			RegisterResource(RIMG_Buildings_ZifengTower_emf);
 			RegisterResource(RIMG_Documentation_PreviewResults_png);
-			RegisterResource(RIMG_ExampleIcons_Barcode_Barcode1D_png);
-			RegisterResource(RIMG_ExampleIcons_Barcode_Barcode2D_png);
-			RegisterResource(RIMG_ExampleIcons_Chart_AreaSeries_png);
-			RegisterResource(RIMG_ExampleIcons_Chart_Axes_png);
-			RegisterResource(RIMG_ExampleIcons_Chart_AxisAppearance_png);
-			RegisterResource(RIMG_ExampleIcons_Chart_AxisElements_png);
-			RegisterResource(RIMG_ExampleIcons_Chart_AxisPosition_png);
-			RegisterResource(RIMG_ExampleIcons_Chart_BarSeries_png);
-			RegisterResource(RIMG_ExampleIcons_Chart_BoxAndWhiskersSeries_png);
-			RegisterResource(RIMG_ExampleIcons_Chart_BubbleSeries_png);
-			RegisterResource(RIMG_ExampleIcons_Chart_Calendar_png);
-			RegisterResource(RIMG_ExampleIcons_Chart_CartesianSeries_png);
-			RegisterResource(RIMG_ExampleIcons_Chart_ComboSeries_png);
-			RegisterResource(RIMG_ExampleIcons_Chart_Effects_png);
-			RegisterResource(RIMG_ExampleIcons_Chart_ErrorBarSeries_png);
-			RegisterResource(RIMG_ExampleIcons_Chart_Export_png);
-			RegisterResource(RIMG_ExampleIcons_Chart_FunnelSeries_png);
-			RegisterResource(RIMG_ExampleIcons_Chart_HeatMapSeries_png);
-			RegisterResource(RIMG_ExampleIcons_Chart_HighLowSeries_png);
-			RegisterResource(RIMG_ExampleIcons_Chart_Interactivity_png);
-			RegisterResource(RIMG_ExampleIcons_Chart_KagiSeries_png);
-			RegisterResource(RIMG_ExampleIcons_Chart_Layout_png);
-			RegisterResource(RIMG_ExampleIcons_Chart_Legend_png);
-			RegisterResource(RIMG_ExampleIcons_Chart_LineSeries_png);
-			RegisterResource(RIMG_ExampleIcons_Chart_PdfExport_png);
-			RegisterResource(RIMG_ExampleIcons_Chart_PieSeries_png);
-			RegisterResource(RIMG_ExampleIcons_Chart_PointAndFigureSeries_png);
-			RegisterResource(RIMG_ExampleIcons_Chart_PointSeries_png);
-			RegisterResource(RIMG_ExampleIcons_Chart_PolarSeries_png);
-			RegisterResource(RIMG_ExampleIcons_Chart_Printing_png);
-			RegisterResource(RIMG_ExampleIcons_Chart_RadarSeries_png);
-			RegisterResource(RIMG_ExampleIcons_Chart_RangeSeries_png);
-			RegisterResource(RIMG_ExampleIcons_Chart_Realtime_png);
-			RegisterResource(RIMG_ExampleIcons_Chart_RenkoSeries_png);
-			RegisterResource(RIMG_ExampleIcons_Chart_Scale_png);
-			RegisterResource(RIMG_ExampleIcons_Chart_ScaleBreaks_png);
-			RegisterResource(RIMG_ExampleIcons_Chart_Serialization_png);
-			RegisterResource(RIMG_ExampleIcons_Chart_Series_png);
-			RegisterResource(RIMG_ExampleIcons_Chart_StockSeries_png);
-			RegisterResource(RIMG_ExampleIcons_Chart_Themes_png);
-			RegisterResource(RIMG_ExampleIcons_Chart_ThreeLineBreakSeries_png);
-			RegisterResource(RIMG_ExampleIcons_Chart_Tools_png);
-			RegisterResource(RIMG_ExampleIcons_Chart_Tooltips_png);
-			RegisterResource(RIMG_ExampleIcons_Chart_TreeMap_png);
-			RegisterResource(RIMG_ExampleIcons_Chart_VectorSeries_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_AutoCAD_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_BoxLayout_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_BusinessProcess_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_CauseAndEffect_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_Connector_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_ControlPoint_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_DemoApplication_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_DemoBubbleSort_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_DemoDiagram_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_DemoFlowChart_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_DiagramDesigner_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_DrawingObject_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_Export_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_FamilyTree_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_FlowchartingEPC_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_FlowchartingSDL_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_Geometry_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_GraphLayout_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_Group_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_Guideline_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_Image_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_Library_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_Map_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_MapPopulation_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_MapProjections_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_MapWorld_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_PDF_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_Pergel_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_Port_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_Print_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_Shape_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_Shapes_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_ShapesAnnotation_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_ShapesArrow_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_ShapesBasic_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_ShapesBrainstorming_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_ShapesBusinessProcess_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_ShapesCallout_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_ShapesConnector_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_ShapesCountry_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_ShapesDataFlowDiagram_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_ShapesDecorative_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_ShapesElectricalSymbols_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_ShapesFilesAndFolders_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_ShapesFlag_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_ShapesFloorPlan_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_ShapesFlowCharting_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_ShapesFood_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_ShapesGenogram_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_ShapesNetwork_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_ShapesSymbol_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_ShapesTrafficSigns_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_ShapesWeather_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_SVG_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_Tables_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_Texts_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_TreeLayout_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_UICustomization_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_UML_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_VernierCallipers_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_Visio_png);
-			RegisterResource(RIMG_ExampleIcons_Diagram_WidgetHosting_png);
-			RegisterResource(RIMG_ExampleIcons_Framework_CategoryEdit_png);
-			RegisterResource(RIMG_ExampleIcons_Framework_ClrSerialization_png);
-			RegisterResource(RIMG_ExampleIcons_Framework_Cryptography_png);
-			RegisterResource(RIMG_ExampleIcons_Framework_DomSerialization_png);
-			RegisterResource(RIMG_ExampleIcons_Framework_Fill_png);
-			RegisterResource(RIMG_ExampleIcons_Framework_Formulas_png);
-			RegisterResource(RIMG_ExampleIcons_Framework_Geometry_png);
-			RegisterResource(RIMG_ExampleIcons_Framework_Http_png);
-			RegisterResource(RIMG_ExampleIcons_Framework_ImageFormatApng_png);
-			RegisterResource(RIMG_ExampleIcons_Framework_ImageFormatGif_png);
-			RegisterResource(RIMG_ExampleIcons_Framework_ImageFormatJpeg_png);
-			RegisterResource(RIMG_ExampleIcons_Framework_ImageFormatPng_png);
-			RegisterResource(RIMG_ExampleIcons_Framework_Images_png);
-			RegisterResource(RIMG_ExampleIcons_Framework_Localization_png);
-			RegisterResource(RIMG_ExampleIcons_Framework_NodeDesigner_png);
-			RegisterResource(RIMG_ExampleIcons_Framework_Paths_png);
-			RegisterResource(RIMG_ExampleIcons_Framework_RasterImages_png);
-			RegisterResource(RIMG_ExampleIcons_Framework_Shadow_png);
-			RegisterResource(RIMG_ExampleIcons_Framework_Stroke_png);
-			RegisterResource(RIMG_ExampleIcons_Framework_StyleEdit_png);
-			RegisterResource(RIMG_ExampleIcons_Framework_Text_png);
-			RegisterResource(RIMG_ExampleIcons_Framework_ValueEdit_png);
-			RegisterResource(RIMG_ExampleIcons_Framework_VectorImages_png);
-			RegisterResource(RIMG_ExampleIcons_Framework_Xml_png);
-			RegisterResource(RIMG_ExampleIcons_Framework_Zip_png);
-			RegisterResource(RIMG_ExampleIcons_Gauge_Axes_png);
-			RegisterResource(RIMG_ExampleIcons_Gauge_Indicators_png);
-			RegisterResource(RIMG_ExampleIcons_Gauge_Interactivity_png);
-			RegisterResource(RIMG_ExampleIcons_Gauge_NumericLedDisplay_png);
-			RegisterResource(RIMG_ExampleIcons_Gauge_StateIndicators_png);
-			RegisterResource(RIMG_ExampleIcons_Grid_AlternatingRows_png);
-			RegisterResource(RIMG_ExampleIcons_Grid_CalculatedColumn_png);
-			RegisterResource(RIMG_ExampleIcons_Grid_ColumnWidth_png);
-			RegisterResource(RIMG_ExampleIcons_Grid_ConditionalFormatting_png);
-			RegisterResource(RIMG_ExampleIcons_Grid_DataColumn_png);
-			RegisterResource(RIMG_ExampleIcons_Grid_filter_png);
-			RegisterResource(RIMG_ExampleIcons_Grid_FormatCells_png);
-			RegisterResource(RIMG_ExampleIcons_Grid_FrozenColumns_png);
-			RegisterResource(RIMG_ExampleIcons_Grid_FrozenRows_png);
-			RegisterResource(RIMG_ExampleIcons_Grid_Gridlines_png);
-			RegisterResource(RIMG_ExampleIcons_Grid_group_png);
-			RegisterResource(RIMG_ExampleIcons_Grid_ListTreeView_png);
-			RegisterResource(RIMG_ExampleIcons_Grid_MasterDetails_png);
-			RegisterResource(RIMG_ExampleIcons_Grid_NullValues_png);
-			RegisterResource(RIMG_ExampleIcons_Grid_Protection_png);
-			RegisterResource(RIMG_ExampleIcons_Grid_RowHeaders_png);
-			RegisterResource(RIMG_ExampleIcons_Grid_Scrolling_png);
-			RegisterResource(RIMG_ExampleIcons_Grid_Selection_png);
-			RegisterResource(RIMG_ExampleIcons_Grid_sort_png);
-			RegisterResource(RIMG_ExampleIcons_Schedule_Appointment_png);
-			RegisterResource(RIMG_ExampleIcons_Schedule_Categorization_png);
-			RegisterResource(RIMG_ExampleIcons_Schedule_CustomCategorization_png);
-			RegisterResource(RIMG_ExampleIcons_Schedule_Formats_png);
-			RegisterResource(RIMG_ExampleIcons_Schedule_Grouping_png);
-			RegisterResource(RIMG_ExampleIcons_Schedule_Notifications_png);
-			RegisterResource(RIMG_ExampleIcons_Schedule_Performance_png);
-			RegisterResource(RIMG_ExampleIcons_Schedule_Recurrence_png);
-			RegisterResource(RIMG_ExampleIcons_Schedule_TimeIndicator_png);
-			RegisterResource(RIMG_ExampleIcons_Schedule_Tools_png);
-			RegisterResource(RIMG_ExampleIcons_Schedule_UICustomization_png);
-			RegisterResource(RIMG_ExampleIcons_Schedule_ViewModes_png);
-			RegisterResource(RIMG_ExampleIcons_Text_Blocks_png);
-			RegisterResource(RIMG_ExampleIcons_Text_DocxFormat_png);
-			RegisterResource(RIMG_ExampleIcons_Text_EpubFormat_png);
-			RegisterResource(RIMG_ExampleIcons_Text_Find_png);
-			RegisterResource(RIMG_ExampleIcons_Text_HtmlFormat_png);
-			RegisterResource(RIMG_ExampleIcons_Text_Inlines_png);
-			RegisterResource(RIMG_ExampleIcons_Text_Lists_png);
-			RegisterResource(RIMG_ExampleIcons_Text_MailMerge_png);
-			RegisterResource(RIMG_ExampleIcons_Text_Miscellaneous_png);
-			RegisterResource(RIMG_ExampleIcons_Text_Paragraphs_png);
-			RegisterResource(RIMG_ExampleIcons_Text_PdfFormat_png);
-			RegisterResource(RIMG_ExampleIcons_Text_Report_png);
-			RegisterResource(RIMG_ExampleIcons_Text_Sections_png);
-			RegisterResource(RIMG_ExampleIcons_Text_Selection_png);
-			RegisterResource(RIMG_ExampleIcons_Text_SpellCheck_png);
-			RegisterResource(RIMG_ExampleIcons_Text_Styles_png);
-			RegisterResource(RIMG_ExampleIcons_Text_Tables_png);
-			RegisterResource(RIMG_ExampleIcons_Text_TOC_png);
-			RegisterResource(RIMG_ExampleIcons_Text_UICustomization_png);
-			RegisterResource(RIMG_ExampleIcons_UI_Accordion_png);
-			RegisterResource(RIMG_ExampleIcons_UI_AutoCompleteBox_png);
-			RegisterResource(RIMG_ExampleIcons_UI_Background_png);
-			RegisterResource(RIMG_ExampleIcons_UI_Border_png);
-			RegisterResource(RIMG_ExampleIcons_UI_BorderSplitButton_png);
-			RegisterResource(RIMG_ExampleIcons_UI_Button_png);
-			RegisterResource(RIMG_ExampleIcons_UI_Calendar_png);
-			RegisterResource(RIMG_ExampleIcons_UI_CheckBox_png);
-			RegisterResource(RIMG_ExampleIcons_UI_Clipboard_png);
-			RegisterResource(RIMG_ExampleIcons_UI_ColorBox_png);
-			RegisterResource(RIMG_ExampleIcons_UI_ComboBox_png);
-			RegisterResource(RIMG_ExampleIcons_UI_CommandBar_png);
-			RegisterResource(RIMG_ExampleIcons_UI_ContextMenu_png);
-			RegisterResource(RIMG_ExampleIcons_UI_ContextPopup_png);
-			RegisterResource(RIMG_ExampleIcons_UI_Cursor_png);
-			RegisterResource(RIMG_ExampleIcons_UI_DateTimeBox_png);
-			RegisterResource(RIMG_ExampleIcons_UI_DockPanel_png);
-			RegisterResource(RIMG_ExampleIcons_UI_DocumentBox_png);
-			RegisterResource(RIMG_ExampleIcons_UI_DragAndDrop_png);
-			RegisterResource(RIMG_ExampleIcons_UI_DropDownButton_png);
-			RegisterResource(RIMG_ExampleIcons_UI_FileDialog_png);
-			RegisterResource(RIMG_ExampleIcons_UI_FillSplitButton_png);
-			RegisterResource(RIMG_ExampleIcons_UI_FlexBoxPanel_png);
-			RegisterResource(RIMG_ExampleIcons_UI_GroupBox_png);
-			RegisterResource(RIMG_ExampleIcons_UI_HexagonColorPicker_png);
-			RegisterResource(RIMG_ExampleIcons_UI_HsbColorPicker_png);
-			RegisterResource(RIMG_ExampleIcons_UI_ImageBox_png);
-			RegisterResource(RIMG_ExampleIcons_UI_Keyboard_png);
-			RegisterResource(RIMG_ExampleIcons_UI_Label_png);
-			RegisterResource(RIMG_ExampleIcons_UI_LinkLabel_png);
-			RegisterResource(RIMG_ExampleIcons_UI_ListBox_png);
-			RegisterResource(RIMG_ExampleIcons_UI_MaskedTextBox_png);
-			RegisterResource(RIMG_ExampleIcons_UI_MenuBar_png);
-			RegisterResource(RIMG_ExampleIcons_UI_MenuSplitButton_png);
-			RegisterResource(RIMG_ExampleIcons_UI_MessageBox_png);
-			RegisterResource(RIMG_ExampleIcons_UI_Mouse_png);
-			RegisterResource(RIMG_ExampleIcons_UI_NamedColorPicker_png);
-			RegisterResource(RIMG_ExampleIcons_UI_NavigationBar_png);
-			RegisterResource(RIMG_ExampleIcons_UI_NumericUpDown_png);
-			RegisterResource(RIMG_ExampleIcons_UI_PageSize_png);
-			RegisterResource(RIMG_ExampleIcons_UI_PairBox_png);
-			RegisterResource(RIMG_ExampleIcons_UI_PaletteColorPicker_png);
-			RegisterResource(RIMG_ExampleIcons_UI_PrintDialog_png);
-			RegisterResource(RIMG_ExampleIcons_UI_ProgressBar_png);
-			RegisterResource(RIMG_ExampleIcons_UI_ProgressWindow_png);
-			RegisterResource(RIMG_ExampleIcons_UI_RadioButton_png);
-			RegisterResource(RIMG_ExampleIcons_UI_Ribbon_png);
-			RegisterResource(RIMG_ExampleIcons_UI_ScrollBar_png);
-			RegisterResource(RIMG_ExampleIcons_UI_ScrollContent_png);
-			RegisterResource(RIMG_ExampleIcons_UI_ShadowSplitButton_png);
-			RegisterResource(RIMG_ExampleIcons_UI_SingleVisiblePanel_png);
-			RegisterResource(RIMG_ExampleIcons_UI_Slider_png);
-			RegisterResource(RIMG_ExampleIcons_UI_Splitter_png);
-			RegisterResource(RIMG_ExampleIcons_UI_StackPanel_png);
-			RegisterResource(RIMG_ExampleIcons_UI_StrokeSplitButton_png);
-			RegisterResource(RIMG_ExampleIcons_UI_Symbols_png);
-			RegisterResource(RIMG_ExampleIcons_UI_Tab_png);
-			RegisterResource(RIMG_ExampleIcons_UI_TableFlowPanel_png);
-			RegisterResource(RIMG_ExampleIcons_UI_TextBox_png);
-			RegisterResource(RIMG_ExampleIcons_UI_ThemeBuilder_png);
-			RegisterResource(RIMG_ExampleIcons_UI_TimeSpanBox_png);
-			RegisterResource(RIMG_ExampleIcons_UI_ToolBar_png);
-			RegisterResource(RIMG_ExampleIcons_UI_Tooltip_png);
-			RegisterResource(RIMG_ExampleIcons_UI_Touch_png);
-			RegisterResource(RIMG_ExampleIcons_UI_TreeView_png);
-			RegisterResource(RIMG_ExampleIcons_UI_UserPanel_png);
-			RegisterResource(RIMG_ExampleIcons_UI_WheelColorPicker_png);
-			RegisterResource(RIMG_ExampleIcons_UI_Windows_png);
-			RegisterResource(RIMG_ExampleIcons_UI_WrapFlowPanel_png);
-			RegisterResource(RIMG_ExampleIcons_UI_WrappableToolbar_png);
 			RegisterResource(RIMG_ExamplesUI_Backgrounds_HomeContentBackground_svg);
 			RegisterResource(RIMG_ExamplesUI_Backgrounds_HomeHeaderBackground_svg);
 			RegisterResource(RIMG_ExamplesUI_Collages_Barcode_png);
@@ -380,6 +127,7 @@ namespace Nevron.Nov.Examples
 			RegisterResource(RIMG_ExamplesUI_Icons_Recent_svg);
 			RegisterResource(RIMG_ExamplesUI_Icons_Search_png);
 			RegisterResource(RIMG_ExamplesUI_Icons_Search_svg);
+			RegisterResource(RIMG_ExamplesUI_Icons_Themes_png);
 			RegisterResource(RIMG_ExamplesUI_Icons_VbProject_png);
 			RegisterResource(RIMG_ExamplesUI_Icons_Products_Barcode_svg);
 			RegisterResource(RIMG_ExamplesUI_Icons_Products_BarcodeSelected_svg);
@@ -623,6 +371,9 @@ namespace Nevron.Nov.Examples
 			RegisterResource(RIMG_Ribbon_32x32_settings_png);
 			RegisterResource(RIMG_Ribbon_32x32_smiley_png);
 			RegisterResource(RIMG_Ribbon_32x32_table_design_png);
+			RegisterResource(RIMG_SVG_Female_svg);
+			RegisterResource(RIMG_SVG_Male_svg);
+			RegisterResource(RIMG_SVG_Tiger_svg);
 			RegisterResource(RIMG_TableBorders_AllBorders_png);
 			RegisterResource(RIMG_TableBorders_BottomBorder_png);
 			RegisterResource(RIMG_TableBorders_InsideBorders_png);
@@ -726,11 +477,11 @@ namespace Nevron.Nov.Examples
 		/// <summary></summary>
 		public static NImage Image_SampleImage_png{get{return new NImage(RIMG_SampleImage_png);}}
 		/// <summary></summary>
-		public static NImage Image_Tiger_svg{get{return new NImage(RIMG_Tiger_svg);}}
-		/// <summary></summary>
 		public static NImage Image_AnimatedPNGs_BouncingBeachBall_png{get{return new NImage(RIMG_AnimatedPNGs_BouncingBeachBall_png);}}
 		/// <summary></summary>
 		public static NImage Image_AnimatedPNGs_Smiley_png{get{return new NImage(RIMG_AnimatedPNGs_Smiley_png);}}
+		/// <summary></summary>
+		public static NImage Image_Artistic_AirplaneSeats_png{get{return new NImage(RIMG_Artistic_AirplaneSeats_png);}}
 		/// <summary></summary>
 		public static NImage Image_Artistic_FishBowl_jpg{get{return new NImage(RIMG_Artistic_FishBowl_jpg);}}
 		/// <summary></summary>
@@ -822,520 +573,6 @@ namespace Nevron.Nov.Examples
 		/// <summary></summary>
 		public static NImage Image_Documentation_PreviewResults_png{get{return new NImage(RIMG_Documentation_PreviewResults_png);}}
 		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Barcode_Barcode1D_png{get{return new NImage(RIMG_ExampleIcons_Barcode_Barcode1D_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Barcode_Barcode2D_png{get{return new NImage(RIMG_ExampleIcons_Barcode_Barcode2D_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Chart_AreaSeries_png{get{return new NImage(RIMG_ExampleIcons_Chart_AreaSeries_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Chart_Axes_png{get{return new NImage(RIMG_ExampleIcons_Chart_Axes_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Chart_AxisAppearance_png{get{return new NImage(RIMG_ExampleIcons_Chart_AxisAppearance_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Chart_AxisElements_png{get{return new NImage(RIMG_ExampleIcons_Chart_AxisElements_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Chart_AxisPosition_png{get{return new NImage(RIMG_ExampleIcons_Chart_AxisPosition_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Chart_BarSeries_png{get{return new NImage(RIMG_ExampleIcons_Chart_BarSeries_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Chart_BoxAndWhiskersSeries_png{get{return new NImage(RIMG_ExampleIcons_Chart_BoxAndWhiskersSeries_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Chart_BubbleSeries_png{get{return new NImage(RIMG_ExampleIcons_Chart_BubbleSeries_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Chart_Calendar_png{get{return new NImage(RIMG_ExampleIcons_Chart_Calendar_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Chart_CartesianSeries_png{get{return new NImage(RIMG_ExampleIcons_Chart_CartesianSeries_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Chart_ComboSeries_png{get{return new NImage(RIMG_ExampleIcons_Chart_ComboSeries_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Chart_Effects_png{get{return new NImage(RIMG_ExampleIcons_Chart_Effects_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Chart_ErrorBarSeries_png{get{return new NImage(RIMG_ExampleIcons_Chart_ErrorBarSeries_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Chart_Export_png{get{return new NImage(RIMG_ExampleIcons_Chart_Export_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Chart_FunnelSeries_png{get{return new NImage(RIMG_ExampleIcons_Chart_FunnelSeries_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Chart_HeatMapSeries_png{get{return new NImage(RIMG_ExampleIcons_Chart_HeatMapSeries_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Chart_HighLowSeries_png{get{return new NImage(RIMG_ExampleIcons_Chart_HighLowSeries_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Chart_Interactivity_png{get{return new NImage(RIMG_ExampleIcons_Chart_Interactivity_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Chart_KagiSeries_png{get{return new NImage(RIMG_ExampleIcons_Chart_KagiSeries_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Chart_Layout_png{get{return new NImage(RIMG_ExampleIcons_Chart_Layout_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Chart_Legend_png{get{return new NImage(RIMG_ExampleIcons_Chart_Legend_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Chart_LineSeries_png{get{return new NImage(RIMG_ExampleIcons_Chart_LineSeries_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Chart_PdfExport_png{get{return new NImage(RIMG_ExampleIcons_Chart_PdfExport_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Chart_PieSeries_png{get{return new NImage(RIMG_ExampleIcons_Chart_PieSeries_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Chart_PointAndFigureSeries_png{get{return new NImage(RIMG_ExampleIcons_Chart_PointAndFigureSeries_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Chart_PointSeries_png{get{return new NImage(RIMG_ExampleIcons_Chart_PointSeries_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Chart_PolarSeries_png{get{return new NImage(RIMG_ExampleIcons_Chart_PolarSeries_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Chart_Printing_png{get{return new NImage(RIMG_ExampleIcons_Chart_Printing_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Chart_RadarSeries_png{get{return new NImage(RIMG_ExampleIcons_Chart_RadarSeries_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Chart_RangeSeries_png{get{return new NImage(RIMG_ExampleIcons_Chart_RangeSeries_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Chart_Realtime_png{get{return new NImage(RIMG_ExampleIcons_Chart_Realtime_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Chart_RenkoSeries_png{get{return new NImage(RIMG_ExampleIcons_Chart_RenkoSeries_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Chart_Scale_png{get{return new NImage(RIMG_ExampleIcons_Chart_Scale_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Chart_ScaleBreaks_png{get{return new NImage(RIMG_ExampleIcons_Chart_ScaleBreaks_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Chart_Serialization_png{get{return new NImage(RIMG_ExampleIcons_Chart_Serialization_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Chart_Series_png{get{return new NImage(RIMG_ExampleIcons_Chart_Series_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Chart_StockSeries_png{get{return new NImage(RIMG_ExampleIcons_Chart_StockSeries_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Chart_Themes_png{get{return new NImage(RIMG_ExampleIcons_Chart_Themes_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Chart_ThreeLineBreakSeries_png{get{return new NImage(RIMG_ExampleIcons_Chart_ThreeLineBreakSeries_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Chart_Tools_png{get{return new NImage(RIMG_ExampleIcons_Chart_Tools_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Chart_Tooltips_png{get{return new NImage(RIMG_ExampleIcons_Chart_Tooltips_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Chart_TreeMap_png{get{return new NImage(RIMG_ExampleIcons_Chart_TreeMap_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Chart_VectorSeries_png{get{return new NImage(RIMG_ExampleIcons_Chart_VectorSeries_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_AutoCAD_png{get{return new NImage(RIMG_ExampleIcons_Diagram_AutoCAD_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_BoxLayout_png{get{return new NImage(RIMG_ExampleIcons_Diagram_BoxLayout_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_BusinessProcess_png{get{return new NImage(RIMG_ExampleIcons_Diagram_BusinessProcess_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_CauseAndEffect_png{get{return new NImage(RIMG_ExampleIcons_Diagram_CauseAndEffect_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_Connector_png{get{return new NImage(RIMG_ExampleIcons_Diagram_Connector_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_ControlPoint_png{get{return new NImage(RIMG_ExampleIcons_Diagram_ControlPoint_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_DemoApplication_png{get{return new NImage(RIMG_ExampleIcons_Diagram_DemoApplication_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_DemoBubbleSort_png{get{return new NImage(RIMG_ExampleIcons_Diagram_DemoBubbleSort_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_DemoDiagram_png{get{return new NImage(RIMG_ExampleIcons_Diagram_DemoDiagram_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_DemoFlowChart_png{get{return new NImage(RIMG_ExampleIcons_Diagram_DemoFlowChart_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_DiagramDesigner_png{get{return new NImage(RIMG_ExampleIcons_Diagram_DiagramDesigner_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_DrawingObject_png{get{return new NImage(RIMG_ExampleIcons_Diagram_DrawingObject_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_Export_png{get{return new NImage(RIMG_ExampleIcons_Diagram_Export_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_FamilyTree_png{get{return new NImage(RIMG_ExampleIcons_Diagram_FamilyTree_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_FlowchartingEPC_png{get{return new NImage(RIMG_ExampleIcons_Diagram_FlowchartingEPC_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_FlowchartingSDL_png{get{return new NImage(RIMG_ExampleIcons_Diagram_FlowchartingSDL_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_Geometry_png{get{return new NImage(RIMG_ExampleIcons_Diagram_Geometry_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_GraphLayout_png{get{return new NImage(RIMG_ExampleIcons_Diagram_GraphLayout_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_Group_png{get{return new NImage(RIMG_ExampleIcons_Diagram_Group_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_Guideline_png{get{return new NImage(RIMG_ExampleIcons_Diagram_Guideline_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_Image_png{get{return new NImage(RIMG_ExampleIcons_Diagram_Image_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_Library_png{get{return new NImage(RIMG_ExampleIcons_Diagram_Library_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_Map_png{get{return new NImage(RIMG_ExampleIcons_Diagram_Map_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_MapPopulation_png{get{return new NImage(RIMG_ExampleIcons_Diagram_MapPopulation_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_MapProjections_png{get{return new NImage(RIMG_ExampleIcons_Diagram_MapProjections_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_MapWorld_png{get{return new NImage(RIMG_ExampleIcons_Diagram_MapWorld_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_PDF_png{get{return new NImage(RIMG_ExampleIcons_Diagram_PDF_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_Pergel_png{get{return new NImage(RIMG_ExampleIcons_Diagram_Pergel_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_Port_png{get{return new NImage(RIMG_ExampleIcons_Diagram_Port_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_Print_png{get{return new NImage(RIMG_ExampleIcons_Diagram_Print_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_Shape_png{get{return new NImage(RIMG_ExampleIcons_Diagram_Shape_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_Shapes_png{get{return new NImage(RIMG_ExampleIcons_Diagram_Shapes_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_ShapesAnnotation_png{get{return new NImage(RIMG_ExampleIcons_Diagram_ShapesAnnotation_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_ShapesArrow_png{get{return new NImage(RIMG_ExampleIcons_Diagram_ShapesArrow_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_ShapesBasic_png{get{return new NImage(RIMG_ExampleIcons_Diagram_ShapesBasic_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_ShapesBrainstorming_png{get{return new NImage(RIMG_ExampleIcons_Diagram_ShapesBrainstorming_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_ShapesBusinessProcess_png{get{return new NImage(RIMG_ExampleIcons_Diagram_ShapesBusinessProcess_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_ShapesCallout_png{get{return new NImage(RIMG_ExampleIcons_Diagram_ShapesCallout_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_ShapesConnector_png{get{return new NImage(RIMG_ExampleIcons_Diagram_ShapesConnector_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_ShapesCountry_png{get{return new NImage(RIMG_ExampleIcons_Diagram_ShapesCountry_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_ShapesDataFlowDiagram_png{get{return new NImage(RIMG_ExampleIcons_Diagram_ShapesDataFlowDiagram_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_ShapesDecorative_png{get{return new NImage(RIMG_ExampleIcons_Diagram_ShapesDecorative_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_ShapesElectricalSymbols_png{get{return new NImage(RIMG_ExampleIcons_Diagram_ShapesElectricalSymbols_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_ShapesFilesAndFolders_png{get{return new NImage(RIMG_ExampleIcons_Diagram_ShapesFilesAndFolders_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_ShapesFlag_png{get{return new NImage(RIMG_ExampleIcons_Diagram_ShapesFlag_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_ShapesFloorPlan_png{get{return new NImage(RIMG_ExampleIcons_Diagram_ShapesFloorPlan_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_ShapesFlowCharting_png{get{return new NImage(RIMG_ExampleIcons_Diagram_ShapesFlowCharting_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_ShapesFood_png{get{return new NImage(RIMG_ExampleIcons_Diagram_ShapesFood_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_ShapesGenogram_png{get{return new NImage(RIMG_ExampleIcons_Diagram_ShapesGenogram_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_ShapesNetwork_png{get{return new NImage(RIMG_ExampleIcons_Diagram_ShapesNetwork_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_ShapesSymbol_png{get{return new NImage(RIMG_ExampleIcons_Diagram_ShapesSymbol_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_ShapesTrafficSigns_png{get{return new NImage(RIMG_ExampleIcons_Diagram_ShapesTrafficSigns_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_ShapesWeather_png{get{return new NImage(RIMG_ExampleIcons_Diagram_ShapesWeather_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_SVG_png{get{return new NImage(RIMG_ExampleIcons_Diagram_SVG_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_Tables_png{get{return new NImage(RIMG_ExampleIcons_Diagram_Tables_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_Texts_png{get{return new NImage(RIMG_ExampleIcons_Diagram_Texts_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_TreeLayout_png{get{return new NImage(RIMG_ExampleIcons_Diagram_TreeLayout_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_UICustomization_png{get{return new NImage(RIMG_ExampleIcons_Diagram_UICustomization_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_UML_png{get{return new NImage(RIMG_ExampleIcons_Diagram_UML_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_VernierCallipers_png{get{return new NImage(RIMG_ExampleIcons_Diagram_VernierCallipers_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_Visio_png{get{return new NImage(RIMG_ExampleIcons_Diagram_Visio_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Diagram_WidgetHosting_png{get{return new NImage(RIMG_ExampleIcons_Diagram_WidgetHosting_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Framework_CategoryEdit_png{get{return new NImage(RIMG_ExampleIcons_Framework_CategoryEdit_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Framework_ClrSerialization_png{get{return new NImage(RIMG_ExampleIcons_Framework_ClrSerialization_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Framework_Cryptography_png{get{return new NImage(RIMG_ExampleIcons_Framework_Cryptography_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Framework_DomSerialization_png{get{return new NImage(RIMG_ExampleIcons_Framework_DomSerialization_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Framework_Fill_png{get{return new NImage(RIMG_ExampleIcons_Framework_Fill_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Framework_Formulas_png{get{return new NImage(RIMG_ExampleIcons_Framework_Formulas_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Framework_Geometry_png{get{return new NImage(RIMG_ExampleIcons_Framework_Geometry_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Framework_Http_png{get{return new NImage(RIMG_ExampleIcons_Framework_Http_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Framework_ImageFormatApng_png{get{return new NImage(RIMG_ExampleIcons_Framework_ImageFormatApng_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Framework_ImageFormatGif_png{get{return new NImage(RIMG_ExampleIcons_Framework_ImageFormatGif_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Framework_ImageFormatJpeg_png{get{return new NImage(RIMG_ExampleIcons_Framework_ImageFormatJpeg_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Framework_ImageFormatPng_png{get{return new NImage(RIMG_ExampleIcons_Framework_ImageFormatPng_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Framework_Images_png{get{return new NImage(RIMG_ExampleIcons_Framework_Images_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Framework_Localization_png{get{return new NImage(RIMG_ExampleIcons_Framework_Localization_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Framework_NodeDesigner_png{get{return new NImage(RIMG_ExampleIcons_Framework_NodeDesigner_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Framework_Paths_png{get{return new NImage(RIMG_ExampleIcons_Framework_Paths_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Framework_RasterImages_png{get{return new NImage(RIMG_ExampleIcons_Framework_RasterImages_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Framework_Shadow_png{get{return new NImage(RIMG_ExampleIcons_Framework_Shadow_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Framework_Stroke_png{get{return new NImage(RIMG_ExampleIcons_Framework_Stroke_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Framework_StyleEdit_png{get{return new NImage(RIMG_ExampleIcons_Framework_StyleEdit_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Framework_Text_png{get{return new NImage(RIMG_ExampleIcons_Framework_Text_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Framework_ValueEdit_png{get{return new NImage(RIMG_ExampleIcons_Framework_ValueEdit_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Framework_VectorImages_png{get{return new NImage(RIMG_ExampleIcons_Framework_VectorImages_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Framework_Xml_png{get{return new NImage(RIMG_ExampleIcons_Framework_Xml_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Framework_Zip_png{get{return new NImage(RIMG_ExampleIcons_Framework_Zip_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Gauge_Axes_png{get{return new NImage(RIMG_ExampleIcons_Gauge_Axes_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Gauge_Indicators_png{get{return new NImage(RIMG_ExampleIcons_Gauge_Indicators_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Gauge_Interactivity_png{get{return new NImage(RIMG_ExampleIcons_Gauge_Interactivity_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Gauge_NumericLedDisplay_png{get{return new NImage(RIMG_ExampleIcons_Gauge_NumericLedDisplay_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Gauge_StateIndicators_png{get{return new NImage(RIMG_ExampleIcons_Gauge_StateIndicators_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Grid_AlternatingRows_png{get{return new NImage(RIMG_ExampleIcons_Grid_AlternatingRows_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Grid_CalculatedColumn_png{get{return new NImage(RIMG_ExampleIcons_Grid_CalculatedColumn_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Grid_ColumnWidth_png{get{return new NImage(RIMG_ExampleIcons_Grid_ColumnWidth_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Grid_ConditionalFormatting_png{get{return new NImage(RIMG_ExampleIcons_Grid_ConditionalFormatting_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Grid_DataColumn_png{get{return new NImage(RIMG_ExampleIcons_Grid_DataColumn_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Grid_filter_png{get{return new NImage(RIMG_ExampleIcons_Grid_filter_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Grid_FormatCells_png{get{return new NImage(RIMG_ExampleIcons_Grid_FormatCells_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Grid_FrozenColumns_png{get{return new NImage(RIMG_ExampleIcons_Grid_FrozenColumns_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Grid_FrozenRows_png{get{return new NImage(RIMG_ExampleIcons_Grid_FrozenRows_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Grid_Gridlines_png{get{return new NImage(RIMG_ExampleIcons_Grid_Gridlines_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Grid_group_png{get{return new NImage(RIMG_ExampleIcons_Grid_group_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Grid_ListTreeView_png{get{return new NImage(RIMG_ExampleIcons_Grid_ListTreeView_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Grid_MasterDetails_png{get{return new NImage(RIMG_ExampleIcons_Grid_MasterDetails_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Grid_NullValues_png{get{return new NImage(RIMG_ExampleIcons_Grid_NullValues_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Grid_Protection_png{get{return new NImage(RIMG_ExampleIcons_Grid_Protection_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Grid_RowHeaders_png{get{return new NImage(RIMG_ExampleIcons_Grid_RowHeaders_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Grid_Scrolling_png{get{return new NImage(RIMG_ExampleIcons_Grid_Scrolling_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Grid_Selection_png{get{return new NImage(RIMG_ExampleIcons_Grid_Selection_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Grid_sort_png{get{return new NImage(RIMG_ExampleIcons_Grid_sort_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Schedule_Appointment_png{get{return new NImage(RIMG_ExampleIcons_Schedule_Appointment_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Schedule_Categorization_png{get{return new NImage(RIMG_ExampleIcons_Schedule_Categorization_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Schedule_CustomCategorization_png{get{return new NImage(RIMG_ExampleIcons_Schedule_CustomCategorization_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Schedule_Formats_png{get{return new NImage(RIMG_ExampleIcons_Schedule_Formats_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Schedule_Grouping_png{get{return new NImage(RIMG_ExampleIcons_Schedule_Grouping_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Schedule_Notifications_png{get{return new NImage(RIMG_ExampleIcons_Schedule_Notifications_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Schedule_Performance_png{get{return new NImage(RIMG_ExampleIcons_Schedule_Performance_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Schedule_Recurrence_png{get{return new NImage(RIMG_ExampleIcons_Schedule_Recurrence_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Schedule_TimeIndicator_png{get{return new NImage(RIMG_ExampleIcons_Schedule_TimeIndicator_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Schedule_Tools_png{get{return new NImage(RIMG_ExampleIcons_Schedule_Tools_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Schedule_UICustomization_png{get{return new NImage(RIMG_ExampleIcons_Schedule_UICustomization_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Schedule_ViewModes_png{get{return new NImage(RIMG_ExampleIcons_Schedule_ViewModes_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Text_Blocks_png{get{return new NImage(RIMG_ExampleIcons_Text_Blocks_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Text_DocxFormat_png{get{return new NImage(RIMG_ExampleIcons_Text_DocxFormat_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Text_EpubFormat_png{get{return new NImage(RIMG_ExampleIcons_Text_EpubFormat_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Text_Find_png{get{return new NImage(RIMG_ExampleIcons_Text_Find_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Text_HtmlFormat_png{get{return new NImage(RIMG_ExampleIcons_Text_HtmlFormat_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Text_Inlines_png{get{return new NImage(RIMG_ExampleIcons_Text_Inlines_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Text_Lists_png{get{return new NImage(RIMG_ExampleIcons_Text_Lists_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Text_MailMerge_png{get{return new NImage(RIMG_ExampleIcons_Text_MailMerge_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Text_Miscellaneous_png{get{return new NImage(RIMG_ExampleIcons_Text_Miscellaneous_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Text_Paragraphs_png{get{return new NImage(RIMG_ExampleIcons_Text_Paragraphs_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Text_PdfFormat_png{get{return new NImage(RIMG_ExampleIcons_Text_PdfFormat_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Text_Report_png{get{return new NImage(RIMG_ExampleIcons_Text_Report_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Text_Sections_png{get{return new NImage(RIMG_ExampleIcons_Text_Sections_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Text_Selection_png{get{return new NImage(RIMG_ExampleIcons_Text_Selection_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Text_SpellCheck_png{get{return new NImage(RIMG_ExampleIcons_Text_SpellCheck_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Text_Styles_png{get{return new NImage(RIMG_ExampleIcons_Text_Styles_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Text_Tables_png{get{return new NImage(RIMG_ExampleIcons_Text_Tables_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Text_TOC_png{get{return new NImage(RIMG_ExampleIcons_Text_TOC_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_Text_UICustomization_png{get{return new NImage(RIMG_ExampleIcons_Text_UICustomization_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_Accordion_png{get{return new NImage(RIMG_ExampleIcons_UI_Accordion_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_AutoCompleteBox_png{get{return new NImage(RIMG_ExampleIcons_UI_AutoCompleteBox_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_Background_png{get{return new NImage(RIMG_ExampleIcons_UI_Background_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_Border_png{get{return new NImage(RIMG_ExampleIcons_UI_Border_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_BorderSplitButton_png{get{return new NImage(RIMG_ExampleIcons_UI_BorderSplitButton_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_Button_png{get{return new NImage(RIMG_ExampleIcons_UI_Button_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_Calendar_png{get{return new NImage(RIMG_ExampleIcons_UI_Calendar_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_CheckBox_png{get{return new NImage(RIMG_ExampleIcons_UI_CheckBox_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_Clipboard_png{get{return new NImage(RIMG_ExampleIcons_UI_Clipboard_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_ColorBox_png{get{return new NImage(RIMG_ExampleIcons_UI_ColorBox_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_ComboBox_png{get{return new NImage(RIMG_ExampleIcons_UI_ComboBox_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_CommandBar_png{get{return new NImage(RIMG_ExampleIcons_UI_CommandBar_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_ContextMenu_png{get{return new NImage(RIMG_ExampleIcons_UI_ContextMenu_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_ContextPopup_png{get{return new NImage(RIMG_ExampleIcons_UI_ContextPopup_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_Cursor_png{get{return new NImage(RIMG_ExampleIcons_UI_Cursor_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_DateTimeBox_png{get{return new NImage(RIMG_ExampleIcons_UI_DateTimeBox_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_DockPanel_png{get{return new NImage(RIMG_ExampleIcons_UI_DockPanel_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_DocumentBox_png{get{return new NImage(RIMG_ExampleIcons_UI_DocumentBox_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_DragAndDrop_png{get{return new NImage(RIMG_ExampleIcons_UI_DragAndDrop_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_DropDownButton_png{get{return new NImage(RIMG_ExampleIcons_UI_DropDownButton_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_FileDialog_png{get{return new NImage(RIMG_ExampleIcons_UI_FileDialog_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_FillSplitButton_png{get{return new NImage(RIMG_ExampleIcons_UI_FillSplitButton_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_FlexBoxPanel_png{get{return new NImage(RIMG_ExampleIcons_UI_FlexBoxPanel_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_GroupBox_png{get{return new NImage(RIMG_ExampleIcons_UI_GroupBox_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_HexagonColorPicker_png{get{return new NImage(RIMG_ExampleIcons_UI_HexagonColorPicker_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_HsbColorPicker_png{get{return new NImage(RIMG_ExampleIcons_UI_HsbColorPicker_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_ImageBox_png{get{return new NImage(RIMG_ExampleIcons_UI_ImageBox_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_Keyboard_png{get{return new NImage(RIMG_ExampleIcons_UI_Keyboard_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_Label_png{get{return new NImage(RIMG_ExampleIcons_UI_Label_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_LinkLabel_png{get{return new NImage(RIMG_ExampleIcons_UI_LinkLabel_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_ListBox_png{get{return new NImage(RIMG_ExampleIcons_UI_ListBox_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_MaskedTextBox_png{get{return new NImage(RIMG_ExampleIcons_UI_MaskedTextBox_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_MenuBar_png{get{return new NImage(RIMG_ExampleIcons_UI_MenuBar_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_MenuSplitButton_png{get{return new NImage(RIMG_ExampleIcons_UI_MenuSplitButton_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_MessageBox_png{get{return new NImage(RIMG_ExampleIcons_UI_MessageBox_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_Mouse_png{get{return new NImage(RIMG_ExampleIcons_UI_Mouse_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_NamedColorPicker_png{get{return new NImage(RIMG_ExampleIcons_UI_NamedColorPicker_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_NavigationBar_png{get{return new NImage(RIMG_ExampleIcons_UI_NavigationBar_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_NumericUpDown_png{get{return new NImage(RIMG_ExampleIcons_UI_NumericUpDown_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_PageSize_png{get{return new NImage(RIMG_ExampleIcons_UI_PageSize_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_PairBox_png{get{return new NImage(RIMG_ExampleIcons_UI_PairBox_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_PaletteColorPicker_png{get{return new NImage(RIMG_ExampleIcons_UI_PaletteColorPicker_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_PrintDialog_png{get{return new NImage(RIMG_ExampleIcons_UI_PrintDialog_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_ProgressBar_png{get{return new NImage(RIMG_ExampleIcons_UI_ProgressBar_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_ProgressWindow_png{get{return new NImage(RIMG_ExampleIcons_UI_ProgressWindow_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_RadioButton_png{get{return new NImage(RIMG_ExampleIcons_UI_RadioButton_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_Ribbon_png{get{return new NImage(RIMG_ExampleIcons_UI_Ribbon_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_ScrollBar_png{get{return new NImage(RIMG_ExampleIcons_UI_ScrollBar_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_ScrollContent_png{get{return new NImage(RIMG_ExampleIcons_UI_ScrollContent_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_ShadowSplitButton_png{get{return new NImage(RIMG_ExampleIcons_UI_ShadowSplitButton_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_SingleVisiblePanel_png{get{return new NImage(RIMG_ExampleIcons_UI_SingleVisiblePanel_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_Slider_png{get{return new NImage(RIMG_ExampleIcons_UI_Slider_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_Splitter_png{get{return new NImage(RIMG_ExampleIcons_UI_Splitter_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_StackPanel_png{get{return new NImage(RIMG_ExampleIcons_UI_StackPanel_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_StrokeSplitButton_png{get{return new NImage(RIMG_ExampleIcons_UI_StrokeSplitButton_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_Symbols_png{get{return new NImage(RIMG_ExampleIcons_UI_Symbols_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_Tab_png{get{return new NImage(RIMG_ExampleIcons_UI_Tab_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_TableFlowPanel_png{get{return new NImage(RIMG_ExampleIcons_UI_TableFlowPanel_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_TextBox_png{get{return new NImage(RIMG_ExampleIcons_UI_TextBox_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_ThemeBuilder_png{get{return new NImage(RIMG_ExampleIcons_UI_ThemeBuilder_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_TimeSpanBox_png{get{return new NImage(RIMG_ExampleIcons_UI_TimeSpanBox_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_ToolBar_png{get{return new NImage(RIMG_ExampleIcons_UI_ToolBar_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_Tooltip_png{get{return new NImage(RIMG_ExampleIcons_UI_Tooltip_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_Touch_png{get{return new NImage(RIMG_ExampleIcons_UI_Touch_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_TreeView_png{get{return new NImage(RIMG_ExampleIcons_UI_TreeView_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_UserPanel_png{get{return new NImage(RIMG_ExampleIcons_UI_UserPanel_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_WheelColorPicker_png{get{return new NImage(RIMG_ExampleIcons_UI_WheelColorPicker_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_Windows_png{get{return new NImage(RIMG_ExampleIcons_UI_Windows_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_WrapFlowPanel_png{get{return new NImage(RIMG_ExampleIcons_UI_WrapFlowPanel_png);}}
-		/// <summary></summary>
-		public static NImage Image_ExampleIcons_UI_WrappableToolbar_png{get{return new NImage(RIMG_ExampleIcons_UI_WrappableToolbar_png);}}
-		/// <summary></summary>
 		public static NImage Image_ExamplesUI_Backgrounds_HomeContentBackground_svg{get{return new NImage(RIMG_ExamplesUI_Backgrounds_HomeContentBackground_svg);}}
 		/// <summary></summary>
 		public static NImage Image_ExamplesUI_Backgrounds_HomeHeaderBackground_svg{get{return new NImage(RIMG_ExamplesUI_Backgrounds_HomeHeaderBackground_svg);}}
@@ -1381,6 +618,8 @@ namespace Nevron.Nov.Examples
 		public static NImage Image_ExamplesUI_Icons_Search_png{get{return new NImage(RIMG_ExamplesUI_Icons_Search_png);}}
 		/// <summary></summary>
 		public static NImage Image_ExamplesUI_Icons_Search_svg{get{return new NImage(RIMG_ExamplesUI_Icons_Search_svg);}}
+		/// <summary></summary>
+		public static NImage Image_ExamplesUI_Icons_Themes_png{get{return new NImage(RIMG_ExamplesUI_Icons_Themes_png);}}
 		/// <summary></summary>
 		public static NImage Image_ExamplesUI_Icons_VbProject_png{get{return new NImage(RIMG_ExamplesUI_Icons_VbProject_png);}}
 		/// <summary></summary>
@@ -1868,6 +1107,12 @@ namespace Nevron.Nov.Examples
 		/// <summary></summary>
 		public static NImage Image_Ribbon_32x32_table_design_png{get{return new NImage(RIMG_Ribbon_32x32_table_design_png);}}
 		/// <summary></summary>
+		public static NImage Image_SVG_Female_svg{get{return new NImage(RIMG_SVG_Female_svg);}}
+		/// <summary></summary>
+		public static NImage Image_SVG_Male_svg{get{return new NImage(RIMG_SVG_Male_svg);}}
+		/// <summary></summary>
+		public static NImage Image_SVG_Tiger_svg{get{return new NImage(RIMG_SVG_Tiger_svg);}}
+		/// <summary></summary>
 		public static NImage Image_TableBorders_AllBorders_png{get{return new NImage(RIMG_TableBorders_AllBorders_png);}}
 		/// <summary></summary>
 		public static NImage Image_TableBorders_BottomBorder_png{get{return new NImage(RIMG_TableBorders_BottomBorder_png);}}
@@ -2062,1369 +1307,871 @@ namespace Nevron.Nov.Examples
 		/// <summary></summary>
 		public static readonly NEmbeddedResource RBIN_ComponentIcons_zip = new NEmbeddedResource(Instance,"RBIN_ComponentIcons_zip",0,22434);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RBIN_DOCX_CompatibilityTest_docx = new NEmbeddedResource(Instance,"RBIN_DOCX_CompatibilityTest_docx",22434,77283);
+		public static readonly NEmbeddedResource RBIN_Countries_zip = new NEmbeddedResource(Instance,"RBIN_Countries_zip",22434,793339);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RBIN_DOCX_ComplexDocument_docx = new NEmbeddedResource(Instance,"RBIN_DOCX_ComplexDocument_docx",99717,33710);
+		public static readonly NEmbeddedResource RBIN_DOCX_CompatibilityTest_docx = new NEmbeddedResource(Instance,"RBIN_DOCX_CompatibilityTest_docx",815773,77283);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RBIN_DOCX_EventInvitation_docx = new NEmbeddedResource(Instance,"RBIN_DOCX_EventInvitation_docx",133427,57727);
+		public static readonly NEmbeddedResource RBIN_DOCX_ComplexDocument_docx = new NEmbeddedResource(Instance,"RBIN_DOCX_ComplexDocument_docx",893056,33710);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RBIN_DOCX_InvoiceTemplate_docx = new NEmbeddedResource(Instance,"RBIN_DOCX_InvoiceTemplate_docx",191154,7159);
+		public static readonly NEmbeddedResource RBIN_DOCX_EventInvitation_docx = new NEmbeddedResource(Instance,"RBIN_DOCX_EventInvitation_docx",926766,57727);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RBIN_DXF_FloorPlan_zip = new NEmbeddedResource(Instance,"RBIN_DXF_FloorPlan_zip",198313,92334);
+		public static readonly NEmbeddedResource RBIN_DOCX_InvoiceTemplate_docx = new NEmbeddedResource(Instance,"RBIN_DOCX_InvoiceTemplate_docx",984493,7159);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RBIN_EPUB_GeographyOfBliss_epub = new NEmbeddedResource(Instance,"RBIN_EPUB_GeographyOfBliss_epub",290647,198197);
+		public static readonly NEmbeddedResource RBIN_DXF_FloorPlan_zip = new NEmbeddedResource(Instance,"RBIN_DXF_FloorPlan_zip",991652,92334);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RBIN_ProjectTemplates_CS_NovXamarinMacProject_zip = new NEmbeddedResource(Instance,"RBIN_ProjectTemplates_CS_NovXamarinMacProject_zip",488844,348242);
+		public static readonly NEmbeddedResource RBIN_EPUB_GeographyOfBliss_epub = new NEmbeddedResource(Instance,"RBIN_EPUB_GeographyOfBliss_epub",1083986,198197);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RBIN_ProjectTemplates_CS_Net472_NovWinFormsProject_zip = new NEmbeddedResource(Instance,"RBIN_ProjectTemplates_CS_Net472_NovWinFormsProject_zip",837086,10876);
+		public static readonly NEmbeddedResource RBIN_ProjectTemplates_CS_NovXamarinMacProject_zip = new NEmbeddedResource(Instance,"RBIN_ProjectTemplates_CS_NovXamarinMacProject_zip",1282183,348242);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RBIN_ProjectTemplates_CS_Net472_NovWpfProject_zip = new NEmbeddedResource(Instance,"RBIN_ProjectTemplates_CS_Net472_NovWpfProject_zip",847962,9784);
+		public static readonly NEmbeddedResource RBIN_ProjectTemplates_CS_Net472_NovWinFormsProject_zip = new NEmbeddedResource(Instance,"RBIN_ProjectTemplates_CS_Net472_NovWinFormsProject_zip",1630425,10876);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RBIN_ProjectTemplates_CS_Net70_NovWinFormsProject_zip = new NEmbeddedResource(Instance,"RBIN_ProjectTemplates_CS_Net70_NovWinFormsProject_zip",857746,4339);
+		public static readonly NEmbeddedResource RBIN_ProjectTemplates_CS_Net472_NovWpfProject_zip = new NEmbeddedResource(Instance,"RBIN_ProjectTemplates_CS_Net472_NovWpfProject_zip",1641301,9784);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RBIN_ProjectTemplates_CS_Net70_NovWpfProject_zip = new NEmbeddedResource(Instance,"RBIN_ProjectTemplates_CS_Net70_NovWpfProject_zip",862085,3867);
+		public static readonly NEmbeddedResource RBIN_ProjectTemplates_CS_Net70_NovWinFormsProject_zip = new NEmbeddedResource(Instance,"RBIN_ProjectTemplates_CS_Net70_NovWinFormsProject_zip",1651085,4339);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RBIN_ProjectTemplates_VB_Net472_NovWinFormsProject_zip = new NEmbeddedResource(Instance,"RBIN_ProjectTemplates_VB_Net472_NovWinFormsProject_zip",865952,8196);
+		public static readonly NEmbeddedResource RBIN_ProjectTemplates_CS_Net70_NovWpfProject_zip = new NEmbeddedResource(Instance,"RBIN_ProjectTemplates_CS_Net70_NovWpfProject_zip",1655424,3867);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RBIN_ProjectTemplates_VB_Net472_NovWpfProject_zip = new NEmbeddedResource(Instance,"RBIN_ProjectTemplates_VB_Net472_NovWpfProject_zip",874148,12461);
+		public static readonly NEmbeddedResource RBIN_ProjectTemplates_VB_Net472_NovWinFormsProject_zip = new NEmbeddedResource(Instance,"RBIN_ProjectTemplates_VB_Net472_NovWinFormsProject_zip",1659291,8196);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RBIN_ProjectTemplates_VB_Net70_Form1_vb = new NEmbeddedResource(Instance,"RBIN_ProjectTemplates_VB_Net70_Form1_vb",886609,1796);
+		public static readonly NEmbeddedResource RBIN_ProjectTemplates_VB_Net472_NovWpfProject_zip = new NEmbeddedResource(Instance,"RBIN_ProjectTemplates_VB_Net472_NovWpfProject_zip",1667487,12461);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RBIN_ProjectTemplates_VB_Net70_NovWinFormsProject_zip = new NEmbeddedResource(Instance,"RBIN_ProjectTemplates_VB_Net70_NovWinFormsProject_zip",888405,8186);
+		public static readonly NEmbeddedResource RBIN_ProjectTemplates_VB_Net70_Form1_vb = new NEmbeddedResource(Instance,"RBIN_ProjectTemplates_VB_Net70_Form1_vb",1679948,1796);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RBIN_ProjectTemplates_VB_Net70_NovWpfProject_zip = new NEmbeddedResource(Instance,"RBIN_ProjectTemplates_VB_Net70_NovWpfProject_zip",896591,3976);
+		public static readonly NEmbeddedResource RBIN_ProjectTemplates_VB_Net70_NovWinFormsProject_zip = new NEmbeddedResource(Instance,"RBIN_ProjectTemplates_VB_Net70_NovWinFormsProject_zip",1681744,8186);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RBIN_SourceCode_CSharp_zip = new NEmbeddedResource(Instance,"RBIN_SourceCode_CSharp_zip",900567,1018136);
+		public static readonly NEmbeddedResource RBIN_ProjectTemplates_VB_Net70_NovWpfProject_zip = new NEmbeddedResource(Instance,"RBIN_ProjectTemplates_VB_Net70_NovWpfProject_zip",1689930,3976);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RBIN_SourceCode_VB_zip = new NEmbeddedResource(Instance,"RBIN_SourceCode_VB_zip",1918703,973183);
+		public static readonly NEmbeddedResource RBIN_SampleData_DataXYZ_bin = new NEmbeddedResource(Instance,"RBIN_SampleData_DataXYZ_bin",1693906,27024);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RBIN_VSDX_CorporateDiagramShapes_vsdx = new NEmbeddedResource(Instance,"RBIN_VSDX_CorporateDiagramShapes_vsdx",2891886,44344);
+		public static readonly NEmbeddedResource RBIN_SampleData_DataY_bin = new NEmbeddedResource(Instance,"RBIN_SampleData_DataY_bin",1720930,16384);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RCUR_CustomCursor_cur = new NEmbeddedResource(Instance,"RCUR_CustomCursor_cur",2936230,326);
+		public static readonly NEmbeddedResource RBIN_SourceCode_CSharp_zip = new NEmbeddedResource(Instance,"RBIN_SourceCode_CSharp_zip",1737314,1119306);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RFONT_LiberationMonoBold_ttf = new NEmbeddedResource(Instance,"RFONT_LiberationMonoBold_ttf",2936556,301684);
+		public static readonly NEmbeddedResource RBIN_SourceCode_VB_zip = new NEmbeddedResource(Instance,"RBIN_SourceCode_VB_zip",2856620,1077805);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Add_png = new NEmbeddedResource(Instance,"RIMG_Add_png",3238240,143);
+		public static readonly NEmbeddedResource RBIN_VSDX_CorporateDiagramShapes_vsdx = new NEmbeddedResource(Instance,"RBIN_VSDX_CorporateDiagramShapes_vsdx",3934425,44344);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Delete_png = new NEmbeddedResource(Instance,"RIMG_Delete_png",3238383,120);
+		public static readonly NEmbeddedResource RBIN_XLSX_Organization_xlsx = new NEmbeddedResource(Instance,"RBIN_XLSX_Organization_xlsx",3978769,10427);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ErrorImage_png = new NEmbeddedResource(Instance,"RIMG_ErrorImage_png",3238503,169);
+		public static readonly NEmbeddedResource RCUR_CustomCursor_cur = new NEmbeddedResource(Instance,"RCUR_CustomCursor_cur",3989196,326);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_FishBowl_wmf = new NEmbeddedResource(Instance,"RIMG_FishBowl_wmf",3238672,24118);
+		public static readonly NEmbeddedResource RFONT_LiberationMonoBold_ttf = new NEmbeddedResource(Instance,"RFONT_LiberationMonoBold_ttf",3989522,301684);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Print_ico = new NEmbeddedResource(Instance,"RIMG_Print_ico",3262790,43006);
+		public static readonly NEmbeddedResource RIMG_Add_png = new NEmbeddedResource(Instance,"RIMG_Add_png",4291206,143);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_SampleImage_png = new NEmbeddedResource(Instance,"RIMG_SampleImage_png",3305796,31898);
+		public static readonly NEmbeddedResource RIMG_Delete_png = new NEmbeddedResource(Instance,"RIMG_Delete_png",4291349,120);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Tiger_svg = new NEmbeddedResource(Instance,"RIMG_Tiger_svg",3337694,96719);
+		public static readonly NEmbeddedResource RIMG_ErrorImage_png = new NEmbeddedResource(Instance,"RIMG_ErrorImage_png",4291469,169);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_AnimatedPNGs_BouncingBeachBall_png = new NEmbeddedResource(Instance,"RIMG_AnimatedPNGs_BouncingBeachBall_png",3434413,63435);
+		public static readonly NEmbeddedResource RIMG_FishBowl_wmf = new NEmbeddedResource(Instance,"RIMG_FishBowl_wmf",4291638,24118);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_AnimatedPNGs_Smiley_png = new NEmbeddedResource(Instance,"RIMG_AnimatedPNGs_Smiley_png",3497848,460881);
+		public static readonly NEmbeddedResource RIMG_Print_ico = new NEmbeddedResource(Instance,"RIMG_Print_ico",4315756,43006);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Artistic_FishBowl_jpg = new NEmbeddedResource(Instance,"RIMG_Artistic_FishBowl_jpg",3958729,7639);
+		public static readonly NEmbeddedResource RIMG_SampleImage_png = new NEmbeddedResource(Instance,"RIMG_SampleImage_png",4358762,31898);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Artistic_Plane_png = new NEmbeddedResource(Instance,"RIMG_Artistic_Plane_png",3966368,15864);
+		public static readonly NEmbeddedResource RIMG_AnimatedPNGs_BouncingBeachBall_png = new NEmbeddedResource(Instance,"RIMG_AnimatedPNGs_BouncingBeachBall_png",4390660,63435);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_BmpSuite_g01bg_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g01bg_bmp",3982232,1086);
+		public static readonly NEmbeddedResource RIMG_AnimatedPNGs_Smiley_png = new NEmbeddedResource(Instance,"RIMG_AnimatedPNGs_Smiley_png",4454095,460881);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_BmpSuite_g01bw_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g01bw_bmp",3983318,1086);
+		public static readonly NEmbeddedResource RIMG_Artistic_AirplaneSeats_png = new NEmbeddedResource(Instance,"RIMG_Artistic_AirplaneSeats_png",4914976,61957);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_BmpSuite_g01p1_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g01p1_bmp",3984404,1082);
+		public static readonly NEmbeddedResource RIMG_Artistic_FishBowl_jpg = new NEmbeddedResource(Instance,"RIMG_Artistic_FishBowl_jpg",4976933,7639);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_BmpSuite_g01wb_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g01wb_bmp",3985486,1086);
+		public static readonly NEmbeddedResource RIMG_Artistic_Plane_png = new NEmbeddedResource(Instance,"RIMG_Artistic_Plane_png",4984572,15864);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_BmpSuite_g04_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g04_bmp",3986572,4214);
+		public static readonly NEmbeddedResource RIMG_BmpSuite_g01bg_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g01bg_bmp",5000436,1086);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_BmpSuite_g04p4_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g04p4_bmp",3990786,4166);
+		public static readonly NEmbeddedResource RIMG_BmpSuite_g01bw_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g01bw_bmp",5001522,1086);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_BmpSuite_g04rle_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g04rle_bmp",3994952,922);
+		public static readonly NEmbeddedResource RIMG_BmpSuite_g01p1_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g01p1_bmp",5002608,1082);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_BmpSuite_g08_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g08_bmp",3995874,9270);
+		public static readonly NEmbeddedResource RIMG_BmpSuite_g01wb_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g01wb_bmp",5003690,1086);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_BmpSuite_g08offs_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g08offs_bmp",4005144,9370);
+		public static readonly NEmbeddedResource RIMG_BmpSuite_g04_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g04_bmp",5004776,4214);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_BmpSuite_g08os2_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g08os2_bmp",4014514,8986);
+		public static readonly NEmbeddedResource RIMG_BmpSuite_g04p4_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g04p4_bmp",5008990,4166);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_BmpSuite_g08p256_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g08p256_bmp",4023500,9270);
+		public static readonly NEmbeddedResource RIMG_BmpSuite_g04rle_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g04rle_bmp",5013156,922);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_BmpSuite_g08p64_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g08p64_bmp",4032770,8502);
+		public static readonly NEmbeddedResource RIMG_BmpSuite_g08_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g08_bmp",5014078,9270);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_BmpSuite_g08pi256_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g08pi256_bmp",4041272,9270);
+		public static readonly NEmbeddedResource RIMG_BmpSuite_g08offs_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g08offs_bmp",5023348,9370);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_BmpSuite_g08pi64_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g08pi64_bmp",4050542,9270);
+		public static readonly NEmbeddedResource RIMG_BmpSuite_g08os2_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g08os2_bmp",5032718,8986);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_BmpSuite_g08res11_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g08res11_bmp",4059812,9270);
+		public static readonly NEmbeddedResource RIMG_BmpSuite_g08p256_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g08p256_bmp",5041704,9270);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_BmpSuite_g08res21_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g08res21_bmp",4069082,9270);
+		public static readonly NEmbeddedResource RIMG_BmpSuite_g08p64_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g08p64_bmp",5050974,8502);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_BmpSuite_g08res22_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g08res22_bmp",4078352,9270);
+		public static readonly NEmbeddedResource RIMG_BmpSuite_g08pi256_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g08pi256_bmp",5059476,9270);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_BmpSuite_g08rle_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g08rle_bmp",4087622,1820);
+		public static readonly NEmbeddedResource RIMG_BmpSuite_g08pi64_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g08pi64_bmp",5068746,9270);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_BmpSuite_g08s0_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g08s0_bmp",4089442,9270);
+		public static readonly NEmbeddedResource RIMG_BmpSuite_g08res11_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g08res11_bmp",5078016,9270);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_BmpSuite_g08w124_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g08w124_bmp",4098712,8642);
+		public static readonly NEmbeddedResource RIMG_BmpSuite_g08res21_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g08res21_bmp",5087286,9270);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_BmpSuite_g08w125_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g08w125_bmp",4107354,9014);
+		public static readonly NEmbeddedResource RIMG_BmpSuite_g08res22_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g08res22_bmp",5096556,9270);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_BmpSuite_g08w126_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g08w126_bmp",4116368,9142);
+		public static readonly NEmbeddedResource RIMG_BmpSuite_g08rle_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g08rle_bmp",5105826,1820);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_BmpSuite_g16bf555_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g16bf555_bmp",4125510,16450);
+		public static readonly NEmbeddedResource RIMG_BmpSuite_g08s0_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g08s0_bmp",5107646,9270);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_BmpSuite_g16bf565_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g16bf565_bmp",4141960,16450);
+		public static readonly NEmbeddedResource RIMG_BmpSuite_g08w124_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g08w124_bmp",5116916,8642);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_BmpSuite_g16def555_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g16def555_bmp",4158410,16438);
+		public static readonly NEmbeddedResource RIMG_BmpSuite_g08w125_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g08w125_bmp",5125558,9014);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_BmpSuite_g24_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g24_bmp",4174848,24630);
+		public static readonly NEmbeddedResource RIMG_BmpSuite_g08w126_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g08w126_bmp",5134572,9142);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_BmpSuite_g32bf_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g32bf_bmp",4199478,32578);
+		public static readonly NEmbeddedResource RIMG_BmpSuite_g16bf555_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g16bf555_bmp",5143714,16450);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_BmpSuite_g32def_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g32def_bmp",4232056,32566);
+		public static readonly NEmbeddedResource RIMG_BmpSuite_g16bf565_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g16bf565_bmp",5160164,16450);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Books_AGameOfThrones_jpg = new NEmbeddedResource(Instance,"RIMG_Books_AGameOfThrones_jpg",4264622,46127);
+		public static readonly NEmbeddedResource RIMG_BmpSuite_g16def555_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g16def555_bmp",5176614,16438);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Books_LordOfTheRings_jpg = new NEmbeddedResource(Instance,"RIMG_Books_LordOfTheRings_jpg",4310749,38217);
+		public static readonly NEmbeddedResource RIMG_BmpSuite_g24_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g24_bmp",5193052,24630);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Books_Mistborn_jpg = new NEmbeddedResource(Instance,"RIMG_Books_Mistborn_jpg",4348966,43801);
+		public static readonly NEmbeddedResource RIMG_BmpSuite_g32bf_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g32bf_bmp",5217682,32578);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Books_NameOfTheWind_jpg = new NEmbeddedResource(Instance,"RIMG_Books_NameOfTheWind_jpg",4392767,30433);
+		public static readonly NEmbeddedResource RIMG_BmpSuite_g32def_bmp = new NEmbeddedResource(Instance,"RIMG_BmpSuite_g32def_bmp",5250260,32566);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Books_TheWayOfKings_jpg = new NEmbeddedResource(Instance,"RIMG_Books_TheWayOfKings_jpg",4423200,43063);
+		public static readonly NEmbeddedResource RIMG_Books_AGameOfThrones_jpg = new NEmbeddedResource(Instance,"RIMG_Books_AGameOfThrones_jpg",5282826,46127);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Buildings_AbrajAlBait_emf = new NEmbeddedResource(Instance,"RIMG_Buildings_AbrajAlBait_emf",4466263,4108);
+		public static readonly NEmbeddedResource RIMG_Books_LordOfTheRings_jpg = new NEmbeddedResource(Instance,"RIMG_Books_LordOfTheRings_jpg",5328953,38217);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Buildings_BurjKhalifa_emf = new NEmbeddedResource(Instance,"RIMG_Buildings_BurjKhalifa_emf",4470371,632);
+		public static readonly NEmbeddedResource RIMG_Books_Mistborn_jpg = new NEmbeddedResource(Instance,"RIMG_Books_Mistborn_jpg",5367170,43801);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Buildings_China_emf = new NEmbeddedResource(Instance,"RIMG_Buildings_China_emf",4471003,888);
+		public static readonly NEmbeddedResource RIMG_Books_NameOfTheWind_jpg = new NEmbeddedResource(Instance,"RIMG_Books_NameOfTheWind_jpg",5410971,30433);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Buildings_JeddahTower_emf = new NEmbeddedResource(Instance,"RIMG_Buildings_JeddahTower_emf",4471891,596);
+		public static readonly NEmbeddedResource RIMG_Books_TheWayOfKings_jpg = new NEmbeddedResource(Instance,"RIMG_Books_TheWayOfKings_jpg",5441404,43063);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Buildings_SaudiArabia_emf = new NEmbeddedResource(Instance,"RIMG_Buildings_SaudiArabia_emf",4472487,8212);
+		public static readonly NEmbeddedResource RIMG_Buildings_AbrajAlBait_emf = new NEmbeddedResource(Instance,"RIMG_Buildings_AbrajAlBait_emf",5484467,4108);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Buildings_Taipei101_emf = new NEmbeddedResource(Instance,"RIMG_Buildings_Taipei101_emf",4480699,696);
+		public static readonly NEmbeddedResource RIMG_Buildings_BurjKhalifa_emf = new NEmbeddedResource(Instance,"RIMG_Buildings_BurjKhalifa_emf",5488575,632);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Buildings_Taiwan_emf = new NEmbeddedResource(Instance,"RIMG_Buildings_Taiwan_emf",4481395,1940);
+		public static readonly NEmbeddedResource RIMG_Buildings_China_emf = new NEmbeddedResource(Instance,"RIMG_Buildings_China_emf",5489207,888);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Buildings_UAE_emf = new NEmbeddedResource(Instance,"RIMG_Buildings_UAE_emf",4483335,904);
+		public static readonly NEmbeddedResource RIMG_Buildings_JeddahTower_emf = new NEmbeddedResource(Instance,"RIMG_Buildings_JeddahTower_emf",5490095,596);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Buildings_ZifengTower_emf = new NEmbeddedResource(Instance,"RIMG_Buildings_ZifengTower_emf",4484239,604);
+		public static readonly NEmbeddedResource RIMG_Buildings_SaudiArabia_emf = new NEmbeddedResource(Instance,"RIMG_Buildings_SaudiArabia_emf",5490691,8212);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Documentation_PreviewResults_png = new NEmbeddedResource(Instance,"RIMG_Documentation_PreviewResults_png",4484843,485);
+		public static readonly NEmbeddedResource RIMG_Buildings_Taipei101_emf = new NEmbeddedResource(Instance,"RIMG_Buildings_Taipei101_emf",5498903,696);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Barcode_Barcode1D_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Barcode_Barcode1D_png",4485328,363);
+		public static readonly NEmbeddedResource RIMG_Buildings_Taiwan_emf = new NEmbeddedResource(Instance,"RIMG_Buildings_Taiwan_emf",5499599,1940);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Barcode_Barcode2D_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Barcode_Barcode2D_png",4485691,396);
+		public static readonly NEmbeddedResource RIMG_Buildings_UAE_emf = new NEmbeddedResource(Instance,"RIMG_Buildings_UAE_emf",5501539,904);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Chart_AreaSeries_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Chart_AreaSeries_png",4486087,507);
+		public static readonly NEmbeddedResource RIMG_Buildings_ZifengTower_emf = new NEmbeddedResource(Instance,"RIMG_Buildings_ZifengTower_emf",5502443,604);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Chart_Axes_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Chart_Axes_png",4486594,114);
+		public static readonly NEmbeddedResource RIMG_Documentation_PreviewResults_png = new NEmbeddedResource(Instance,"RIMG_Documentation_PreviewResults_png",5503047,485);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Chart_AxisAppearance_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Chart_AxisAppearance_png",4486708,211);
+		public static readonly NEmbeddedResource RIMG_ExamplesUI_Backgrounds_HomeContentBackground_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Backgrounds_HomeContentBackground_svg",5503532,24289);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Chart_AxisElements_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Chart_AxisElements_png",4486919,210);
+		public static readonly NEmbeddedResource RIMG_ExamplesUI_Backgrounds_HomeHeaderBackground_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Backgrounds_HomeHeaderBackground_svg",5527821,7643);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Chart_AxisPosition_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Chart_AxisPosition_png",4487129,174);
+		public static readonly NEmbeddedResource RIMG_ExamplesUI_Collages_Barcode_png = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Collages_Barcode_png",5535464,21057);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Chart_BarSeries_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Chart_BarSeries_png",4487303,330);
+		public static readonly NEmbeddedResource RIMG_ExamplesUI_Collages_Chart_png = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Collages_Chart_png",5556521,131429);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Chart_BoxAndWhiskersSeries_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Chart_BoxAndWhiskersSeries_png",4487633,450);
+		public static readonly NEmbeddedResource RIMG_ExamplesUI_Collages_Diagram_png = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Collages_Diagram_png",5687950,149835);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Chart_BubbleSeries_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Chart_BubbleSeries_png",4488083,512);
+		public static readonly NEmbeddedResource RIMG_ExamplesUI_Collages_Framework_png = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Collages_Framework_png",5837785,55109);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Chart_Calendar_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Chart_Calendar_png",4488595,442);
+		public static readonly NEmbeddedResource RIMG_ExamplesUI_Collages_Gauge_png = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Collages_Gauge_png",5892894,126871);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Chart_CartesianSeries_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Chart_CartesianSeries_png",4489037,304);
+		public static readonly NEmbeddedResource RIMG_ExamplesUI_Collages_Grid_png = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Collages_Grid_png",6019765,95918);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Chart_ComboSeries_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Chart_ComboSeries_png",4489341,387);
+		public static readonly NEmbeddedResource RIMG_ExamplesUI_Collages_Schedule_png = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Collages_Schedule_png",6115683,79776);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Chart_Effects_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Chart_Effects_png",4489728,365);
+		public static readonly NEmbeddedResource RIMG_ExamplesUI_Collages_Text_png = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Collages_Text_png",6195459,56249);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Chart_ErrorBarSeries_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Chart_ErrorBarSeries_png",4490093,368);
+		public static readonly NEmbeddedResource RIMG_ExamplesUI_Collages_UI_png = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Collages_UI_png",6251708,79209);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Chart_Export_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Chart_Export_png",4490461,502);
+		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_CsProject_png = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_CsProject_png",6330917,135);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Chart_FunnelSeries_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Chart_FunnelSeries_png",4490963,378);
+		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Favorites_png = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Favorites_png",6331052,258);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Chart_HeatMapSeries_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Chart_HeatMapSeries_png",4491341,103);
+		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Favorites_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Favorites_svg",6331310,1553);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Chart_HighLowSeries_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Chart_HighLowSeries_png",4491444,380);
+		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_FavoritesEmpty_png = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_FavoritesEmpty_png",6332863,224);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Chart_Interactivity_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Chart_Interactivity_png",4491824,743);
+		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Folder_emf = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Folder_emf",6333087,1320);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Chart_KagiSeries_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Chart_KagiSeries_png",4492567,447);
+		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Home_png = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Home_png",6334407,217);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Chart_Layout_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Chart_Layout_png",4493014,118);
+		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_HomeLight_png = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_HomeLight_png",6334624,348);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Chart_Legend_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Chart_Legend_png",4493132,597);
+		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Link_png = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Link_png",6334972,308);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Chart_LineSeries_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Chart_LineSeries_png",4493729,289);
+		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Mail_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Mail_svg",6335280,1184);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Chart_PdfExport_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Chart_PdfExport_png",4494018,306);
+		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Recent_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Recent_svg",6336464,1220);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Chart_PieSeries_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Chart_PieSeries_png",4494324,708);
+		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Search_png = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Search_png",6337684,293);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Chart_PointAndFigureSeries_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Chart_PointAndFigureSeries_png",4495032,447);
+		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Search_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Search_svg",6337977,1206);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Chart_PointSeries_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Chart_PointSeries_png",4495479,300);
+		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Themes_png = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Themes_png",6339183,531);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Chart_PolarSeries_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Chart_PolarSeries_png",4495779,338);
+		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_VbProject_png = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_VbProject_png",6339714,137);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Chart_Printing_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Chart_Printing_png",4496117,473);
+		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Products_Barcode_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Products_Barcode_svg",6339851,2870);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Chart_RadarSeries_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Chart_RadarSeries_png",4496590,321);
+		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Products_BarcodeSelected_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Products_BarcodeSelected_svg",6342721,14528);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Chart_RangeSeries_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Chart_RangeSeries_png",4496911,285);
+		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Products_Chart_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Products_Chart_svg",6357249,1097);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Chart_Realtime_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Chart_Realtime_png",4497196,638);
+		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Products_ChartSelected_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Products_ChartSelected_svg",6358346,1097);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Chart_RenkoSeries_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Chart_RenkoSeries_png",4497834,471);
+		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Products_Diagram_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Products_Diagram_svg",6359443,1131);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Chart_Scale_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Chart_Scale_png",4498305,114);
+		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Products_DiagramSelected_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Products_DiagramSelected_svg",6360574,1131);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Chart_ScaleBreaks_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Chart_ScaleBreaks_png",4498419,191);
+		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Products_Framework_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Products_Framework_svg",6361705,3428);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Chart_Serialization_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Chart_Serialization_png",4498610,605);
+		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Products_FrameworkSelected_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Products_FrameworkSelected_svg",6365133,3428);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Chart_Series_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Chart_Series_png",4499215,300);
+		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Products_Gauge_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Products_Gauge_svg",6368561,1413);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Chart_StockSeries_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Chart_StockSeries_png",4499515,318);
+		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Products_GaugeSelected_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Products_GaugeSelected_svg",6369974,15200);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Chart_Themes_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Chart_Themes_png",4499833,534);
+		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Products_Grid_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Products_Grid_svg",6385174,1591);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Chart_ThreeLineBreakSeries_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Chart_ThreeLineBreakSeries_png",4500367,451);
+		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Products_GridSelected_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Products_GridSelected_svg",6386765,1591);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Chart_Tools_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Chart_Tools_png",4500818,791);
+		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Products_Schedule_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Products_Schedule_svg",6388356,1705);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Chart_Tooltips_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Chart_Tooltips_png",4501609,321);
+		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Products_ScheduleSelected_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Products_ScheduleSelected_svg",6390061,1705);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Chart_TreeMap_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Chart_TreeMap_png",4501930,107);
+		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Products_Text_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Products_Text_svg",6391766,1031);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Chart_VectorSeries_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Chart_VectorSeries_png",4502037,207);
+		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Products_TextSelected_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Products_TextSelected_svg",6392797,1033);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_AutoCAD_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_AutoCAD_png",4502244,611);
+		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Products_UI_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Products_UI_svg",6393830,1139);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_BoxLayout_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_BoxLayout_png",4502855,118);
+		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Products_UISelected_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Products_UISelected_svg",6394969,1142);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_BusinessProcess_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_BusinessProcess_png",4502973,315);
+		public static readonly NEmbeddedResource RIMG_ExamplesUI_Logos_Nevron_emf = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Logos_Nevron_emf",6396111,2448);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_CauseAndEffect_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_CauseAndEffect_png",4503288,1782);
+		public static readonly NEmbeddedResource RIMG_ExamplesUI_Logos_Nevron_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Logos_Nevron_svg",6398559,3745);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_Connector_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_Connector_png",4505070,139);
+		public static readonly NEmbeddedResource RIMG_ExamplesUI_Logos_NOV_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Logos_NOV_svg",6402304,5004);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_ControlPoint_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_ControlPoint_png",4505209,137);
+		public static readonly NEmbeddedResource RIMG_ExamplesUI_Logos_Platforms_Blazor_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Logos_Platforms_Blazor_svg",6407308,5997);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_DemoApplication_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_DemoApplication_png",4505346,416);
+		public static readonly NEmbeddedResource RIMG_ExamplesUI_Logos_Platforms_WinForms_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Logos_Platforms_WinForms_svg",6413305,3742);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_DemoBubbleSort_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_DemoBubbleSort_png",4505762,115);
+		public static readonly NEmbeddedResource RIMG_ExamplesUI_Logos_Platforms_Wpf_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Logos_Platforms_Wpf_svg",6417047,1993);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_DemoDiagram_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_DemoDiagram_png",4505877,345);
+		public static readonly NEmbeddedResource RIMG_ExamplesUI_Logos_Platforms_Xamarin_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Logos_Platforms_Xamarin_svg",6419040,7437);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_DemoFlowChart_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_DemoFlowChart_png",4506222,188);
+		public static readonly NEmbeddedResource RIMG_GifSuite_Gears_gif = new NEmbeddedResource(Instance,"RIMG_GifSuite_Gears_gif",6426477,14799);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_DiagramDesigner_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_DiagramDesigner_png",4506410,416);
+		public static readonly NEmbeddedResource RIMG_GifSuite_Peace_gif = new NEmbeddedResource(Instance,"RIMG_GifSuite_Peace_gif",6441276,79448);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_DrawingObject_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_DrawingObject_png",4506826,587);
+		public static readonly NEmbeddedResource RIMG_GifSuite_Plane_gif = new NEmbeddedResource(Instance,"RIMG_GifSuite_Plane_gif",6520724,51900);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_Export_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_Export_png",4507413,502);
+		public static readonly NEmbeddedResource RIMG_GifSuite_Racer_gif = new NEmbeddedResource(Instance,"RIMG_GifSuite_Racer_gif",6572624,14134);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_FamilyTree_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_FamilyTree_png",4507915,131);
+		public static readonly NEmbeddedResource RIMG_GifSuite_Wave_gif = new NEmbeddedResource(Instance,"RIMG_GifSuite_Wave_gif",6586758,391422);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_FlowchartingEPC_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_FlowchartingEPC_png",4508046,236);
+		public static readonly NEmbeddedResource RIMG_JpegSuite_q001_jpg = new NEmbeddedResource(Instance,"RIMG_JpegSuite_q001_jpg",6978180,4449);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_FlowchartingSDL_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_FlowchartingSDL_png",4508282,211);
+		public static readonly NEmbeddedResource RIMG_JpegSuite_q020_jpg = new NEmbeddedResource(Instance,"RIMG_JpegSuite_q020_jpg",6982629,13231);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_Geometry_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_Geometry_png",4508493,136);
+		public static readonly NEmbeddedResource RIMG_JpegSuite_q040_jpg = new NEmbeddedResource(Instance,"RIMG_JpegSuite_q040_jpg",6995860,20465);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_GraphLayout_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_GraphLayout_png",4508629,222);
+		public static readonly NEmbeddedResource RIMG_JpegSuite_q060_jpg = new NEmbeddedResource(Instance,"RIMG_JpegSuite_q060_jpg",7016325,26993);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_Group_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_Group_png",4508851,132);
+		public static readonly NEmbeddedResource RIMG_JpegSuite_q080_jpg = new NEmbeddedResource(Instance,"RIMG_JpegSuite_q080_jpg",7043318,40830);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_Guideline_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_Guideline_png",4508983,89);
+		public static readonly NEmbeddedResource RIMG_JpegSuite_q100_jpg = new NEmbeddedResource(Instance,"RIMG_JpegSuite_q100_jpg",7084148,188227);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_Image_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_Image_png",4509072,508);
+		public static readonly NEmbeddedResource RIMG_MobileComputers_Laptop_jpg = new NEmbeddedResource(Instance,"RIMG_MobileComputers_Laptop_jpg",7272375,8557);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_Library_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_Library_png",4509580,572);
+		public static readonly NEmbeddedResource RIMG_MobileComputers_Netbook_jpg = new NEmbeddedResource(Instance,"RIMG_MobileComputers_Netbook_jpg",7280932,6051);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_Map_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_Map_png",4510152,815);
+		public static readonly NEmbeddedResource RIMG_MobileComputers_Smartbook_jpg = new NEmbeddedResource(Instance,"RIMG_MobileComputers_Smartbook_jpg",7286983,9431);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_MapPopulation_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_MapPopulation_png",4510967,790);
+		public static readonly NEmbeddedResource RIMG_MobileComputers_Tablet_jpg = new NEmbeddedResource(Instance,"RIMG_MobileComputers_Tablet_jpg",7296414,6034);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_MapProjections_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_MapProjections_png",4511757,815);
+		public static readonly NEmbeddedResource RIMG_MobileComputers_Ultrabook_jpg = new NEmbeddedResource(Instance,"RIMG_MobileComputers_Ultrabook_jpg",7302448,5392);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_MapWorld_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_MapWorld_png",4512572,579);
+		public static readonly NEmbeddedResource RIMG_MobileComputers_UMPC_jpg = new NEmbeddedResource(Instance,"RIMG_MobileComputers_UMPC_jpg",7307840,5822);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_PDF_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_PDF_png",4513151,306);
+		public static readonly NEmbeddedResource RIMG_PngSuite_BASI0G01_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASI0G01_png",7313662,217);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_Pergel_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_Pergel_png",4513457,18227);
+		public static readonly NEmbeddedResource RIMG_PngSuite_BASI0G02_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASI0G02_png",7313879,154);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_Port_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_Port_png",4531684,131);
+		public static readonly NEmbeddedResource RIMG_PngSuite_BASI0G04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASI0G04_png",7314033,247);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_Print_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_Print_png",4531815,473);
+		public static readonly NEmbeddedResource RIMG_PngSuite_BASI0G08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASI0G08_png",7314280,254);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_Shape_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_Shape_png",4532288,140);
+		public static readonly NEmbeddedResource RIMG_PngSuite_BASI0G16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASI0G16_png",7314534,299);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_Shapes_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_Shapes_png",4532428,509);
+		public static readonly NEmbeddedResource RIMG_PngSuite_BASI2C08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASI2C08_png",7314833,315);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_ShapesAnnotation_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_ShapesAnnotation_png",4532937,461);
+		public static readonly NEmbeddedResource RIMG_PngSuite_BASI2C16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASI2C16_png",7315148,595);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_ShapesArrow_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_ShapesArrow_png",4533398,17856);
+		public static readonly NEmbeddedResource RIMG_PngSuite_BASI3P01_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASI3P01_png",7315743,132);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_ShapesBasic_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_ShapesBasic_png",4551254,188);
+		public static readonly NEmbeddedResource RIMG_PngSuite_BASI3P02_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASI3P02_png",7315875,193);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_ShapesBrainstorming_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_ShapesBrainstorming_png",4551442,230);
+		public static readonly NEmbeddedResource RIMG_PngSuite_BASI3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASI3P04_png",7316068,327);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_ShapesBusinessProcess_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_ShapesBusinessProcess_png",4551672,315);
+		public static readonly NEmbeddedResource RIMG_PngSuite_BASI3P08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASI3P08_png",7316395,1527);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_ShapesCallout_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_ShapesCallout_png",4551987,15608);
+		public static readonly NEmbeddedResource RIMG_PngSuite_BASI4A08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASI4A08_png",7317922,214);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_ShapesConnector_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_ShapesConnector_png",4567595,100);
+		public static readonly NEmbeddedResource RIMG_PngSuite_BASI4A16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASI4A16_png",7318136,2855);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_ShapesCountry_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_ShapesCountry_png",4567695,510);
+		public static readonly NEmbeddedResource RIMG_PngSuite_BASI6A08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASI6A08_png",7320991,361);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_ShapesDataFlowDiagram_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_ShapesDataFlowDiagram_png",4568205,1386);
+		public static readonly NEmbeddedResource RIMG_PngSuite_BASI6A16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASI6A16_png",7321352,4180);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_ShapesDecorative_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_ShapesDecorative_png",4569591,1311);
+		public static readonly NEmbeddedResource RIMG_PngSuite_BASN0G01_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASN0G01_png",7325532,164);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_ShapesElectricalSymbols_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_ShapesElectricalSymbols_png",4570902,95);
+		public static readonly NEmbeddedResource RIMG_PngSuite_BASN0G02_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASN0G02_png",7325696,104);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_ShapesFilesAndFolders_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_ShapesFilesAndFolders_png",4570997,141);
+		public static readonly NEmbeddedResource RIMG_PngSuite_BASN0G04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASN0G04_png",7325800,145);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_ShapesFlag_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_ShapesFlag_png",4571138,226);
+		public static readonly NEmbeddedResource RIMG_PngSuite_BASN0G08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASN0G08_png",7325945,138);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_ShapesFloorPlan_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_ShapesFloorPlan_png",4571364,186);
+		public static readonly NEmbeddedResource RIMG_PngSuite_BASN0G16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASN0G16_png",7326083,167);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_ShapesFlowCharting_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_ShapesFlowCharting_png",4571550,241);
+		public static readonly NEmbeddedResource RIMG_PngSuite_BASN2C08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASN2C08_png",7326250,145);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_ShapesFood_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_ShapesFood_png",4571791,641);
+		public static readonly NEmbeddedResource RIMG_PngSuite_BASN2C16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASN2C16_png",7326395,302);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_ShapesGenogram_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_ShapesGenogram_png",4572432,17845);
+		public static readonly NEmbeddedResource RIMG_PngSuite_BASN3P01_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASN3P01_png",7326697,112);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_ShapesNetwork_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_ShapesNetwork_png",4590277,149);
+		public static readonly NEmbeddedResource RIMG_PngSuite_BASN3P02_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASN3P02_png",7326809,146);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_ShapesSymbol_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_ShapesSymbol_png",4590426,563);
+		public static readonly NEmbeddedResource RIMG_PngSuite_BASN3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASN3P04_png",7326955,216);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_ShapesTrafficSigns_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_ShapesTrafficSigns_png",4590989,237);
+		public static readonly NEmbeddedResource RIMG_PngSuite_BASN3P08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASN3P08_png",7327171,1286);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_ShapesWeather_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_ShapesWeather_png",4591226,484);
+		public static readonly NEmbeddedResource RIMG_PngSuite_BASN4A08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASN4A08_png",7328457,126);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_SVG_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_SVG_png",4591710,462);
+		public static readonly NEmbeddedResource RIMG_PngSuite_BASN4A16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASN4A16_png",7328583,2206);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_Tables_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_Tables_png",4592172,394);
+		public static readonly NEmbeddedResource RIMG_PngSuite_BASN6A08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASN6A08_png",7330789,184);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_Texts_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_Texts_png",4592566,443);
+		public static readonly NEmbeddedResource RIMG_PngSuite_BASN6A16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASN6A16_png",7330973,3435);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_TreeLayout_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_TreeLayout_png",4593009,131);
+		public static readonly NEmbeddedResource RIMG_PngSuite_BGAI4A08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BGAI4A08_png",7334408,214);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_UICustomization_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_UICustomization_png",4593140,477);
+		public static readonly NEmbeddedResource RIMG_PngSuite_BGAI4A16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BGAI4A16_png",7334622,2855);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_UML_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_UML_png",4593617,382);
+		public static readonly NEmbeddedResource RIMG_PngSuite_BGAN6A08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BGAN6A08_png",7337477,184);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_VernierCallipers_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_VernierCallipers_png",4593999,18242);
+		public static readonly NEmbeddedResource RIMG_PngSuite_BGAN6A16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BGAN6A16_png",7337661,3435);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_Visio_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_Visio_png",4612241,241);
+		public static readonly NEmbeddedResource RIMG_PngSuite_BGBN4A08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BGBN4A08_png",7341096,140);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Diagram_WidgetHosting_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Diagram_WidgetHosting_png",4612482,568);
+		public static readonly NEmbeddedResource RIMG_PngSuite_BGGN4A16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BGGN4A16_png",7341236,2220);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Framework_CategoryEdit_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Framework_CategoryEdit_png",4613050,543);
+		public static readonly NEmbeddedResource RIMG_PngSuite_BGWN6A08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BGWN6A08_png",7343456,202);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Framework_ClrSerialization_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Framework_ClrSerialization_png",4613593,662);
+		public static readonly NEmbeddedResource RIMG_PngSuite_BGYN6A16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BGYN6A16_png",7343658,3453);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Framework_Cryptography_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Framework_Cryptography_png",4614255,365);
+		public static readonly NEmbeddedResource RIMG_PngSuite_CCWN2C08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_CCWN2C08_png",7347111,1514);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Framework_DomSerialization_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Framework_DomSerialization_png",4614620,695);
+		public static readonly NEmbeddedResource RIMG_PngSuite_CCWN3P08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_CCWN3P08_png",7348625,1554);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Framework_Fill_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Framework_Fill_png",4615315,587);
+		public static readonly NEmbeddedResource RIMG_PngSuite_CDFN2C08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_CDFN2C08_png",7350179,404);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Framework_Formulas_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Framework_Formulas_png",4615902,520);
+		public static readonly NEmbeddedResource RIMG_PngSuite_CDHN2C08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_CDHN2C08_png",7350583,344);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Framework_Geometry_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Framework_Geometry_png",4616422,509);
+		public static readonly NEmbeddedResource RIMG_PngSuite_CDSN2C08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_CDSN2C08_png",7350927,232);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Framework_Http_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Framework_Http_png",4616931,392);
+		public static readonly NEmbeddedResource RIMG_PngSuite_CDUN2C08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_CDUN2C08_png",7351159,724);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Framework_ImageFormatApng_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Framework_ImageFormatApng_png",4617323,583);
+		public static readonly NEmbeddedResource RIMG_PngSuite_CH1N3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_CH1N3P04_png",7351883,258);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Framework_ImageFormatGif_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Framework_ImageFormatGif_png",4617906,514);
+		public static readonly NEmbeddedResource RIMG_PngSuite_CH2N3P08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_CH2N3P08_png",7352141,1810);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Framework_ImageFormatJpeg_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Framework_ImageFormatJpeg_png",4618420,572);
+		public static readonly NEmbeddedResource RIMG_PngSuite_CM0N0G04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_CM0N0G04_png",7353951,292);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Framework_ImageFormatPng_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Framework_ImageFormatPng_png",4618992,592);
+		public static readonly NEmbeddedResource RIMG_PngSuite_CM7N0G04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_CM7N0G04_png",7354243,292);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Framework_Images_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Framework_Images_png",4619584,600);
+		public static readonly NEmbeddedResource RIMG_PngSuite_CM9N0G04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_CM9N0G04_png",7354535,292);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Framework_Localization_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Framework_Localization_png",4620184,679);
+		public static readonly NEmbeddedResource RIMG_PngSuite_CS3N2C16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_CS3N2C16_png",7354827,214);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Framework_NodeDesigner_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Framework_NodeDesigner_png",4620863,692);
+		public static readonly NEmbeddedResource RIMG_PngSuite_CS3N3P08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_CS3N3P08_png",7355041,259);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Framework_Paths_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Framework_Paths_png",4621555,472);
+		public static readonly NEmbeddedResource RIMG_PngSuite_CS5N2C08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_CS5N2C08_png",7355300,186);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Framework_RasterImages_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Framework_RasterImages_png",4622027,560);
+		public static readonly NEmbeddedResource RIMG_PngSuite_CS5N3P08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_CS5N3P08_png",7355486,271);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Framework_Shadow_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Framework_Shadow_png",4622587,306);
+		public static readonly NEmbeddedResource RIMG_PngSuite_CS8N2C08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_CS8N2C08_png",7355757,149);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Framework_Stroke_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Framework_Stroke_png",4622893,391);
+		public static readonly NEmbeddedResource RIMG_PngSuite_CS8N3P08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_CS8N3P08_png",7355906,256);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Framework_StyleEdit_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Framework_StyleEdit_png",4623284,712);
+		public static readonly NEmbeddedResource RIMG_PngSuite_CT0N0G04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_CT0N0G04_png",7356162,273);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Framework_Text_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Framework_Text_png",4623996,478);
+		public static readonly NEmbeddedResource RIMG_PngSuite_CT1N0G04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_CT1N0G04_png",7356435,792);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Framework_ValueEdit_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Framework_ValueEdit_png",4624474,648);
+		public static readonly NEmbeddedResource RIMG_PngSuite_CTZN0G04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_CTZN0G04_png",7357227,753);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Framework_VectorImages_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Framework_VectorImages_png",4625122,587);
+		public static readonly NEmbeddedResource RIMG_PngSuite_F00N0G08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_F00N0G08_png",7357980,319);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Framework_Xml_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Framework_Xml_png",4625709,322);
+		public static readonly NEmbeddedResource RIMG_PngSuite_F00N2C08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_F00N2C08_png",7358299,2475);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Framework_Zip_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Framework_Zip_png",4626031,355);
+		public static readonly NEmbeddedResource RIMG_PngSuite_F01N0G08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_F01N0G08_png",7360774,321);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Gauge_Axes_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Gauge_Axes_png",4626386,196);
+		public static readonly NEmbeddedResource RIMG_PngSuite_F01N2C08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_F01N2C08_png",7361095,1180);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Gauge_Indicators_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Gauge_Indicators_png",4626582,589);
+		public static readonly NEmbeddedResource RIMG_PngSuite_F02N0G08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_F02N0G08_png",7362275,355);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Gauge_Interactivity_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Gauge_Interactivity_png",4627171,743);
+		public static readonly NEmbeddedResource RIMG_PngSuite_F02N2C08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_F02N2C08_png",7362630,1729);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Gauge_NumericLedDisplay_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Gauge_NumericLedDisplay_png",4627914,314);
+		public static readonly NEmbeddedResource RIMG_PngSuite_F03N0G08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_F03N0G08_png",7364359,389);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Gauge_StateIndicators_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Gauge_StateIndicators_png",4628228,386);
+		public static readonly NEmbeddedResource RIMG_PngSuite_F03N2C08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_F03N2C08_png",7364748,1291);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Grid_AlternatingRows_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Grid_AlternatingRows_png",4628614,95);
+		public static readonly NEmbeddedResource RIMG_PngSuite_F04N0G08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_F04N0G08_png",7366039,269);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Grid_CalculatedColumn_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Grid_CalculatedColumn_png",4628709,315);
+		public static readonly NEmbeddedResource RIMG_PngSuite_F04N2C08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_F04N2C08_png",7366308,985);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Grid_ColumnWidth_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Grid_ColumnWidth_png",4629024,174);
+		public static readonly NEmbeddedResource RIMG_PngSuite_G03N0G16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_G03N0G16_png",7367293,345);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Grid_ConditionalFormatting_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Grid_ConditionalFormatting_png",4629198,106);
+		public static readonly NEmbeddedResource RIMG_PngSuite_G03N2C08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_G03N2C08_png",7367638,370);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Grid_DataColumn_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Grid_DataColumn_png",4629304,142);
+		public static readonly NEmbeddedResource RIMG_PngSuite_G03N3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_G03N3P04_png",7368008,214);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Grid_filter_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Grid_filter_png",4629446,196);
+		public static readonly NEmbeddedResource RIMG_PngSuite_G04N0G16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_G04N0G16_png",7368222,363);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Grid_FormatCells_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Grid_FormatCells_png",4629642,100);
+		public static readonly NEmbeddedResource RIMG_PngSuite_G04N2C08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_G04N2C08_png",7368585,377);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Grid_FrozenColumns_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Grid_FrozenColumns_png",4629742,96);
+		public static readonly NEmbeddedResource RIMG_PngSuite_G04N3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_G04N3P04_png",7368962,219);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Grid_FrozenRows_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Grid_FrozenRows_png",4629838,92);
+		public static readonly NEmbeddedResource RIMG_PngSuite_G05N0G16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_G05N0G16_png",7369181,339);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Grid_Gridlines_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Grid_Gridlines_png",4629930,89);
+		public static readonly NEmbeddedResource RIMG_PngSuite_G05N2C08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_G05N2C08_png",7369520,350);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Grid_group_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Grid_group_png",4630019,764);
+		public static readonly NEmbeddedResource RIMG_PngSuite_G05N3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_G05N3P04_png",7369870,206);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Grid_ListTreeView_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Grid_ListTreeView_png",4630783,591);
+		public static readonly NEmbeddedResource RIMG_PngSuite_G07N0G16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_G07N0G16_png",7370076,321);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Grid_MasterDetails_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Grid_MasterDetails_png",4631374,496);
+		public static readonly NEmbeddedResource RIMG_PngSuite_G07N2C08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_G07N2C08_png",7370397,340);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Grid_NullValues_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Grid_NullValues_png",4631870,108);
+		public static readonly NEmbeddedResource RIMG_PngSuite_G07N3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_G07N3P04_png",7370737,207);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Grid_Protection_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Grid_Protection_png",4631978,613);
+		public static readonly NEmbeddedResource RIMG_PngSuite_G10N0G16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_G10N0G16_png",7370944,262);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Grid_RowHeaders_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Grid_RowHeaders_png",4632591,92);
+		public static readonly NEmbeddedResource RIMG_PngSuite_G10N2C08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_G10N2C08_png",7371206,285);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Grid_Scrolling_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Grid_Scrolling_png",4632683,264);
+		public static readonly NEmbeddedResource RIMG_PngSuite_G10N3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_G10N3P04_png",7371491,214);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Grid_Selection_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Grid_Selection_png",4632947,120);
+		public static readonly NEmbeddedResource RIMG_PngSuite_G25N0G16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_G25N0G16_png",7371705,383);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Grid_sort_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Grid_sort_png",4633067,283);
+		public static readonly NEmbeddedResource RIMG_PngSuite_G25N2C08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_G25N2C08_png",7372088,405);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Schedule_Appointment_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Schedule_Appointment_png",4633350,267);
+		public static readonly NEmbeddedResource RIMG_PngSuite_G25N3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_G25N3P04_png",7372493,215);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Schedule_Categorization_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Schedule_Categorization_png",4633617,207);
+		public static readonly NEmbeddedResource RIMG_PngSuite_OI1N0G16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_OI1N0G16_png",7372708,167);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Schedule_CustomCategorization_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Schedule_CustomCategorization_png",4633824,270);
+		public static readonly NEmbeddedResource RIMG_PngSuite_OI1N2C16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_OI1N2C16_png",7372875,302);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Schedule_Formats_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Schedule_Formats_png",4634094,236);
+		public static readonly NEmbeddedResource RIMG_PngSuite_OI2N0G16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_OI2N0G16_png",7373177,179);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Schedule_Grouping_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Schedule_Grouping_png",4634330,329);
+		public static readonly NEmbeddedResource RIMG_PngSuite_OI2N2C16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_OI2N2C16_png",7373356,314);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Schedule_Notifications_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Schedule_Notifications_png",4634659,286);
+		public static readonly NEmbeddedResource RIMG_PngSuite_OI4N0G16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_OI4N0G16_png",7373670,203);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Schedule_Performance_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Schedule_Performance_png",4634945,308);
+		public static readonly NEmbeddedResource RIMG_PngSuite_OI4N2C16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_OI4N2C16_png",7373873,338);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Schedule_Recurrence_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Schedule_Recurrence_png",4635253,329);
+		public static readonly NEmbeddedResource RIMG_PngSuite_OI9N0G16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_OI9N0G16_png",7374211,1283);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Schedule_TimeIndicator_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Schedule_TimeIndicator_png",4635582,341);
+		public static readonly NEmbeddedResource RIMG_PngSuite_OI9N2C16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_OI9N2C16_png",7375494,3038);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Schedule_Tools_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Schedule_Tools_png",4635923,290);
+		public static readonly NEmbeddedResource RIMG_PngSuite_PP0N2C16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_PP0N2C16_png",7378532,962);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Schedule_UICustomization_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Schedule_UICustomization_png",4636213,514);
+		public static readonly NEmbeddedResource RIMG_PngSuite_PP0N6A08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_PP0N6A08_png",7379494,818);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Schedule_ViewModes_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Schedule_ViewModes_png",4636727,390);
+		public static readonly NEmbeddedResource RIMG_PngSuite_PS1N0G08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_PS1N0G08_png",7380312,1477);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Text_Blocks_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Text_Blocks_png",4637117,397);
+		public static readonly NEmbeddedResource RIMG_PngSuite_PS1N2C16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_PS1N2C16_png",7381789,1641);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Text_DocxFormat_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Text_DocxFormat_png",4637514,541);
+		public static readonly NEmbeddedResource RIMG_PngSuite_PS2N0G08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_PS2N0G08_png",7383430,2341);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Text_EpubFormat_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Text_EpubFormat_png",4638055,569);
+		public static readonly NEmbeddedResource RIMG_PngSuite_PS2N2C16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_PS2N2C16_png",7385771,2505);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Text_Find_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Text_Find_png",4638624,584);
+		public static readonly NEmbeddedResource RIMG_PngSuite_S01I3P01_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S01I3P01_png",7388276,113);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Text_HtmlFormat_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Text_HtmlFormat_png",4639208,676);
+		public static readonly NEmbeddedResource RIMG_PngSuite_S01N3P01_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S01N3P01_png",7388389,113);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Text_Inlines_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Text_Inlines_png",4639884,444);
+		public static readonly NEmbeddedResource RIMG_PngSuite_S02I3P01_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S02I3P01_png",7388502,114);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Text_Lists_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Text_Lists_png",4640328,491);
+		public static readonly NEmbeddedResource RIMG_PngSuite_S02N3P01_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S02N3P01_png",7388616,115);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Text_MailMerge_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Text_MailMerge_png",4640819,689);
+		public static readonly NEmbeddedResource RIMG_PngSuite_S03I3P01_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S03I3P01_png",7388731,118);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Text_Miscellaneous_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Text_Miscellaneous_png",4641508,520);
+		public static readonly NEmbeddedResource RIMG_PngSuite_S03N3P01_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S03N3P01_png",7388849,120);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Text_Paragraphs_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Text_Paragraphs_png",4642028,443);
+		public static readonly NEmbeddedResource RIMG_PngSuite_S04I3P01_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S04I3P01_png",7388969,126);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Text_PdfFormat_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Text_PdfFormat_png",4642471,306);
+		public static readonly NEmbeddedResource RIMG_PngSuite_S04N3P01_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S04N3P01_png",7389095,121);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Text_Report_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Text_Report_png",4642777,601);
+		public static readonly NEmbeddedResource RIMG_PngSuite_S05I3P02_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S05I3P02_png",7389216,134);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Text_Sections_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Text_Sections_png",4643378,429);
+		public static readonly NEmbeddedResource RIMG_PngSuite_S05N3P02_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S05N3P02_png",7389350,129);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Text_Selection_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Text_Selection_png",4643807,479);
+		public static readonly NEmbeddedResource RIMG_PngSuite_S06I3P02_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S06I3P02_png",7389479,143);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Text_SpellCheck_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Text_SpellCheck_png",4644286,365);
+		public static readonly NEmbeddedResource RIMG_PngSuite_S06N3P02_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S06N3P02_png",7389622,131);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Text_Styles_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Text_Styles_png",4644651,663);
+		public static readonly NEmbeddedResource RIMG_PngSuite_S07I3P02_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S07I3P02_png",7389753,149);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Text_Tables_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Text_Tables_png",4645314,394);
+		public static readonly NEmbeddedResource RIMG_PngSuite_S07N3P02_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S07N3P02_png",7389902,138);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Text_TOC_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Text_TOC_png",4645708,465);
+		public static readonly NEmbeddedResource RIMG_PngSuite_S08I3P02_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S08I3P02_png",7390040,149);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_Text_UICustomization_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_Text_UICustomization_png",4646173,474);
+		public static readonly NEmbeddedResource RIMG_PngSuite_S08N3P02_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S08N3P02_png",7390189,139);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_Accordion_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_Accordion_png",4646647,326);
+		public static readonly NEmbeddedResource RIMG_PngSuite_S09I3P02_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S09I3P02_png",7390328,147);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_AutoCompleteBox_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_AutoCompleteBox_png",4646973,455);
+		public static readonly NEmbeddedResource RIMG_PngSuite_S09N3P02_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S09N3P02_png",7390475,143);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_Background_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_Background_png",4647428,587);
+		public static readonly NEmbeddedResource RIMG_PngSuite_S32I3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S32I3P04_png",7390618,355);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_Border_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_Border_png",4648015,184);
+		public static readonly NEmbeddedResource RIMG_PngSuite_S32N3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S32N3P04_png",7390973,263);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_BorderSplitButton_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_BorderSplitButton_png",4648199,364);
+		public static readonly NEmbeddedResource RIMG_PngSuite_S33I3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S33I3P04_png",7391236,385);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_Button_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_Button_png",4648563,291);
+		public static readonly NEmbeddedResource RIMG_PngSuite_S33N3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S33N3P04_png",7391621,329);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_Calendar_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_Calendar_png",4648854,585);
+		public static readonly NEmbeddedResource RIMG_PngSuite_S34I3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S34I3P04_png",7391950,349);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_CheckBox_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_CheckBox_png",4649439,524);
+		public static readonly NEmbeddedResource RIMG_PngSuite_S34N3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S34N3P04_png",7392299,248);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_Clipboard_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_Clipboard_png",4649963,584);
+		public static readonly NEmbeddedResource RIMG_PngSuite_S35I3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S35I3P04_png",7392547,399);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_ColorBox_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_ColorBox_png",4650547,392);
+		public static readonly NEmbeddedResource RIMG_PngSuite_S35N3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S35N3P04_png",7392946,338);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_ComboBox_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_ComboBox_png",4650939,438);
+		public static readonly NEmbeddedResource RIMG_PngSuite_S36I3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S36I3P04_png",7393284,356);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_CommandBar_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_CommandBar_png",4651377,193);
+		public static readonly NEmbeddedResource RIMG_PngSuite_S36N3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S36N3P04_png",7393640,258);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_ContextMenu_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_ContextMenu_png",4651570,482);
+		public static readonly NEmbeddedResource RIMG_PngSuite_S37I3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S37I3P04_png",7393898,393);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_ContextPopup_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_ContextPopup_png",4652052,432);
+		public static readonly NEmbeddedResource RIMG_PngSuite_S37N3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S37N3P04_png",7394291,336);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_Cursor_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_Cursor_png",4652484,441);
+		public static readonly NEmbeddedResource RIMG_PngSuite_S38I3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S38I3P04_png",7394627,357);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_DateTimeBox_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_DateTimeBox_png",4652925,496);
+		public static readonly NEmbeddedResource RIMG_PngSuite_S38N3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S38N3P04_png",7394984,245);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_DockPanel_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_DockPanel_png",4653421,359);
+		public static readonly NEmbeddedResource RIMG_PngSuite_S39I3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S39I3P04_png",7395229,420);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_DocumentBox_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_DocumentBox_png",4653780,279);
+		public static readonly NEmbeddedResource RIMG_PngSuite_S39N3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S39N3P04_png",7395649,352);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_DragAndDrop_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_DragAndDrop_png",4654059,531);
+		public static readonly NEmbeddedResource RIMG_PngSuite_S40I3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S40I3P04_png",7396001,357);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_DropDownButton_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_DropDownButton_png",4654590,390);
+		public static readonly NEmbeddedResource RIMG_PngSuite_S40N3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S40N3P04_png",7396358,256);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_FileDialog_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_FileDialog_png",4654980,514);
+		public static readonly NEmbeddedResource RIMG_PngSuite_TBBN1G04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_TBBN1G04_png",7396614,419);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_FillSplitButton_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_FillSplitButton_png",4655494,360);
+		public static readonly NEmbeddedResource RIMG_PngSuite_TBBN2C16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_TBBN2C16_png",7397033,1994);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_FlexBoxPanel_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_FlexBoxPanel_png",4655854,304);
+		public static readonly NEmbeddedResource RIMG_PngSuite_TBBN3P08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_TBBN3P08_png",7399027,1128);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_GroupBox_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_GroupBox_png",4656158,237);
+		public static readonly NEmbeddedResource RIMG_PngSuite_TBGN2C16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_TBGN2C16_png",7400155,1994);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_HexagonColorPicker_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_HexagonColorPicker_png",4656395,391);
+		public static readonly NEmbeddedResource RIMG_PngSuite_TBGN3P08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_TBGN3P08_png",7402149,1128);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_HsbColorPicker_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_HsbColorPicker_png",4656786,306);
+		public static readonly NEmbeddedResource RIMG_PngSuite_TBRN2C08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_TBRN2C08_png",7403277,1347);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_ImageBox_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_ImageBox_png",4657092,502);
+		public static readonly NEmbeddedResource RIMG_PngSuite_TBWN1G16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_TBWN1G16_png",7404624,1146);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_Keyboard_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_Keyboard_png",4657594,514);
+		public static readonly NEmbeddedResource RIMG_PngSuite_TBWN3P08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_TBWN3P08_png",7405770,1131);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_Label_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_Label_png",4658108,323);
+		public static readonly NEmbeddedResource RIMG_PngSuite_TBYN3P08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_TBYN3P08_png",7406901,1131);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_LinkLabel_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_LinkLabel_png",4658431,404);
+		public static readonly NEmbeddedResource RIMG_PngSuite_TP0N1G08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_TP0N1G08_png",7408032,689);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_ListBox_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_ListBox_png",4658835,531);
+		public static readonly NEmbeddedResource RIMG_PngSuite_TP0N2C08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_TP0N2C08_png",7408721,1311);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_MaskedTextBox_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_MaskedTextBox_png",4659366,384);
+		public static readonly NEmbeddedResource RIMG_PngSuite_TP0N3P08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_TP0N3P08_png",7410032,1120);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_MenuBar_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_MenuBar_png",4659750,473);
+		public static readonly NEmbeddedResource RIMG_PngSuite_TP1N3P08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_TP1N3P08_png",7411152,1115);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_MenuSplitButton_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_MenuSplitButton_png",4660223,331);
+		public static readonly NEmbeddedResource RIMG_PngSuite_X00N0G01_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_X00N0G01_png",7412267,49);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_MessageBox_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_MessageBox_png",4660554,503);
+		public static readonly NEmbeddedResource RIMG_PngSuite_XCRN0G04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_XCRN0G04_png",7412316,261);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_Mouse_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_Mouse_png",4661057,667);
+		public static readonly NEmbeddedResource RIMG_PngSuite_XLFN0G04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_XLFN0G04_png",7412577,251);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_NamedColorPicker_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_NamedColorPicker_png",4661724,459);
+		public static readonly NEmbeddedResource RIMG_PngSuite_Z00N2C08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_Z00N2C08_png",7412828,3172);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_NavigationBar_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_NavigationBar_png",4662183,275);
+		public static readonly NEmbeddedResource RIMG_PngSuite_Z03N2C08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_Z03N2C08_png",7416000,232);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_NumericUpDown_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_NumericUpDown_png",4662458,493);
+		public static readonly NEmbeddedResource RIMG_PngSuite_Z06N2C08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_Z06N2C08_png",7416232,224);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_PageSize_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_PageSize_png",4662951,144);
+		public static readonly NEmbeddedResource RIMG_PngSuite_Z09N2C08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_Z09N2C08_png",7416456,224);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_PairBox_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_PairBox_png",4663095,330);
+		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_character_bold_small_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_character_bold_small_png",7416680,217);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_PaletteColorPicker_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_PaletteColorPicker_png",4663425,455);
+		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_character_change_case_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_character_change_case_png",7416897,291);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_PrintDialog_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_PrintDialog_png",4663880,473);
+		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_character_italic_small_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_character_italic_small_png",7417188,173);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_ProgressBar_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_ProgressBar_png",4664353,367);
+		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_character_strikethrough_small_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_character_strikethrough_small_png",7417361,229);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_ProgressWindow_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_ProgressWindow_png",4664720,454);
+		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_character_subscript_small_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_character_subscript_small_png",7417590,289);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_RadioButton_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_RadioButton_png",4665174,472);
+		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_character_superscript_small_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_character_superscript_small_png",7417879,293);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_Ribbon_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_Ribbon_png",4665646,564);
+		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_character_underline_small_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_character_underline_small_png",7418172,202);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_ScrollBar_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_ScrollBar_png",4666210,265);
+		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_clipboard_copy_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_clipboard_copy_png",7418374,247);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_ScrollContent_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_ScrollContent_png",4666475,482);
+		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_clipboard_cut_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_clipboard_cut_png",7418621,369);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_ShadowSplitButton_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_ShadowSplitButton_png",4666957,367);
+		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_copy_format_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_copy_format_png",7418990,537);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_SingleVisiblePanel_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_SingleVisiblePanel_png",4667324,432);
+		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_cover_page_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_cover_page_png",7419527,202);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_Slider_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_Slider_png",4667756,309);
+		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_font_delete2_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_font_delete2_png",7419729,342);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_Splitter_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_Splitter_png",4668065,267);
+		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_font_grow_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_font_grow_png",7420071,356);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_StackPanel_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_StackPanel_png",4668332,248);
+		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_font_shrink_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_font_shrink_png",7420427,331);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_StrokeSplitButton_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_StrokeSplitButton_png",4668580,411);
+		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_list_bullets_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_list_bullets_png",7420758,108);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_Symbols_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_Symbols_png",4668991,552);
+		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_list_multilevel_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_list_multilevel_png",7420866,204);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_Tab_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_Tab_png",4669543,353);
+		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_list_numbers_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_list_numbers_png",7421070,157);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_TableFlowPanel_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_TableFlowPanel_png",4669896,328);
+		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_page_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_page_png",7421227,142);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_TextBox_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_TextBox_png",4670224,273);
+		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_page_break_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_page_break_png",7421369,150);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_ThemeBuilder_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_ThemeBuilder_png",4670497,531);
+		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_paragraph_align_center_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_paragraph_align_center_png",7421519,87);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_TimeSpanBox_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_TimeSpanBox_png",4671028,640);
+		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_paragraph_align_justified_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_paragraph_align_justified_png",7421606,85);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_ToolBar_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_ToolBar_png",4671668,252);
+		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_paragraph_align_left_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_paragraph_align_left_png",7421691,87);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_Tooltip_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_Tooltip_png",4671920,304);
+		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_paragraph_align_right_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_paragraph_align_right_png",7421778,83);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_Touch_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_Touch_png",4672224,234);
+		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_paragraph_indent_left_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_paragraph_indent_left_png",7421861,160);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_TreeView_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_TreeView_png",4672458,593);
+		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_paragraph_indent_right_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_paragraph_indent_right_png",7422021,155);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_UserPanel_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_UserPanel_png",4673051,308);
+		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_paragraph_marker_small_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_paragraph_marker_small_png",7422176,146);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_WheelColorPicker_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_WheelColorPicker_png",4673359,745);
+		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_paragraph_spacing_before_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_paragraph_spacing_before_png",7422322,129);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_Windows_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_Windows_png",4674104,509);
+		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_smiley_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_smiley_png",7422451,489);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_WrapFlowPanel_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_WrapFlowPanel_png",4674613,292);
+		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_sort_az_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_sort_az_png",7422940,293);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExampleIcons_UI_WrappableToolbar_png = new NEmbeddedResource(Instance,"RIMG_ExampleIcons_UI_WrappableToolbar_png",4674905,203);
+		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_table_design_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_table_design_png",7423233,339);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExamplesUI_Backgrounds_HomeContentBackground_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Backgrounds_HomeContentBackground_svg",4675108,24289);
+		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_text_fill_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_text_fill_png",7423572,311);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExamplesUI_Backgrounds_HomeHeaderBackground_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Backgrounds_HomeHeaderBackground_svg",4699397,7643);
+		public static readonly NEmbeddedResource RIMG_Ribbon_32x32_clipboard_copy_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_32x32_clipboard_copy_png",7423883,272);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExamplesUI_Collages_Barcode_png = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Collages_Barcode_png",4707040,21057);
+		public static readonly NEmbeddedResource RIMG_Ribbon_32x32_clipboard_paste_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_32x32_clipboard_paste_png",7424155,360);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExamplesUI_Collages_Chart_png = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Collages_Chart_png",4728097,131429);
+		public static readonly NEmbeddedResource RIMG_Ribbon_32x32_cover_page_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_32x32_cover_page_png",7424515,277);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExamplesUI_Collages_Diagram_png = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Collages_Diagram_png",4859526,149835);
+		public static readonly NEmbeddedResource RIMG_Ribbon_32x32_exit_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_32x32_exit_png",7424792,254);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExamplesUI_Collages_Framework_png = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Collages_Framework_png",5009361,55109);
+		public static readonly NEmbeddedResource RIMG_Ribbon_32x32_folder_action_open_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_32x32_folder_action_open_png",7425046,664);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExamplesUI_Collages_Gauge_png = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Collages_Gauge_png",5064470,126871);
+		public static readonly NEmbeddedResource RIMG_Ribbon_32x32_page_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_32x32_page_png",7425710,193);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExamplesUI_Collages_Grid_png = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Collages_Grid_png",5191341,95918);
+		public static readonly NEmbeddedResource RIMG_Ribbon_32x32_page_break_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_32x32_page_break_png",7425903,228);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExamplesUI_Collages_Schedule_png = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Collages_Schedule_png",5287259,79776);
+		public static readonly NEmbeddedResource RIMG_Ribbon_32x32_print_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_32x32_print_png",7426131,364);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExamplesUI_Collages_Text_png = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Collages_Text_png",5367035,56249);
+		public static readonly NEmbeddedResource RIMG_Ribbon_32x32_save_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_32x32_save_png",7426495,250);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExamplesUI_Collages_UI_png = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Collages_UI_png",5423284,79209);
+		public static readonly NEmbeddedResource RIMG_Ribbon_32x32_save_as_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_32x32_save_as_png",7426745,469);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_CsProject_png = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_CsProject_png",5502493,135);
+		public static readonly NEmbeddedResource RIMG_Ribbon_32x32_settings_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_32x32_settings_png",7427214,587);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Favorites_png = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Favorites_png",5502628,258);
+		public static readonly NEmbeddedResource RIMG_Ribbon_32x32_smiley_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_32x32_smiley_png",7427801,919);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Favorites_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Favorites_svg",5502886,1553);
+		public static readonly NEmbeddedResource RIMG_Ribbon_32x32_table_design_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_32x32_table_design_png",7428720,416);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_FavoritesEmpty_png = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_FavoritesEmpty_png",5504439,224);
+		public static readonly NEmbeddedResource RIMG_SVG_Female_svg = new NEmbeddedResource(Instance,"RIMG_SVG_Female_svg",7429136,1932);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Folder_emf = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Folder_emf",5504663,1320);
+		public static readonly NEmbeddedResource RIMG_SVG_Male_svg = new NEmbeddedResource(Instance,"RIMG_SVG_Male_svg",7431068,1697);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Home_png = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Home_png",5505983,217);
+		public static readonly NEmbeddedResource RIMG_SVG_Tiger_svg = new NEmbeddedResource(Instance,"RIMG_SVG_Tiger_svg",7432765,97449);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_HomeLight_png = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_HomeLight_png",5506200,348);
+		public static readonly NEmbeddedResource RIMG_TableBorders_AllBorders_png = new NEmbeddedResource(Instance,"RIMG_TableBorders_AllBorders_png",7530214,83);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Link_png = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Link_png",5506548,308);
+		public static readonly NEmbeddedResource RIMG_TableBorders_BottomBorder_png = new NEmbeddedResource(Instance,"RIMG_TableBorders_BottomBorder_png",7530297,93);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Mail_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Mail_svg",5506856,1184);
+		public static readonly NEmbeddedResource RIMG_TableBorders_InsideBorders_png = new NEmbeddedResource(Instance,"RIMG_TableBorders_InsideBorders_png",7530390,96);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Recent_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Recent_svg",5508040,1220);
+		public static readonly NEmbeddedResource RIMG_TableBorders_InsideHorizontalBorder_png = new NEmbeddedResource(Instance,"RIMG_TableBorders_InsideHorizontalBorder_png",7530486,88);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Search_png = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Search_png",5509260,293);
+		public static readonly NEmbeddedResource RIMG_TableBorders_InsideVerticalBorder_png = new NEmbeddedResource(Instance,"RIMG_TableBorders_InsideVerticalBorder_png",7530574,89);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Search_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Search_svg",5509553,1206);
+		public static readonly NEmbeddedResource RIMG_TableBorders_LeftBorder_png = new NEmbeddedResource(Instance,"RIMG_TableBorders_LeftBorder_png",7530663,88);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_VbProject_png = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_VbProject_png",5510759,137);
+		public static readonly NEmbeddedResource RIMG_TableBorders_NoBorder_png = new NEmbeddedResource(Instance,"RIMG_TableBorders_NoBorder_png",7530751,87);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Products_Barcode_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Products_Barcode_svg",5510896,2870);
+		public static readonly NEmbeddedResource RIMG_TableBorders_OutsideBorders_png = new NEmbeddedResource(Instance,"RIMG_TableBorders_OutsideBorders_png",7530838,111);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Products_BarcodeSelected_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Products_BarcodeSelected_svg",5513766,14528);
+		public static readonly NEmbeddedResource RIMG_TableBorders_RightBorder_png = new NEmbeddedResource(Instance,"RIMG_TableBorders_RightBorder_png",7530949,88);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Products_Chart_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Products_Chart_svg",5528294,1097);
+		public static readonly NEmbeddedResource RIMG_TableBorders_TopBorder_png = new NEmbeddedResource(Instance,"RIMG_TableBorders_TopBorder_png",7531037,84);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Products_ChartSelected_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Products_ChartSelected_svg",5529391,1097);
+		public static readonly NEmbeddedResource RIMG_ToolBar_16x16_Help_png = new NEmbeddedResource(Instance,"RIMG_ToolBar_16x16_Help_png",7531121,805);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Products_Diagram_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Products_Diagram_svg",5530488,1131);
+		public static readonly NEmbeddedResource RIMG_ToolBar_16x16_Open_png = new NEmbeddedResource(Instance,"RIMG_ToolBar_16x16_Open_png",7531926,329);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Products_DiagramSelected_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Products_DiagramSelected_svg",5531619,1131);
+		public static readonly NEmbeddedResource RIMG_ToolBar_16x16_Options_png = new NEmbeddedResource(Instance,"RIMG_ToolBar_16x16_Options_png",7532255,565);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Products_Framework_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Products_Framework_svg",5532750,3428);
+		public static readonly NEmbeddedResource RIMG_ToolBar_16x16_Print_png = new NEmbeddedResource(Instance,"RIMG_ToolBar_16x16_Print_png",7532820,679);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Products_FrameworkSelected_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Products_FrameworkSelected_svg",5536178,3428);
+		public static readonly NEmbeddedResource RIMG_ToolBar_16x16_Save_png = new NEmbeddedResource(Instance,"RIMG_ToolBar_16x16_Save_png",7533499,491);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Products_Gauge_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Products_Gauge_svg",5539606,1413);
+		public static readonly NEmbeddedResource RIMG_ToolBar_16x16_SaveAs_png = new NEmbeddedResource(Instance,"RIMG_ToolBar_16x16_SaveAs_png",7533990,770);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Products_GaugeSelected_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Products_GaugeSelected_svg",5541019,15200);
+		public static readonly NEmbeddedResource RIMG_ToolBar_32x32_Help_png = new NEmbeddedResource(Instance,"RIMG_ToolBar_32x32_Help_png",7534760,2410);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Products_Grid_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Products_Grid_svg",5556219,1591);
+		public static readonly NEmbeddedResource RIMG_ToolBar_32x32_Open_png = new NEmbeddedResource(Instance,"RIMG_ToolBar_32x32_Open_png",7537170,1273);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Products_GridSelected_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Products_GridSelected_svg",5557810,1591);
+		public static readonly NEmbeddedResource RIMG_ToolBar_32x32_Options_png = new NEmbeddedResource(Instance,"RIMG_ToolBar_32x32_Options_png",7538443,2103);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Products_Schedule_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Products_Schedule_svg",5559401,1705);
+		public static readonly NEmbeddedResource RIMG_ToolBar_32x32_Print_png = new NEmbeddedResource(Instance,"RIMG_ToolBar_32x32_Print_png",7540546,1689);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Products_ScheduleSelected_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Products_ScheduleSelected_svg",5561106,1705);
+		public static readonly NEmbeddedResource RIMG_ToolBar_32x32_Save_png = new NEmbeddedResource(Instance,"RIMG_ToolBar_32x32_Save_png",7542235,1675);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Products_Text_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Products_Text_svg",5562811,1031);
+		public static readonly NEmbeddedResource RIMG_ToolBar_32x32_SaveAs_png = new NEmbeddedResource(Instance,"RIMG_ToolBar_32x32_SaveAs_png",7543910,2664);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Products_TextSelected_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Products_TextSelected_svg",5563842,1033);
+		public static readonly NEmbeddedResource RIMG__16x16_Birthday_png = new NEmbeddedResource(Instance,"RIMG__16x16_Birthday_png",7546574,703);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Products_UI_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Products_UI_svg",5564875,1139);
+		public static readonly NEmbeddedResource RIMG__16x16_Calendar_png = new NEmbeddedResource(Instance,"RIMG__16x16_Calendar_png",7547277,580);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExamplesUI_Icons_Products_UISelected_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Icons_Products_UISelected_svg",5566014,1142);
+		public static readonly NEmbeddedResource RIMG__16x16_Contacts_png = new NEmbeddedResource(Instance,"RIMG__16x16_Contacts_png",7547857,518);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExamplesUI_Logos_Nevron_emf = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Logos_Nevron_emf",5567156,2448);
+		public static readonly NEmbeddedResource RIMG__16x16_folderDeleted_png = new NEmbeddedResource(Instance,"RIMG__16x16_folderDeleted_png",7548375,494);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExamplesUI_Logos_Nevron_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Logos_Nevron_svg",5569604,3745);
+		public static readonly NEmbeddedResource RIMG__16x16_folderDrafts_png = new NEmbeddedResource(Instance,"RIMG__16x16_folderDrafts_png",7548869,475);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExamplesUI_Logos_NOV_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Logos_NOV_svg",5573349,5004);
+		public static readonly NEmbeddedResource RIMG__16x16_folderHome_png = new NEmbeddedResource(Instance,"RIMG__16x16_folderHome_png",7549344,516);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExamplesUI_Logos_Platforms_Blazor_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Logos_Platforms_Blazor_svg",5578353,5997);
+		public static readonly NEmbeddedResource RIMG__16x16_folderInbox_png = new NEmbeddedResource(Instance,"RIMG__16x16_folderInbox_png",7549860,454);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExamplesUI_Logos_Platforms_WinForms_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Logos_Platforms_WinForms_svg",5584350,3742);
+		public static readonly NEmbeddedResource RIMG__16x16_folderJunk_png = new NEmbeddedResource(Instance,"RIMG__16x16_folderJunk_png",7550314,524);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExamplesUI_Logos_Platforms_Wpf_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Logos_Platforms_Wpf_svg",5588092,1993);
+		public static readonly NEmbeddedResource RIMG__16x16_folderOutbox_png = new NEmbeddedResource(Instance,"RIMG__16x16_folderOutbox_png",7550838,450);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ExamplesUI_Logos_Platforms_Xamarin_svg = new NEmbeddedResource(Instance,"RIMG_ExamplesUI_Logos_Platforms_Xamarin_svg",5590085,7437);
+		public static readonly NEmbeddedResource RIMG__16x16_folderRss_png = new NEmbeddedResource(Instance,"RIMG__16x16_folderRss_png",7551288,521);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_GifSuite_Gears_gif = new NEmbeddedResource(Instance,"RIMG_GifSuite_Gears_gif",5597522,14799);
+		public static readonly NEmbeddedResource RIMG__16x16_Folders_png = new NEmbeddedResource(Instance,"RIMG__16x16_Folders_png",7551809,214);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_GifSuite_Peace_gif = new NEmbeddedResource(Instance,"RIMG_GifSuite_Peace_gif",5612321,79448);
+		public static readonly NEmbeddedResource RIMG__16x16_folderSearch_png = new NEmbeddedResource(Instance,"RIMG__16x16_folderSearch_png",7552023,488);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_GifSuite_Plane_gif = new NEmbeddedResource(Instance,"RIMG_GifSuite_Plane_gif",5691769,51900);
+		public static readonly NEmbeddedResource RIMG__16x16_folderSent_png = new NEmbeddedResource(Instance,"RIMG__16x16_folderSent_png",7552511,423);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_GifSuite_Racer_gif = new NEmbeddedResource(Instance,"RIMG_GifSuite_Racer_gif",5743669,14134);
+		public static readonly NEmbeddedResource RIMG__16x16_Gender_png = new NEmbeddedResource(Instance,"RIMG__16x16_Gender_png",7552934,627);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_GifSuite_Wave_gif = new NEmbeddedResource(Instance,"RIMG_GifSuite_Wave_gif",5757803,391422);
+		public static readonly NEmbeddedResource RIMG__16x16_Globe_png = new NEmbeddedResource(Instance,"RIMG__16x16_Globe_png",7553561,682);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_JpegSuite_q001_jpg = new NEmbeddedResource(Instance,"RIMG_JpegSuite_q001_jpg",6149225,4449);
+		public static readonly NEmbeddedResource RIMG__16x16_Journal_png = new NEmbeddedResource(Instance,"RIMG__16x16_Journal_png",7554243,689);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_JpegSuite_q020_jpg = new NEmbeddedResource(Instance,"RIMG_JpegSuite_q020_jpg",6153674,13231);
+		public static readonly NEmbeddedResource RIMG__16x16_Mail_png = new NEmbeddedResource(Instance,"RIMG__16x16_Mail_png",7554932,748);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_JpegSuite_q040_jpg = new NEmbeddedResource(Instance,"RIMG_JpegSuite_q040_jpg",6166905,20465);
+		public static readonly NEmbeddedResource RIMG__16x16_Notes_png = new NEmbeddedResource(Instance,"RIMG__16x16_Notes_png",7555680,650);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_JpegSuite_q060_jpg = new NEmbeddedResource(Instance,"RIMG_JpegSuite_q060_jpg",6187370,26993);
+		public static readonly NEmbeddedResource RIMG__16x16_Phone_png = new NEmbeddedResource(Instance,"RIMG__16x16_Phone_png",7556330,635);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_JpegSuite_q080_jpg = new NEmbeddedResource(Instance,"RIMG_JpegSuite_q080_jpg",6214363,40830);
+		public static readonly NEmbeddedResource RIMG__16x16_Shortcuts_png = new NEmbeddedResource(Instance,"RIMG__16x16_Shortcuts_png",7556965,448);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_JpegSuite_q100_jpg = new NEmbeddedResource(Instance,"RIMG_JpegSuite_q100_jpg",6255193,188227);
+		public static readonly NEmbeddedResource RIMG__16x16_Tasks_png = new NEmbeddedResource(Instance,"RIMG__16x16_Tasks_png",7557413,668);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_MobileComputers_Laptop_jpg = new NEmbeddedResource(Instance,"RIMG_MobileComputers_Laptop_jpg",6443420,8557);
+		public static readonly NEmbeddedResource RIMG__24x24_Calendar_png = new NEmbeddedResource(Instance,"RIMG__24x24_Calendar_png",7558081,1061);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_MobileComputers_Netbook_jpg = new NEmbeddedResource(Instance,"RIMG_MobileComputers_Netbook_jpg",6451977,6051);
+		public static readonly NEmbeddedResource RIMG__24x24_Contacts_png = new NEmbeddedResource(Instance,"RIMG__24x24_Contacts_png",7559142,809);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_MobileComputers_Smartbook_jpg = new NEmbeddedResource(Instance,"RIMG_MobileComputers_Smartbook_jpg",6458028,9431);
+		public static readonly NEmbeddedResource RIMG__24x24_Folders_png = new NEmbeddedResource(Instance,"RIMG__24x24_Folders_png",7559951,775);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_MobileComputers_Tablet_jpg = new NEmbeddedResource(Instance,"RIMG_MobileComputers_Tablet_jpg",6467459,6034);
+		public static readonly NEmbeddedResource RIMG__24x24_Journal_png = new NEmbeddedResource(Instance,"RIMG__24x24_Journal_png",7560726,1176);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_MobileComputers_Ultrabook_jpg = new NEmbeddedResource(Instance,"RIMG_MobileComputers_Ultrabook_jpg",6473493,5392);
+		public static readonly NEmbeddedResource RIMG__24x24_Mail_png = new NEmbeddedResource(Instance,"RIMG__24x24_Mail_png",7561902,1115);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_MobileComputers_UMPC_jpg = new NEmbeddedResource(Instance,"RIMG_MobileComputers_UMPC_jpg",6478885,5822);
+		public static readonly NEmbeddedResource RIMG__24x24_Notes_png = new NEmbeddedResource(Instance,"RIMG__24x24_Notes_png",7563017,1102);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_BASI0G01_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASI0G01_png",6484707,217);
+		public static readonly NEmbeddedResource RIMG__24x24_Shortcuts_png = new NEmbeddedResource(Instance,"RIMG__24x24_Shortcuts_png",7564119,701);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_BASI0G02_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASI0G02_png",6484924,154);
+		public static readonly NEmbeddedResource RIMG__24x24_Tasks_png = new NEmbeddedResource(Instance,"RIMG__24x24_Tasks_png",7564820,1208);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_BASI0G04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASI0G04_png",6485078,247);
+		public static readonly NEmbeddedResource RIMG__256x256_FemaleIcon_jpg = new NEmbeddedResource(Instance,"RIMG__256x256_FemaleIcon_jpg",7566028,4129);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_BASI0G08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASI0G08_png",6485325,254);
+		public static readonly NEmbeddedResource RIMG__256x256_MaleIcon_jpg = new NEmbeddedResource(Instance,"RIMG__256x256_MaleIcon_jpg",7570157,4493);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_BASI0G16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASI0G16_png",6485579,299);
+		public static readonly NEmbeddedResource RIMG__48x48_Book_png = new NEmbeddedResource(Instance,"RIMG__48x48_Book_png",7574650,3746);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_BASI2C08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASI2C08_png",6485878,315);
+		public static readonly NEmbeddedResource RIMG__48x48_Clock_png = new NEmbeddedResource(Instance,"RIMG__48x48_Clock_png",7578396,3831);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_BASI2C16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASI2C16_png",6486193,595);
+		public static readonly NEmbeddedResource RIMG__48x48_Darts_png = new NEmbeddedResource(Instance,"RIMG__48x48_Darts_png",7582227,4130);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_BASI3P01_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASI3P01_png",6486788,132);
+		public static readonly NEmbeddedResource RIMG__48x48_Envelope_png = new NEmbeddedResource(Instance,"RIMG__48x48_Envelope_png",7586357,3642);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_BASI3P02_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASI3P02_png",6486920,193);
+		public static readonly NEmbeddedResource RIMG__48x48_Flash_png = new NEmbeddedResource(Instance,"RIMG__48x48_Flash_png",7589999,3514);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_BASI3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASI3P04_png",6487113,327);
+		public static readonly NEmbeddedResource RIMG__48x48_Flask_png = new NEmbeddedResource(Instance,"RIMG__48x48_Flask_png",7593513,3485);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_BASI3P08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASI3P08_png",6487440,1527);
+		public static readonly NEmbeddedResource RIMG__48x48_Globe_png = new NEmbeddedResource(Instance,"RIMG__48x48_Globe_png",7596998,3506);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_BASI4A08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASI4A08_png",6488967,214);
+		public static readonly NEmbeddedResource RIMG__48x48_Light_png = new NEmbeddedResource(Instance,"RIMG__48x48_Light_png",7600504,2471);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_BASI4A16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASI4A16_png",6489181,2855);
+		public static readonly NEmbeddedResource RIMG__48x48_Mobile_png = new NEmbeddedResource(Instance,"RIMG__48x48_Mobile_png",7602975,3588);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_BASI6A08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASI6A08_png",6492036,361);
+		public static readonly NEmbeddedResource RIMG__48x48_Pencil_png = new NEmbeddedResource(Instance,"RIMG__48x48_Pencil_png",7606563,2947);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_BASI6A16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASI6A16_png",6492397,4180);
+		public static readonly NEmbeddedResource RIMG__48x48_Tasks_png = new NEmbeddedResource(Instance,"RIMG__48x48_Tasks_png",7609510,1208);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_BASN0G01_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASN0G01_png",6496577,164);
+		public static readonly NEmbeddedResource RSTR_BmpSuite_txt = new NEmbeddedResource(Instance,"RSTR_BmpSuite_txt",7610718,1886);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_BASN0G02_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASN0G02_png",6496741,104);
+		public static readonly NEmbeddedResource RSTR_CountryList_xml = new NEmbeddedResource(Instance,"RSTR_CountryList_xml",7612604,99717);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_BASN0G04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASN0G04_png",6496845,145);
+		public static readonly NEmbeddedResource RSTR_Employees_csv = new NEmbeddedResource(Instance,"RSTR_Employees_csv",7712321,3672);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_BASN0G08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASN0G08_png",6496990,138);
+		public static readonly NEmbeddedResource RSTR_Examples_xml = new NEmbeddedResource(Instance,"RSTR_Examples_xml",7715993,60718);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_BASN0G16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASN0G16_png",6497128,167);
+		public static readonly NEmbeddedResource RSTR_JpegSuite_txt = new NEmbeddedResource(Instance,"RSTR_JpegSuite_txt",7776711,487);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_BASN2C08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASN2C08_png",6497295,145);
+		public static readonly NEmbeddedResource RSTR_LincolnFamily_ged = new NEmbeddedResource(Instance,"RSTR_LincolnFamily_ged",7777198,5284);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_BASN2C16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASN2C16_png",6497440,302);
+		public static readonly NEmbeddedResource RSTR_PngSuite_txt = new NEmbeddedResource(Instance,"RSTR_PngSuite_txt",7782482,10066);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_BASN3P01_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASN3P01_png",6497742,112);
+		public static readonly NEmbeddedResource RSTR_TreeMapData_xml = new NEmbeddedResource(Instance,"RSTR_TreeMapData_xml",7792548,11276);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_BASN3P02_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASN3P02_png",6497854,146);
+		public static readonly NEmbeddedResource RSTR_TreeMapDataSmall_xml = new NEmbeddedResource(Instance,"RSTR_TreeMapDataSmall_xml",7803824,2495);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_BASN3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASN3P04_png",6498000,216);
+		public static readonly NEmbeddedResource RSTR_HtmlSuite_AttributeSelectors_html = new NEmbeddedResource(Instance,"RSTR_HtmlSuite_AttributeSelectors_html",7806319,1466);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_BASN3P08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASN3P08_png",6498216,1286);
+		public static readonly NEmbeddedResource RSTR_HtmlSuite_Backgrounds_html = new NEmbeddedResource(Instance,"RSTR_HtmlSuite_Backgrounds_html",7807785,2726);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_BASN4A08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASN4A08_png",6499502,126);
+		public static readonly NEmbeddedResource RSTR_HtmlSuite_Borders_html = new NEmbeddedResource(Instance,"RSTR_HtmlSuite_Borders_html",7810511,2404);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_BASN4A16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASN4A16_png",6499628,2206);
+		public static readonly NEmbeddedResource RSTR_HtmlSuite_CursorsAndTooltips_html = new NEmbeddedResource(Instance,"RSTR_HtmlSuite_CursorsAndTooltips_html",7812915,1590);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_BASN6A08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASN6A08_png",6501834,184);
+		public static readonly NEmbeddedResource RSTR_HtmlSuite_EmbeddedImages_html = new NEmbeddedResource(Instance,"RSTR_HtmlSuite_EmbeddedImages_html",7814505,2051);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_BASN6A16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BASN6A16_png",6502018,3435);
+		public static readonly NEmbeddedResource RSTR_HtmlSuite_Lists_html = new NEmbeddedResource(Instance,"RSTR_HtmlSuite_Lists_html",7816556,1871);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_BGAI4A08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BGAI4A08_png",6505453,214);
+		public static readonly NEmbeddedResource RSTR_HtmlSuite_MediaAndImportance_html = new NEmbeddedResource(Instance,"RSTR_HtmlSuite_MediaAndImportance_html",7818427,601);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_BGAI4A16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BGAI4A16_png",6505667,2855);
+		public static readonly NEmbeddedResource RSTR_HtmlSuite_PseudoClasses_html = new NEmbeddedResource(Instance,"RSTR_HtmlSuite_PseudoClasses_html",7819028,1640);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_BGAN6A08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BGAN6A08_png",6508522,184);
+		public static readonly NEmbeddedResource RSTR_HtmlSuite_StyleSheets_html = new NEmbeddedResource(Instance,"RSTR_HtmlSuite_StyleSheets_html",7820668,1770);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_BGAN6A16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BGAN6A16_png",6508706,3435);
+		public static readonly NEmbeddedResource RSTR_HtmlSuite_Tables_html = new NEmbeddedResource(Instance,"RSTR_HtmlSuite_Tables_html",7822438,1236);
 		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_BGBN4A08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BGBN4A08_png",6512141,140);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_BGGN4A16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BGGN4A16_png",6512281,2220);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_BGWN6A08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BGWN6A08_png",6514501,202);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_BGYN6A16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_BGYN6A16_png",6514703,3453);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_CCWN2C08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_CCWN2C08_png",6518156,1514);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_CCWN3P08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_CCWN3P08_png",6519670,1554);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_CDFN2C08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_CDFN2C08_png",6521224,404);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_CDHN2C08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_CDHN2C08_png",6521628,344);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_CDSN2C08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_CDSN2C08_png",6521972,232);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_CDUN2C08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_CDUN2C08_png",6522204,724);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_CH1N3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_CH1N3P04_png",6522928,258);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_CH2N3P08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_CH2N3P08_png",6523186,1810);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_CM0N0G04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_CM0N0G04_png",6524996,292);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_CM7N0G04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_CM7N0G04_png",6525288,292);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_CM9N0G04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_CM9N0G04_png",6525580,292);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_CS3N2C16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_CS3N2C16_png",6525872,214);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_CS3N3P08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_CS3N3P08_png",6526086,259);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_CS5N2C08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_CS5N2C08_png",6526345,186);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_CS5N3P08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_CS5N3P08_png",6526531,271);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_CS8N2C08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_CS8N2C08_png",6526802,149);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_CS8N3P08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_CS8N3P08_png",6526951,256);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_CT0N0G04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_CT0N0G04_png",6527207,273);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_CT1N0G04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_CT1N0G04_png",6527480,792);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_CTZN0G04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_CTZN0G04_png",6528272,753);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_F00N0G08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_F00N0G08_png",6529025,319);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_F00N2C08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_F00N2C08_png",6529344,2475);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_F01N0G08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_F01N0G08_png",6531819,321);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_F01N2C08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_F01N2C08_png",6532140,1180);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_F02N0G08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_F02N0G08_png",6533320,355);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_F02N2C08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_F02N2C08_png",6533675,1729);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_F03N0G08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_F03N0G08_png",6535404,389);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_F03N2C08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_F03N2C08_png",6535793,1291);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_F04N0G08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_F04N0G08_png",6537084,269);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_F04N2C08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_F04N2C08_png",6537353,985);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_G03N0G16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_G03N0G16_png",6538338,345);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_G03N2C08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_G03N2C08_png",6538683,370);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_G03N3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_G03N3P04_png",6539053,214);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_G04N0G16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_G04N0G16_png",6539267,363);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_G04N2C08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_G04N2C08_png",6539630,377);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_G04N3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_G04N3P04_png",6540007,219);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_G05N0G16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_G05N0G16_png",6540226,339);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_G05N2C08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_G05N2C08_png",6540565,350);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_G05N3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_G05N3P04_png",6540915,206);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_G07N0G16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_G07N0G16_png",6541121,321);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_G07N2C08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_G07N2C08_png",6541442,340);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_G07N3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_G07N3P04_png",6541782,207);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_G10N0G16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_G10N0G16_png",6541989,262);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_G10N2C08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_G10N2C08_png",6542251,285);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_G10N3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_G10N3P04_png",6542536,214);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_G25N0G16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_G25N0G16_png",6542750,383);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_G25N2C08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_G25N2C08_png",6543133,405);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_G25N3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_G25N3P04_png",6543538,215);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_OI1N0G16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_OI1N0G16_png",6543753,167);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_OI1N2C16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_OI1N2C16_png",6543920,302);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_OI2N0G16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_OI2N0G16_png",6544222,179);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_OI2N2C16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_OI2N2C16_png",6544401,314);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_OI4N0G16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_OI4N0G16_png",6544715,203);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_OI4N2C16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_OI4N2C16_png",6544918,338);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_OI9N0G16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_OI9N0G16_png",6545256,1283);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_OI9N2C16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_OI9N2C16_png",6546539,3038);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_PP0N2C16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_PP0N2C16_png",6549577,962);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_PP0N6A08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_PP0N6A08_png",6550539,818);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_PS1N0G08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_PS1N0G08_png",6551357,1477);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_PS1N2C16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_PS1N2C16_png",6552834,1641);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_PS2N0G08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_PS2N0G08_png",6554475,2341);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_PS2N2C16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_PS2N2C16_png",6556816,2505);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_S01I3P01_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S01I3P01_png",6559321,113);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_S01N3P01_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S01N3P01_png",6559434,113);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_S02I3P01_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S02I3P01_png",6559547,114);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_S02N3P01_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S02N3P01_png",6559661,115);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_S03I3P01_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S03I3P01_png",6559776,118);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_S03N3P01_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S03N3P01_png",6559894,120);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_S04I3P01_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S04I3P01_png",6560014,126);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_S04N3P01_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S04N3P01_png",6560140,121);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_S05I3P02_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S05I3P02_png",6560261,134);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_S05N3P02_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S05N3P02_png",6560395,129);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_S06I3P02_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S06I3P02_png",6560524,143);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_S06N3P02_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S06N3P02_png",6560667,131);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_S07I3P02_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S07I3P02_png",6560798,149);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_S07N3P02_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S07N3P02_png",6560947,138);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_S08I3P02_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S08I3P02_png",6561085,149);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_S08N3P02_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S08N3P02_png",6561234,139);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_S09I3P02_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S09I3P02_png",6561373,147);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_S09N3P02_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S09N3P02_png",6561520,143);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_S32I3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S32I3P04_png",6561663,355);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_S32N3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S32N3P04_png",6562018,263);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_S33I3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S33I3P04_png",6562281,385);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_S33N3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S33N3P04_png",6562666,329);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_S34I3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S34I3P04_png",6562995,349);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_S34N3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S34N3P04_png",6563344,248);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_S35I3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S35I3P04_png",6563592,399);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_S35N3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S35N3P04_png",6563991,338);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_S36I3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S36I3P04_png",6564329,356);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_S36N3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S36N3P04_png",6564685,258);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_S37I3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S37I3P04_png",6564943,393);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_S37N3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S37N3P04_png",6565336,336);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_S38I3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S38I3P04_png",6565672,357);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_S38N3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S38N3P04_png",6566029,245);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_S39I3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S39I3P04_png",6566274,420);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_S39N3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S39N3P04_png",6566694,352);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_S40I3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S40I3P04_png",6567046,357);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_S40N3P04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_S40N3P04_png",6567403,256);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_TBBN1G04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_TBBN1G04_png",6567659,419);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_TBBN2C16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_TBBN2C16_png",6568078,1994);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_TBBN3P08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_TBBN3P08_png",6570072,1128);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_TBGN2C16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_TBGN2C16_png",6571200,1994);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_TBGN3P08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_TBGN3P08_png",6573194,1128);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_TBRN2C08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_TBRN2C08_png",6574322,1347);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_TBWN1G16_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_TBWN1G16_png",6575669,1146);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_TBWN3P08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_TBWN3P08_png",6576815,1131);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_TBYN3P08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_TBYN3P08_png",6577946,1131);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_TP0N1G08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_TP0N1G08_png",6579077,689);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_TP0N2C08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_TP0N2C08_png",6579766,1311);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_TP0N3P08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_TP0N3P08_png",6581077,1120);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_TP1N3P08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_TP1N3P08_png",6582197,1115);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_X00N0G01_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_X00N0G01_png",6583312,49);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_XCRN0G04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_XCRN0G04_png",6583361,261);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_XLFN0G04_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_XLFN0G04_png",6583622,251);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_Z00N2C08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_Z00N2C08_png",6583873,3172);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_Z03N2C08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_Z03N2C08_png",6587045,232);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_Z06N2C08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_Z06N2C08_png",6587277,224);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_PngSuite_Z09N2C08_png = new NEmbeddedResource(Instance,"RIMG_PngSuite_Z09N2C08_png",6587501,224);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_character_bold_small_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_character_bold_small_png",6587725,217);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_character_change_case_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_character_change_case_png",6587942,291);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_character_italic_small_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_character_italic_small_png",6588233,173);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_character_strikethrough_small_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_character_strikethrough_small_png",6588406,229);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_character_subscript_small_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_character_subscript_small_png",6588635,289);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_character_superscript_small_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_character_superscript_small_png",6588924,293);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_character_underline_small_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_character_underline_small_png",6589217,202);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_clipboard_copy_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_clipboard_copy_png",6589419,247);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_clipboard_cut_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_clipboard_cut_png",6589666,369);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_copy_format_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_copy_format_png",6590035,537);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_cover_page_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_cover_page_png",6590572,202);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_font_delete2_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_font_delete2_png",6590774,342);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_font_grow_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_font_grow_png",6591116,356);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_font_shrink_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_font_shrink_png",6591472,331);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_list_bullets_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_list_bullets_png",6591803,108);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_list_multilevel_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_list_multilevel_png",6591911,204);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_list_numbers_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_list_numbers_png",6592115,157);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_page_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_page_png",6592272,142);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_page_break_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_page_break_png",6592414,150);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_paragraph_align_center_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_paragraph_align_center_png",6592564,87);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_paragraph_align_justified_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_paragraph_align_justified_png",6592651,85);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_paragraph_align_left_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_paragraph_align_left_png",6592736,87);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_paragraph_align_right_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_paragraph_align_right_png",6592823,83);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_paragraph_indent_left_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_paragraph_indent_left_png",6592906,160);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_paragraph_indent_right_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_paragraph_indent_right_png",6593066,155);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_paragraph_marker_small_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_paragraph_marker_small_png",6593221,146);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_paragraph_spacing_before_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_paragraph_spacing_before_png",6593367,129);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_smiley_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_smiley_png",6593496,489);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_sort_az_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_sort_az_png",6593985,293);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_table_design_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_table_design_png",6594278,339);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Ribbon_16x16_text_fill_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_16x16_text_fill_png",6594617,311);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Ribbon_32x32_clipboard_copy_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_32x32_clipboard_copy_png",6594928,272);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Ribbon_32x32_clipboard_paste_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_32x32_clipboard_paste_png",6595200,360);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Ribbon_32x32_cover_page_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_32x32_cover_page_png",6595560,277);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Ribbon_32x32_exit_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_32x32_exit_png",6595837,254);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Ribbon_32x32_folder_action_open_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_32x32_folder_action_open_png",6596091,664);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Ribbon_32x32_page_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_32x32_page_png",6596755,193);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Ribbon_32x32_page_break_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_32x32_page_break_png",6596948,228);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Ribbon_32x32_print_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_32x32_print_png",6597176,364);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Ribbon_32x32_save_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_32x32_save_png",6597540,250);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Ribbon_32x32_save_as_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_32x32_save_as_png",6597790,469);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Ribbon_32x32_settings_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_32x32_settings_png",6598259,587);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Ribbon_32x32_smiley_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_32x32_smiley_png",6598846,919);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_Ribbon_32x32_table_design_png = new NEmbeddedResource(Instance,"RIMG_Ribbon_32x32_table_design_png",6599765,416);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_TableBorders_AllBorders_png = new NEmbeddedResource(Instance,"RIMG_TableBorders_AllBorders_png",6600181,83);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_TableBorders_BottomBorder_png = new NEmbeddedResource(Instance,"RIMG_TableBorders_BottomBorder_png",6600264,93);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_TableBorders_InsideBorders_png = new NEmbeddedResource(Instance,"RIMG_TableBorders_InsideBorders_png",6600357,96);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_TableBorders_InsideHorizontalBorder_png = new NEmbeddedResource(Instance,"RIMG_TableBorders_InsideHorizontalBorder_png",6600453,88);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_TableBorders_InsideVerticalBorder_png = new NEmbeddedResource(Instance,"RIMG_TableBorders_InsideVerticalBorder_png",6600541,89);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_TableBorders_LeftBorder_png = new NEmbeddedResource(Instance,"RIMG_TableBorders_LeftBorder_png",6600630,88);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_TableBorders_NoBorder_png = new NEmbeddedResource(Instance,"RIMG_TableBorders_NoBorder_png",6600718,87);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_TableBorders_OutsideBorders_png = new NEmbeddedResource(Instance,"RIMG_TableBorders_OutsideBorders_png",6600805,111);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_TableBorders_RightBorder_png = new NEmbeddedResource(Instance,"RIMG_TableBorders_RightBorder_png",6600916,88);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_TableBorders_TopBorder_png = new NEmbeddedResource(Instance,"RIMG_TableBorders_TopBorder_png",6601004,84);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ToolBar_16x16_Help_png = new NEmbeddedResource(Instance,"RIMG_ToolBar_16x16_Help_png",6601088,805);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ToolBar_16x16_Open_png = new NEmbeddedResource(Instance,"RIMG_ToolBar_16x16_Open_png",6601893,329);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ToolBar_16x16_Options_png = new NEmbeddedResource(Instance,"RIMG_ToolBar_16x16_Options_png",6602222,565);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ToolBar_16x16_Print_png = new NEmbeddedResource(Instance,"RIMG_ToolBar_16x16_Print_png",6602787,679);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ToolBar_16x16_Save_png = new NEmbeddedResource(Instance,"RIMG_ToolBar_16x16_Save_png",6603466,491);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ToolBar_16x16_SaveAs_png = new NEmbeddedResource(Instance,"RIMG_ToolBar_16x16_SaveAs_png",6603957,770);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ToolBar_32x32_Help_png = new NEmbeddedResource(Instance,"RIMG_ToolBar_32x32_Help_png",6604727,2410);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ToolBar_32x32_Open_png = new NEmbeddedResource(Instance,"RIMG_ToolBar_32x32_Open_png",6607137,1273);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ToolBar_32x32_Options_png = new NEmbeddedResource(Instance,"RIMG_ToolBar_32x32_Options_png",6608410,2103);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ToolBar_32x32_Print_png = new NEmbeddedResource(Instance,"RIMG_ToolBar_32x32_Print_png",6610513,1689);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ToolBar_32x32_Save_png = new NEmbeddedResource(Instance,"RIMG_ToolBar_32x32_Save_png",6612202,1675);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG_ToolBar_32x32_SaveAs_png = new NEmbeddedResource(Instance,"RIMG_ToolBar_32x32_SaveAs_png",6613877,2664);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG__16x16_Birthday_png = new NEmbeddedResource(Instance,"RIMG__16x16_Birthday_png",6616541,703);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG__16x16_Calendar_png = new NEmbeddedResource(Instance,"RIMG__16x16_Calendar_png",6617244,580);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG__16x16_Contacts_png = new NEmbeddedResource(Instance,"RIMG__16x16_Contacts_png",6617824,518);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG__16x16_folderDeleted_png = new NEmbeddedResource(Instance,"RIMG__16x16_folderDeleted_png",6618342,494);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG__16x16_folderDrafts_png = new NEmbeddedResource(Instance,"RIMG__16x16_folderDrafts_png",6618836,475);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG__16x16_folderHome_png = new NEmbeddedResource(Instance,"RIMG__16x16_folderHome_png",6619311,516);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG__16x16_folderInbox_png = new NEmbeddedResource(Instance,"RIMG__16x16_folderInbox_png",6619827,454);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG__16x16_folderJunk_png = new NEmbeddedResource(Instance,"RIMG__16x16_folderJunk_png",6620281,524);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG__16x16_folderOutbox_png = new NEmbeddedResource(Instance,"RIMG__16x16_folderOutbox_png",6620805,450);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG__16x16_folderRss_png = new NEmbeddedResource(Instance,"RIMG__16x16_folderRss_png",6621255,521);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG__16x16_Folders_png = new NEmbeddedResource(Instance,"RIMG__16x16_Folders_png",6621776,214);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG__16x16_folderSearch_png = new NEmbeddedResource(Instance,"RIMG__16x16_folderSearch_png",6621990,488);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG__16x16_folderSent_png = new NEmbeddedResource(Instance,"RIMG__16x16_folderSent_png",6622478,423);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG__16x16_Gender_png = new NEmbeddedResource(Instance,"RIMG__16x16_Gender_png",6622901,627);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG__16x16_Globe_png = new NEmbeddedResource(Instance,"RIMG__16x16_Globe_png",6623528,682);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG__16x16_Journal_png = new NEmbeddedResource(Instance,"RIMG__16x16_Journal_png",6624210,689);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG__16x16_Mail_png = new NEmbeddedResource(Instance,"RIMG__16x16_Mail_png",6624899,748);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG__16x16_Notes_png = new NEmbeddedResource(Instance,"RIMG__16x16_Notes_png",6625647,650);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG__16x16_Phone_png = new NEmbeddedResource(Instance,"RIMG__16x16_Phone_png",6626297,635);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG__16x16_Shortcuts_png = new NEmbeddedResource(Instance,"RIMG__16x16_Shortcuts_png",6626932,448);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG__16x16_Tasks_png = new NEmbeddedResource(Instance,"RIMG__16x16_Tasks_png",6627380,668);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG__24x24_Calendar_png = new NEmbeddedResource(Instance,"RIMG__24x24_Calendar_png",6628048,1061);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG__24x24_Contacts_png = new NEmbeddedResource(Instance,"RIMG__24x24_Contacts_png",6629109,809);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG__24x24_Folders_png = new NEmbeddedResource(Instance,"RIMG__24x24_Folders_png",6629918,775);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG__24x24_Journal_png = new NEmbeddedResource(Instance,"RIMG__24x24_Journal_png",6630693,1176);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG__24x24_Mail_png = new NEmbeddedResource(Instance,"RIMG__24x24_Mail_png",6631869,1115);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG__24x24_Notes_png = new NEmbeddedResource(Instance,"RIMG__24x24_Notes_png",6632984,1102);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG__24x24_Shortcuts_png = new NEmbeddedResource(Instance,"RIMG__24x24_Shortcuts_png",6634086,701);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG__24x24_Tasks_png = new NEmbeddedResource(Instance,"RIMG__24x24_Tasks_png",6634787,1208);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG__256x256_FemaleIcon_jpg = new NEmbeddedResource(Instance,"RIMG__256x256_FemaleIcon_jpg",6635995,4129);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG__256x256_MaleIcon_jpg = new NEmbeddedResource(Instance,"RIMG__256x256_MaleIcon_jpg",6640124,4493);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG__48x48_Book_png = new NEmbeddedResource(Instance,"RIMG__48x48_Book_png",6644617,3746);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG__48x48_Clock_png = new NEmbeddedResource(Instance,"RIMG__48x48_Clock_png",6648363,3831);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG__48x48_Darts_png = new NEmbeddedResource(Instance,"RIMG__48x48_Darts_png",6652194,4130);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG__48x48_Envelope_png = new NEmbeddedResource(Instance,"RIMG__48x48_Envelope_png",6656324,3642);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG__48x48_Flash_png = new NEmbeddedResource(Instance,"RIMG__48x48_Flash_png",6659966,3514);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG__48x48_Flask_png = new NEmbeddedResource(Instance,"RIMG__48x48_Flask_png",6663480,3485);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG__48x48_Globe_png = new NEmbeddedResource(Instance,"RIMG__48x48_Globe_png",6666965,3506);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG__48x48_Light_png = new NEmbeddedResource(Instance,"RIMG__48x48_Light_png",6670471,2471);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG__48x48_Mobile_png = new NEmbeddedResource(Instance,"RIMG__48x48_Mobile_png",6672942,3588);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG__48x48_Pencil_png = new NEmbeddedResource(Instance,"RIMG__48x48_Pencil_png",6676530,2947);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RIMG__48x48_Tasks_png = new NEmbeddedResource(Instance,"RIMG__48x48_Tasks_png",6679477,1208);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RSTR_BmpSuite_txt = new NEmbeddedResource(Instance,"RSTR_BmpSuite_txt",6680685,1886);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RSTR_CountryList_xml = new NEmbeddedResource(Instance,"RSTR_CountryList_xml",6682571,99717);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RSTR_Employees_csv = new NEmbeddedResource(Instance,"RSTR_Employees_csv",6782288,3672);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RSTR_Examples_xml = new NEmbeddedResource(Instance,"RSTR_Examples_xml",6785960,64064);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RSTR_JpegSuite_txt = new NEmbeddedResource(Instance,"RSTR_JpegSuite_txt",6850024,487);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RSTR_LincolnFamily_ged = new NEmbeddedResource(Instance,"RSTR_LincolnFamily_ged",6850511,5284);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RSTR_PngSuite_txt = new NEmbeddedResource(Instance,"RSTR_PngSuite_txt",6855795,10066);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RSTR_TreeMapData_xml = new NEmbeddedResource(Instance,"RSTR_TreeMapData_xml",6865861,11276);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RSTR_TreeMapDataSmall_xml = new NEmbeddedResource(Instance,"RSTR_TreeMapDataSmall_xml",6877137,2495);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RSTR_HtmlSuite_AttributeSelectors_html = new NEmbeddedResource(Instance,"RSTR_HtmlSuite_AttributeSelectors_html",6879632,1466);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RSTR_HtmlSuite_Backgrounds_html = new NEmbeddedResource(Instance,"RSTR_HtmlSuite_Backgrounds_html",6881098,2726);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RSTR_HtmlSuite_Borders_html = new NEmbeddedResource(Instance,"RSTR_HtmlSuite_Borders_html",6883824,2404);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RSTR_HtmlSuite_CursorsAndTooltips_html = new NEmbeddedResource(Instance,"RSTR_HtmlSuite_CursorsAndTooltips_html",6886228,1590);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RSTR_HtmlSuite_EmbeddedImages_html = new NEmbeddedResource(Instance,"RSTR_HtmlSuite_EmbeddedImages_html",6887818,2051);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RSTR_HtmlSuite_Lists_html = new NEmbeddedResource(Instance,"RSTR_HtmlSuite_Lists_html",6889869,1871);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RSTR_HtmlSuite_MediaAndImportance_html = new NEmbeddedResource(Instance,"RSTR_HtmlSuite_MediaAndImportance_html",6891740,601);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RSTR_HtmlSuite_PseudoClasses_html = new NEmbeddedResource(Instance,"RSTR_HtmlSuite_PseudoClasses_html",6892341,1640);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RSTR_HtmlSuite_StyleSheets_html = new NEmbeddedResource(Instance,"RSTR_HtmlSuite_StyleSheets_html",6893981,1770);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RSTR_HtmlSuite_Tables_html = new NEmbeddedResource(Instance,"RSTR_HtmlSuite_Tables_html",6895751,1236);
-		/// <summary></summary>
-		public static readonly NEmbeddedResource RSTR_HtmlSuite_TextStyles_html = new NEmbeddedResource(Instance,"RSTR_HtmlSuite_TextStyles_html",6896987,1360);
+		public static readonly NEmbeddedResource RSTR_HtmlSuite_TextStyles_html = new NEmbeddedResource(Instance,"RSTR_HtmlSuite_TextStyles_html",7823674,1360);
 
 		#endregion
 		

@@ -91,7 +91,7 @@ namespace Nevron.Nov.Examples.Text
 			// Image inline with a hyperlink to an URL
 			{
 				NImageInline imageInline = new NImageInline();
-				imageInline.Image = Nov.Diagram.NResources.Image_MyDraw_Logos_MyDrawLogo_png;
+				imageInline.Image = Nov.Diagram.NResources.Image_MyDraw_Logos_MyDrawLogo_svg;
 				imageInline.Hyperlink = new NUrlHyperlink("http://www.mydraw.com", ENUrlHyperlinkTarget.SameWindowSameFrame);
 
 				NParagraph paragraph = new NParagraph();

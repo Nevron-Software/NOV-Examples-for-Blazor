@@ -404,7 +404,6 @@ namespace Nevron.Nov.Examples.Text
 			chart.Padding = new NMargins(20);
 
 			// configure axes
-			chart.SetPredefinedCartesianAxes(ENPredefinedCartesianAxis.XOrdinalYLinear);
 			chart.Margins = NMargins.Zero;
 
 			NBarSeries bar = new NBarSeries();

@@ -35,7 +35,8 @@ namespace Nevron.Nov.Examples.Chart
 
 		protected override NWidget CreateExampleContent()
 		{
-			m_ChartView = new NChartView();
+			NChartViewWithCommandBars chartViewWithCommandBars = new NChartViewWithCommandBars();
+			m_ChartView = chartViewWithCommandBars.View;
 			m_ChartView.Surface.CreatePredefinedChart(ENPredefinedChartType.Cartesian);
 
 			// configure title
@@ -94,9 +95,9 @@ namespace Nevron.Nov.Examples.Chart
 				range.DataPoints.Add(new NRangeDataPoint(x1, y1, x2, y2));
 			}
 
-			m_ChartView.Document.StyleSheets.ApplyTheme(new NChartTheme(ENChartPalette.Bright, false));
+			m_ChartView.Document.StyleSheets.ApplyTheme(new NChartTheme(ENChartPalette.Bright, ENChartPaletteTarget.Series));
 
-			return m_ChartView;
+			return chartViewWithCommandBars;
 		}
 		protected override NWidget CreateExampleControls()
 		{
@@ -150,7 +151,8 @@ namespace Nevron.Nov.Examples.Chart
 		{
 			NChartRasterImageExporter rasterImageExporter = new NChartRasterImageExporter(m_ChartView.Content);
 			rasterImageExporter.SaveAsImage();
-		}
+
+        }
 		private void ShowExportDialogButton_Click(NEventArgs arg)
 		{
 			NChartRasterImageExporter rasterImageExporter = new NChartRasterImageExporter(m_ChartView.Content);

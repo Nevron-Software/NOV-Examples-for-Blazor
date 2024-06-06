@@ -84,7 +84,7 @@ namespace Nevron.Nov.Examples.Diagram
 		}
 		protected override string GetExampleDescription()
 		{
-			return "<p>Demonstrates how to create a Diagram Designer Application</p>";
+			return "<p>Demonstrates how to create a Diagram Designer application.</p>";
 		}
 
 		#endregion

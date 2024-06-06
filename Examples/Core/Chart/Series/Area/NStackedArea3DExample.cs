@@ -36,7 +36,8 @@ namespace Nevron.Nov.Examples.Chart
 
 		protected override NWidget CreateExampleContent()
 		{
-			m_ChartView = new NChartView();
+			NChartViewWithCommandBars chartViewWithCommandBars = new NChartViewWithCommandBars();
+			m_ChartView = chartViewWithCommandBars.View;
 			m_ChartView.Surface.CreatePredefinedChart(ENPredefinedChartType.Cartesian);
 
 			// configure title
@@ -51,7 +52,6 @@ namespace Nevron.Nov.Examples.Chart
             chart.ModelHeight = 40;
             chart.Projection.SetPredefinedProjection(ENPredefinedProjection.PerspectiveTilted);
 			chart.LightModel.SetPredefinedLightModel(ENPredefinedLightModel.BrightCameraLight);
-            chart.SetPredefinedCartesianAxes(ENPredefinedCartesianAxis.Standard);
             chart.Interactor = new NInteractor(new NTrackballTool());
 
             // setup X axis
@@ -98,7 +98,7 @@ namespace Nevron.Nov.Examples.Chart
 				m_Area3.DataPoints.Add(new NAreaDataPoint(random.Next(20, 50)));
 			}
 
-			return m_ChartView;
+			return chartViewWithCommandBars;
 		}
 		protected override NWidget CreateExampleControls()
 		{

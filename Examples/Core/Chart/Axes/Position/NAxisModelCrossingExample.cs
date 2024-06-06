@@ -33,13 +33,10 @@ namespace Nevron.Nov.Examples.Chart
 
 		#region Example
 
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <returns></returns>
 		protected override NWidget CreateExampleContent()
 		{
-			NChartView chartView = new NChartView();
+			NChartViewWithCommandBars chartViewWithCommandBars = new NChartViewWithCommandBars();
+			NChartView chartView = chartViewWithCommandBars.View;
 			chartView.Surface.CreatePredefinedChart(ENPredefinedChartType.Cartesian);
 
 			// configure title
@@ -93,15 +90,10 @@ namespace Nevron.Nov.Examples.Chart
 
 			m_Chart.Series.Add(bubble);
 
-			chartView.Document.StyleSheets.ApplyTheme(new NChartTheme(ENChartPalette.Bright, true));
+			chartView.Document.StyleSheets.ApplyTheme(new NChartTheme(ENChartPalette.Bright, ENChartPaletteTarget.DataPoints));
 
-			return chartView;
+			return chartViewWithCommandBars;
 		}
-
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <returns></returns>
 		protected override NWidget CreateExampleControls()
 		{
 			NStackPanel stack = new NStackPanel();
@@ -132,7 +124,6 @@ namespace Nevron.Nov.Examples.Chart
 
 			return boxGroup;
 		}
-
 		protected override string GetExampleDescription()
 		{
 			return @"<p>This example demonstrates how to cross two axes at a specified model offset.</p>";
@@ -145,13 +136,13 @@ namespace Nevron.Nov.Examples.Chart
 		void OnHorizontalAxisOffsetUpDownValueChanged(NValueChangeEventArgs arg)
 		{
             NCrossCartesianAxisAnchor anchor = m_Chart.Axes[ENCartesianAxis.PrimaryX].Anchor as NCrossCartesianAxisAnchor;
-			(anchor.XAxisCrossing as NModelAxisCrossing).Offset = ((NNumericUpDown)arg.TargetNode).Value;
+			(anchor.YAxisCrossing as NModelAxisCrossing).Offset = ((NNumericUpDown)arg.TargetNode).Value;
 		}
 
 		void OnVerticalAxisOffsetUpDownValueChanged(NValueChangeEventArgs arg)
 		{
             NCrossCartesianAxisAnchor anchor = m_Chart.Axes[ENCartesianAxis.PrimaryY].Anchor as NCrossCartesianAxisAnchor;
-            (anchor.YAxisCrossing as NModelAxisCrossing).Offset = ((NNumericUpDown)arg.TargetNode).Value;
+            (anchor.XAxisCrossing as NModelAxisCrossing).Offset = ((NNumericUpDown)arg.TargetNode).Value;
 		}
 
 		void OnHorizontalAxisAlignmentComboBoxSelectedIndexChanged(NValueChangeEventArgs arg)

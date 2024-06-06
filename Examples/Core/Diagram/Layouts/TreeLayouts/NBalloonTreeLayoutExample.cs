@@ -9,7 +9,7 @@ using Nevron.Nov.UI;
 
 namespace Nevron.Nov.Examples.Diagram
 {
-	public class NBalloonTreeLayoutExample : NExampleBase
+    public class NBalloonTreeLayoutExample : NExampleBase
     {
         #region Constructors
 

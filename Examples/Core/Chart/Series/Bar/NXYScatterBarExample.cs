@@ -4,7 +4,6 @@ using Nevron.Nov.Chart;
 using Nevron.Nov.Dom;
 using Nevron.Nov.Graphics;
 using Nevron.Nov.UI;
-using static Nevron.Nov.UI.NCommandBarLane;
 
 namespace Nevron.Nov.Examples.Chart
 {
@@ -34,13 +33,10 @@ namespace Nevron.Nov.Examples.Chart
 
 		#region Example
 
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <returns></returns>
 		protected override NWidget CreateExampleContent()
 		{
-			NChartView chartView = new NChartView();
+			NChartViewWithCommandBars chartViewWithCommandBars = new NChartViewWithCommandBars();
+			NChartView chartView = chartViewWithCommandBars.View;
 			chartView.Surface.CreatePredefinedChart(ENPredefinedChartType.Cartesian);
 
 			// configure title
@@ -76,12 +72,8 @@ namespace Nevron.Nov.Examples.Chart
 			m_Bar.DataPoints.Add(new NBarDataPoint(67, 19));
 			m_Bar.DataPoints.Add(new NBarDataPoint(72, 11));
 
-            return chartView;
+            return chartViewWithCommandBars;
 		}
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <returns></returns>
 		protected override NWidget CreateExampleControls()
 		{
 			NStackPanel stack = new NStackPanel();

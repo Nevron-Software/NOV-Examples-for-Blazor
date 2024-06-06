@@ -1,4 +1,5 @@
 using System;
+
 using Nevron.Nov.DataStructures;
 using Nevron.Nov.Diagram;
 using Nevron.Nov.Diagram.Shapes;
@@ -6,10 +7,10 @@ using Nevron.Nov.Graphics;
 
 namespace Nevron.Nov.Examples.Diagram
 {
-	/// <summary>
-	/// The NEllipticalGridTemplate class represents an elliptical grid template
-	/// </summary>
-	public class NEllipticalGridTemplate : NGraphTemplate
+    /// <summary>
+    /// The NEllipticalGridTemplate class represents an elliptical grid template
+    /// </summary>
+    public class NEllipticalGridTemplate : NGraphTemplate
 	{
 		#region Constructors
 

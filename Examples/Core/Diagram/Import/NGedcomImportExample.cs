@@ -69,20 +69,11 @@ namespace Nevron.Nov.Examples.Diagram
 
         private void InitDiagram(NDrawingDocument drawingDocument)
         {
-			// Load the GEDCOM file format's family tree library (this needs to be done only once)
-			NFile libraryFile = NApplication.ResourcesFolder.GetFile(NPath.Current.Combine(
-					"ShapeLibraries", "Family Tree", "Family Tree Shapes.nlb"));
-			NDrawingFormat.Gedcom.LoadFamilyTreeLibraryFromFileAsync(libraryFile).Then(
-				delegate (NUndefined ud)
-				{
-					// The family tree library loaded successfully
-					// Import a GEDCOM file
-					m_DrawingView.LoadFromResourceAsync(NResources.RSTR_LincolnFamily_ged, NDrawingFormat.Gedcom);
+			// Import a GEDCOM file from a resource
+			m_DrawingView.LoadFromResourceAsync(NResources.RSTR_LincolnFamily_ged, NDrawingFormat.Gedcom);
 
-					// Hide the ports
-					drawingDocument.Content.ScreenVisibility.ShowPorts = false;
-				}
-			);
+			// Hide the ports
+			drawingDocument.Content.ScreenVisibility.ShowPorts = false;
         }
 
         #endregion

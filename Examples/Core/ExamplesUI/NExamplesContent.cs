@@ -1,6 +1,8 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 
 using Nevron.Nov.Dom;
+using Nevron.Nov.Examples.ExamplesUI;
 using Nevron.Nov.UI;
 using Nevron.Nov.Xml;
 
@@ -28,7 +30,7 @@ namespace Nevron.Nov.Examples
 			// Create the Examples' home page
 			m_HomePage = new NHomePage();
 			m_HomePage.InitializeFromXml(xmlDocument);
-			m_HomePage.TileSelected += OnTileSelected;
+			m_HomePage.ItemSelected += OnItemSelected;
 
 			// Host it
 			Content = m_HomePage;
@@ -50,20 +52,14 @@ namespace Nevron.Nov.Examples
 
 		#region Properties
 
-		/// <summary>
-		/// Gets/Sets the path to the examples.
-		/// </summary>
-		public string ExamplesPath
-		{
-			get
-			{
-				return m_ExamplePage.ExamplesPath;
-			}
-			set
-			{
-				m_ExamplePage.ExamplesPath = value;
-			}
-		}
+        /// <summary>
+        /// Gets/Sets the examples link processor.
+        /// </summary>
+        public INExampleLinkProcessor LinkProcessor
+        {
+            get;
+            set;
+        }
 
 		#endregion
 
@@ -94,13 +90,28 @@ namespace Nevron.Nov.Examples
 			m_HomePage.Header.m_SearchBox.Text = null;
 		}
 
-		/// <summary>
-		/// Navigates to the given example. This is used by the Silverlight examples when
-		/// there's an example specified in the query string, for example:
-		/// "SilverlightTestPage.html?example=UI.NTooBarExample".
-		/// </summary>
-		/// <param name="exampleType"></param>
-		public void NavigateToExample(string exampleType)
+        /// <summary>
+        /// Navigates to the given example URI string.
+        /// </summary>
+        /// <param name="uri"></param>
+        /// <remarks>
+        /// Used by the WinForms, WPF and WebAssembly examples to navigate to a specific example from a custom URL like:
+        /// <para>nov-winforms://NDiagramDesignerExample</para>
+        /// <para>nov-wpf://NDiagramDesignerExample</para>
+        /// </remarks>
+        public void NavigateToExampleUri(string uriString)
+        {
+            string exampleTypeName = LinkProcessor.GetExampleType(uriString);
+            if (exampleTypeName != null)
+            {
+                NavigateToExample(exampleTypeName);
+            }
+        }
+        /// <summary>
+        /// Navigates to the given example.
+        /// </summary>
+        /// <param name="exampleTypeName">Example type name, for example: "NDiagramDesignerExample".</param>
+        public void NavigateToExample(string exampleTypeName)
 		{
 			NXmlDocument document;
 			using (Stream stream = NResources.Instance.GetResourceStream("RSTR_Examples_xml"))
@@ -110,7 +121,7 @@ namespace Nevron.Nov.Examples
 
 			// Find the XML element with the given example type
 			// FIX: use map like in NExamplesAccordion
-			NXmlElement xmlElement = GetExampleElement(document, exampleType);
+			NXmlElement xmlElement = GetExampleElement(document, exampleTypeName);
 			if (xmlElement != null)
 			{
 				NavigateToExample(xmlElement);
@@ -141,7 +152,7 @@ namespace Nevron.Nov.Examples
 			base.OnRegistered();
 
 			// Load examples options
-			NExamplesOptions.Instance.Load().Then(
+			NExamplesOptions.Instance.LoadAsync().Then(
 				delegate (NUndefined ud)
 				{
 					// Example options has been loaded
@@ -154,7 +165,7 @@ namespace Nevron.Nov.Examples
 
 		#region Event Handles - Navigation
 
-		private void OnTileSelected(NXmlElement element)
+		private void OnItemSelected(NXmlElement element)
 		{
 			NavigateToExample(element);
 		}
@@ -164,7 +175,6 @@ namespace Nevron.Nov.Examples
 		#region Fields
 
 		internal NHomePage m_HomePage;
-		internal NHomePage m_HomePageNew;
 		private NExamplePage m_ExamplePage;
 
 		#endregion
@@ -177,15 +187,16 @@ namespace Nevron.Nov.Examples
 
 		#region Static Methods
 
-		private static NXmlElement GetExampleElement(NXmlNode node, string type)
+		private static NXmlElement GetExampleElement(NXmlNode node, string exampleTypeName)
 		{
 			NXmlElement element = node as NXmlElement;
-			if (element != null && element.Name == "example" && element.GetAttributeValue("type") == type)
+			if (element != null && element.Name == "example" &&
+                String.Equals(element.GetAttributeValue("type"), exampleTypeName, StringComparison.OrdinalIgnoreCase))
 				return element;
 
 			for (int i = 0, count = node.ChildrenCount; i < count; i++)
 			{
-				element = GetExampleElement(node.GetChildAt(i), type);
+				element = GetExampleElement(node.GetChildAt(i), exampleTypeName);
 				if (element != null)
 					return element;
 			}

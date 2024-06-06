@@ -36,8 +36,9 @@ namespace Nevron.Nov.Examples.Chart
 
         protected override NWidget CreateExampleContent()
         {
-            NChartView chartView = new NChartView();
-            chartView.Surface.CreatePredefinedChart(ENPredefinedChartType.Cartesian);
+			NChartViewWithCommandBars chartViewWithCommandBars = new NChartViewWithCommandBars();
+			NChartView chartView = chartViewWithCommandBars.View;
+			chartView.Surface.CreatePredefinedChart(ENPredefinedChartType.Cartesian);
 
             // configure title
             chartView.Surface.Titles[0].Text = "Multi Series Line Chart";
@@ -96,9 +97,9 @@ namespace Nevron.Nov.Examples.Chart
             GenerateData();
 
             // apply style sheet
-            chartView.Document.StyleSheets.ApplyTheme(new NChartTheme(ENChartPalette.Fresh, false));
+            chartView.Document.StyleSheets.ApplyTheme(new NChartTheme(ENChartPalette.Fresh, ENChartPaletteTarget.Series));
 
-            return chartView;
+            return chartViewWithCommandBars;
         }
 
         private void GenerateData()

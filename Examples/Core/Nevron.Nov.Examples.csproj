@@ -5,9 +5,10 @@
     <RootNamespace>Nevron.Nov.Examples</RootNamespace>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>Nevron.Examples.Core.snk</AssemblyOriginatorKeyFile>
-    <OutputPath>..\..\Bin\Net70</OutputPath>
+    <OutputPath>..\..\Bin\Net80</OutputPath>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
     <DocumentationFile>Nevron.Nov.Examples.xml</DocumentationFile>
   </PropertyGroup>
   <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
@@ -36,42 +37,42 @@
   <ItemGroup>
     <Reference Include="Nevron.Nov.Barcode">
       <Name>Nevron.Nov.Barcode</Name>
-      <HintPath>..\..\Bin\Net70\Nevron.Nov.Barcode.dll</HintPath>
+      <HintPath>..\..\Bin\Net80\Nevron.Nov.Barcode.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Nevron.Nov.Chart">
       <Name>Nevron.Nov.Chart</Name>
-      <HintPath>..\..\Bin\Net70\Nevron.Nov.Chart.dll</HintPath>
+      <HintPath>..\..\Bin\Net80\Nevron.Nov.Chart.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Nevron.Nov.Diagram">
       <Name>Nevron.Nov.Diagram</Name>
-      <HintPath>..\..\Bin\Net70\Nevron.Nov.Diagram.dll</HintPath>
+      <HintPath>..\..\Bin\Net80\Nevron.Nov.Diagram.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Nevron.Nov.GraphicsGL">
       <Name>Nevron.Nov.GraphicsGL</Name>
-      <HintPath>..\..\Bin\Net70\Nevron.Nov.GraphicsGL.dll</HintPath>
+      <HintPath>..\..\Bin\Net80\Nevron.Nov.GraphicsGL.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Nevron.Nov.Grid">
       <Name>Nevron.Nov.Grid</Name>
-      <HintPath>..\..\Bin\Net70\Nevron.Nov.Grid.dll</HintPath>
+      <HintPath>..\..\Bin\Net80\Nevron.Nov.Grid.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Nevron.Nov.Presentation">
       <Name>Nevron.Nov.Presentation</Name>
-      <HintPath>..\..\Bin\Net70\Nevron.Nov.Presentation.dll</HintPath>
+      <HintPath>..\..\Bin\Net80\Nevron.Nov.Presentation.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Nevron.Nov.Schedule">
       <Name>Nevron.Nov.Schedule</Name>
-      <HintPath>..\..\Bin\Net70\Nevron.Nov.Schedule.dll</HintPath>
+      <HintPath>..\..\Bin\Net80\Nevron.Nov.Schedule.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Nevron.Nov.Text">
       <Name>Nevron.Nov.Text</Name>
-      <HintPath>..\..\Bin\Net70\Nevron.Nov.Text.dll</HintPath>
+      <HintPath>..\..\Bin\Net80\Nevron.Nov.Text.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>

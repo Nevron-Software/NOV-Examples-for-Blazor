@@ -1,18 +1,14 @@
-﻿using System;
-
-using Nevron.Nov.DataStructures;
+﻿using Nevron.Nov.DataStructures;
 using Nevron.Nov.Diagram;
-using Nevron.Nov.Diagram.Formats;
 using Nevron.Nov.Diagram.Layout;
 using Nevron.Nov.Diagram.Shapes;
 using Nevron.Nov.Dom;
 using Nevron.Nov.Editors;
-using Nevron.Nov.IO;
 using Nevron.Nov.UI;
 
 namespace Nevron.Nov.Examples.Diagram
 {
-	public class NFamilyTreeExample : NExampleBase
+    public class NFamilyTreeExample : NExampleBase
 	{
 		#region Constructors
 
@@ -37,29 +33,17 @@ namespace Nevron.Nov.Examples.Diagram
 
 		protected override NWidget CreateExampleContent()
 		{
-			// Create a simple drawing
+			// Create a drawing view with a ribbon
 			NDrawingViewWithRibbon drawingViewWithRibbon = new NDrawingViewWithRibbon();
 			m_DrawingView = drawingViewWithRibbon.View;
 
-			m_DrawingView.Document.HistoryService.Pause();
-			InitDiagram(m_DrawingView.Document);
+            // hide grid and ports
+            m_DrawingView.Content.ScreenVisibility.ShowGrid = false;
+            m_DrawingView.Content.ScreenVisibility.ShowPorts = false;
 
-			// Load the GEDCOM file format's family tree library (this needs to be done only once)
-			NFile libraryFile = NApplication.ResourcesFolder.GetFile(NPath.Current.Combine(
-					"ShapeLibraries", "Family Tree", "Family Tree Shapes.nlb"));
-			NDrawingFormat.Gedcom.LoadFamilyTreeLibraryFromFileAsync(libraryFile).Then(
-				delegate (NUndefined ud)
-				{
-					// Family tree library loaded successfully, so create the family tree diagram
-					CreateFamilyTree(m_DrawingView.ActivePage);
-					m_DrawingView.Document.HistoryService.Resume();
-				},
-				delegate (Exception ex)
-				{
-					// Failed to load the family tree library
-					m_DrawingView.Document.HistoryService.Resume();
-				}
-			);
+            // Create a family tree diagram
+            m_DrawingView.Document.HistoryService.Pause();
+			InitDiagram(m_DrawingView.Document);
 
 			return drawingViewWithRibbon;
 		}
@@ -97,12 +81,6 @@ namespace Nevron.Nov.Examples.Diagram
 
 		#region Implementation
 
-		private NShape CreateShape(ENFamilyTreeShape familyShape)
-		{
-			NLibraryItem libraryItem = NDrawingFormat.Gedcom.FamilyTreeLibrary.Items[(int)familyShape];
-			NShape shape = (NShape)libraryItem.Items[0];
-			return (NShape)shape.DeepClone();
-		}
 		private void InitDiagram(NDrawingDocument drawingDocument)
 		{
 			// Get drawing and the active page
@@ -111,46 +89,49 @@ namespace Nevron.Nov.Examples.Diagram
 			// Set the family tree extension to the drawing to activate the "Family Tree" ribbon tab
 			drawing.Extensions = new NDiagramExtensionCollection();
 			drawing.Extensions.Add(new NFamilyTreeExtension());
+
+            // Create a family tree diagram in the active page of the drawing
+            CreateFamilyTree(drawing.ActivePage);
 		}
 		private void CreateFamilyTree(NPage page)
 		{
 			// Create the parents
-			NShape fatherShape = CreateShape(ENFamilyTreeShape.Male);
+			NShape fatherShape = NLibrary.FamilyTreeShapes.CreateShape(ENFamilyTreeShape.Male);
 			fatherShape.SetShapePropertyValue("FirstName", "Abraham");
 			fatherShape.SetShapePropertyValue("LastName", "Lincoln");
 			fatherShape.SetShapePropertyValue("BirthDate", new NMaskedDateTime(1809, 02, 12));// NMaskedDateTime
 			fatherShape.SetShapePropertyValue("DeathDate", new NMaskedDateTime(1865, 04, 15));
 			page.Items.Add(fatherShape);
 
-			NShape motherShape = CreateShape(ENFamilyTreeShape.Female);
+			NShape motherShape = NLibrary.FamilyTreeShapes.CreateShape(ENFamilyTreeShape.Female);
 			motherShape.SetShapePropertyValue("FirstName", "Mary");
 			motherShape.SetShapePropertyValue("LastName", "Todd");
 			motherShape.SetShapePropertyValue("BirthDate", new NMaskedDateTime(1811));
 			page.Items.Add(motherShape);
 
 			// Create the children
-			NShape childShape1 = CreateShape(ENFamilyTreeShape.Male);
+			NShape childShape1 = NLibrary.FamilyTreeShapes.CreateShape(ENFamilyTreeShape.Male);
 			childShape1.SetShapePropertyValue("FirstName", "Thomas");
 			childShape1.SetShapePropertyValue("LastName", "Lincoln");
 			childShape1.SetShapePropertyValue("BirthDate", new NMaskedDateTime(1853, 4, 4));
 			childShape1.SetShapePropertyValue("DeathDate", new NMaskedDateTime(1871));
 			page.Items.Add(childShape1);
 
-			NShape childShape2 = CreateShape(ENFamilyTreeShape.Male);
+			NShape childShape2 = NLibrary.FamilyTreeShapes.CreateShape(ENFamilyTreeShape.Male);
 			childShape2.SetShapePropertyValue("FirstName", "Robert Todd");
 			childShape2.SetShapePropertyValue("LastName", "Lincoln");
 			childShape2.SetShapePropertyValue("BirthDate", new NMaskedDateTime(1843, 8, 1));
 			childShape2.SetShapePropertyValue("DeathDate", new NMaskedDateTime(1926, 7, 26));
 			page.Items.Add(childShape2);
 
-			NShape childShape3 = CreateShape(ENFamilyTreeShape.Male);
+			NShape childShape3 = NLibrary.FamilyTreeShapes.CreateShape(ENFamilyTreeShape.Male);
 			childShape3.SetShapePropertyValue("FirstName", "William Wallace");
 			childShape3.SetShapePropertyValue("LastName", "Lincoln");
 			childShape3.SetShapePropertyValue("BirthDate", new NMaskedDateTime(1850, 12, 21));
 			childShape3.SetShapePropertyValue("DeathDate", new NMaskedDateTime(1862, 2, 20));
 			page.Items.Add(childShape3);
 
-			NShape childShape4 = CreateShape(ENFamilyTreeShape.Male);
+			NShape childShape4 = NLibrary.FamilyTreeShapes.CreateShape(ENFamilyTreeShape.Male);
 			childShape4.SetShapePropertyValue("FirstName", "Edward Baker");
 			childShape4.SetShapePropertyValue("LastName", "Lincoln");
 			childShape4.SetShapePropertyValue("BirthDate", new NMaskedDateTime(1846, 3, 10));
@@ -158,7 +139,7 @@ namespace Nevron.Nov.Examples.Diagram
 			page.Items.Add(childShape4);
 
 			// Create the relationship shape
-			NShape relShape = CreateShape(ENFamilyTreeShape.Relationship);
+			NShape relShape = NLibrary.FamilyTreeShapes.CreateShape(ENFamilyTreeShape.Relationship);
 			relShape.SetShapePropertyValue("MarriageDate", new NMaskedDateTime(1842, 11, 4));
 			page.Items.Add(relShape);
 

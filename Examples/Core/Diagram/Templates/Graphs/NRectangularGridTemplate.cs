@@ -1,17 +1,15 @@
 using System;
 
-using System.Collections;
-
 using Nevron.Nov.Diagram;
 using Nevron.Nov.Diagram.Shapes;
 using Nevron.Nov.Graphics;
 
 namespace Nevron.Nov.Examples.Diagram
 {
-	/// <summary>
-	/// The NEllipticalGridTemplate class represents a rectangular grid template
-	/// </summary>
-	public class NRectangularGridTemplate : NGraphTemplate
+    /// <summary>
+    /// The NEllipticalGridTemplate class represents a rectangular grid template
+    /// </summary>
+    public class NRectangularGridTemplate : NGraphTemplate
     {
         #region Constructors
 

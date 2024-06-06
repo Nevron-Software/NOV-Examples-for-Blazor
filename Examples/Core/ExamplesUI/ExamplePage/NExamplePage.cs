@@ -38,28 +38,13 @@ namespace Nevron.Nov.Examples
 		#region Properties
 
 		/// <summary>
-		/// Gets/Sets the path to the examples.
-		/// </summary>
-		public string ExamplesPath
-		{
-			get
-			{
-				return m_ExamplesPath;
-			}
-			set
-			{
-				m_ExamplesPath = value;
-			}
-		}
-
-		/// <summary>
 		/// Gets the current example path.
 		/// </summary>
 		internal string CurrentExamplePath
 		{
 			get
 			{
-				return NExamplesUiHelpers.GetExamplePath(m_CurrentExampleXmlElement);
+				return NExamplesUi.GetExamplePath(m_CurrentExampleXmlElement);
 			}
 		}
 
@@ -92,7 +77,8 @@ namespace Nevron.Nov.Examples
 			// Update the breadcrumb
 			m_HeaderLane2.Breadcrumb.InitFromXmlElement(exampleXmlElement);
 
-			if (m_CurrentExampleXmlElement != exampleXmlElement)
+			if (m_CurrentExampleXmlElement != exampleXmlElement &&
+				exampleXmlElement.Name == NExamplesXml.Element.Example)
 			{
 				// The tree view selected path change event has not been fired, so load the example
 				LoadExample(exampleXmlElement);
@@ -176,7 +162,7 @@ namespace Nevron.Nov.Examples
 			string groupNamespace = NExamplesXml.GetNamespace(xmlElement);
 			string name = xmlElement.GetAttributeValue("name");
 			string type = groupNamespace + "." + xmlElement.GetAttributeValue("type");
-			string examplePath = NExamplesUiHelpers.GetExamplePath(xmlElement);
+			string examplePath = NExamplesUi.GetExamplePath(xmlElement);
 
 			// Update the example title, favorites and copy link butons
 			m_HeaderLane2.Update(xmlElement);
@@ -185,30 +171,30 @@ namespace Nevron.Nov.Examples
 			{
 				type = "Nevron.Nov.Examples." + type;
 				Type exampleType = Type.GetType(type);
-				if (exampleType != null)
-				{
-					NDomType domType = NDomType.FromType(exampleType);
-					NDebug.Assert(domType != null, "The example type:" + type + " is not a valid type");
+				if (exampleType == null)
+					throw new Exception("Failed to find example with type: " + type);
+				
+				NDomType domType = NDomType.FromType(exampleType);
+				NDebug.Assert(domType != null, "The example type:" + type + " is not a valid type");
 
-					// Create the example
-					DateTime start = DateTime.Now;
-					NExampleBase example = domType.CreateInstance() as NExampleBase;
-					example.Title = name;
-					example.Initialize();
-					m_Splitter.Pane2.Content = example;
+				// Create the example
+				DateTime start = DateTime.Now;
+				NExampleBase example = domType.CreateInstance() as NExampleBase;
+				example.Title = name;
+				example.Initialize();
+				m_Splitter.Pane2.Content = example;
 
-					// Evaluate the example
-					string stats = "Example created in: " + (DateTime.Now - start).TotalSeconds + " seconds, ";
-					start = DateTime.Now;
-					OwnerDocument.Evaluate();
-					stats += " evaluated in: " + (DateTime.Now - start).TotalSeconds + " seconds";
-					NDebug.WriteLine(stats);
+				// Evaluate the example
+				string stats = "Example created in: " + (DateTime.Now - start).TotalSeconds + " seconds, ";
+				start = DateTime.Now;
+				OwnerDocument.Evaluate();
+				stats += " evaluated in: " + (DateTime.Now - start).TotalSeconds + " seconds";
+				NDebug.WriteLine(stats);
 
-					m_CurrentExampleXmlElement = xmlElement;
+				m_CurrentExampleXmlElement = xmlElement;
 
-					// Add the recent example
-					NExamplesOptions.Instance.AddRecentExample(examplePath);
-				}
+				// Add the recent example
+				NExamplesOptions.Instance.AddRecentExample(examplePath);
 			}
 			catch (Exception ex)
 			{
@@ -386,7 +372,6 @@ namespace Nevron.Nov.Examples
 		private NExamplesAccordion m_Accordion;
 		private NExampleFooter m_Footer;
 
-		private string m_ExamplesPath;
 		private NXmlElement m_CurrentExampleXmlElement;
 
 		#endregion

@@ -1,6 +1,4 @@
-﻿using System;
-
-using Nevron.Nov.Chart;
+﻿using Nevron.Nov.Chart;
 using Nevron.Nov.Chart.Tools;
 using Nevron.Nov.Dom;
 using Nevron.Nov.Graphics;
@@ -36,7 +34,8 @@ namespace Nevron.Nov.Examples.Chart
 
 		protected override NWidget CreateExampleContent()
 		{
-			NChartView chartView = new NChartView();
+			NChartViewWithCommandBars chartViewWithCommandBars = new NChartViewWithCommandBars();
+			NChartView chartView = chartViewWithCommandBars.View;
 			chartView.Surface.CreatePredefinedChart(ENPredefinedChartType.Cartesian);
 
 			// configure title
@@ -62,7 +61,7 @@ namespace Nevron.Nov.Examples.Chart
 				scaleX.MajorGridLines.SetShowAtWall(ENChartWall.Back, true);
 				scaleX.MajorGridLines.SetShowAtWall(ENChartWall.Bottom, true);
 				scaleX.MajorGridLines.Stroke.DashStyle = ENDashStyle.Dot;
-				m_Chart.Axes[ENCartesianAxis.PrimaryX].SetFixedRange(0, 20);
+				m_Chart.Axes[ENCartesianAxis.PrimaryX].SetFixedViewRange(0, 20);
 			}
 
 			// setup Y axis
@@ -79,7 +78,7 @@ namespace Nevron.Nov.Examples.Chart
 				stripStyle.Interlaced = true;
                 scaleY.Strips.Add(stripStyle);
 
-                m_Chart.Axes[ENCartesianAxis.PrimaryY].SetFixedRange(0, 20);
+                m_Chart.Axes[ENCartesianAxis.PrimaryY].SetFixedViewRange(0, 20);
             }
 
 			// setup Depth axis
@@ -88,7 +87,7 @@ namespace Nevron.Nov.Examples.Chart
                 scaleZ.MajorGridLines.SetShowAtWall(ENChartWall.Left, true);
 				scaleZ.MajorGridLines.SetShowAtWall(ENChartWall.Bottom, true);
 				scaleZ.MajorGridLines.Stroke.DashStyle = ENDashStyle.Dot;
-                m_Chart.Axes[ENCartesianAxis.Depth].SetFixedRange(0, 20);
+                m_Chart.Axes[ENCartesianAxis.Depth].SetFixedViewRange(0, 20);
             }
 
 			// setup shape series
@@ -108,9 +107,9 @@ namespace Nevron.Nov.Examples.Chart
             m_Range.DataPoints.Add(new NRangeDataPoint(9, 2, 3, 14, 5, 5));
             m_Range.DataPoints.Add(new NRangeDataPoint(15, 2, 3, 19, 5, 5));
 
-            chartView.Document.StyleSheets.ApplyTheme(new NChartTheme(ENChartPalette.Bright, true));
+            chartView.Document.StyleSheets.ApplyTheme(new NChartTheme(ENChartPalette.Bright, ENChartPaletteTarget.DataPoints));
 
-			return chartView;
+			return chartViewWithCommandBars;
 		}
 		protected override NWidget CreateExampleControls()
 		{

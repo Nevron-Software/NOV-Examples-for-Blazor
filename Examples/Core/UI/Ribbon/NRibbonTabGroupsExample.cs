@@ -179,7 +179,7 @@ namespace Nevron.Nov.Examples.UI
 			group.Items.Add(pasteSplitButton);
 
 			NRibbonCollapsiblePanel collapsiblePanel = new NRibbonCollapsiblePanel();
-			collapsiblePanel.InitialState = (int)ENRibbonWidgetState.Medium;
+			collapsiblePanel.InitialState = ENRibbonWidgetState.Medium;
 			group.Items.Add(collapsiblePanel);
 
 			collapsiblePanel.Add(new NRibbonButton("Cut", null, NResources.Image_Ribbon_16x16_clipboard_cut_png));

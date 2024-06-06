@@ -35,7 +35,8 @@ namespace Nevron.Nov.Examples.Chart
 
 		protected override NWidget CreateExampleContent()
 		{
-			NChartView chartView = new NChartView();
+			NChartViewWithCommandBars chartViewWithCommandBars = new NChartViewWithCommandBars();
+			NChartView chartView = chartViewWithCommandBars.View;
 			chartView.Surface.CreatePredefinedChart(ENPredefinedChartType.Cartesian);
 
 			// configure title
@@ -72,7 +73,7 @@ namespace Nevron.Nov.Examples.Chart
 			line2.VerticalAxis = m_GreenAxis;
 			line3.VerticalAxis = m_BlueAxis;
 
-			return chartView;
+			return chartViewWithCommandBars;
 		}
 
 		private NComboBox CreateAxisZoneCombo()

@@ -35,7 +35,9 @@ namespace Nevron.Nov.Examples.Chart
 
 		protected override NWidget CreateExampleContent()
 		{
-			NChartView chartView = CreatePolarChartView();
+			NChartViewWithCommandBars chartViewWithCommandBars = new NChartViewWithCommandBars();
+			NChartView chartView = chartViewWithCommandBars.View;
+			chartView.Surface.CreatePredefinedChart(ENPredefinedChartType.Polar);
 
 			// configure title
 			chartView.Surface.Titles[0].Text = "Polar Angle Axis Position";
@@ -116,9 +118,11 @@ namespace Nevron.Nov.Examples.Chart
 			m_RedAxis.Scale.SetColor(NColor.Red);
 			m_GreenAxis.Scale.SetColor(NColor.Green);
 
-			series2.ValueAxis = m_GreenAxis;
+			m_GreenAxis.VisibilityMode = ENAxisVisibilityMode.Visible;
 
-			return chartView;
+            series2.ValueAxis = m_GreenAxis;
+
+			return chartViewWithCommandBars;
 		}
 		protected override NWidget CreateExampleControls()
 		{
@@ -279,17 +283,6 @@ namespace Nevron.Nov.Examples.Chart
 		#region Schema
 
 		public static readonly NSchema NPolarAngleAxisPositionExampleSchema;
-
-		#endregion
-
-		#region Static Methods
-
-		private static NChartView CreatePolarChartView()
-		{
-			NChartView chartView = new NChartView();
-			chartView.Surface.CreatePredefinedChart(ENPredefinedChartType.Polar);
-			return chartView;
-		}
 
 		#endregion
 	}

@@ -1,12 +1,13 @@
-using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 
+using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+using Microsoft.Extensions.DependencyInjection;
+
 namespace Nevron.Nov.Examples.WebAssembly
 {
-    public class Program
+	public class Program
 	{
 		public static async Task Main(string[] args)
 		{

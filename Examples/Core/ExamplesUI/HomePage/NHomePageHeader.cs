@@ -74,6 +74,7 @@ namespace Nevron.Nov.Examples
 			stack.Add(CreateToolbar());
 
 			NImageBox novLogoImageBox = new NImageBox(NResources.Image_ExamplesUI_Logos_NOV_svg);
+			novLogoImageBox.UserId = NovLogoImageBoxId;
 			stack.Add(novLogoImageBox);
 
 			NLabel label = new NLabel("Leading User Interface Components for Blazor, WinForms, WPF and Xamarin.Mac");
@@ -96,6 +97,7 @@ namespace Nevron.Nov.Examples
 
 			NImageBox nevronImageBox = new NImageBox(NResources.Image_ExamplesUI_Logos_Nevron_svg);
 			nevronImageBox.HorizontalPlacement = ENHorizontalPlacement.Left;
+			nevronImageBox.UserId = NevronLogoImageBoxId;
 			stack.Add(nevronImageBox);
 
 			m_SearchBox = CreateSearchBox();
@@ -132,7 +134,7 @@ namespace Nevron.Nov.Examples
 
 		private void OnMailButtonClick(NEventArgs arg)
 		{
-			NApplication.OpenUrl("mailto:" + NExamplesUiHelpers.NevronEmail + "?subject=Nevron%20Open%20Vision%20Question");
+			NApplication.OpenUrl("mailto:" + NExamplesUi.NevronEmail + "?subject=Nevron%20Open%20Vision%20Question");
 		}
 
 		#endregion
@@ -156,6 +158,8 @@ namespace Nevron.Nov.Examples
 
 		#region Constants
 
+		private const string NevronLogoImageBoxId = "NevronLogoImageBox";
+		private const string NovLogoImageBoxId = "NovLogoImageBox";
 		private const string DescriptionLabelId = "DescriptionLabel";
 
 		#endregion
@@ -165,6 +169,15 @@ namespace Nevron.Nov.Examples
 		private class NHomePageDarkTheme : NNevronDarkTheme
 		{
 			#region Constructors
+
+			public NHomePageDarkTheme()
+			{
+				InSmallSizeContext = CreateContext(sb =>
+				{
+					sb.DescendantOf();
+					sb.UserClass(SmallSizeClass);
+				});
+			}
 
 			static NHomePageDarkTheme()
 			{
@@ -188,11 +201,30 @@ namespace Nevron.Nov.Examples
 			{
 				base.CreateLabelStyles();
 
+				NThemingState descriptionLabelState = CreateUserIdState(DescriptionLabelId);
+
 				// Description label
-				NThemeRule rule = GetRule(NLabel.NLabelSchema, CreateUserIdState(DescriptionLabelId));
+				NThemeRule rule = GetRule(NLabel.NLabelSchema, descriptionLabelState);
 				HorizontalPlacementCenter(rule);
 				TextFill(rule, NColor.White);
 				DefaultFont(rule, ENRelativeFontSize.XXLarge);
+
+				// Description label - in small size
+				rule = GetRule(NLabel.NLabelSchema, descriptionLabelState, InSmallSizeContext);
+				DefaultFont(rule, ENRelativeFontSize.XLarge);
+			}
+			protected override void CreateImageBoxStyles()
+			{
+				base.CreateImageBoxStyles();
+
+				// Nevron logo image box - in small size
+				NThemeRule rule = GetRule(NImageBox.NImageBoxSchema, CreateUserIdState(NevronLogoImageBoxId), InSmallSizeContext);
+				PreferredHeight(rule, 16);
+				Margins(rule, new NMargins(0, 8));
+
+				// NOV logo image box - in small size
+				rule = GetRule(NImageBox.NImageBoxSchema, CreateUserIdState(NovLogoImageBoxId), InSmallSizeContext);
+				PreferredHeight(rule, 34);
 			}
 			protected override void CreateListBoxStyles()
 			{
@@ -231,6 +263,12 @@ namespace Nevron.Nov.Examples
 				DefaultFont(rule, ENRelativeFontSize.XLarge);
 				Margins(rule, NMargins.Zero);
 			}
+
+			#endregion
+
+			#region Fields
+
+			private readonly NThemingContext InSmallSizeContext;
 
 			#endregion
 

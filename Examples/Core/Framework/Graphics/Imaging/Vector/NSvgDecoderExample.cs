@@ -26,7 +26,7 @@ namespace Nevron.Nov.Examples.Framework
         protected override NWidget CreateExampleContent()
         {
             // Show the SVG image in an image box
-            m_ImageBox = new NImageBox(NResources.Image_Tiger_svg);
+            m_ImageBox = new NImageBox(NResources.Image_SVG_Tiger_svg);
             m_ImageBox.HorizontalPlacement = ENHorizontalPlacement.Fit;
             m_ImageBox.VerticalPlacement = ENVerticalPlacement.Fit;
             m_ImageBox.SetBorder(1, NColor.Red);

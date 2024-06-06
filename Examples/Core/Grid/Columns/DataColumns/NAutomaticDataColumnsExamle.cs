@@ -73,7 +73,7 @@ namespace Nevron.Nov.Examples.Grid
     Data columns are columns, which obtain and edit data from the data source.
 </p>
 <p>
-    When the grid is bound to a data source, it will automatically create data columns for all data source fields, if the grid <b>AutoCreateColumns</b> property is true.</br>
+    When the grid is bound to a data source, it will automatically create data columns for all data source fields, if the grid <b>AutoCreateColumns</b> property is true.<br/>
     During this process it will also raise the <b>AutoCreateColumn</b> column event.
 </p>
 <p>

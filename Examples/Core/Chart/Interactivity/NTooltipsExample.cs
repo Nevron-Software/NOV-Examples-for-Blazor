@@ -33,7 +33,9 @@ namespace Nevron.Nov.Examples.Chart
 
 		protected override NWidget CreateExampleContent()
 		{
-			NChartView chartView = CreatePieChartView();
+			NChartViewWithCommandBars chartViewWithCommandBars = new NChartViewWithCommandBars();
+			NChartView chartView = chartViewWithCommandBars.View;
+			chartView.Surface.CreatePredefinedChart(ENPredefinedChartType.Pie);
 
 			// configure title
 			chartView.Surface.Titles[0].Text = "Tooltips";
@@ -65,14 +67,12 @@ namespace Nevron.Nov.Examples.Chart
             m_PieSeries.DataPoints.Add(CreateDataPoint(23, "Ships"));
             m_PieSeries.DataPoints.Add(CreateDataPoint(19, "Buses"));
 
-
-
 			// detach airplanes
 			m_PieSeries.DataPoints[1].DetachmentPercent = 10;
 			
-			chartView.Document.StyleSheets.ApplyTheme(new NChartTheme(ENChartPalette.Bright, true));
+			chartView.Document.StyleSheets.ApplyTheme(new NChartTheme(ENChartPalette.Bright, ENChartPaletteTarget.DataPoints));
 
-			return chartView;
+			return chartViewWithCommandBars;
 		}
 		protected override NWidget CreateExampleControls()
 		{
@@ -98,7 +98,6 @@ namespace Nevron.Nov.Examples.Chart
 
 			return group;
 		}
-
         protected override string GetExampleDescription()
 		{
 			return @"<p>This example demonstrates how to create tooltips attached to chart objects.</p>";
@@ -153,17 +152,6 @@ namespace Nevron.Nov.Examples.Chart
 		#region Schema
 
 		public static readonly NSchema NTooltipsExampleSchema;
-
-		#endregion
-
-		#region Static Methods
-
-		private static NChartView CreatePieChartView()
-		{
-			NChartView chartView = new NChartView();
-			chartView.Surface.CreatePredefinedChart(ENPredefinedChartType.Pie);
-			return chartView;
-		}
 
 		#endregion
 	}

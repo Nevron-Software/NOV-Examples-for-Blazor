@@ -1,12 +1,43 @@
 ﻿@page "/"
 @inject IJSRuntime JSRuntime
+@inject NavigationManager NavigationManager
 
 @using Nevron.Nov;
+@using Nevron.Nov.Dom;
 @using Nevron.Nov.WebAssembly;
 
-<NNovWidgetHost @ref="m_Examples" TWidget="NExamplesContent" Style="width:100vw; height:100vh;"/>
+<NNovWidgetHost @ref="m_ExamplesHost" TWidget="NExamplesContent" Style="width:100vw; height:100vh;" />
 
 @code
 {
-    NNovWidgetHost<NExamplesContent> m_Examples;
+    private NNovWidgetHost<NExamplesContent> m_ExamplesHost;
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        base.OnAfterRender(firstRender);
+
+        if (firstRender)
+        {
+            NExamplesContent examplesContent = m_ExamplesHost.Widget;
+            string uri = NavigationManager.Uri;
+            int index = uri.IndexOf('?');
+
+            if (index != -1)
+            {
+                examplesContent.LinkProcessor = new NWaExampleLinkProcessor(uri.Substring(0, index));
+                examplesContent.Registered += OnExamplesContentRegistered;
+            }
+            else
+            {
+                examplesContent.LinkProcessor = new NWaExampleLinkProcessor(uri);
+            }
+        }
+    }
+
+    private void OnExamplesContentRegistered(NEventArgs arg)
+    {
+        NExamplesContent examplesContent = m_ExamplesHost.Widget;
+        examplesContent.NavigateToExampleUri(NavigationManager.Uri);
+        examplesContent.Registered -= OnExamplesContentRegistered;
+    }
 }

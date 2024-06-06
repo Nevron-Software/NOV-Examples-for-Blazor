@@ -7,6 +7,9 @@ using Nevron.Nov.UI;
 
 namespace Nevron.Nov.Examples
 {
+	/// <summary>
+	/// Represents an example tile, which can be an examples folder or an example.
+	/// </summary>
 	public class NExampleTile : NPairBox
 	{
 		#region Constructors

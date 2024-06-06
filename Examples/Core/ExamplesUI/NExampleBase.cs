@@ -184,20 +184,10 @@ namespace Nevron.Nov.Examples
 		/// <returns></returns>
 		protected virtual NWidget CreateExampleDescription()
 		{
-			NRichTextView richTextView = new NRichTextView();
-			richTextView.Padding = new NMargins(NDesign.HorizontalSpacing, NDesign.VerticalSpacing);
+			NRichTextView richTextView = CreateDescriptionRichTextView();
 
-			richTextView.HRuler.Visibility = ENVisibility.Collapsed;
-			richTextView.VRuler.Visibility = ENVisibility.Collapsed;
-			richTextView.ReadOnly = true;
-			richTextView.TryEnterExampleDescriptionMode();
-
-
-            byte[] descriptionData = NEncoding.UTF8.GetBytes(GetExampleDescription());
-			MemoryStream stream = new MemoryStream(descriptionData);
-
-			richTextView.Content.Layout = ENTextLayout.Normal;
-			
+			byte[] descriptionData = NEncoding.UTF8.GetBytes(GetExampleDescription());
+			MemoryStream stream = new MemoryStream(descriptionData);			
 			richTextView.LoadFromStreamAsync(stream, NTextFormat.Html).Finally(delegate () 
 			{
 				richTextView.Content.Padding = new NMargins(NDesign.HorizontalSpacing * 2, NDesign.VerticalSpacing);
@@ -206,7 +196,8 @@ namespace Nevron.Nov.Examples
 
 			NGroupBox groupBox = new NGroupBox("Description");
 			groupBox.Content = richTextView;
-			return groupBox;
+
+            return groupBox;
 		}
 		/// <summary>
 		/// Called when the user has switched to a new example and this example is about to be closed.
@@ -214,16 +205,36 @@ namespace Nevron.Nov.Examples
 		protected internal virtual void OnClosing()
 		{
 		}
-
-		#endregion
-
-		#region Implementation
-
 		/// <summary>
-		/// Creates the example "Source" tab page.
+		/// Creates an array with random values in the specified [min;max] range
 		/// </summary>
+		/// <param name="itemCount"></param>
+		/// <param name="from"></param>
+		/// <param name="to"></param>
 		/// <returns></returns>
-		private NTabPage CreateExportSolutionTabPage()
+        protected virtual double[] CreateRandomData(int itemCount, double from = 0, double to = 100)
+        {
+            double min = Math.Min(from, to);
+            double length = Math.Abs(to - from);
+            double[] arr = new double[itemCount];
+
+            for (int i = 0; i < itemCount; i++)
+            {
+                arr[i] = Math.Round(min + s_Random.NextDouble() * length, 2);
+            }
+
+			return arr;
+        }
+
+        #endregion
+
+        #region Implementation
+
+        /// <summary>
+        /// Creates the example "Source" tab page.
+        /// </summary>
+        /// <returns></returns>
+        private NTabPage CreateExportSolutionTabPage()
 		{
 			NMargins padding = new NMargins(NDesign.HorizontalSpacing * 2, NDesign.VerticalSpacing * 2);
 
@@ -279,6 +290,11 @@ namespace Nevron.Nov.Examples
 
 			saveDialog.RequestShow();
 		}
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="language"></param>
+		/// <returns></returns>
 		private NContentHolder GetSourceCodeHolder(ENProgrammingLanguage language)
 		{
 			return language == ENProgrammingLanguage.CSharp ?
@@ -342,6 +358,19 @@ namespace Nevron.Nov.Examples
 
 		#region Static Methods
 
+		internal static NRichTextView CreateDescriptionRichTextView()
+		{
+			NRichTextView richTextView = new NRichTextView();
+			richTextView.Padding = new NMargins(NDesign.HorizontalSpacing, NDesign.VerticalSpacing);
+			richTextView.HRuler.Visibility = ENVisibility.Collapsed;
+			richTextView.VRuler.Visibility = ENVisibility.Collapsed;
+			richTextView.ReadOnly = true;
+			richTextView.TryEnterExampleDescriptionMode();
+			richTextView.Content.Layout = ENTextLayout.Normal;
+
+			return richTextView;
+		}
+
 		internal static Stream GetExampleSourceCodeStream(NSchema exampleSchema, ENProgrammingLanguage language)
 		{
 			Stream sourceCodeStream = GetSourceCodeArchiveStream(language);
@@ -361,9 +390,15 @@ namespace Nevron.Nov.Examples
 
 		#endregion
 
-		#region Constants
+		#region Static
 
-		private static readonly Stream CSharpSourceCodeArchiveStream;
+		static Random s_Random = new Random();
+
+        #endregion
+
+        #region Constants
+
+        private static readonly Stream CSharpSourceCodeArchiveStream;
 		private static readonly Stream VbSourceCodeArchiveStream;
 		private static bool PlatformSupportsExportSolution = NApplication.IntegrationPlatform != ENIntegrationPlatform.WebAssembly;
 

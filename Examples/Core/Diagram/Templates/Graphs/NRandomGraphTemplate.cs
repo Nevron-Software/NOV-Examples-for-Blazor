@@ -1,12 +1,11 @@
 using System;
-using System.Collections.Generic;
 
-using Nevron.Nov.Graphics;
-using Nevron.Nov.Layout;
+using Nevron.Nov.DataStructures;
 using Nevron.Nov.Diagram;
 using Nevron.Nov.Diagram.Layout;
 using Nevron.Nov.Diagram.Shapes;
-using Nevron.Nov.DataStructures;
+using Nevron.Nov.Graphics;
+using Nevron.Nov.Layout;
 
 namespace Nevron.Nov.Examples.Diagram
 {

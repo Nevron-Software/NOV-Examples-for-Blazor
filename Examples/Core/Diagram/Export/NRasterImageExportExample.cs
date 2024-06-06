@@ -7,7 +7,7 @@ using Nevron.Nov.UI;
 
 namespace Nevron.Nov.Examples.Diagram
 {
-    public class NRasterImageExportExample : NExampleBase
+	public class NRasterImageExportExample : NExampleBase
     {
         #region Constructors
 
@@ -85,30 +85,30 @@ namespace Nevron.Nov.Examples.Diagram
             drawing.ScreenVisibility.ShowGrid = false;
             drawing.ScreenVisibility.ShowPorts = false;
 
-            NBasicShapeFactory basisShapes = new NBasicShapeFactory();
-			NFlowchartShapeFactory flowChartingShapes = new NFlowchartShapeFactory();
-            NConnectorShapeFactory connectorShapes = new NConnectorShapeFactory();
+			NBasicShapeFactory basicShapes = new NBasicShapeFactory();
+			NLibrary flowchartShapes = NLibrary.FlowchartShapes;
+			NConnectorShapeFactory connectorShapes = new NConnectorShapeFactory();
 
-            NShape nonPrintableShape = basisShapes.CreateShape(ENBasicShape.Rectangle);
+			NShape nonPrintableShape = basicShapes.CreateShape(ENBasicShape.Rectangle);
             nonPrintableShape.Text = "Non printable shape";
             nonPrintableShape.AllowPrint = false;
             nonPrintableShape.Geometry.Fill = new NColorFill(NColor.Tomato);
             nonPrintableShape.SetBounds(50, 50, 150, 50);
             activePage.Items.Add(nonPrintableShape);
 
-            NShape isLifeGood = flowChartingShapes.CreateShape(ENFlowchartingShape.Decision);
+            NShape isLifeGood = flowchartShapes.CreateShape(ENFlowchartingShape.Decision);
             isLifeGood.Text = "Is Life Good?";
             isLifeGood.SetBounds(300, 50, 150, 100);
             isLifeGood.Geometry.Fill = new NColorFill(NColor.LightSkyBlue);
             activePage.Items.Add(isLifeGood);
 
-            NShape goodShape = flowChartingShapes.CreateShape(ENFlowchartingShape.Termination);
+            NShape goodShape = flowchartShapes.CreateShape(ENFlowchartingShape.Termination);
             goodShape.Text = "Good";
             goodShape.SetBounds(200, 200, 100, 100);
             goodShape.Geometry.Fill = new NColorFill(NColor.Gold);
             activePage.Items.Add(goodShape);
 
-            NShape changeSomething = flowChartingShapes.CreateShape(ENFlowchartingShape.Process);
+            NShape changeSomething = flowchartShapes.CreateShape(ENFlowchartingShape.Process);
             changeSomething.Text = "Change Something";
             changeSomething.Geometry.Fill = new NColorFill(NColor.Thistle);
             changeSomething.SetBounds(450, 200, 100, 100);
@@ -150,13 +150,17 @@ namespace Nevron.Nov.Examples.Diagram
         {
 			NDrawingRasterImageExporter imageExporter = new NDrawingRasterImageExporter(m_DrawingView.Content);
             imageExporter.SaveAsImage();
-        }
 
-        #endregion
+			// Pass a raster image format, if you want it to be selected by default in the Save File dialog.
+			// For example, to make the PNG image format selected by default, use the following line of code:
+			// imageExporter.SaveAsImage(NImageFormat.Png);
+		}
 
-        #region Fields
+		#endregion
 
-        private NDrawingView m_DrawingView;
+		#region Fields
+
+		private NDrawingView m_DrawingView;
 
         #endregion
 

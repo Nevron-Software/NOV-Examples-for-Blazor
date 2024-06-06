@@ -11,24 +11,24 @@ using Nevron.Nov.UI;
 
 namespace Nevron.Nov.Examples.Diagram
 {
-    public class NOrthogonalGraphLayoutExample : NExampleBase
-    {
-        #region Constructors
+	public class NOrthogonalGraphLayoutExample : NExampleBase
+	{
+		#region Constructors
 
-        /// <summary>
-        /// Default constructor.
-        /// </summary>
-        public NOrthogonalGraphLayoutExample()
-        {
-        }
+		/// <summary>
+		/// Default constructor.
+		/// </summary>
+		public NOrthogonalGraphLayoutExample()
+		{
+		}
 
-        /// <summary>
-        /// Static constructor.
-        /// </summary>
-        static NOrthogonalGraphLayoutExample()
-        {
-            NOrthogonalGraphLayoutExampleSchema = NSchema.Create(typeof(NOrthogonalGraphLayoutExample), NExampleBaseSchema);
-        }
+		/// <summary>
+		/// Static constructor.
+		/// </summary>
+		static NOrthogonalGraphLayoutExample()
+		{
+			NOrthogonalGraphLayoutExampleSchema = NSchema.Create(typeof(NOrthogonalGraphLayoutExample), NExampleBaseSchema);
+		}
 
 		#endregion
 
@@ -88,8 +88,8 @@ namespace Nevron.Nov.Examples.Diagram
 			return stack;
 		}
 		protected override string GetExampleDescription()
-        {
-            return @"
+		{
+			return @"
 <p>
     The orthogonal graph layout produces orthogonal graph drawings of all types of graphs
     (including those with self-loops and duplicate edges). It tries to compact the graph
@@ -128,69 +128,69 @@ namespace Nevron.Nov.Examples.Diagram
     To see the layout in action on a different graph, just click the <b>Random Graph</b> button. 
 </p>
             ";
-        }
+		}
 
-        private void InitDiagram(NDrawingDocument drawingDocument)
-        {
-            const double width = 40;
-            const double height = 40;
-            const double distance = 80;
+		private void InitDiagram(NDrawingDocument drawingDocument)
+		{
+			const double width = 40;
+			const double height = 40;
+			const double distance = 80;
 
 			// Hide ports
 			drawingDocument.Content.ScreenVisibility.ShowPorts = false;
 
 			NBasicShapeFactory basicShapes = new NBasicShapeFactory();
-            NPage activePage = drawingDocument.Content.ActivePage;
-            
-            int[] from = new int[] { 1, 1, 1, 2, 2, 2, 3, 3, 4, 4, 4, 5, 5, 6 };
-            int[] to = new int[] { 2, 3, 4, 4, 5, 8, 6, 7, 5, 8, 10, 8, 9, 10 };
-            NShape[] shapes = new NShape[10];
-            int vertexCount = shapes.Length;
-            int edgeCount = from.Length;
-            int count = vertexCount + edgeCount;
+			NPage activePage = drawingDocument.Content.ActivePage;
 
-            for (int i = 0; i < count; i++)
-            {
-                if (i < vertexCount)
-                {
-                    int j = vertexCount % 2 == 0 ? i : i + 1;
-                    shapes[i] = basicShapes.CreateShape(ENBasicShape.Rectangle);
+			int[] from = new int[] { 1, 1, 1, 2, 2, 2, 3, 3, 4, 4, 4, 5, 5, 6 };
+			int[] to = new int[] { 2, 3, 4, 4, 5, 8, 6, 7, 5, 8, 10, 8, 9, 10 };
+			NShape[] shapes = new NShape[10];
+			int vertexCount = shapes.Length;
+			int edgeCount = from.Length;
+			int count = vertexCount + edgeCount;
 
-                    if (vertexCount % 2 != 0 && i == 0)
-                    {
-                        shapes[i].SetBounds(new NRectangle(
-                            (width + (distance * 1.5)) / 2,
-                            distance + (j / 2) * (distance * 1.5), 
-                            width, 
-                            height));
-                    }
-                    else
-                    {
-                        shapes[i].SetBounds(new NRectangle(
-                            width / 2 + (j % 2) * (distance * 1.5),
-                            height + (j / 2) * (distance * 1.5), 
-                            width, 
-                            height));
-                    }
+			for (int i = 0; i < count; i++)
+			{
+				if (i < vertexCount)
+				{
+					int j = vertexCount % 2 == 0 ? i : i + 1;
+					shapes[i] = basicShapes.CreateShape(ENBasicShape.Rectangle);
 
-                    activePage.Items.Add(shapes[i]);
-                }
-                else
-                {
-                    NRoutableConnector edge = new NRoutableConnector();
-                    edge.UserClass = NDR.StyleSheetNameConnectors;
-                    activePage.Items.Add(edge);
-                    edge.GlueBeginToShape(shapes[from[i - vertexCount] - 1]);
-                    edge.GlueEndToShape(shapes[to[i - vertexCount] - 1]);
-                }
-            }
+					if (vertexCount % 2 != 0 && i == 0)
+					{
+						shapes[i].SetBounds(new NRectangle(
+							(width + (distance * 1.5)) / 2,
+							distance + (j / 2) * (distance * 1.5),
+							width,
+							height));
+					}
+					else
+					{
+						shapes[i].SetBounds(new NRectangle(
+							width / 2 + (j % 2) * (distance * 1.5),
+							height + (j / 2) * (distance * 1.5),
+							width,
+							height));
+					}
 
-            // arrange diagram
-            ArrangeDiagram(drawingDocument);
+					activePage.Items.Add(shapes[i]);
+				}
+				else
+				{
+					NRoutableConnector edge = new NRoutableConnector();
+					edge.UserClass = NDR.StyleSheetNameConnectors;
+					activePage.Items.Add(edge);
+					edge.GlueBeginToShape(shapes[from[i - vertexCount] - 1]);
+					edge.GlueEndToShape(shapes[to[i - vertexCount] - 1]);
+				}
+			}
 
-            // fit active page
-            drawingDocument.Content.ActivePage.ZoomMode = ENZoomMode.Fit;
-        }
+			// arrange diagram
+			ArrangeDiagram(drawingDocument);
+
+			// fit active page
+			drawingDocument.Content.ActivePage.ZoomMode = ENZoomMode.Fit;
+		}
 
 		#endregion
 
@@ -300,16 +300,16 @@ namespace Nevron.Nov.Examples.Diagram
 
 		private NDrawingView m_DrawingView;
 		private NLabel m_ResultLabel;
-        private NOrthogonalGraphLayout m_Layout = new NOrthogonalGraphLayout();
+		private NOrthogonalGraphLayout m_Layout = new NOrthogonalGraphLayout();
 
-        #endregion
+		#endregion
 
-        #region Schema
+		#region Schema
 
-        /// <summary>
-        /// Schema associated with NOrthogonalGraphLayoutExample.
-        /// </summary>
-        public static readonly NSchema NOrthogonalGraphLayoutExampleSchema;
+		/// <summary>
+		/// Schema associated with NOrthogonalGraphLayoutExample.
+		/// </summary>
+		public static readonly NSchema NOrthogonalGraphLayoutExampleSchema;
 
 		#endregion
 

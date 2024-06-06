@@ -1,14 +1,15 @@
-﻿using Nevron.Nov.Chart;
+﻿using System;
+
+using Nevron.Nov.Chart;
 using Nevron.Nov.Dom;
 using Nevron.Nov.UI;
-using System;
 
 namespace Nevron.Nov.Examples.Chart
 {
-    /// <summary>
-    /// Axis View Range Example
-    /// </summary>
-    public class NSynchronizedAxesExample : NExampleBase
+	/// <summary>
+	/// Axis View Range Example
+	/// </summary>
+	public class NSynchronizedAxesExample : NExampleBase
     {
         #region Constructors
 
@@ -33,8 +34,9 @@ namespace Nevron.Nov.Examples.Chart
 
         protected override NWidget CreateExampleContent()
         {
-            NChartView chartView = new NChartView();
-            chartView.Surface.CreatePredefinedChart(ENPredefinedChartType.Cartesian);
+			NChartViewWithCommandBars chartViewWithCommandBars = new NChartViewWithCommandBars();
+			NChartView chartView = chartViewWithCommandBars.View;
+			chartView.Surface.CreatePredefinedChart(ENPredefinedChartType.Cartesian);
 
             // configure title
             chartView.Surface.Titles[0].Text = "Axis View Range";
@@ -63,14 +65,10 @@ namespace Nevron.Nov.Examples.Chart
 
             OnChangeDataButtonClick(null);
 
-            chartView.Document.StyleSheets.ApplyTheme(new NChartTheme(ENChartPalette.Bright, false));
+            chartView.Document.StyleSheets.ApplyTheme(new NChartTheme(ENChartPalette.Bright, ENChartPaletteTarget.Series));
 
-            return chartView;
+            return chartViewWithCommandBars;
         }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
         protected override NWidget CreateExampleControls()
         {
             NStackPanel stack = new NStackPanel();
@@ -80,13 +78,8 @@ namespace Nevron.Nov.Examples.Chart
             changeDataButton.Click += new Function<NEventArgs>(OnChangeDataButtonClick);
             stack.Add(changeDataButton);
 
-
             return boxGroup;
         }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
         protected override string GetExampleDescription()
         {
             return @"<p>This example demonstrates how to synchronize the ranges of two or more axes.</p>";
@@ -129,10 +122,6 @@ namespace Nevron.Nov.Examples.Chart
         #region Fields
 
         NCartesianChart m_Chart;
-
-        NComboBox m_ViewRangeMode;
-        NNumericUpDown m_ViewRangeBegin;
-        NNumericUpDown m_ViewRangeEnd;
 
         #endregion
 

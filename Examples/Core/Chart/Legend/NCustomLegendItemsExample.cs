@@ -1,17 +1,17 @@
-﻿using Nevron.Nov.Chart;
+﻿using System;
+
+using Nevron.Nov.Chart;
 using Nevron.Nov.Dom;
 using Nevron.Nov.Graphics;
-using Nevron.Nov.UI;
-using System.Drawing;
-using System;
 using Nevron.Nov.Layout;
+using Nevron.Nov.UI;
 
 namespace Nevron.Nov.Examples.Chart
 {
-    /// <summary>
-    /// Custom Legend Items Example
-    /// </summary>
-    public class NCustomLegendItemsExample : NExampleBase
+	/// <summary>
+	/// Custom Legend Items Example
+	/// </summary>
+	public class NCustomLegendItemsExample : NExampleBase
     {
         #region Constructors
 
@@ -34,15 +34,12 @@ namespace Nevron.Nov.Examples.Chart
 
         #region Example
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
         protected override NWidget CreateExampleContent()
         {
-            NChartView chartView = new NChartView();
+			NChartViewWithCommandBars chartViewWithCommandBars = new NChartViewWithCommandBars();
+			NChartView chartView = chartViewWithCommandBars.View;
 
-            chartView.Document.StyleSheets.ApplyTheme(new NChartTheme(ENChartPalette.Bright, false));
+			chartView.Document.StyleSheets.ApplyTheme(new NChartTheme(ENChartPalette.Bright, ENChartPaletteTarget.Series));
 
             NDockPanel dockPanel = new NDockPanel();
 
@@ -65,20 +62,12 @@ namespace Nevron.Nov.Examples.Chart
 
             chartView.Surface.Content = dockPanel;
 
-            return chartView;
+            return chartViewWithCommandBars;
         }
-        /// <summary>
-        /// Creates the example controls
-        /// </summary>
-        /// <returns></returns>
         protected override NWidget CreateExampleControls()
         {
             return null;
         }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
         protected override string GetExampleDescription()
         {
             return @"<p>This example demonstrates how to add custom legend items.</p>";

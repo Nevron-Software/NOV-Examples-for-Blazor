@@ -84,7 +84,6 @@ namespace Nevron.Nov.Examples.Diagram
             // apply predefined projection and lighting
             chart.Projection.SetPredefinedProjection(ENPredefinedProjection.PerspectiveTilted);
             chart.LightModel.SetPredefinedLightModel(ENPredefinedLightModel.BrightCameraLight);
-            chart.SetPredefinedCartesianAxes(ENPredefinedCartesianAxis.Standard);
 
             // add axis labels
             NOrdinalScale ordinalScale = chart.Axes[ENCartesianAxis.Depth].Scale as NOrdinalScale;

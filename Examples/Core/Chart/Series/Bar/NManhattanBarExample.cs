@@ -33,14 +33,11 @@ namespace Nevron.Nov.Examples.Chart
 
         #region Example
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
         protected override NWidget CreateExampleContent()
         {
-            NChartView chartView = new NChartView();
-            chartView.Surface.CreatePredefinedChart(ENPredefinedChartType.Cartesian);
+			NChartViewWithCommandBars chartViewWithCommandBars = new NChartViewWithCommandBars();
+			NChartView chartView = chartViewWithCommandBars.View;
+			chartView.Surface.CreatePredefinedChart(ENPredefinedChartType.Cartesian);
 
             // configure title
             chartView.Surface.Titles[0].Text = "Manhattan Bar Chart";
@@ -112,9 +109,8 @@ namespace Nevron.Nov.Examples.Chart
 
             OnPositiveDataButtonClick(null);
 
-            return chartView;
+            return chartViewWithCommandBars;
         }
-
         protected override NWidget CreateExampleControls()
 		{
 			NStackPanel stack = new NStackPanel();
@@ -160,7 +156,6 @@ namespace Nevron.Nov.Examples.Chart
 
             return boxGroup;
 		}
-
         protected override string GetExampleDescription()
 		{
 			return @"<p>This example demonstrates a Manhattan bar chart. This type of chart is created with several bar series displayed with MultiBarMode set to Series.</p>";

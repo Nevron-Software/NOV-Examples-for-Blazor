@@ -34,7 +34,9 @@ namespace Nevron.Nov.Examples.Chart
 
 		protected override NWidget CreateExampleContent()
 		{
-			NChartView chartView = CreateFunnelChartView();
+			NChartViewWithCommandBars chartViewWithCommandBars = new NChartViewWithCommandBars();
+			NChartView chartView = chartViewWithCommandBars.View;
+			chartView.Surface.CreatePredefinedChart(ENPredefinedChartType.Funnel);
 
 			// configure title
 			chartView.Surface.Titles[0].Text = "Scatter Funnel";
@@ -51,9 +53,9 @@ namespace Nevron.Nov.Examples.Chart
 
 			GenerateData();
 
-			chartView.Document.StyleSheets.ApplyTheme(new NChartTheme(ENChartPalette.Bright, true));
+			chartView.Document.StyleSheets.ApplyTheme(new NChartTheme(ENChartPalette.Bright, ENChartPaletteTarget.DataPoints));
 
-			return chartView;
+			return chartViewWithCommandBars;
 		}
 		protected override NWidget CreateExampleControls()
 		{
@@ -144,17 +146,6 @@ namespace Nevron.Nov.Examples.Chart
 		#region Schema
 
 		public static readonly NSchema NScatterFunnelExampleSchema;
-
-		#endregion
-
-		#region Static Methods
-
-		private static NChartView CreateFunnelChartView()
-		{
-			NChartView chartView = new NChartView();
-			chartView.Surface.CreatePredefinedChart(ENPredefinedChartType.Funnel);
-			return chartView;
-		}
 
 		#endregion
 	}

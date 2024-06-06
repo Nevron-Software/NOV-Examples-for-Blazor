@@ -92,36 +92,36 @@ namespace Nevron.Nov.Examples.Diagram
 
 		private void CreateDiagram(NPage page)
 		{
-			NBasicShapeFactory basisShapes = new NBasicShapeFactory();
-			NFlowchartShapeFactory flowChartingShapes = new NFlowchartShapeFactory();
+			NBasicShapeFactory basicShapes = new NBasicShapeFactory();
 			NConnectorShapeFactory connectorShapes = new NConnectorShapeFactory();
+			NLibrary flowchartShapes = NLibrary.FlowchartShapes;
 
-			NShape titleShape = basisShapes.CreateShape(ENBasicShape.Rectangle);
+			NShape titleShape = basicShapes.CreateShape(ENBasicShape.Rectangle);
 			titleShape.Geometry.Fill = new NColorFill(NColor.LightGray);
 			titleShape.Text = page.Title;
 			titleShape.SetBounds(10, 10, page.Width - 20, 50);
 			page.Items.Add(titleShape);
 
-			NShape nonPrintableShape = basisShapes.CreateShape(ENBasicShape.Rectangle);
+			NShape nonPrintableShape = basicShapes.CreateShape(ENBasicShape.Rectangle);
 			nonPrintableShape.Text = "Non printable shape";
 			nonPrintableShape.AllowPrint = false;
 			nonPrintableShape.Geometry.Fill = new NColorFill(NColor.Tomato);
 			nonPrintableShape.SetBounds(50, 150, 150, 50);
 			page.Items.Add(nonPrintableShape);
 
-			NShape isLifeGood = flowChartingShapes.CreateShape(ENFlowchartingShape.Decision);
+			NShape isLifeGood = flowchartShapes.CreateShape(ENFlowchartingShape.Decision);
 			isLifeGood.Text = "Is Life Good?";
 			isLifeGood.SetBounds(300, 150, 150, 100);
 			isLifeGood.Geometry.Fill = new NColorFill(NColor.LightSkyBlue);
 			page.Items.Add(isLifeGood);
 
-			NShape goodShape = flowChartingShapes.CreateShape(ENFlowchartingShape.Termination);
+			NShape goodShape = flowchartShapes.CreateShape(ENFlowchartingShape.Termination);
 			goodShape.Text = "Good";
 			goodShape.SetBounds(200, 300, 100, 100);
 			goodShape.Geometry.Fill = new NColorFill(NColor.Gold);
 			page.Items.Add(goodShape);
 
-			NShape changeSomething = flowChartingShapes.CreateShape(ENFlowchartingShape.Process);
+			NShape changeSomething = flowchartShapes.CreateShape(ENFlowchartingShape.Process);
 			changeSomething.Text = "Change Something";
 			changeSomething.Geometry.Fill = new NColorFill(NColor.Thistle);
 			changeSomething.SetBounds(450, 300, 100, 100);
@@ -159,7 +159,7 @@ namespace Nevron.Nov.Examples.Diagram
 				m_DrawingView.Content.Information.FileName = "Document1.html";
 			}
 
-            m_DrawingView.SaveAsAsync();
+			m_DrawingView.SaveAsAsync();
 		}
 
 		#endregion

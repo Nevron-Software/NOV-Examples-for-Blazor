@@ -7,36 +7,36 @@ using Nevron.Nov.Graphics;
 
 namespace Nevron.Nov.Examples.Diagram
 {
-	/// <summary>
-	/// The NGraphTemplate class is a template, which serves as base class for all templates which create graph
-	/// </summary>
-	/// <remarks>
-	/// It enhances its base with the following features:
-	/// <list type="bullet">
-	/// <item>
-	///		<term>Vertex style and Edge style attributes</term>
-	///		<description>Exposed by the VerticesUserClass and EdgesUserClass properties
-	///		</description>
-	///	</item>
-	/// <item>
-	///		<term>Control over the vertices shape and size</term>
-	///		<description>Exposed by the VerticesSize and VerticesShape properties
-	///		</description>
-	///	</item>
-	/// <item>
-	///		<term>Generic spacing control</term>
-	///		<description>Exposed by the HorizontalSpacing and VerticalSpacing properties
-	///		</description>
-	///	</item>
-	/// <item>
-	///		<term>Ability to create new vertices and edges which conform to the template settings</term>
-	///		<description>
-	///		Achieved with the help of the CreateLineGraphEdge and CreateGraphVertex methods.
-	///		</description>
-	///	</item>
-	///	</list>
-	/// </remarks>
-	public abstract class NGraphTemplate : NTemplate
+    /// <summary>
+    /// The NGraphTemplate class is a template, which serves as base class for all templates which create graph
+    /// </summary>
+    /// <remarks>
+    /// It enhances its base with the following features:
+    /// <list type="bullet">
+    /// <item>
+    ///		<term>Vertex style and Edge style attributes</term>
+    ///		<description>Exposed by the VerticesUserClass and EdgesUserClass properties
+    ///		</description>
+    ///	</item>
+    /// <item>
+    ///		<term>Control over the vertices shape and size</term>
+    ///		<description>Exposed by the VerticesSize and VerticesShape properties
+    ///		</description>
+    ///	</item>
+    /// <item>
+    ///		<term>Generic spacing control</term>
+    ///		<description>Exposed by the HorizontalSpacing and VerticalSpacing properties
+    ///		</description>
+    ///	</item>
+    /// <item>
+    ///		<term>Ability to create new vertices and edges which conform to the template settings</term>
+    ///		<description>
+    ///		Achieved with the help of the CreateLineGraphEdge and CreateGraphVertex methods.
+    ///		</description>
+    ///	</item>
+    ///	</list>
+    /// </remarks>
+    public abstract class NGraphTemplate : NTemplate
     {
         #region Constructors
 
@@ -200,7 +200,7 @@ namespace Nevron.Nov.Examples.Diagram
         /// <returns>A new edge shape.</returns> 
         protected virtual NShape CreateEdge(ENConnectorShape type)
         {
-			NShape connector = m_ConnectorShapeFactory.CreateShape(type);
+			NShape connector = m_ConnectorShapes.CreateShape(type);
             connector.Name = m_sName + " Edge " + CurrentEdgeIndex.ToString(CultureInfo.InvariantCulture);
             connector.UserClass = m_EdgeUserClass;
             CurrentEdgeIndex++;
@@ -214,7 +214,7 @@ namespace Nevron.Nov.Examples.Diagram
         /// <returns>A new vertex shape.</returns>
         protected virtual NShape CreateVertex(ENBasicShape shape)
         {
-            NShape vertex = m_ShapeFactory.CreateShape(shape);
+            NShape vertex = m_BasicShapes.CreateShape(shape);
             vertex.Name = m_sName + " Vertex " + CurrentVertexIndex.ToString(CultureInfo.InvariantCulture);
             vertex.UserClass = m_VertexUserClass;
             CurrentVertexIndex++;
@@ -237,8 +237,8 @@ namespace Nevron.Nov.Examples.Diagram
             m_VertexUserClass = String.Empty;
             m_EdgeUserClass = String.Empty;
 
-            m_ShapeFactory = new NBasicShapeFactory();
-			m_ConnectorShapeFactory = new NConnectorShapeFactory();
+			m_BasicShapes = new NBasicShapeFactory();
+			m_ConnectorShapes = new NConnectorShapeFactory();
         }
 
         #endregion
@@ -254,8 +254,8 @@ namespace Nevron.Nov.Examples.Diagram
         internal string m_VertexUserClass;
         internal string m_EdgeUserClass;
 
-        private NBasicShapeFactory m_ShapeFactory;
-		private NConnectorShapeFactory m_ConnectorShapeFactory;
+		private NBasicShapeFactory m_BasicShapes;
+		private NConnectorShapeFactory m_ConnectorShapes;
 
         #endregion
 

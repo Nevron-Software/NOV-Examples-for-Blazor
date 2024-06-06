@@ -33,13 +33,10 @@ namespace Nevron.Nov.Examples.Chart
 
 		#region Example
 
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <returns></returns>
 		protected override NWidget CreateExampleContent()
 		{
-			NChartView chartView = new NChartView();
+			NChartViewWithCommandBars chartViewWithCommandBars = new NChartViewWithCommandBars();
+			NChartView chartView = chartViewWithCommandBars.View;
 			chartView.Surface.CreatePredefinedChart(ENPredefinedChartType.Cartesian);
 
 			// configure title
@@ -69,12 +66,9 @@ namespace Nevron.Nov.Examples.Chart
 
 			GenerateData();
 
-			return chartView;
+			return chartViewWithCommandBars;
 		}
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <returns></returns>
+
 		protected override NWidget CreateExampleControls()
 		{
 			NStackPanel stack = new NStackPanel();
@@ -152,7 +146,7 @@ namespace Nevron.Nov.Examples.Chart
 		/// </summary>
 		private void GenerateData()
 		{
-			NGridData data = m_HeatMap.Data;
+			NHeatMapData data = m_HeatMap.Data;
 
 			int GridStepX = 300;
 			int GridStepY = 300;

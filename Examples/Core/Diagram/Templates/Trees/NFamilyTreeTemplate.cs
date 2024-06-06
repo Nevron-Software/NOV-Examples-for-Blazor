@@ -6,10 +6,10 @@ using Nevron.Nov.Graphics;
 
 namespace Nevron.Nov.Examples.Diagram
 {
-	/// <summary>
-	/// The NFamilyTreeTemplate class represents a family tree template
-	/// </summary>
-	public class NFamilyTreeTemplate : NGraphTemplate
+    /// <summary>
+    /// The NFamilyTreeTemplate class represents a family tree template
+    /// </summary>
+    public class NFamilyTreeTemplate : NGraphTemplate
 	{
 		#region Constructors
 
@@ -136,5 +136,3 @@ namespace Nevron.Nov.Examples.Diagram
 		#endregion
 	}
 }
-#region AUTO_CODE_BLOCK [NFamilyTreeTemplate]
-#endregion

@@ -8,7 +8,7 @@ using Nevron.Nov.UI;
 namespace Nevron.Nov.Examples.Chart
 {
 	/// <summary>
-	/// Axis value crossing example
+	/// Axis value crossing example.
 	/// </summary>
 	public class NAxisValueCrossingExample : NExampleBase
 	{
@@ -33,13 +33,10 @@ namespace Nevron.Nov.Examples.Chart
 
 		#region Example
 
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <returns></returns>
 		protected override NWidget CreateExampleContent()
 		{
-			NChartView chartView = new NChartView();
+			NChartViewWithCommandBars chartViewWithCommandBars = new NChartViewWithCommandBars();
+			NChartView chartView = chartViewWithCommandBars.View;
 			chartView.Surface.CreatePredefinedChart(ENPredefinedChartType.Cartesian);
 
 			chartView.Surface.Titles[0].Text = "Axis Value Crossing";
@@ -92,15 +89,10 @@ namespace Nevron.Nov.Examples.Chart
 
 			m_Chart.Series.Add(bubble);
 
-			chartView.Document.StyleSheets.ApplyTheme(new NChartTheme(ENChartPalette.Bright, true));
+			chartView.Document.StyleSheets.ApplyTheme(new NChartTheme(ENChartPalette.Bright, ENChartPaletteTarget.DataPoints));
 
-			return chartView;
+			return chartViewWithCommandBars;
 		}
-
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <returns></returns>
 		protected override NWidget CreateExampleControls()
 		{
 			NStackPanel stack = new NStackPanel();
@@ -129,7 +121,6 @@ namespace Nevron.Nov.Examples.Chart
 
 			return boxGroup;
 		}
-
 		protected override string GetExampleDescription()
 		{
 			return @"<p>This example demonstrates how to cross two axes at a specified value.</p>";
@@ -192,7 +183,7 @@ namespace Nevron.Nov.Examples.Chart
 
             if (crossAnchor != null)
 			{
-                (crossAnchor.YAxisCrossing as NValueAxisCrossing).Value = ((NNumericUpDown)arg.TargetNode).Value;
+                (crossAnchor.XAxisCrossing as NValueAxisCrossing).Value = ((NNumericUpDown)arg.TargetNode).Value;
 			}
 		}
 

@@ -10,7 +10,7 @@ using Nevron.Nov.UI;
 namespace Nevron.Nov.Examples.Chart
 {
 	/// <summary>
-	/// Pdf Export Example
+	/// Pdf Export Example.
 	/// </summary>
 	public class NPdfExportExample : NExampleBase
 	{
@@ -37,8 +37,9 @@ namespace Nevron.Nov.Examples.Chart
 
 		protected override NWidget CreateExampleContent()
 		{
-            m_ChartView = new NChartView();
-            m_ChartView.Surface.CreatePredefinedChart(ENPredefinedChartType.Cartesian);
+			NChartViewWithCommandBars chartViewWithCommandBars = new NChartViewWithCommandBars();
+			m_ChartView = chartViewWithCommandBars.View;
+			m_ChartView.Surface.CreatePredefinedChart(ENPredefinedChartType.Cartesian);
 
             // configure title
             m_ChartView.Surface.Titles[0].Text = "PDF Export Example";
@@ -96,9 +97,9 @@ namespace Nevron.Nov.Examples.Chart
                 range.DataPoints.Add(new NRangeDataPoint(x1, y1, x2, y2));
             }
 
-            m_ChartView.Document.StyleSheets.ApplyTheme(new NChartTheme(ENChartPalette.Bright, false));
+            m_ChartView.Document.StyleSheets.ApplyTheme(new NChartTheme(ENChartPalette.Bright, ENChartPaletteTarget.Series));
 
-            return m_ChartView;
+            return chartViewWithCommandBars;
         }
 		protected override NWidget CreateExampleControls()
 		{

@@ -95,17 +95,16 @@ namespace Nevron.Nov.Examples.Diagram
             // hide the grid
             drawing.ScreenVisibility.ShowGrid = false;
 
-			NBasicShapeFactory basicShapesFactory = new NBasicShapeFactory();
-
 			double padding = 10;
 			double sizeX = 160;
 			double sizeY = 160;
 
+			NBasicShapeFactory factory = new NBasicShapeFactory();
 			for (int x = 0; x < 4; x++)
 			{
 				for (int y = 0; y < 4; y++)
 				{
-					NShape shape1 = basicShapesFactory.CreateShape(ENBasicShape.Rectangle);
+					NShape shape1 = factory.CreateShape(ENBasicShape.Rectangle);
 					shape1.SetBounds(padding + x * (padding + sizeX), padding + y * (padding + sizeY), sizeX, sizeY);
 					shape1.TextBlock = new NTextBlock();
 					shape1.TextBlock.Padding = new NMargins(20);

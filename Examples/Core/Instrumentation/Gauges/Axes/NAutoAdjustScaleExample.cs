@@ -68,7 +68,6 @@ namespace Nevron.Nov.Examples.Gauge
 
             m_InitBegin =  m_CurBegin;
             m_InitEnd = m_CurEnd;
-            m_Up = true;
 
             // scale 
             m_Scale = (NStandardScale)axis1.Scale;
@@ -296,7 +295,6 @@ namespace Nevron.Nov.Examples.Gauge
         private double m_InitBegin;
         private double m_InitEnd;
 
-        bool m_Up;
         double m_Range;
         double m_FirstIndicatorAngle;
         const double c_ScaleRange = 50;

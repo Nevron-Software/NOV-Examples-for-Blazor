@@ -3,8 +3,6 @@
 using Nevron.Nov.DataStructures;
 using Nevron.Nov.Dom;
 using Nevron.Nov.Graphics;
-using Nevron.Nov.IO;
-using Nevron.Nov.Layout;
 using Nevron.Nov.UI;
 using Nevron.Nov.Xml;
 
@@ -41,7 +39,7 @@ namespace Nevron.Nov.Examples
 
 		#region Events
 
-		public event Function<NXmlElement> TileSelected;
+		public event Function<NXmlElement> ItemSelected;
 
 		#endregion
 
@@ -86,7 +84,6 @@ namespace Nevron.Nov.Examples
 
 			// Process the categories
 			NXmlElement categoriesElement = (NXmlElement)rootElement.GetFirstChild("categories");
-			//((NWelcomePanel)m_PagePanel[0]).Initialize(categoriesElement);
 
 			for (int i = 0, count = categoriesElement.ChildrenCount; i < count; i++)
 			{
@@ -95,11 +92,13 @@ namespace Nevron.Nov.Examples
 					if (childElement.Name != NExamplesXml.Element.Category)
 						throw new Exception("The body element can contain only category elements");
 
-					// Create a widget and add it to the categories panel
-					Content.AddCategory(childElement);
-
 					// Parse the category
+					int oldExamplesCount = m_ExamplesMap.Count;
 					ParseCategory(childElement);
+
+					// Add a tab page for the category
+					int examplesCount = m_ExamplesMap.Count - oldExamplesCount;
+					Content.AddCategory(childElement, examplesCount);
 				}
 			}
 
@@ -126,14 +125,14 @@ namespace Nevron.Nov.Examples
 			return m_StatusColorMap[String.Empty];
 		}
 		/// <summary>
-		/// Raises the <see cref="TileSelected"/> event.
+		/// Raises the <see cref="ItemSelected"/> event.
 		/// </summary>
 		/// <param name="xmlElement"></param>
-		internal void RaiseTileSelected(NXmlElement xmlElement)
+		internal void RaiseItemSelected(NXmlElement xmlElement)
 		{
-			if (TileSelected != null)
+			if (ItemSelected != null)
 			{
-				TileSelected(xmlElement);
+				ItemSelected(xmlElement);
 			}
 		}
 
@@ -144,64 +143,67 @@ namespace Nevron.Nov.Examples
 		private void ParseCategory(NXmlElement categoryElement)
 		{
 			string categoryNamespace = categoryElement.GetAttributeValue(NExamplesXml.Attribute.Namespace);
-			NList<NXmlNode> tiles = categoryElement.GetDescendants(NExamplesXml.Element.Tile);
+			NXmlNode contentElement = categoryElement.GetFirstChild(NExamplesXml.Element.Content);
+			if (contentElement == null)
+				return;
 
-			for (int i = 0; i < tiles.Count; i++)
+			// Get the icon for the category
+			NImage icon = NExamplesUi.GetComponentIcon(categoryElement, ENImageStyle.Colored);
+
+			// Parse the category child elements
+			for (int i = 0; i < contentElement.ChildrenCount; i++)
 			{
-				if (tiles[i] is NXmlElement tileElement)
+				if (contentElement.GetChildAt(i) is NXmlElement childElement)
 				{
-					CreateTile(tileElement, categoryNamespace);
+					ParseXmlElement(childElement, categoryNamespace, icon);
+				}
+            }
+		}
+		private void ParseXmlElement(NXmlElement xmlElement, string categoryNamespace, NImage icon)
+		{
+			switch (xmlElement.Name)
+			{
+				case NExamplesXml.Element.Folder:
+					ParseFolder(xmlElement, categoryNamespace, icon);
+					break;
+				case NExamplesXml.Element.Example:
+					ParseExample(xmlElement, icon);
+					break;
+				default:
+					NDebug.Assert(false, "New examples content XML child element?");
+					break;
+			}
+		}
+		private void ParseFolder(NXmlElement folderElement, string categoryNamespace, NImage icon)
+		{
+			// Add the examples of the current tile to the examples map
+			for (int i = 0; i < folderElement.ChildrenCount; i++)
+			{
+				if (folderElement.GetChildAt(i) is NXmlElement xmlElement)
+				{
+					ParseXmlElement(xmlElement, categoryNamespace, icon);
 				}
 			}
 		}
-		/// <summary>
-		/// Creates a tile for the given example element.
-		/// </summary>
-		/// <param name="tileElement"></param>
-		/// <param name="categoryNamespace"></param>
-		/// <returns></returns>
-		private NExampleTile CreateTile(NXmlElement tileElement, string categoryNamespace)
+		private void ParseExample(NXmlElement exampleElement, NImage icon)
 		{
-			if (!NExamplesXml.IsSupportedOnTheCurrentPlatform(tileElement))
-				return null;
+			if (!NExamplesXml.IsSupportedOnTheCurrentPlatform(exampleElement))
+				return;
 
-			string tileTitle = tileElement.GetAttributeValue(NExamplesXml.Attribute.Name);
-			string iconName = tileElement.GetAttributeValue(NExamplesXml.Attribute.Icon);
-
-			// Get the icon for the tile
-			NImage icon = GetTileIcon(categoryNamespace, iconName);
-
-			// Create and configure the tile
-			NExampleTile tile = new NExampleTile(icon, tileTitle);
-			tile.HorizontalPlacement = ENHorizontalPlacement.Left;
-			tile.Status = tileElement.GetAttributeValue(NExamplesXml.Attribute.Status);
-			tile.Tag = new NExampleTileInfo(tileElement);
-
-			// Add the examples of the current tile to the examples map
-			INIterator<NXmlNode> iter = tileElement.GetChildNodesIterator();
-			while (iter.MoveNext())
+			string examplePath = NExamplesUi.GetExamplePath(exampleElement);
+			if (icon != null)
 			{
-				NXmlElement exampleElement = iter.Current as NXmlElement;
-				if (exampleElement == null || !NExamplesXml.IsSupportedOnTheCurrentPlatform(exampleElement))
-					continue;
-
-				string examplePath = NExamplesUiHelpers.GetExamplePath(exampleElement);
-				if (icon != null)
-				{
-					icon = new NImage(icon.ImageSource);
-				}
-
-				NExampleTile example = new NExampleTile(icon, examplePath);
-				example.Status = exampleElement.GetAttributeValue(NExamplesXml.Attribute.Status);
-				example.Tag = new NExampleTileInfo(exampleElement);
-
-				if (!m_ExamplesMap.Contains(examplePath))
-				{
-					m_ExamplesMap.Add(examplePath, example);
-				}
+				icon = new NImage(icon.ImageSource);
 			}
 
-			return tile;
+			NExampleTile example = new NExampleTile(icon, examplePath);
+			example.Status = exampleElement.GetAttributeValue(NExamplesXml.Attribute.Status);
+			example.Tag = new NExampleTileInfo(exampleElement);
+
+			if (!m_ExamplesMap.Contains(examplePath))
+			{
+				m_ExamplesMap.Add(examplePath, example);
+			}
 		}
 
 		#endregion
@@ -217,7 +219,7 @@ namespace Nevron.Nov.Examples
 			if (changeArg.Property == NExamplesOptions.RecentExamplesProperty)
 			{
 				// Update the Recent Examples menu drop down
-				NExamplesUiHelpers.PopulateExamplesDropDown(
+				NExamplesUi.PopulateExamplesDropDown(
 					Header.RecentExamplesDropDown,
 					NExamplesOptions.Instance.RecentExamples.GetReverseIterator(), // Most recent examples should be first
 					m_ExamplesMap,
@@ -226,7 +228,7 @@ namespace Nevron.Nov.Examples
 			else if (changeArg.Property == NExamplesOptions.FavoriteExamplesProperty)
 			{
 				// Update Favorite Examples menu drop down
-				NExamplesUiHelpers.PopulateExamplesDropDown(
+				NExamplesUi.PopulateExamplesDropDown(
 					Header.FavoriteExamplesDropDown,
 					NExamplesOptions.Instance.FavoriteExamples.GetIterator(),
 					m_ExamplesMap,
@@ -235,10 +237,10 @@ namespace Nevron.Nov.Examples
 		}
 		private void OnExampleMenuItemClick(NEventArgs arg)
 		{
-			NXmlElement xmlElement = NExamplesUiHelpers.GetMenuItemExample((NMenuItem)arg.CurrentTargetNode);
+			NXmlElement xmlElement = NExamplesUi.GetMenuItemExample((NMenuItem)arg.CurrentTargetNode);
 			if (xmlElement != null)
 			{
-				RaiseTileSelected(xmlElement);
+				RaiseItemSelected(xmlElement);
 			}
 		}
 		private void OnSearchBoxListBoxItemSelected(NEventArgs arg)
@@ -249,10 +251,10 @@ namespace Nevron.Nov.Examples
 			INSearchableListBox listBox = (INSearchableListBox)arg.TargetNode;
 			NWidget selectedItem = ((NKeyValuePair<string, NWidget>)listBox.GetSelectedItem()).Value;
 
-			if (selectedItem != null && TileSelected != null)
+			if (selectedItem != null)
 			{
 				NExampleTileInfo tileInfo = (NExampleTileInfo)selectedItem.Tag;
-				TileSelected(tileInfo.XmlElement);
+				RaiseItemSelected(tileInfo.XmlElement);
 			}
 
 			// Mark the event as handled
@@ -266,43 +268,6 @@ namespace Nevron.Nov.Examples
 		// Examples data structures
 		internal NStringMap<NWidget> m_ExamplesMap;
 		private NMap<string, NColor> m_StatusColorMap;
-
-		#endregion
-
-		#region Static Methods - UI
-
-		private static NImage GetTileIcon(string categoryNamespace, string iconName)
-		{
-			if (String.IsNullOrEmpty(iconName))
-				return null;
-
-			if (NPath.Current.DirectorySeparatorChar != '\\')
-			{
-				iconName = iconName.Replace('\\', NPath.Current.DirectorySeparatorChar);
-			}
-
-			string imageFolder = NPath.Current.GetParentFolderPath(iconName);
-			if (String.IsNullOrEmpty(imageFolder))
-			{
-				// The icon is in the folder for the current category
-				imageFolder = categoryNamespace;
-			}
-			else
-			{
-				// The icon is in a folder of another category
-				imageFolder = NPath.Current.Normalize(NPath.Current.Combine(categoryNamespace, imageFolder));
-				if (imageFolder[imageFolder.Length - 1] == NPath.Current.DirectorySeparatorChar)
-				{
-					imageFolder = imageFolder.Remove(imageFolder.Length - 1);
-				}
-
-				// Update the icon name
-				iconName = NPath.Current.GetFileName(iconName);
-			}
-
-			iconName = "RIMG_ExampleIcons_" + imageFolder + "_" + iconName.Replace('.', '_');
-			return new NImage(new NEmbeddedResourceRef(NResources.Instance, iconName));
-		}
 
 		#endregion
 

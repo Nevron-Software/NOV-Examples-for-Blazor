@@ -1,17 +1,16 @@
 using System;
 
-
+using Nevron.Nov.DataStructures;
 using Nevron.Nov.Diagram;
 using Nevron.Nov.Diagram.Shapes;
 using Nevron.Nov.Graphics;
-using Nevron.Nov.DataStructures;
 
 namespace Nevron.Nov.Examples.Diagram
 {
-	/// <summary>
-	/// The NTriangularGridTemplate class represents a triangular grid template
-	/// </summary>
-	public class NTriangularGridTemplate : NGraphTemplate
+    /// <summary>
+    /// The NTriangularGridTemplate class represents a triangular grid template
+    /// </summary>
+    public class NTriangularGridTemplate : NGraphTemplate
     {
         #region Constructors
 
@@ -152,7 +151,7 @@ namespace Nevron.Nov.Examples.Diagram
                             edge = CreateEdge(ENConnectorShape.Line);
 							page.Items.AddChild(edge);
 
-							edge.GlueBeginToGeometryIntersection((NShape)prevRowNodes[i]);
+							edge.GlueBeginToGeometryIntersection(prevRowNodes[i]);
 							edge.GlueEndToShape(cur);
 						}
 

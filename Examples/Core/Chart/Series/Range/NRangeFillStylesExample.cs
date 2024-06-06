@@ -1,6 +1,4 @@
-﻿using System;
-
-using Nevron.Nov.Chart;
+﻿using Nevron.Nov.Chart;
 using Nevron.Nov.Dom;
 using Nevron.Nov.Graphics;
 using Nevron.Nov.UI;
@@ -35,7 +33,8 @@ namespace Nevron.Nov.Examples.Chart
 
 		protected override NWidget CreateExampleContent()
 		{
-			NChartView chartView = new NChartView();
+			NChartViewWithCommandBars chartViewWithCommandBars = new NChartViewWithCommandBars();
+			NChartView chartView = chartViewWithCommandBars.View;
 			chartView.Surface.CreatePredefinedChart(ENPredefinedChartType.Cartesian);
 
 			// configure title
@@ -118,7 +117,7 @@ namespace Nevron.Nov.Examples.Chart
 				legend.Items.Add(new NPairBox(buildingCountryImageBox, new NLabel(buildingNames[i] + ", " + countryNames[i])));
 			}
 
-			return chartView;
+			return chartViewWithCommandBars;
 		}
 
         protected override NWidget CreateExampleControls()

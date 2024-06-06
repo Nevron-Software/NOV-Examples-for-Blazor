@@ -1,9 +1,10 @@
-﻿using Nevron.Nov.Chart;
+﻿using System;
+
+using Nevron.Nov.Chart;
 using Nevron.Nov.Chart.Tools;
 using Nevron.Nov.Dom;
 using Nevron.Nov.Graphics;
 using Nevron.Nov.UI;
-using System;
 
 namespace Nevron.Nov.Examples.Chart
 {
@@ -35,7 +36,8 @@ namespace Nevron.Nov.Examples.Chart
 
 		protected override NWidget CreateExampleContent()
 		{
-			NChartView chartView = new NChartView();
+			NChartViewWithCommandBars chartViewWithCommandBars = new NChartViewWithCommandBars();
+			NChartView chartView = chartViewWithCommandBars.View;
 			chartView.Surface.CreatePredefinedChart(ENPredefinedChartType.Cartesian);
 
 			// configure title
@@ -89,21 +91,8 @@ namespace Nevron.Nov.Examples.Chart
 
             OnNewDataButtonClick(null);
 
-            return chartView;
+            return chartViewWithCommandBars;
 		}
-
-        void AddBarSeries(NCartesianChart chart, ENMultiBarMode mode)
-        {
-			NBarSeries bar = new NBarSeries();
-			chart.Series.Add(bar);
-			bar.WidthSizeMode = ENBarSizeMode.Fixed;
-			bar.DepthSizeMode = ENBarSizeMode.Fixed;
-            bar.MultiBarMode = mode;
-            bar.UseXValues = true;
-            bar.UseZValues = true;
-            bar.InflateMargins = true;
-        }
-
         protected override NWidget CreateExampleControls()
 		{
 			NStackPanel propertyStack = new NStackPanel();
@@ -115,7 +104,6 @@ namespace Nevron.Nov.Examples.Chart
 
             return boxGroup;
 		}
-
 		protected override string GetExampleDescription()
 		{
 			return @"<p>This example demonstrates how to create a cluster bar chart.</p>";
@@ -125,6 +113,17 @@ namespace Nevron.Nov.Examples.Chart
 
 		#region Implementation
 
+        private void AddBarSeries(NCartesianChart chart, ENMultiBarMode mode)
+        {
+			NBarSeries bar = new NBarSeries();
+			chart.Series.Add(bar);
+			bar.WidthSizeMode = ENBarSizeMode.Fixed;
+			bar.DepthSizeMode = ENBarSizeMode.Fixed;
+            bar.MultiBarMode = mode;
+            bar.UseXValues = true;
+            bar.UseZValues = true;
+            bar.InflateMargins = true;
+        }
 		/// <summary>
 		/// Creates a new data label style object
 		/// </summary>

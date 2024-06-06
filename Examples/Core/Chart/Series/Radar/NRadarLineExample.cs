@@ -35,7 +35,9 @@ namespace Nevron.Nov.Examples.Chart
 
 		protected override NWidget CreateExampleContent()
 		{
-			NChartView chartView = CreateRadarChartView();
+			NChartViewWithCommandBars chartViewWithCommandBars = new NChartViewWithCommandBars();
+			NChartView chartView = chartViewWithCommandBars.View;
+			chartView.Surface.CreatePredefinedChart(ENPredefinedChartType.Radar);
 
 			// configure title
 			chartView.Surface.Titles[0].Text = "Radar Line";
@@ -91,7 +93,7 @@ namespace Nevron.Nov.Examples.Chart
 				m_RadarLine2.DataPoints.Add(new NRadarLineDataPoint(random.Next(0, 100)));
 			}
 			
-			return chartView;
+			return chartViewWithCommandBars;
 		}
 		protected override NWidget CreateExampleControls()
 		{
@@ -197,17 +199,6 @@ namespace Nevron.Nov.Examples.Chart
 		#region Schema
 
 		public static readonly NSchema NRadarLineExampleSchema;
-
-		#endregion
-
-		#region Static Methods
-
-		private static NChartView CreateRadarChartView()
-		{
-			NChartView chartView = new NChartView();
-			chartView.Surface.CreatePredefinedChart(ENPredefinedChartType.Radar);
-			return chartView;
-		}
 
 		#endregion
 	}

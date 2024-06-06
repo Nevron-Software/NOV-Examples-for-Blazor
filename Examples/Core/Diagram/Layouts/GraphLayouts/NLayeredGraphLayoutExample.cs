@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Xml.Linq;
 
 using Nevron.Nov.DataStructures;
 using Nevron.Nov.Diagram;
@@ -8,12 +7,11 @@ using Nevron.Nov.Diagram.Shapes;
 using Nevron.Nov.Dom;
 using Nevron.Nov.Editors;
 using Nevron.Nov.Graphics;
-using Nevron.Nov.Layout;
 using Nevron.Nov.UI;
 
 namespace Nevron.Nov.Examples.Diagram
 {
-	public class NLayeredGraphLayoutExample : NExampleBase
+    public class NLayeredGraphLayoutExample : NExampleBase
 	{
 		#region Constructors
 

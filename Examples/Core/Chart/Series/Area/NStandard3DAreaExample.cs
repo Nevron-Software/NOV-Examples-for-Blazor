@@ -32,13 +32,10 @@ namespace Nevron.Nov.Examples.Chart
 
 		#region Example
 
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <returns></returns>
 		protected override NWidget CreateExampleContent()
 		{
-			NChartView chartView = new NChartView();
+			NChartViewWithCommandBars chartViewWithCommandBars = new NChartViewWithCommandBars();
+			NChartView chartView = chartViewWithCommandBars.View;
 			chartView.Surface.CreatePredefinedChart(ENPredefinedChartType.Cartesian);
 
 			// configure title
@@ -50,8 +47,7 @@ namespace Nevron.Nov.Examples.Chart
             chart.Enable3D = true;
             chart.LightModel.SetPredefinedLightModel(ENPredefinedLightModel.BrightCameraLight);
 			chart.Projection.SetPredefinedProjection(ENPredefinedProjection.PerspectiveTilted);
-            chart.SetPredefinedCartesianAxes(ENPredefinedCartesianAxis.Standard);
-			chart.Interactor = new NInteractor(new NTrackballTool());
+            chart.Interactor = new NInteractor(new NTrackballTool());
 
             // setup X axis
             NOrdinalScale scaleX = (NOrdinalScale)chart.Axes[ENCartesianAxis.PrimaryX].Scale;
@@ -90,7 +86,7 @@ namespace Nevron.Nov.Examples.Chart
 
 			chart.Series.Add(m_Area);
 
-			return chartView;
+			return chartViewWithCommandBars;
 		}
 		/// <summary>
 		/// 
@@ -107,7 +103,10 @@ namespace Nevron.Nov.Examples.Chart
 			stack.Add(NPairBox.Create("Origin Mode: ", originModeComboBox));
 
 			NNumericUpDown customOriginUpDown = new NNumericUpDown();
-			customOriginUpDown.ValueChanged += new Function<NValueChangeEventArgs>(OnCustomOriginUpDownValueChanged);
+			m_CustomOriginUpDown = customOriginUpDown;
+            m_CustomOriginUpDown.Enabled = m_Area.OriginMode == ENSeriesOriginMode.CustomOrigin;
+
+            customOriginUpDown.ValueChanged += new Function<NValueChangeEventArgs>(OnCustomOriginUpDownValueChanged);
 			customOriginUpDown.Value = 17;
             stack.Add(NPairBox.Create("Custom Origin: ", customOriginUpDown));
 
@@ -118,7 +117,10 @@ namespace Nevron.Nov.Examples.Chart
 
             return boxGroup;
 		}
-
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <returns></returns>
         protected override string GetExampleDescription()
 		{
 			return @"<p>This example demonstrates how to create a standard 3D area chart.</p>";
@@ -136,7 +138,8 @@ namespace Nevron.Nov.Examples.Chart
 		void OnOriginModeComboBoxSelectedIndexChanged(NValueChangeEventArgs arg)
 		{
 			m_Area.OriginMode = (ENSeriesOriginMode)((NComboBox)arg.TargetNode).SelectedIndex;
-		}
+			m_CustomOriginUpDown.Enabled = m_Area.OriginMode == ENSeriesOriginMode.CustomOrigin;
+        }
 
         private void OnDepthPercentUpDownValueChanged(NValueChangeEventArgs arg)
         {
@@ -148,12 +151,13 @@ namespace Nevron.Nov.Examples.Chart
         #region Fields
 
         NAreaSeries m_Area;
+		NNumericUpDown m_CustomOriginUpDown;
 
-		#endregion
+        #endregion
 
-		#region Schema
+        #region Schema
 
-		public static readonly NSchema NStandard3DAreaExampleSchema;
+        public static readonly NSchema NStandard3DAreaExampleSchema;
 
 		#endregion
 

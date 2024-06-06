@@ -405,7 +405,7 @@ namespace Nevron.Nov.Examples.UI
 			group.Items.Add(pasteSplitButton);
 
 			NRibbonCollapsiblePanel collapsiblePanel = new NRibbonCollapsiblePanel();
-			collapsiblePanel.InitialState = (int)ENRibbonWidgetState.Medium;
+			collapsiblePanel.InitialState = ENRibbonWidgetState.Medium;
 			group.Items.Add(collapsiblePanel);
 
 			collapsiblePanel.Add(new NRibbonButton("Cut", null, NResources.Image_Ribbon_16x16_clipboard_cut_png));
@@ -417,7 +417,7 @@ namespace Nevron.Nov.Examples.UI
 			pageHome.Groups.Add(group);
 
 			collapsiblePanel = new NRibbonCollapsiblePanel();
-			collapsiblePanel.InitialState = (int)ENRibbonWidgetState.Medium;
+			collapsiblePanel.InitialState = ENRibbonWidgetState.Medium;
 			group.Items.Add(collapsiblePanel);
 
 			NFillSplitButton fillSplitButton = new NFillSplitButton();
@@ -567,6 +567,18 @@ namespace Nevron.Nov.Examples.UI
 				NTheme theme = (NTheme)selectedItem.Tag;
 				m_DocumentBox.Document.InheritStyleSheets = false;
 				m_DocumentBox.Document.StyleSheets.ApplyTheme(theme);
+
+				NStyleSheet styleSheet = new NStyleSheet();
+				NRule rule = styleSheet.CreateRule(
+					sb =>
+					{
+						sb.Type(NWrapFlowLayout.NWrapFlowLayoutSchema);
+					}
+				);
+
+				rule.AddValueDeclaration(NWrapFlowLayout.DirectionProperty, ENHVDirection.LeftToRight);
+
+				m_DocumentBox.Document.StyleSheets.Add(styleSheet);
 			}
 			else if (NStringHelpers.Equals(selectedItem.Tag, "inherit"))
 			{

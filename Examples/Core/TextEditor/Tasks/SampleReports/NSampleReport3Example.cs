@@ -434,7 +434,7 @@ namespace Nevron.Nov.Examples.Text
 				pieSeries.DataPoints.Add(new NPieDataPoint(values[i], labels[i]));
 			}
 
-			chartView.Document.StyleSheets.ApplyTheme(new NChartTheme(ENChartPalette.Bright, true));
+			chartView.Document.StyleSheets.ApplyTheme(new NChartTheme(ENChartPalette.Bright, ENChartPaletteTarget.DataPoints));
 		}
 
 		private void CreateBarChartStory(NGroupBlock groupBlock, string title, string[] labels, double[] values)
@@ -484,7 +484,7 @@ namespace Nevron.Nov.Examples.Text
 				barSeries.DataPoints.Add(new NBarDataPoint(values[i]));
 			}
 
-			chartView.Document.StyleSheets.ApplyTheme(new NChartTheme(ENChartPalette.Bright, true));
+			chartView.Document.StyleSheets.ApplyTheme(new NChartTheme(ENChartPalette.Bright, ENChartPaletteTarget.DataPoints));
 		}
 
 		#endregion
@@ -562,9 +562,6 @@ namespace Nevron.Nov.Examples.Text
 			// configure chart
 			NCartesianChart chart = (NCartesianChart)chartView.Surface.Charts[0];
 			chart.Padding = new NMargins(20);
-
-			// configure axes
-			chart.SetPredefinedCartesianAxes(ENPredefinedCartesianAxis.XOrdinalYLinear);
 			chart.Margins = NMargins.Zero;
 
 			if (area)

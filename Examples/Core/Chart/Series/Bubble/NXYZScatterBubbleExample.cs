@@ -34,13 +34,10 @@ namespace Nevron.Nov.Examples.Chart
 
 		#region Example
 
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <returns></returns>
 		protected override NWidget CreateExampleContent()
 		{
-			NChartView chartView = new NChartView();
+			NChartViewWithCommandBars chartViewWithCommandBars = new NChartViewWithCommandBars();
+			NChartView chartView = chartViewWithCommandBars.View;
 			chartView.Surface.CreatePredefinedChart(ENPredefinedChartType.Cartesian);
 
 			// configure title
@@ -98,16 +95,12 @@ namespace Nevron.Nov.Examples.Chart
             m_Bubble.UseXValues = true;
             m_Bubble.UseZValues = true;
 
-			chartView.Document.StyleSheets.ApplyTheme(new NChartTheme(ENChartPalette.Bright, true));
+			chartView.Document.StyleSheets.ApplyTheme(new NChartTheme(ENChartPalette.Bright, ENChartPaletteTarget.DataPoints));
 
             OnChangeDataButtonClick(null);
 
-            return chartView;
+            return chartViewWithCommandBars;
 		}
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <returns></returns>
 		protected override NWidget CreateExampleControls()
 		{
 			NStackPanel stack = new NStackPanel();
@@ -118,10 +111,6 @@ namespace Nevron.Nov.Examples.Chart
 
 			return stack;
 		}
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <returns></returns>
 		protected override string GetExampleDescription()
 		{
 			return @"<p>This example demonstrates how to create a xy scatter bubble chart.</p>";

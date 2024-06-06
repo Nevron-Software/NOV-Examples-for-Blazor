@@ -36,7 +36,8 @@ namespace Nevron.Nov.Examples.Chart
 
 		protected override NWidget CreateExampleContent()
 		{
-			NChartView chartView = new NChartView();
+			NChartViewWithCommandBars chartViewWithCommandBars = new NChartViewWithCommandBars();
+			NChartView chartView = chartViewWithCommandBars.View;
 			chartView.Surface.CreatePredefinedChart(ENPredefinedChartType.Cartesian);
 
 			// configure title
@@ -46,7 +47,6 @@ namespace Nevron.Nov.Examples.Chart
             NCartesianChart chart = (NCartesianChart)chartView.Surface.Charts[0];
 
 			chart.Enable3D = true;
-            chart.SetPredefinedCartesianAxes(ENPredefinedCartesianAxis.XOrdinalYLinear);
 
             chart.Enable3D = true;
             chart.Projection.SetPredefinedProjection(ENPredefinedProjection.PerspectiveTilted);
@@ -109,7 +109,7 @@ namespace Nevron.Nov.Examples.Chart
 			// fill data
 			FillData(m_VectorSeries);
 		
-			return chartView;
+			return chartViewWithCommandBars;
 		}
 		protected override NWidget CreateExampleControls()
 		{
